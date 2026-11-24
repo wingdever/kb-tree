@@ -7,8 +7,6 @@ name: "DeepSeek Tool APIs"
 
 # 工具 API（Search / Fetch / OCR / ASR / TTS）
 
-> 来源：DeepSeek Search、Fetch、OCR、Speech to Text、Text to Speech 官方 API Reference 与指南。限制与计费变化快，以官方文档为准。
-
 这些是可独立调用的能力，不走 `/chat/completions`；也能作为服务端工具在对话中启用。
 
 | API | 端点 | 用途 | 计费方式 |
@@ -18,7 +16,6 @@ name: "DeepSeek Tool APIs"
 | OCR | `POST /v1/tools/ocr` | 文档/图片逐页识别文字 | 按页计费 |
 | Speech to Text | `POST /v1/tools/asr` | 音频转文字 | 按音频时长计费 |
 | Text to Speech | `POST /v1/tools/tts` | 文字转语音，流式返回 | 按字符计费 |
-
 
 ## Search
 
@@ -50,3 +47,6 @@ HTTP 响应体直接流式输出音频：wav 为 `audio/wav`，pcm 为 24 kHz、
 
 **五个独立端点各管一种能力：Search/Fetch 补信息，OCR/ASR/TTS 处理文件与语音；按次、按页、按时长、按字符分别计费。**
 
+## 参考资料
+
+- DeepSeek 内置工具 API（Search / Fetch / OCR / ASR / TTS）：https://api-docs.deepseek.com

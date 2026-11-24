@@ -7,8 +7,6 @@ name: "DeepSeek JSON Output"
 
 # JSON 输出（JSON Output）
 
-> 来源：DeepSeek JSON Output 官方指南。参数与失败行为变化快，以官方文档为准。
-
 JSON Output 保证模型输出合法 JSON 字符串，便于结构化解析。它是 `response_format` 的一个取值。
 
 ## 启用条件
@@ -78,3 +76,6 @@ print(json.loads(response.choices[0].message.content))
 
 **`response_format: json_object` + 提示词里写明 JSON 并给示例 + 足够的 `max_tokens`；解析前处理空 `content`，别把 `stop` 当成格式一定正确。**
 
+## 参考资料
+
+- DeepSeek JSON Output 指南：https://api-docs.deepseek.com

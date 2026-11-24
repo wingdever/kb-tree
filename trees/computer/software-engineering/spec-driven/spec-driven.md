@@ -11,10 +11,6 @@ name: "Spec-Driven Development"
 
 它要解决的问题是 **agentic coding 的意图漂移（drift）**：没有持久规格时，agent 只能从当前代码重新推导意图，在多文件、多步骤的变更中把偏差层层累积，最终产出"语法正确但方向错误"的代码。SDD 用一份事先商定、可审查的规格把意图锚定下来。
 
-> 来源：GitHub Spec Kit 官方仓库与文档（2025-09 发布），定义 `/constitution`、`/specify`、`/plan`、`/tasks`、`/implement` 等命令。
-> 来源：AWS Kiro 官方文档与博客（kiro.dev，2025-07 推出、2026-05 正式可用），规定 requirements / design / tasks 三文件工作流与 EARS 需求表示法。
-> 来源：Martin Fowler 网站 Birgitta Boeckeler 关于 spec-driven development 的文章，提出 spec-first / spec-anchored / spec-as-source 三层框架。工具命令形态变化快，落地前对照官方文档。
-
 ## 核心原则
 
 - **规格是真相源**：意图、决策、约束都写在规格里；代码只是"把规格编译出来"的产物。
@@ -74,3 +70,8 @@ Birgitta Boeckeler 的三层框架帮助团队判断"需要多少流程"：
 - **把工具当成纪律**：以为跑一遍命令就是 SDD，真正的价值在关卡与"变更先改规格"的纪律，而非命令本身。
 - **规格与代码双向各自演进**：人有时改规格、有时直接改代码，失去单一真相源。
 
+## 参考资料
+
+- GitHub Spec Kit 仓库：https://github.com/github/spec-kit
+- AWS Kiro 官方文档与博客：https://kiro.dev
+- Birgitta Boeckeler（Martin Fowler 网站）关于 spec-driven development 的三层框架：https://martinfowler.com

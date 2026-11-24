@@ -134,3 +134,7 @@ EU AI Act 高风险系统要求于 2026 年 8 月全面适用——某些自主 
 ## 一句话结论
 
 > 假设提示注入一定会穿透。不要赌在捕获每一条恶意输入上，而要约束 Agent 能**做**什么：最小权限、打破三要素、不可逆动作人工审批、严格出口控制、对触碰不可信数据且握有真实权限的场景使用经过验证的架构模式。提示注入不是要去完全阻止的东西，而是要**围绕它设计**的东西。
+
+## 参考资料
+
+- Simon Willison：The Lethal Trifecta for AI agents：https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/

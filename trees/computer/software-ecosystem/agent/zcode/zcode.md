@@ -7,8 +7,6 @@ name: "ZCode"
 
 # ZCode
 
-> 来源：ZCode 官方仓库与 2026 年开源报道。版本与功能变化快，以官方仓库为准。
-
 ZCode 是 Z.ai（原智谱）的 **Agentic Development Environment**，2026-09 以 Apache-2.0 开源。本页是生态样本视角。
 
 ## 形态与厂商
@@ -39,3 +37,6 @@ GitHub 仓库 `zai-org/ZCode`（搜索即达）；产品信息以 Z.ai 官方页
 
 **ZCode 是「开源 + Agent 居中 + 动态工作流」的国产 IDE 样本；选型时把 2026 年的隐私整改作为信任边界的具体案例来看。**
 
+## 参考资料
+
+- ZCode 官方仓库与发布说明，未附固定链接

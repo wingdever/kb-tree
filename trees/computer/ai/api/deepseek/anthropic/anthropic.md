@@ -7,8 +7,6 @@ name: "DeepSeek Anthropic Compatibility"
 
 # Anthropic Messages API 兼容
 
-> 来源：Anthropic Messages 规范与 DeepSeek 兼容说明。字段与支持范围变化快，以官方文档为准。
-
 base_url：`https://api.deepseek.com/anthropic`。认证：`x-api-key: <KEY>` 或 `Authorization: Bearer <KEY>`。
 
 ```python
@@ -97,3 +95,6 @@ message = client.messages.create(
 
 **换 base_url 和认证头即可用 Anthropic SDK 接入；字段等价但有专属差异——工具省略 `type`、`tool_result` 必须在文本前、思考模式回传完整内容、流式用量取最终 delta。**
 
+## 参考资料
+
+- Anthropic Messages API（DeepSeek 兼容层）：https://api-docs.deepseek.com

@@ -7,15 +7,13 @@ name: "DeepSeek Operations Reference"
 
 # 运维参考（错误码 / 限流 / 用量 / 定价）
 
-> 来源：DeepSeek 官方 Error Codes、Rate Limit & Isolation、Token & Token Usage、Models & Pricing 页面。价格与限制随时调整，以官方页面为准。
-
 ## 错误码
 
 | 状态 | 原因 | 处理 |
 |---|---|---|
 | 400 | 请求体格式错误 | 按错误信息改格式 |
 | 401 | API key 错误 | 检查或重新申请 key |
-| 402 | 余额不足 ||
+| 402 | 余额不足 | 充值后重试 |
 | 408 | 请求超时（文件上传过慢，常见于 OCR/ASR） | 检查网络并重试，遵守文件大小限制 |
 | 413 | 请求体过大（文件过大） | 减小文件 |
 | 422 | 参数无效 | 按错误信息改参数 |
@@ -55,3 +53,6 @@ name: "DeepSeek Operations Reference"
 
 **错误码决定重试还是改参数，限流决定并发设计，`usage` 决定成本归因——把三者接进监控，才能稳定压住账单。**
 
+## 参考资料
+
+- DeepSeek 错误码、限流、用量与定价页面：https://api-docs.deepseek.com

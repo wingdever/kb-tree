@@ -1,6 +1,6 @@
 ---
 description: "Knowledge tree for recall, reranking and fusion algorithms"
-描述: "检索算法知识树导航"
+描述: "检索算法：BM25、向量、混合检索与重排"
 name: "Retrieval Algorithms"
 名称: "检索算法"
 ---

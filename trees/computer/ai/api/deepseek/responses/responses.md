@@ -7,8 +7,6 @@ name: "DeepSeek Responses API"
 
 # Responses API（`/responses`）
 
-> 来源：DeepSeek API 官方文档。参数与输入类型变化快，以官方文档为准。
-
 OpenAI Responses API 格式，**无状态**：服务和对话不存服务端，多轮需每轮在 `input` 带完整历史。
 
 ## 输入项
@@ -27,3 +25,6 @@ OpenAI Responses API 格式，**无状态**：服务和对话不存服务端，�
 
 **每轮带全量历史、用 `call_id` 配对工具结果与调用——无状态换来的好处是可以在历史中间插入工具调用。**
 
+## 参考资料
+
+- DeepSeek API 文档：https://api-docs.deepseek.com

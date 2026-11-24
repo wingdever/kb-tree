@@ -7,8 +7,6 @@ name: "Containerization and Deployment"
 
 # 容器化部署（Containerization and Deployment）
 
-> 来源：Docker 官方构建最佳实践、OCI 规范、Kubernetes 官方文档、OpenGitOps 原则、NSA/CISA Kubernetes 加固指南。镜像规范、API 字段与安全基线变化快，以官方文档为准。
-
 容器化部署把应用及其依赖打包成可移植的不可变制品，再由编排平台按声明的目标状态运行。它解决的是"构建一次、到处运行"与"期望状态自动维持"两件事；它不等于必须上 Kubernetes，也不等于自动获得强隔离。
 
 ## 容器不是轻量虚拟机
@@ -121,3 +119,11 @@ GitOps 四条原则：声明式、版本化且不可变、由目标环境内的 
 - 只在准入时扫描镜像，既拖慢 Pod 启动又产生大量误判；缺少持续扫描。
 - 集群里手工改资源，被控制器拉回后反复排查"配置丢失"。
 - 一次上齐 Helm、GitOps、服务网格、渐进式发布，复杂度超出团队维护能力。
+
+## 参考资料
+
+- Docker 构建最佳实践：https://docs.docker.com
+- OCI 规范：https://opencontainers.org
+- Kubernetes 文档：https://kubernetes.io/docs
+- OpenGitOps 原则：https://opengitops.dev
+- NSA/CISA Kubernetes 加固指南，未附固定链接

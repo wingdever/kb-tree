@@ -7,8 +7,6 @@ name: "Anthropic Tool Use"
 
 # 03 Anthropic Tool Use
 
-> 来源：Claude Tool Use 通用规范与 Anthropic 公开资料。字段细节与 API 形态变化快，以 Anthropic 官方文档为准。
-
 ## tools 参数
 
 请求顶层传 `tools` 数组，每项是一个工具定义：
@@ -168,3 +166,7 @@ if response.stop_reason == "tool_use":
         messages=messages,
     )
 ```
+
+## 参考资料
+
+- Anthropic Tool Use 文档：https://docs.anthropic.com/en/docs/build-with-claude/tool-use

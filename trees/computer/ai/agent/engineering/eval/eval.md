@@ -120,3 +120,8 @@ LLM-as-judge 是 LangSmith、Braintrust、Phoenix、DeepEval 的默认打分器�
 - 无沙箱：拿生产数据评估一个有破坏性的 Agent。
 - 用旧黄金集：语料翻倍、查询分布漂移后仍相信六个月前的准确率数字。
 - 把能自我打分当成可信：LLM-as-judge 需用人工标注切片校准，且只在离线样本上使用。
+
+## 参考资料
+
+- Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena（arXiv:2306.05685）：https://arxiv.org/abs/2306.05685
+- OpenAI Evals 仓库：https://github.com/openai/evals

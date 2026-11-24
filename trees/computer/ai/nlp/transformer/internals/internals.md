@@ -106,3 +106,6 @@ y_t ~ softmax(LMHead(o_t'))
 - **全局+局部混合**：多数 token 看局部窗口，少数全局 token 看全部，保证远处信息通路。
 - **位置编码外推**：RoPE 的 NTK/YaRN 修正，扩展超训练长度的上下文。
 
+## 参考资料
+
+- Attention Is All You Need（arXiv:1706.03762）：https://arxiv.org/abs/1706.03762

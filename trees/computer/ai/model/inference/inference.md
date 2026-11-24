@@ -119,3 +119,9 @@ system prompt 跨请求相同 → 处理一次、复用 KV Cache。Anthropic：�
 - 渐进式优化逐步验证，困惑度/质量不达标就回退。
 - Spot 实例可省 60–80% GPU 成本（容错负载）。
 - 自托管模型还要监控 GPU 利用率、队列深度、TTFT、显存。
+
+## 参考资料
+
+- FlashAttention（arXiv:2205.14135）：https://arxiv.org/abs/2205.14135
+- Efficient Memory Management for LLM Serving with PagedAttention（vLLM，arXiv:2309.06180）：https://arxiv.org/abs/2309.06180
+- Fast Inference from Transformers via Speculative Decoding（arXiv:2211.17192）：https://arxiv.org/abs/2211.17192

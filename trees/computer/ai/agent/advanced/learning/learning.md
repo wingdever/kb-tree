@@ -85,16 +85,16 @@ Harness 方向的专题书。
 
 专门针对上面的开源书，与「一条学习路径」（书 / 课程 / 软件混合）互补。每阶段有可验收产出，框架 API 会变，交付物比章节数更重要。
 
-| 阶段 | 读哪本 | 树节点 | 交付物 |
-|---|---|---|---|
-| 1. 建立心智模型 | `hello-agents` 前半（原理、范式）+ `ai-agent-book` 第 1 章 || 用「Agent = LLM + 上下文 + 工具」复述一个真实 Agent，并说明它为什么不是工作流 |
-| 2. 手写最小循环 | `ai-agents-from-zero` 前几章，或 `hello-agents` 经典范式实战 || 裸 API + 2–3 个工具 + 一个循环，不用框架 |
-| 3. 上下文与记忆 | `ai-agent-book` 第 2–3 章 + `hello-agents` 上下文/记忆部分 || 设计短期/长期记忆分层，并说明缓存命中的前提 |
-| 4. 工具与 MCP | `ai-agent-book` 第 4 章 + `deepagents-in-action` 的 harness / Skills 章 || 写一个符合工具契约的 MCP server，并给出错误参数的处理 |
-| 5. 评估与工程化 | `ai-agent-book` 第 6 章 + `ai-agents-from-zero` 面试题库（系统设计题） || 建 20 条轨迹黄金集，跑一次评估并定位失败 case |
-| 6. Harness 专项（可选分支） | `claude-code-book` 15 章 → `harness-books` → `agent-rules-books` || 拆解一个真实 harness 的生命周期钩子与权限边界，写成 rules |
-| 7. 多智能体与进阶 | `ai-agent-book` 第 10 章 + `hello-agents` 多智能体实战 || 对比单 Agent 与多 Agent 在同一任务上的成本和质量 |
-| 8. 学术纵深（可选） | `harvard-edge/cs249r_book` 的 Agentic AI 卷 || 写一份「后训练如何影响 Agent 工具调用」的综述 |
+| 阶段 | 读哪本 | 交付物 |
+|---|---|---|
+| 1. 建立心智模型 | `hello-agents` 前半（原理、范式）+ `ai-agent-book` 第 1 章 | 用「Agent = LLM + 上下文 + 工具」复述一个真实 Agent，并说明它为什么不是工作流 |
+| 2. 手写最小循环 | `ai-agents-from-zero` 前几章，或 `hello-agents` 经典范式实战 | 裸 API + 2–3 个工具 + 一个循环，不用框架 |
+| 3. 上下文与记忆 | `ai-agent-book` 第 2–3 章 + `hello-agents` 上下文/记忆部分 | 设计短期/长期记忆分层，并说明缓存命中的前提 |
+| 4. 工具与 MCP | `ai-agent-book` 第 4 章 + `deepagents-in-action` 的 harness / Skills 章 | 写一个符合工具契约的 MCP server，并给出错误参数的处理 |
+| 5. 评估与工程化 | `ai-agent-book` 第 6 章 + `ai-agents-from-zero` 面试题库（系统设计题） | 建 20 条轨迹黄金集，跑一次评估并定位失败 case |
+| 6. Harness 专项（可选分支） | `claude-code-book` 15 章 → `harness-books` → `agent-rules-books` | 拆解一个真实 harness 的生命周期钩子与权限边界，写成 rules |
+| 7. 多智能体与进阶 | `ai-agent-book` 第 10 章 + `hello-agents` 多智能体实战 | 对比单 Agent 与多 Agent 在同一任务上的成本和质量 |
+| 8. 学术纵深（可选） | `harvard-edge/cs249r_book` 的 Agentic AI 卷 | 写一份「后训练如何影响 Agent 工具调用」的综述 |
 
 主线：**先建立模型直觉 → 手写循环 → 逐层加上下文/记忆/工具 → 用评估兜底 → 再按兴趣分支到 harness 或多智能体**。
 

@@ -5,8 +5,6 @@ name: "DeepSeek-V3 Architecture"
 名称: "DeepSeek-V3 架构"
 ---
 
-> 来源：DeepSeek-V3 技术报告（arXiv:2412.19437）与 DeepSeekMoE 论文（arXiv:2401.06066）。
-
 # DeepSeek-V3 架构
 
 DeepSeek-V3 是把多个架构创新组装成一个 671B 生产模型的典型案例：稀疏 Transformer，671B 总参数、**每 token 激活 37B**。它在标准 Transformer 框架内，用 MLA 改造注意力、DeepSeekMoE 改造 FFN，再加无辅助损失均衡、MTP、DualPipe、FP8——是"2026 现代 Block 长什么样"的完整答案。
@@ -62,3 +60,7 @@ DeepSeek-V3 是把多个架构创新组装成一个 671B 生产模型的典型�
 
 两者共享同一 MoE 架构与 128K 上下文，区别在输出机制：V3 是通用指令模型，直接生成可见文本（输出上限 8192 token）；R1 是推理模型，用 GRPO 强化学习训练，输出含隐藏思维链（在 `reasoning_content` 字段）——R1 的 64K 输出上限由隐藏思考与可见回答共享，复杂数学题 4.5 万思考 token 会挤占可见回答空间。
 
+## 参考资料
+
+- DeepSeek-V3 技术报告（arXiv:2412.19437）：https://arxiv.org/abs/2412.19437
+- DeepSeekMoE 论文（arXiv:2401.06066）：https://arxiv.org/abs/2401.06066

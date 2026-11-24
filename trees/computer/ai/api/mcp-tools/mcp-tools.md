@@ -9,8 +9,6 @@ name: "MCP Tools Specification"
 
 MCP 允许 server 暴露可被语言模型调用的工具。每个工具由唯一 `name` 标识，含描述 schema 的元数据。基于 JSON-RPC 2.0。请求示例省略 `_meta`（`io.modelcontextprotocol/protocolVersion`、`clientInfo`、`clientCapabilities`），**每个请求必须包含必需 `_meta` 字段**。
 
-> 来源：Model Context Protocol 官方规范（server/tools）。协议版本持续演进，以官方规范为准。
-
 ## 能力声明
 
 支持工具的 server **必须**声明 `tools` 能力：
@@ -303,3 +301,7 @@ Client **应**把工具执行错误提供给语言模型以启用自我纠正；
 ## 安全
 
 Client **必须**把工具注解视为不可信，除非来自可信 server。
+
+## 参考资料
+
+- Model Context Protocol 规范（Server / Tools）：https://modelcontextprotocol.io/specification

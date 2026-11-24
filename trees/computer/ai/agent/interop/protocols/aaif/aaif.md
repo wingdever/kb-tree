@@ -7,8 +7,6 @@ name: "Agentic AI Foundation"
 
 # Agentic AI Foundation（AAIF）
 
-> 来源：AAIF 官网、Linux Foundation 公告与各项目官方博客。项目清单与成员数增长快，以官方页面为准。
-
 AAIF 是 Linux Foundation 下的**定向基金**，给 Agent 开放协议与构件提供中立治理。它的存在本身就是结论：**协议之争没有赢家，最后落在非营利机构**——Google 的 A2A、Anthropic 的 MCP、IBM 已并入 A2A 的 ACP，都不再由单一厂商控制。
 
 ## 官方入口
@@ -52,11 +50,10 @@ AAIF 是 Linux Foundation 下的**定向基金**，给 Agent 开放协议与构�
 - **标准化 ≠ 互操作**：规范统一了线路格式，没有统一语义；两个 MCP server 可能暴露不同工具名，实现质量与部署纪律仍归各团队。
 - **治理集中也有代价**：一个基金会的决策影响面更大；MCP 在快速普及期积累过 40+ CVE 与工具投毒攻击类，A2A 的跨组织信任是更难的问题。授权与 Agent 身份是值得持续盯的两处。
 - **选型建议**：优先基于开放标准构建，不绑定单一厂商的专有集成格式。切换成本从「重写」降为「迁移」。
-
-## 与树中其它节点的关系
-
-
 ## 一句话主线
 
 **AAIF 把 Agent 的关键协议与构件放进 Linux Foundation 的中立治理下——竞争留在模型与产品层，连接层成为公共基础设施；它的成立标志着协议战争以「无人独占」收场。**
 
+## 参考资料
+
+- Agentic AI Foundation 官网与 Linux Foundation 成立公告，未附固定链接

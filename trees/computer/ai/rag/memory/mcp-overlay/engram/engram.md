@@ -7,8 +7,6 @@ name: "Engram Memory Server"
 
 # Engram
 
-> 来源：DeepSeek Harness 官方指南 Connect a third-party memory MCP server。第三方配置仅为互操作示例，非背书；pin、路径与环境变量以官方文档为准。
-
 Engram 是 dsh 三份默认关闭的 MCP memory 参考配置之一，通过 `@deepseek-ai/dsh-mcp-client` 以 stdio 方式接入。它的特点是**自己管存储和项目选择**。
 
 ## 已文档化的接线信息
@@ -44,3 +42,6 @@ Engram 是 dsh 三份默认关闭的 MCP memory 参考配置之一，通过 `@de
 
 **Engram 把存储和项目隔离都收在自己手里，两个环境变量可直接覆盖；但官方指南只教接线，检索语义与依赖要查它自己的文档。**
 
+## 参考资料
+
+- DeepSeek Harness 指南：接入第三方记忆 MCP server，未附固定链接

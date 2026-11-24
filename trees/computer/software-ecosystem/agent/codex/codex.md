@@ -7,8 +7,6 @@ name: "OpenAI Codex"
 
 # OpenAI Codex
 
-> 来源：OpenAI Codex 官方文档与 openai/codex 仓库。产品形态、模型与计费方式变化快，以官方文档为准。
-
 Codex 是 OpenAI 的**编码 Agent**：读取仓库、修改文件、运行命令与测试，并根据结果反复迭代直到完成任务。官方现在把它描述为**一个 Agent、多个客户端（surfaces）**——同一 Agent 通过 CLI、IDE 扩展、桌面 App 与云端四种入口提供，区别在运行位置，不在能力本身。它与 ChatGPT Work 并列：Chat 用于对话，Work 用于长步骤的通用工作，Codex 专攻软件开发；两者共用桌面 App，也共用同一份用量额度。
 
 ## 四种形态
@@ -94,3 +92,8 @@ Codex 不用 VM 或容器做默认隔离，而是用各平台原生沙箱约束�
 - 把 IDE 扩展当代码补全工具，期待 inline 建议落空。
 - 把云端任务当本地任务的等价替代：额度消耗口径不同，且依赖队列与可用性。
 - 沙箱策略未集中配置就全员铺开，放开网络与 MCP 带来失控风险。
+
+## 参考资料
+
+- OpenAI Codex 文档：https://platform.openai.com/docs
+- openai/codex 仓库：https://github.com/openai/codex

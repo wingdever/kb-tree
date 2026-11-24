@@ -7,8 +7,6 @@ name: "Docker"
 
 # Docker
 
-> 来源：Docker 官方文档。CLI、Compose 规范与镜像构建实践变化快，以官方文档为准。
-
 Docker 官方把应用开发定位为「构建、保护并交付容器化应用」（Build, secure, and ship containerized applications）。Docker 是**围绕容器化应用的平台与工具体系**，而不是容器本身；容器是它用来打包与运行的单元。
 
 ## 容器：隔离运行的进程
@@ -49,3 +47,7 @@ Docker 的镜像和运行时遵守 OCI 规范，因此镜像能被其他符合 O
 - 镜像烘焙密钥，或把明文凭据打进层。
 - 数据写进容器可写层而非 volume，容器替换时数据丢失。
 - 用 Compose 跑多容器本地环境，却把这套配置直接当生产编排方案。
+
+## 参考资料
+
+- Docker 文档：https://docs.docker.com

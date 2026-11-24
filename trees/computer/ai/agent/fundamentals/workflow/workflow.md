@@ -61,3 +61,6 @@ name: "AI Workflows"
 - **像支付系统一样埋点**：图确定性 → 每次运行可复现，存精确提示、响应、工具调用、分支；失败可端到端重放，成本可归因到具体节点，延迟可定位到具体边。
 - **LLM 真正挣得价值的场景**：流程本身开放、设计图成本高于运行 Agent 成本（研究、探索式数据分析、一次性信息收集）。
 
+## 参考资料
+
+- Anthropic：Building Effective Agents：https://www.anthropic.com/research/building-effective-agents

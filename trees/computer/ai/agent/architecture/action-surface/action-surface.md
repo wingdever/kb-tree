@@ -17,16 +17,16 @@ name: "Agent Action Surfaces"
 
 ## `-use` 家族
 
-| 名称 | 行动面 | 树中入口 |
-|---|---|---|
-| **tool use** | 母概念：模型填工具名 + 参数，宿主执行 ||
-| **code / shell use** | 终端与文件：读写文件、跑命令、改仓库 ||
-| **browser use** | 网页：DOM / a11y 或截图，限定在浏览器 ||
-| **computer use** | 整个桌面：截图 + 坐标 + 按键 ||
-| **phone use** | 两种含义：Agent 驱动手机 GUI；或手机作为窗口远程监督别处运行的会话 ||
-| **web use** | 搜索 / 抓取作为工具，不改界面 ||
-| **api / connector use** | 结构化调用云应用、MCP server ||
-| **agent use** | 把另一个 Agent 客户端当工具：A2A / ACP / headless CLI ||
+| 名称 | 行动面 |
+|---|---|
+| **tool use** | 母概念：模型填工具名 + 参数，宿主执行 |
+| **code / shell use** | 终端与文件：读写文件、跑命令、改仓库 |
+| **browser use** | 网页：DOM / a11y 或截图，限定在浏览器 |
+| **computer use** | 整个桌面：截图 + 坐标 + 按键 |
+| **phone use** | 两种含义：Agent 驱动手机 GUI；或手机作为窗口远程监督别处运行的会话 |
+| **web use** | 搜索 / 抓取作为工具，不改界面 |
+| **api / connector use** | 结构化调用云应用、MCP server |
+| **agent use** | 把另一个 Agent 客户端当工具：A2A / ACP / headless CLI |
 
 ## 去魅：同一条动作链
 
@@ -41,11 +41,11 @@ name: "Agent Action Surfaces"
 
 ## 三种机制收敛
 
-| 机制 | 怎么行动 | 代表 |
-|---|---|---|
-| **UI 控制** | 截图 + 点击 / 按键，覆盖无 API 的遗留系统 ||
-| **API / connector 调用** | 结构化工具与 MCP，生产集成默认选择 ||
-| **终端与文件系统** | 读写文件、跑命令，coding agent 的主场 ||
+| 机制 | 怎么行动 |
+|---|---|
+| **UI 控制** | 截图 + 点击 / 按键，覆盖无 API 的遗留系统 |
+| **API / connector 调用** | 结构化工具与 MCP，生产集成默认选择 |
+| **终端与文件系统** | 读写文件、跑命令，coding agent 的主场 |
 
 Browser use 是「UI 控制」里被 DOM / a11y 约束得更紧的特例，不是第四种机制；web use 与 api use 落在第二类。
 

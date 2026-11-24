@@ -7,8 +7,6 @@ name: "Gemini Function Calling"
 
 # 04 Gemini Function Calling
 
-> 来源：Google Gemini Function Calling 官方文档。模型名与 API 形态变化快，落地前以官方文档为准。
-
 ## 核心理念
 
 模型**不直接调用函数**——它生成结构化数据，指定函数名和建议参数。你的应用执行外部 API 并把结果回灌。
@@ -220,3 +218,7 @@ Google Gen AI SDK 可把本地 MCP server 作为工具直接传入（通过 `mcp
 
 - 并行返回多个 `functionCall` 时，回灌的 `functionResponse` 顺序必须与之一致。
 - 不要在多个轮次间交错 functionCall / functionResponse parts。
+
+## 参考资料
+
+- Gemini Function Calling 官方文档：https://ai.google.dev/gemini-api/docs/function-calling

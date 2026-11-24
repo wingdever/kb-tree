@@ -7,13 +7,7 @@ name: "DeepSeek API Specification"
 
 # 08 DeepSeek API 规范
 
-> 来源：DeepSeek API 官方文档。端点、模型名与计费规则变化快，以官方文档为准。
-
 DeepSeek API 兼容 OpenAI / Anthropic 形态，换 base_url 与少量扩展参数即可接入现有 SDK。本主题覆盖官方 API Reference 的 15 个端点，按端点形态与工程主题拆成 15 个子知识点。
-
-## 建议阅读顺序
-
-
 ## 与 OpenAI 原生 Function Calling 的关键差异
 
 | 维度 | OpenAI 原生 | DeepSeek |
@@ -45,3 +39,6 @@ DeepSeek API 兼容 OpenAI / Anthropic 形态，换 base_url 与少量扩展参�
 
 **三种对话端点共用一套工具语义，差异集中在扩展参数、strict 的 Beta 限制与思考模式的回传要求；FIM、独立工具与文件接口补齐能力面，缓存、限流与定价决定成本和稳定性下限。**
 
+## 参考资料
+
+- DeepSeek API 文档：https://api-docs.deepseek.com

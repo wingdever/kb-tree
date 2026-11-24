@@ -7,8 +7,6 @@ name: "NestJS"
 
 # NestJS
 
-> 来源：NestJS 官方微服务与韧性文档。框架 API 与版本变化快，以官方文档为准。
-
 NestJS 是 TypeScript 优先的 Node.js 应用框架，微服务是其中的一部分。官方定义是：**Nest 中的微服务本质上是一个使用不同于 HTTP 的传输层（transport）的应用**。依赖注入、装饰器、异常过滤器、管道、守卫与拦截器等核心概念在微服务中同样适用；它提供代码结构与完整生态，但不内置服务发现与客户端负载均衡。
 
 ## 传输层
@@ -61,3 +59,7 @@ NestJS 的强项是代码结构、TypeScript 工具链、生态集成（REST / G
 - fallback 回调原依赖，故障沿备用路径继续传播。
 - 用可变 tag 或未固定 transporter 配置，导致环境间行为不一致。
 - 把 NestJS 当成自带服务发现的框架，容器化环境下重复搭建注册中心。
+
+## 参考资料
+
+- NestJS 微服务与韧性文档：https://docs.nestjs.com/microservices/basics

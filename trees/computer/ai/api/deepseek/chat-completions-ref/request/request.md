@@ -7,13 +7,11 @@ name: "Chat Completions Request Schema"
 
 # Request Schema（application/json）
 
-> 来源：DeepSeek Chat Completions API 官方 API Reference。字段与约束变化快，以官方文档为准。
-
 ## 顶层字段
 
 | 字段 | 类型 | 必填 | 默认 / 约束 | 说明 |
 |---|---|---|---|---|
-| `messages` | `object[]` | 是 | 至少 1 项 ||
+| `messages` | `object[]` | 是 | 至少 1 项 | 对话消息列表，按 role 排序 |
 | `model` | `string` | 是 | `deepseek-flash` / `deepseek-v4-pro` | 模型 ID |
 | `thinking` | `object \| null` | 否 | 省略时为 null | 思考模式开关；提供时 `type` 必填，优先级高于 `reasoning_effort` |
 | `reasoning_effort` | `string` | 否 | 默认 `high` | `none`/`low`/`high`/`max`；兼容映射 `minimal`→`low`，`medium`/`xhigh`→`high` |
@@ -61,7 +59,7 @@ Function 工具：
 | `function.description` | `string` | 否 | 供模型理解何时调用 |
 | `function.name` | `string` | 是 | a-z/A-Z/0-9/`_`/`-`，最长 128 |
 | `function.parameters` | `object` | 否 | JSON Schema；省略表示无参数 |
-| `function.strict` | `boolean` | 否 ||
+| `function.strict` | `boolean` | 否 | 严格 schema 模式，仅 Beta 可用 |
 
 ### tool_choice
 
@@ -86,3 +84,6 @@ Function 工具：
 
 **六个必填/核心字段搭起请求骨架，DeepSeek 扩展字段（`thinking`、`safety_check`、`title`、`user_id`）走标准参数而非 `extra_body`（HTTP 直连场景）；SDK 不原生支持的才走 `extra_body`。**
 
+## 参考资料
+
+- DeepSeek Chat Completions API Reference：https://api-docs.deepseek.com

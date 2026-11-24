@@ -7,8 +7,6 @@ name: "QoderCN"
 
 # QoderCN
 
-> 来源：Qoder 官方 CLI 文档与阿里云帮助中心。版本与能力变化快，以官方文档为准。
-
 QoderCN 是阿里旗下 Qoder 的国内 CLI 形态（国际版称 Qoder），面向终端开发者。本页是生态样本视角。
 
 ## 形态与厂商
@@ -36,10 +34,6 @@ QoderCN 是阿里旗下 Qoder 的国内 CLI 形态（国际版称 Qoder），面
 - 记忆与知识库：记住项目约定与团队知识。
 - 权限：配置文件分层（用户 / 项目），`--allowed-tools` / `--disallowed-tools`、`--max-turns`、`--yolo`。
 - 支持 worktree、会话续接（`-c` / `-r`）、TUI 中的 `!` Bash 与 `#` 记忆模式。
-
-## 在树中的位置
-
-
 ## 官方入口
 
 `https://docs.qoder.com/zh/cli/overview`；国内 CLI 帮助见阿里云帮助中心搜索 “Using the CLI / Qoder CN CLI”。
@@ -48,3 +42,6 @@ QoderCN 是阿里旗下 Qoder 的国内 CLI 形态（国际版称 Qoder），面
 
 **QoderCN 的差异点是六种工作方式与调度能力，把 CLI Agent 从「一问一答」拉到「定时任务 + 目标驱动」的长运行场景。**
 
+## 参考资料
+
+- Qoder 官方文档：https://qoder.com

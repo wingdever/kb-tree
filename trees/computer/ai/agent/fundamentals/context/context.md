@@ -135,3 +135,8 @@ Lightrun 2026 报告：97% 的工程负责人表示其 Agent 对生产执行状�
 - **工具集最小化**：如果人都说不清某场景该用哪个工具，Agent 同样会挣扎。
 - **让失败可见**：抹掉失败就移除了模型适应所需的证据。
 - **闭环验证**：Agent 改了文件要重读、写了测试要运行、发了 API 要检查响应。可靠性来自"行动→观察→对照目标验证→纠错"，而非假设成功。
+
+## 参考资料
+
+- Anthropic：Effective context engineering for AI agents：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- Lost in the Middle（arXiv:2307.03172）：https://arxiv.org/abs/2307.03172

@@ -61,3 +61,7 @@ RAG（检索增强生成）让模型在查询时从自有数据中检索相关�
 7. 评估：Ragas / Arize Phoenix
 
 > 延迟注意：查询改写增加 200–400ms；用缓存、GPU 加速重排器、ANN 索引（HNSW、IVF-PQ）缓解。
+
+## 参考资料
+
+- Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks（arXiv:2005.11401）：https://arxiv.org/abs/2005.11401

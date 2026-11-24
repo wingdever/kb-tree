@@ -1,6 +1,6 @@
 ---
 description: "Knowledge tree for vector databases and ANN indexes"
-描述: "向量数据库知识树导航"
+描述: "向量数据库：索引算法、产品对比与元数据过滤"
 name: "Vector Databases and ANN Indexes"
 名称: "向量数据库"
 ---

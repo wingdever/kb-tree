@@ -7,8 +7,6 @@ name: "DeepSeek Strict Mode"
 
 # strict 模式（Beta）
 
-> 来源：DeepSeek API 官方文档。Beta 参数与 Schema 支持范围变化快，以官方文档为准。
-
 模型输出 Function 调用时严格遵循 JSON Schema，确保输出符合定义。思考与非思考模式均可用。
 
 ## 启用条件
@@ -84,3 +82,6 @@ string 示例：
 
 **Beta 通道 + 全部工具 strict + 受限 Schema 子集：转换前先把 schema 按支持的类型与约束改写，否则请求直接报错。**
 
+## 参考资料
+
+- DeepSeek API 文档：https://api-docs.deepseek.com

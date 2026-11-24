@@ -58,3 +58,7 @@ name: "Multi-Agent Failure Modes"
 - 植入慢故障代理（一致率、重试率、输出长度分布），在漂移显化前捕获。
 - 结构化制品交换（MetaGPT）降低约 40% 错误并产生审计轨迹。
 
+## 参考资料
+
+- Why Do Multi-Agent LLM Systems Fail?（MAST，arXiv:2503.13657）：https://arxiv.org/abs/2503.13657
+- Groupthink 相关研究（arXiv:2508.05687）：https://arxiv.org/abs/2508.05687

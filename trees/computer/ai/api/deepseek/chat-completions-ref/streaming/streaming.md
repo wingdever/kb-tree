@@ -7,8 +7,6 @@ name: "Chat Completions Streaming"
 
 # 流式响应（SSE）
 
-> 来源：DeepSeek Chat Completions API 官方 API Reference。流式字段形态与事件顺序变化快，以官方示例为准。
-
 `stream: true` 时，响应以 **data-only server-sent events** 分块返回增量，消息流以 `data: [DONE]` 结束。
 
 ## chunk 形态
@@ -36,3 +34,6 @@ Anthropic Messages 格式也支持 `stream: true`，但事件名是 `message_sta
 
 **Chat Completions 的增量在 `choices[].delta`，以 `data: [DONE]` 结束，用量只在末块给一次；Anthropic 格式用另一套事件名且没有 `[DONE]`。**
 
+## 参考资料
+
+- DeepSeek Chat Completions API Reference：https://api-docs.deepseek.com

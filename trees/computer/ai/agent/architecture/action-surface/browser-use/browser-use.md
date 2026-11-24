@@ -7,8 +7,6 @@ name: "Browser-Use Agents"
 
 # 浏览器 Agent（Browser Use）
 
-> 来源：Browser Use 官方 README、Playwright 官方站点与 2026 年生态资料。框架版本、pin 与能力变化快，以官方文档为准。
-
 浏览器 Agent 让模型**驱动真实浏览器完成任务**：填表、检索、下单、抓取。提供角色、标签、层级与文本，而整台电脑的截图没有这种结构。这个差异决定它能比通用桌面 Agent 更便宜、更确定，但也只能覆盖浏览器内的事。
 
 ## 两种感知方式
@@ -64,3 +62,7 @@ name: "Browser-Use Agents"
 
 **浏览器 Agent 的价值来自「浏览器自带结构」：默认用 DOM/a11y 求快求稳，视觉只在必要时兜底；生产上把重复流程交给确定性脚本，把需要推理的少数步骤交给 Agent，并用审计与审批兜住不可信页面。**
 
+## 参考资料
+
+- Browser Use 官方仓库：https://github.com/browser-use/browser-use
+- Playwright 官方文档：https://playwright.dev

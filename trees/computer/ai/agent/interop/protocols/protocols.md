@@ -19,7 +19,6 @@ name: "Agent Interoperability Protocols"
 | AG-UI | `https://docs.ag-ui.com/` |
 | AP2 | `https://github.com/google-agentic-commerce/AP2` |
 | ANP | `https://github.com/agent-network-protocol/AgentNetworkProtocol` |
-| AAIF ||
 
 ## 三协议对照
 
@@ -32,7 +31,6 @@ name: "Agent Interoperability Protocols"
 | 发现 | 配置 server 后列能力 | `Agent Card`（well-known URI） | 编辑器内注册 / Registry |
 | 长任务 | 有限 | Task + SSE 流式 + Webhook 推送 | 随会话 |
 | 状态 | 活跃，规范 2026-07-28 | 活跃，稳定 v1.0 | 活跃 |
-| 树中入口 || 本节点 | 本节点 |
 
 官方口径：**MCP 纵向深入一个 Agent，A2A 横向连接 Agent 之间**——互补，不是替代。只碰自有工具就只需 MCP；出现「别的团队 / 厂商的 Agent 参与」才加 A2A。
 

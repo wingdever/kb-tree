@@ -37,13 +37,13 @@ IM 是软件生态里第一个成形的子生态：它以「把人、机器人�
 
 ## 平台条目
 
-| 平台 | 身份路线 | 入口 |
-|---|---|---|
-| 云湖（YunhuM3） | 官方机器人账号；开放 API + Webhook ||
-| QQ | 官方 Bot 账号 vs 真人号 + 协议端 ||
-| 飞书 / 钉钉 / 企业微信 | 企业协作套件，IM 是其中一个模块；非消费级 IM 同类 | 未展开 |
-| Telegram / Discord / Slack | 官方 Bot API；大陆访问有门槛 | 未展开 |
-| Matrix / Rocket.Chat / Mattermost / Zulip | Matrix 是协议；自托管解决连通但有运维、合规与联邦访问门槛 | 未展开 |
+| 平台 | 身份路线 |
+|---|---|
+| 云湖（YunhuM3） | 官方机器人账号；开放 API + Webhook |
+| QQ | 官方 Bot 账号 vs 真人号 + 协议端 |
+| 飞书 / 钉钉 / 企业微信 | 企业协作套件，IM 是其中一个模块；非消费级 IM 同类 |
+| Telegram / Discord / Slack | 官方 Bot API；大陆访问有门槛 |
+| Matrix / Rocket.Chat / Mattermost / Zulip | Matrix 是协议；自托管解决连通但有运维、合规与联邦访问门槛 |
 
 ## 与 Agent 渠道的边界
 

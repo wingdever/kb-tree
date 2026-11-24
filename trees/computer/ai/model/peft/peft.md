@@ -139,3 +139,8 @@ model.save_pretrained_merged("merged", tok, save_method="lora")
 - epoch 过多。
 - 不做 MMLU sanity check。
 - LoRA 学到的是行为而非新知识时，误以为能注入事实——知识注入应交给 RAG。
+
+## 参考资料
+
+- LoRA: Low-Rank Adaptation of Large Language Models（arXiv:2106.09685）：https://arxiv.org/abs/2106.09685
+- QLoRA（arXiv:2305.14314）：https://arxiv.org/abs/2305.14314

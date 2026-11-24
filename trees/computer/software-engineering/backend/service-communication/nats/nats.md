@@ -7,8 +7,6 @@ name: "NATS Transport"
 
 # NATS 传输（NATS Transport）
 
-> 来源：NATS 官方文档与 NestJS 官方微服务文档。产品能力与接口形态变化快，以官方文档为准。
-
 NATS 是轻量消息系统，在 NestJS 中是内置 transporter 之一。它用主题（subject）路由，核心价值是"少运维"——不需要 Consul、etcd 或服务网格即可做服务间发现与通信。
 
 ## 核心特性
@@ -31,3 +29,8 @@ NATS 是轻量消息系统，在 NestJS 中是内置 transporter 之一。它用
 - 通配符订阅过宽，收到大量无关消息。
 - 把 metadata 放进 payload，污染业务消息。
 - 队列组名配置不一致，导致消息只被单一实例消费。
+
+## 参考资料
+
+- NATS 文档：https://docs.nats.io
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

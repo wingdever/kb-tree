@@ -7,8 +7,6 @@ name: "Kafka Transport"
 
 # Kafka 传输（Kafka Transport）
 
-> 来源：Apache Kafka 官方文档与 NestJS 官方微服务文档。配置项与版本变化快，以官方文档为准。
-
 Kafka 是分布式日志/流平台，在 NestJS 中是内置 transporter 之一。与队列式 broker 不同，它以**追加日志**为中心：消息按分区持久化、可被多个消费者组独立读取与重放。
 
 ## 核心特性
@@ -33,3 +31,8 @@ Kafka 是分布式日志/流平台，在 NestJS 中是内置 transporter 之一�
 - 消费者处理非幂等却开启自动提交，重放时重复生效。
 - 忽略消费者组 rebalance，处理中被迫中断。
 - 把消息保留期当长期存储，超出后被清理造成数据丢失。
+
+## 参考资料
+
+- Kafka 文档：https://kafka.apache.org/documentation/
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

@@ -25,9 +25,9 @@ name: "Handoff and Communication"
 
 ## 跨框架/厂商通信：A2A 协议
 
-当 Agent 由不同团队、框架或公司构建时，标准化到 **A2A（Agent2Agent）协议**——Google 2025 年 4 月发布，6 月捐给 Linux Foundation。
+Agent 由不同团队、框架或公司构建时，跨边界那一跳必须落在标准信封上，不要自造消息格式——否则每接一个伙伴写一次适配器，鉴权、能力发现与长任务状态也没法复用。
 
-> **区分**：A2A 是 Agent 对 Agent；MCP 是 Agent 对工具和数据，不是对其他 Agent。MCP 纵向（Agent→工具），A2A 横向（Agent→Agent）。
+选型看三件事：对方是否用签名 Agent Card 做能力发现，是否支持 task 生命周期与状态回传，鉴权是否按 OAuth 资源服务器隔离。交接质量仍靠自己这一侧：验收标准写进任务描述，结果按可校验的 Artifact 收，失败按 task 状态收口。
 
 ## 共享状态与黑板模式
 

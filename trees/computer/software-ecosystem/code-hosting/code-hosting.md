@@ -7,8 +7,6 @@ name: "Code Hosting Ecosystem"
 
 # 代码托管生态
 
-> 来源：GitHub MCP Server 官方 README、各平台官方文档与 2026 年选型资料。平台能力与工具形态变化快，以官方文档为准。
-
 代码托管生态回答「代码资产放在哪、协作流程怎么走、Agent 如何安全地操作仓库」。它不只是 Git 仓库——PR / Issue / CI / 规则集构成一层治理面，Agent 的权限必须落在这层治理里。
 
 ## 平台谱系
@@ -69,3 +67,6 @@ CI/CD 的部署侧归云原生与 DevOps 子生态（尚未展开）。
 
 **代码托管生态是「Git 工作树 + Forge 治理面 + 两层 MCP」的组合；Agent 能操作仓库，但真正保证安全的是分支规则、必需检查与最小权限，而不是接口有多顺。**
 
+## 参考资料
+
+- GitHub MCP Server 仓库：https://github.com/github/github-mcp-server

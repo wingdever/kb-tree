@@ -7,8 +7,6 @@ name: "Memorix Memory Server"
 
 # Memorix
 
-> 来源：DeepSeek Harness 官方指南 Connect a third-party memory MCP server。第三方配置仅为互操作示例，非背书；pin、路径与环境变量以官方文档为准。
-
 Memorix 是 dsh 三份默认关闭的 MCP memory 参考配置之一，通过 `@deepseek-ai/dsh-mcp-client` 以 stdio 方式接入。
 
 ## 已文档化的接线信息
@@ -41,3 +39,6 @@ Memorix 是 dsh 三份默认关闭的 MCP memory 参考配置之一，通过 `@d
 
 **Memorix 的优势是本地启发式、零 LLM/嵌入依赖且项目身份自动取工作目录；但官方指南只给了接线，检索语义要查它自己的文档。**
 
+## 参考资料
+
+- DeepSeek Harness 指南：接入第三方记忆 MCP server，未附固定链接

@@ -7,8 +7,6 @@ name: "Context Caching and Cost"
 
 # 上下文缓存与成本
 
-> 来源：DeepSeek API 官方文档。缓存规则与计费单价变化快，以官方文档为准。
-
 长 system prompt、few-shot 示例与多轮历史会在每次请求里重复发送。上下文缓存把稳定前缀留在服务端，命中部分不再重复计算——对高频、长上下文的 Agent 是数量级的成本差异。
 
 ## 缓存什么
@@ -46,3 +44,6 @@ name: "Context Caching and Cost"
 
 **把不变的内容固定在最前面，让重复请求只付新增部分的钱；命中率是可观测、可优化的工程指标，不是黑盒。**
 
+## 参考资料
+
+- DeepSeek API 文档：https://api-docs.deepseek.com

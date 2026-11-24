@@ -142,3 +142,9 @@ NVIDIA NeMo Gym 提供可扩展、可复现的环境构建方式，覆盖单步�
 - 更简单的方法（提示、上下文工程、工具设计）还没跑通——先把正常路径做对。
 
 > 一条实用主线：需要时先 SFT → 用可验证奖励做 GRPO → 评估 → 检查失败 → 重复。奖励是核心：验证器决定下游一切。
+
+## 参考资料
+
+- Playing Atari with Deep Reinforcement Learning（DQN，arXiv:1312.5602）：https://arxiv.org/abs/1312.5602
+- Proximal Policy Optimization Algorithms（arXiv:1707.06347）：https://arxiv.org/abs/1707.06347
+- DeepSeekMath：GRPO（arXiv:2402.03300）：https://arxiv.org/abs/2402.03300

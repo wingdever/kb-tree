@@ -7,8 +7,6 @@ name: "Frontend Development"
 
 # 前端开发（Frontend Development）
 
-> 来源：web.dev Core Web Vitals 与 MDN JavaScript 执行模型等官方文档。指标、阈值与浏览器行为变化快，以官方文档为准。
-
 前端开发关注**用户如何看见和操作服务**：浏览器如何渲染、事件如何调度、UI 状态如何组织、代码如何构建交付、性能与安全边界在哪。前端处理「结果怎样变成可交互的界面，以及用户动作怎样变成请求」。
 
 两者共用同一套机制的不同形态：「并发」在后端是线程/协程与限流，在前端是事件循环与微任务；「状态」在后端是会话外置，在前端是组件状态与本地存储；「缓存」在后端是服务端缓存，在前端是 HTTP 缓存与浏览器存储。
@@ -18,7 +16,6 @@ name: "Frontend Development"
 - **DOM 与样式**：HTML 解析成 DOM 树，CSS 形成 CSSOM，两者合成渲染树；布局计算几何位置，绘制生成像素，合成把层交给 GPU。
 - **重排与重绘**：改几何属性触发 layout + paint，只改颜色等多只触发 paint；批量读写、用 transform/opacity 做动画可避开重排。
 - **事件循环**：JS 是单线程 + 事件循环。调用栈执行同步代码，异步回调作为 job 入队；HTML 事件循环把 job 分为 task 与 microtask，**微任务队列先清空**再取下一个 task；每个 job 运行到完成（run-to-completion）才让位。单个 job 过长会阻塞点击/滚动——这是「把长任务切片」的根据。
-
 
 ## UI 状态与组件
 
@@ -82,3 +79,7 @@ INP 于 2024 年取代 FID 成为稳定指标。指标会被更好的替代者�
 
 **前端是「状态到界面」的映射层：浏览器模型定边界，状态与构建定结构，性能与安全定底线；在 AI 工程里还要把流式轨迹、工具调用与审批门变成可审计的界面。**
 
+## 参考资料
+
+- web.dev Core Web Vitals：https://web.dev/articles/vitals
+- MDN：https://developer.mozilla.org

@@ -7,8 +7,6 @@ name: "MCP Reference Memory Server"
 
 # MCP Reference Memory
 
-> 来源：DeepSeek Harness 官方指南 Connect a third-party memory MCP server。第三方配置仅为互操作示例，非背书；pin、路径与环境变量以官方文档为准。
-
 MCP Reference Memory 是 dsh 三份默认关闭的 MCP memory 参考配置之一，通过 `@deepseek-ai/dsh-mcp-client` 以 stdio 方式接入。它是三者中**唯一被官方指南说清数据模型与检索行为**的配置。
 
 ## 已文档化的接线信息
@@ -48,3 +46,6 @@ MCP Reference Memory 是 dsh 三份默认关闭的 MCP memory 参考配置之一
 
 **它是可预测性最高的基线：本地知识图谱、子串匹配、零嵌入，但语义、冲突与遗忘都不管——先用它验证跨会话链路，再决定要不要更强的语义。**
 
+## 参考资料
+
+- DeepSeek Harness 指南：接入第三方记忆 MCP server，未附固定链接

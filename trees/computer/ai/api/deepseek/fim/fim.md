@@ -7,8 +7,6 @@ name: "FIM and Chat Prefix"
 
 # FIM 与 Chat Prefix
 
-> 来源：DeepSeek FIM Completion / Chat Prefix Completion 官方指南与 API Reference。Beta 形态变化快，以官方文档为准。
-
 两者都是 Beta 特性，都需要 `base_url="https://api.deepseek.com/beta"`，但走**不同端点**：
 
 | 特性 | 端点 | 输入方式 |
@@ -71,3 +69,6 @@ print(response.choices[0].message.content)
 
 **FIM 用 `prompt` + `suffix` 补中间，Chat Prefix 用 `prefix: true` 续写开头；两者都要 `/beta`，别再把 FIM 写成 chat 消息角色。**
 
+## 参考资料
+
+- DeepSeek FIM / Chat Prefix Completion 指南：https://api-docs.deepseek.com

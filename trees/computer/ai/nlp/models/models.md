@@ -52,4 +52,4 @@ Facebook AI 基于 BERT 的优化版：以自监督方式利用无监督数据�
 | XLNet | Transformer-XL | 排列 LM | 长距离依赖 |
 | RoBERTa | Transformer Encoder | 改进 MLM | 鲁棒理解 |
 
-
+比表格更关键的是训练目标与可见上下文的差别：双向编码适合理解类任务，自回归解码适合生成，二者在 2026 年的分工没有反转。

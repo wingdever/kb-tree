@@ -7,8 +7,6 @@ name: "DeepSeek Models API"
 
 # 模型 API（Lists Models）
 
-> 来源：DeepSeek Lists Models 官方 API Reference。模型能力与规格变化快，以官方文档为准。
-
 `GET https://api.deepseek.com/models` 列出当前可用模型。响应 `object: list`，`data[]` 每项是一个 model object。
 
 ## model object
@@ -30,3 +28,6 @@ name: "DeepSeek Models API"
 
 **`/models` 是模型能力的机器可读真相源：ID、上下文、输出上限、思考档位、按协议差异都从这里取。**
 
+## 参考资料
+
+- DeepSeek 模型列表 API：https://api-docs.deepseek.com

@@ -1,6 +1,6 @@
 ---
 description: "Knowledge tree for the model engineering lifecycle"
-描述: "模型工程全链路知识树导航"
+描述: "模型工程全链路：分词、预训练、微调、蒸馏、推理与评估"
 name: "Model Engineering"
 名称: "模型工程"
 ---

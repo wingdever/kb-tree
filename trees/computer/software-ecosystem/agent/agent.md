@@ -7,8 +7,6 @@ name: "Agent Sub-ecosystem"
 
 # Agent 子生态
 
-> 来源：AAIF 官网、各厂商文档与 2026 年生态盘点。版本与项目清单变化快，以官方页面为准。
-
 Agent 已成形为一个软件品类：有厂商、有运行时、有协议栈、有分发渠道、有中立治理机构。本页是**生态视角**——讲这个品类怎么组织起来；本页不重复。
 
 ## 生态版图
@@ -17,21 +15,21 @@ Agent 已成形为一个软件品类：有厂商、有运行时、有协议栈�
 |---|---|---|
 | 编码 Agent | Claude Code、OpenAI Codex、Cursor、Cline、OpenCode、Gemini CLI、Qoder CN、CodeBuddy | IDE 插件 / CLI / 云任务；事实上的主战场 |
 | 通用 Agent | ChatGPT Work、Claude Cowork、Gemini 的 agent 模式 | 跨文件、桌面与云应用完成交付物 |
-| 知识 Agent | 腾讯 ima ||
+| 知识 Agent | 腾讯 ima | AI 知识库 App |
 | 渠道型 | OpenClaw、Hermes、nanobot | 常驻 + 消息渠道（29+ 渠道、 skills、持久会话） |
 | 开放栈 | AAIF 治理下的 MCP / A2A / goose / AGENTS.md / agentgateway | 指令 → 运行时 → 工具 → Agent 间 → 流量 |
 | 基础设施 | LangGraph、LangSmith、Agent Router、OpenEnv / OpenSandbox | 编排、可观测、路由、沙箱 |
 
 ## 共有维度
 
-| 维度 | 生态层的问题 | 机制入口 |
-|---|---|---|
-| 身份与凭证 | 谁的账号、什么权限、如何审批 ||
-| 工具与协议 | MCP 接工具、A2A 接 Agent、ACP 接编辑器 ||
-| 上下文与技能 | AGENTS.md / SKILL.md / Hooks / 记忆文件 ||
-| 运行与沙箱 | 本地 CLI、容器、云任务、工作树隔离 ||
-| 评估与可观测 | 轨迹、黄金集、成本与延迟 ||
-| 分发 | IDE 市场、npm / skills.sh、消息渠道、云 Runner ||
+| 维度 | 生态层的问题 |
+|---|---|
+| 身份与凭证 | 谁的账号、什么权限、如何审批 |
+| 工具与协议 | MCP 接工具、A2A 接 Agent、ACP 接编辑器 |
+| 上下文与技能 | AGENTS.md / SKILL.md / Hooks / 记忆文件 |
+| 运行与沙箱 | 本地 CLI、容器、云任务、工作树隔离 |
+| 评估与可观测 | 轨迹、黄金集、成本与延迟 |
+| 分发 | IDE 市场、npm / skills.sh、消息渠道、云 Runner |
 
 ## 治理与收敛
 
@@ -50,3 +48,6 @@ Agent 已成形为一个软件品类：有厂商、有运行时、有协议栈�
 
 **Agent 子生态由「编码 Agent 主战场 + 开放协议栈 + 中立治理 + 多渠道分发」构成；机制看 `ai/agent/`，生态看本页。**
 
+## 参考资料
+
+- 各厂商官方文档与 AAIF 公告，未附固定链接

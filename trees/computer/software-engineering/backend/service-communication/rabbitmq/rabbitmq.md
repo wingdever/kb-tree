@@ -7,8 +7,6 @@ name: "RabbitMQ Transport"
 
 # RabbitMQ 传输（RabbitMQ Transport）
 
-> 来源：RabbitMQ 官方文档与 NestJS 官方微服务文档。配置项与版本变化快，以官方文档为准。
-
 RabbitMQ 是基于 AMQP 的消息代理，在 NestJS 中以 RMQ transporter 接入。它适合需要复杂路由、可靠投递与失败隔离的场景。
 
 ## 核心特性
@@ -32,3 +30,8 @@ RabbitMQ 是基于 AMQP 的消息代理，在 NestJS 中以 RMQ transporter 接�
 - exchange 与 binding 设计混乱，路由不可预测。
 - 队列无界增长，积压最终压垮 broker。
 - 把 RabbitMQ 当 RPC 用，忽略请求响应超时与关联 ID。
+
+## 参考资料
+
+- RabbitMQ 文档：https://www.rabbitmq.com/docs
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

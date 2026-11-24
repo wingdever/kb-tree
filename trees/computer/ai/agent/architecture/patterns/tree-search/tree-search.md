@@ -47,3 +47,8 @@ name: "Tree Search: ToT, GoT, MCTS, LATS"
 
 研究还发现：生成器比判别器重要得多——提升模型提出好思路的能力帮助大，提升其判断能力帮助有限。
 
+## 参考资料
+
+- Tree of Thoughts（arXiv:2305.10601）：https://arxiv.org/abs/2305.10601
+- Graph of Thoughts（arXiv:2308.09687）：https://arxiv.org/abs/2308.09687
+- Language Agent Tree Search（LATS，arXiv:2310.04406）：https://arxiv.org/abs/2310.04406

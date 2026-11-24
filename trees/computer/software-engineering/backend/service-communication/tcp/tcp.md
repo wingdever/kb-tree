@@ -7,8 +7,6 @@ name: "TCP Transport"
 
 # TCP 传输（TCP Transport）
 
-> 来源：NestJS 官方微服务文档。配置项与版本变化快，以官方文档为准。
-
 TCP 是 NestJS 微服务的**默认传输层**，基于 Node 的 `net` / TLS 模块，无消息 broker。它适合服务少、拓扑简单、需要低开销同步调用的场景，也适合与非 Nest 服务直接通信。
 
 ## 数据包格式
@@ -42,3 +40,7 @@ TCP 传输不写裸 JSON：`JsonSocket` 先写 JSON 文本长度，再写 `#`，
 - 用字节数或码点数计算长度前缀，非 ASCII 负载错位。
 - 把 TCP 当持久消息系统，期望消息不丢或可重放。
 - 忽略 `maxBufferSize` 与超时，超大包或半开连接拖垮服务。
+
+## 参考资料
+
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

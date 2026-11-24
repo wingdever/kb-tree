@@ -7,8 +7,6 @@ name: "gRPC Transport"
 
 # gRPC 传输（gRPC Transport）
 
-> 来源：gRPC 官方文档与 NestJS 官方微服务文档。API 形态与版本变化快，以官方文档为准。
-
 gRPC 是基于 HTTP/2 的高性能 RPC 框架，默认用 Protocol Buffers 同时作为接口定义语言与线上格式，由 `protoc` 生成各语言桩代码，是 CNCF 孵化项目。在 NestJS 中它是内置 transporter 之一。
 
 ## 核心特性
@@ -32,3 +30,8 @@ gRPC 是基于 HTTP/2 的高性能 RPC 框架，默认用 Protocol Buffers 同�
 - proto 破坏性变更不升版本号，导致上下游同时失效。
 - 把 correlation id 等塞进 payload，污染业务 schema。
 - 只追求基准吞吐，忽略实际瓶颈常在数据库与序列化。
+
+## 参考资料
+
+- gRPC 文档：https://grpc.io/docs/
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

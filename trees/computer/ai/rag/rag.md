@@ -1,6 +1,6 @@
 ---
 description: "Knowledge tree for retrieval-augmented generation engineering"
-描述: "RAG 工程知识树导航"
+描述: "RAG 工程：切块、嵌入、索引、检索与评估的全链路"
 name: "Retrieval-Augmented Generation"
 名称: "检索增强生成"
 ---
@@ -8,10 +8,6 @@ name: "Retrieval-Augmented Generation"
 # RAG 知识树
 
 RAG（检索增强生成）让模型在查询时从自有数据中检索相关事实，而不是只依赖训练记忆。本目录把 RAG 工程拆成 14 个子知识点，每个自成一个目录、目录内放同名介绍 md。
-
-## 建议阅读顺序
-
-
 ## 一句话主线
 
 从"检索而非记忆"的基础出发，把文档切好块、选对嵌入与索引、用混合检索与重排精排。

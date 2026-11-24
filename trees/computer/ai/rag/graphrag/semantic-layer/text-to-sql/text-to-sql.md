@@ -50,7 +50,7 @@ Agentic 循环优于一次性翻译：schema 探索 → 对活库执行 → 从�
 | 错误 join 路径 | 重复行、SUM 膨胀（fan-out：订单×3 明细×2 支付 = 6 行） | FK 提示 + 显式 join 链 few-shot；声明关系基数、批准 join 路径；每次 join 前后测行数 |
 | 幻觉列 | "column X does not exist" | 对活 catalog 校验标识符；裁剪 schema 块 |
 | 错误聚合粒度 | 平均的平均、缺 GROUP BY | 标注 grain 的 few-shot 示例 |
-| 指标歧义 | revenue 指 gross/net/booked/recognized 中哪个？ ||
+| 指标歧义 | revenue 指 gross/net/booked/recognized 中哪个？ | 先查受治理指标定义，再生成 SQL |
 | 日期误判 | "上季度"解析到训练时代 | 注入当前日期、时区、财年规则 |
 | 静默空结果 | 明明有数据却返回 0 行 | 零行重试 + 重过滤提示 |
 | 越界 | 查询碰到非白名单表 | allow-list 拒绝，再问澄清 |

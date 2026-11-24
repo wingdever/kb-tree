@@ -7,8 +7,6 @@ name: "MQTT Transport"
 
 # MQTT 传输（MQTT Transport）
 
-> 来源：MQTT 官方规范与 NestJS 官方微服务文档。协议版本与接口形态变化快，以官方文档为准。
-
 MQTT 是基于主题的轻量发布/订阅协议，最初为低带宽、不稳定网络的设备与边缘场景设计。在 NestJS 中它是内置 transporter 之一；消息按主题路由，发布方只管发，订阅方按主题接收。
 
 ## 核心特性
@@ -31,3 +29,8 @@ MQTT 是基于主题的轻量发布/订阅协议，最初为低带宽、不稳�
 - 主题层级设计混乱，订阅通配符过宽导致消息风暴。
 - 把所有消息设为最高 QoS，带宽与确认开销失控。
 - 把设备侧的不可靠网络假设照搬到数据中心内部。
+
+## 参考资料
+
+- MQTT 规范：https://mqtt.org/
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

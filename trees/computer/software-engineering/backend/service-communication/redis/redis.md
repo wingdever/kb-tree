@@ -7,8 +7,6 @@ name: "Redis Transport"
 
 # Redis 传输（Redis Transport）
 
-> 来源：Redis 官方文档与 NestJS 官方微服务文档。配置项与版本变化快，以官方文档为准。
-
 Redis 传输借 Redis 的发布/订阅或 Stream 在微服务间传消息。在 NestJS 中它是内置 transporter 之一；如果系统已在用 Redis，用它承载轻量事件可以避免再运维一套 broker。
 
 ## 核心特性
@@ -30,3 +28,8 @@ Redis 传输借 Redis 的发布/订阅或 Stream 在微服务间传消息。在 
 - 混淆 channel 与 pattern，以为 pattern 字段决定路由。
 - 单个 Redis 同时承担缓存、会话与消息，负载互相干扰。
 - 消息体过大，拖慢 Redis 并影响缓存命中延迟。
+
+## 参考资料
+
+- Redis 文档：https://redis.io/docs/latest/
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

@@ -7,8 +7,6 @@ name: "DeepSeek Context Caching"
 
 # 上下文缓存（Context Caching on Disk）
 
-> 来源：DeepSeek Context Caching 官方指南。缓存规则变化快，以官方文档为准。
-
 DeepSeek API 的**磁盘上下文缓存默认对所有用户开启**，无需修改代码即可受益。每次请求都会触发缓存构建；后续请求若与之前请求有重叠前缀，重叠部分从缓存读取，计为一次**缓存命中**。
 
 ## 命中规则：完整匹配缓存前缀单元
@@ -45,3 +43,6 @@ DeepSeek API 的**磁盘上下文缓存默认对所有用户开启**，无需修
 
 **默认开启、按完整前缀单元命中、命中可观测但不保证——把稳定内容放在最前面，让请求尽量完整复用同一个单元。**
 
+## 参考资料
+
+- DeepSeek Context Caching 指南：https://api-docs.deepseek.com

@@ -7,8 +7,6 @@ name: "Microservice Frameworks"
 
 # 微服务框架（Microservice Frameworks）
 
-> 来源：microservices.io 模式目录、Apache Dubbo 官方文档、Istio 官方文档、gRPC 官方文档。框架能力矩阵与接口形态变化快，以官方文档为准。
-
 微服务架构把应用组织为一组**可独立部署、松耦合**的服务，服务围绕业务能力组织，通常由小团队拥有。收益来自"独立部署"这一属性本身——独立发布节奏、独立扩缩、故障隔离；代价是网络失败、分布式一致性、可观测性与运维协调。如果组织并不需要独立部署节奏，引入注册中心、网关、熔断与分布式事务就是纯负债。
 
 单体并非反模式：小团队小项目用单体往往更好。边界尚未稳定时过早拆分会造出**分布式单体**（distributed monolith），比单体更难改。务实路径是先把边界在单体里跑清楚，再选择性地把高变更、高扩展、跨团队的领域拆成服务，用绞杀者模式（Strangler Fig）渐进迁移。
@@ -66,3 +64,10 @@ REST 以资源与 HTTP 语义为中心，JSON 可读、调试工具成熟、浏�
 - 忽略可观测性：跨服务失败只能靠猜。
 - 把 Saga 当默认方案，而不是先重构边界避免跨服务事务。
 - 同时维护平台发现与框架注册中心，出现双份服务视图。
+
+## 参考资料
+
+- microservices.io 模式目录：https://microservices.io/patterns/
+- Apache Dubbo 文档：https://dubbo.apache.org
+- Istio 文档：https://istio.io/latest/docs/
+- gRPC 文档：https://grpc.io/docs/

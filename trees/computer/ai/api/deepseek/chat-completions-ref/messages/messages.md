@@ -7,8 +7,6 @@ name: "Chat Messages Schema"
 
 # messages[] 结构
 
-> 来源：DeepSeek Chat Completions API 官方 API Reference。字段与约束变化快，以官方文档为准。
-
 `messages` 是必填数组，至少 1 项，每项为以下角色之一：system、user、assistant、tool、latest reminder（官方 schema 列出但正文未展开该角色的字段）。各角色共有可选 `name`（`string`），用于区分同角色的参与者。
 
 ## system message
@@ -78,3 +76,6 @@ name: "Chat Messages Schema"
 
 **user/tool 的 content 可以是字符串或带 `type` 的 parts 数组；图片用 `image_url`、文件用 `file_id`/`file_data` 二选一，assistant 的 `prefix` 是 Beta 续写入口。**
 
+## 参考资料
+
+- DeepSeek Chat Completions API Reference：https://api-docs.deepseek.com

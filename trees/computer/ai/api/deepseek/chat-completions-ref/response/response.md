@@ -7,8 +7,6 @@ name: "Chat Completions Response Schema"
 
 # Response Schema（chat completion object）
 
-> 来源：DeepSeek Chat Completions API 官方 API Reference（200 OK）。字段与取值变化快，以官方文档为准。
-
 ## 顶层字段
 
 | 字段 | 类型 | 必填 | 说明 |
@@ -97,3 +95,6 @@ name: "Chat Completions Response Schema"
 
 **顶层只有 7 个字段，复杂度集中在 `choices[].message` 的 9 个字段与 `usage` 的两层明细；`finish_reason` 的 6 个取值是分支处理的关键。**
 
+## 参考资料
+
+- DeepSeek Chat Completions API Reference：https://api-docs.deepseek.com

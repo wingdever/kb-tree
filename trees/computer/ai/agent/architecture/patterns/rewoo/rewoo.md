@@ -41,3 +41,6 @@ ReWOO 把规划集中在一次前置调用中完成：规划器生成带占位�
 - **特化 Plan-and-Execute**：用占位变量 DAG 把规划与观察彻底解耦，比一般 Plan-and-Execute 更省。
 - **被 LLMCompiler 泛化**：把 ReWOO 的 plan-as-DAG 用任务分发器并行执行独立步骤，原论文声称比顺序执行快 3.6×。
 
+## 参考资料
+
+- ReWOO: Decoupling Reasoning from Observations（arXiv:2305.18323）：https://arxiv.org/abs/2305.18323

@@ -7,8 +7,6 @@ name: "Computer-Use Agents"
 
 # 计算机操作 Agent（Computer Use）
 
-> 来源：Anthropic / OpenAI / Google 官方文档与 2026 年生态资料。Anthropic 官方文档在本地区被跳转拦截，本节以多来源交叉核对为主；能力、分数与工具集变化极快，以官方文档为准。
-
 Computer Use 让多模态模型**像人一样操作图形界面**：看截图，输出点击、输入、滚动等动作，由 harness 执行后返回新截图。它用于**没有 API 的系统**——遗留桌面应用、厂商门户、只给界面不给接口的工作流。
 
 ## 感知—行动循环
@@ -28,7 +26,7 @@ Computer Use 让多模态模型**像人一样操作图形界面**：看截图，
 | 方案 | 怎么行动 | 适合 | 不适合 |
 |---|---|---|---|
 | **API / MCP 工具调用** | 结构化调用，按 schema | 任何有 API 或 MCP server 的系统 | 覆盖不到的功能 |
-|| 对页面结构写选择器或让 Agent 驱动浏览器 | 稳定的 Web 流程；DOM 可读的页面 | 桌面应用、canvas、无语义界面 |
+| **Browser Use** | 对页面结构写选择器或让 Agent 驱动浏览器 | 稳定的 Web 流程；DOM 可读的页面 | 桌面应用、canvas、无语义界面 |
 | **RPA**（UiPath 等） | 开发者预先录制/编排步骤 | 高稳定、高频、任务型流程 | 界面多变、需要推理的任务 |
 | **Computer Use** | 截图 + 坐标 + 按键 | 无 API、界面多变、遗留系统 | 有 API 却不用——慢且贵 |
 
@@ -68,3 +66,8 @@ Computer Use 让多模态模型**像人一样操作图形界面**：看截图，
 
 **Computer Use 是「没有 API 时的最后一招」：截图感知、坐标行动、逐步验证；用隔离 VM 与审批门兜住风险，能走 API 或稳定脚本就别走它。**
 
+## 参考资料
+
+- Anthropic 官方文档：https://docs.anthropic.com
+- OpenAI 官方文档：https://platform.openai.com/docs
+- Google AI 官方文档：https://ai.google.dev/gemini-api/docs

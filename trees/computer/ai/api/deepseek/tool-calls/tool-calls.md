@@ -7,8 +7,6 @@ name: "DeepSeek Tool Calling"
 
 # 工具调用（Chat Completions 格式，OpenAI 兼容）
 
-> 来源：DeepSeek API 官方文档。字段与参数变化快，以官方文档为准。
-
 ## 完整示例（非思考模式）
 
 ```python
@@ -94,3 +92,6 @@ print(message.content)                # "The current temperature in Hangzhou is 
 
 **标准 OpenAI 循环直接可用，扩展参数走 `extra_body`；唯一硬限制是 Chat Completions 不能在历史中间插入工具调用。**
 
+## 参考资料
+
+- DeepSeek API 文档：https://api-docs.deepseek.com

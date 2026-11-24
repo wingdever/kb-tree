@@ -104,3 +104,8 @@ Anthropic 特别指出两个最有前景的应用方向：
 **客服**：把熟悉的聊天界面与工具集成带来的增强能力结合。对话天然是流程化的，同时需要访问外部信息和执行动作——工具可以拉取客户数据、订单历史、知识库文章，也能以编程方式处理退款或更新工单。成功可以通过用户定义的"解决"来清晰衡量；已有多家公司采用"只为成功解决付费"的用量定价模式，说明对其 Agent 的有效性有信心。
 
 **编码 Agent**：软件开发是从代码补全演进到自主解决问题的天然土壤。代码方案可通过自动化测试验证，Agent 能以测试结果为反馈迭代；问题空间定义明确、结构清晰；输出质量可客观衡量。Anthropic 的实现已经能仅凭 PR 描述解决 SWE-bench Verified 中的真实 GitHub issue。注意：自动测试能验证功能，但人工审查对确保方案符合更广泛系统要求仍然关键。
+
+## 参考资料
+
+- Anthropic：Building Effective Agents：https://www.anthropic.com/research/building-effective-agents
+- ReAct（arXiv:2210.03629）：https://arxiv.org/abs/2210.03629

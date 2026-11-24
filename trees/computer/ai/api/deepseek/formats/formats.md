@@ -7,8 +7,6 @@ name: "DeepSeek Endpoints and Models"
 
 # 端点与模型
 
-> 来源：DeepSeek API 官方文档。端点、模型名与参数变化快，以官方文档为准。
-
 DeepSeek API **兼容 OpenAI / Anthropic 格式**——改 base_url 即可用对应 SDK 接入。提供三种端点：
 
 | 格式 | base_url | 说明 |
@@ -74,3 +72,6 @@ print(response.choices[0].message.content)
 
 **同一个 key、换 base_url 即可跨三种形态；扩展参数走 `extra_body`，思考模式决定 temperature 与工具回传方式。**
 
+## 参考资料
+
+- DeepSeek API 文档：https://api-docs.deepseek.com

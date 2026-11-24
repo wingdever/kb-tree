@@ -7,8 +7,6 @@ name: "DeepSeek Balance API"
 
 # 余额 API（Get User Balance）
 
-> 来源：DeepSeek Get User Balance 官方 API Reference。字段与扣费规则变化快，以官方文档为准。
-
 `GET https://api.deepseek.com/user/balance` 返回账户余额。
 
 ## 响应
@@ -30,3 +28,6 @@ name: "DeepSeek Balance API"
 
 **一个 GET 拿回可用性与分币种余额；赠送余额优先扣除，费用按各 API 的计费单位分别累计。**
 
+## 参考资料
+
+- DeepSeek 余额查询 API：https://api-docs.deepseek.com

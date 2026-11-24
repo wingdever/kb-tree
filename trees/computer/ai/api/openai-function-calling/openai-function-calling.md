@@ -9,8 +9,6 @@ name: "OpenAI Function Calling"
 
 两种集成：**Responses API**（新）与 **Chat Completions API**。GPT-6 Astra / GPT-6.1 Sol 的 tool calling 需用 Responses API；Chat Completions 示例用 GPT-5.6 Terra（reasoning 关闭）。
 
-> 来源：OpenAI Function Calling 官方文档。API 形态与模型名变化快，以官方文档为准。
-
 ## 核心五步流程
 
 1. 带 `tools` 向模型发请求。
@@ -165,3 +163,7 @@ Strict 基于 Structured Outputs，要求：
 - 用 system prompt 说明何时（以及何时不）用每个函数——明确告诉模型该做什么。
 - 包含示例与边界案例，尤其用于纠正反复出现的失败（注意：加示例可能损害推理模型性能）。
 - 对延迟加载工具：详细指南放函数描述，namespace 描述保持简洁。
+
+## 参考资料
+
+- OpenAI Function Calling 指南：https://platform.openai.com/docs/guides/function-calling

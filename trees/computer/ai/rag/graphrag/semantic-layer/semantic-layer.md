@@ -11,9 +11,7 @@ name: "Semantic Layer and Metric Store"
 
 ## 子知识点
 
-| 目录 | 内容 |
-|---|---|
-|| 生成技术本身：五阶段管线、schema linking、基准、失败模式、安全护栏、工具 |
+- **Text-to-SQL**：生成技术本身——五阶段管线、schema linking、基准、失败模式、安全护栏与工具。
 
 语义层与 Text-to-SQL 是"约束 vs 生成"的互补：本页讲如何**治理定义**（让模型从封闭指标集选），子页讲如何**把自然语言生成 SQL**（以及为什么裸生成在企业 schema 上会失败）。2026 更强的模式是 text-to-semantic——让 Agent 输出结构化请求给语义层编译，而非直接写 SQL。
 

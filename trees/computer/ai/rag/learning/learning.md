@@ -22,7 +22,7 @@ name: "RAG Learning Resources"
 |---|---|
 | `towardsai/ragbook-notebooks` | Towards AI《Building LLMs for Production》配套 notebook |
 | `Nipi64310/RAG-Book` | 《大模型 RAG 实战》代码与资料汇总 |
-| `tomasonjo/kg-rag` ||
+| `tomasonjo/kg-rag` | 用 Neo4j 搭图谱的 GraphRAG 实践仓库 |
 | `abhinav-kimothi/A-Simple-Guide-to-RAG` | 《A Simple Introduction to RAG》示例与插图源码 |
 
 ## 怎么配本树读
@@ -34,13 +34,13 @@ name: "RAG Learning Resources"
 
 书与树节点交替推进，每阶段先跑通再扩展，并有可验收产出。
 
-| 阶段 | 读什么 | 树节点 | 交付物 |
-|---|---|---|---|
-| 1. 建立心智模型 | `all-in-rag` 第 1 章 + 配套代码 || 裸代码写一个四步 RAG：加载 → 分块 → 嵌入 → 检索 → 生成，不依赖框架 |
-| 2. 管道部件 | 同教程第 2–3 章（数据、嵌入、向量库、Milvus） || 同一语料上对比两种分块策略与两种索引配置，记录 Recall@k |
-| 3. 检索与查询 | 第 4 章（混合检索、查询构建、Text2SQL、查询重构） || 搭出 BM25 + 向量 + RRF + rerank 的流水线，说明每步为何需要 |
-| 4. 评估与保障 | 第 6 章 + `towardsai/ragbook-notebooks` || 建一个 20 条问题的黄金集，跑 RAG Triad，定位失败 case |
-| 5. 进阶二选一 ||| 同一批问题分别走向量 RAG、GraphRAG、Wiki 编译，写对比结论 |
+| 阶段 | 读什么 | 交付物 |
+|---|---|---|
+| 1. 建立心智模型 | `all-in-rag` 第 1 章 + 配套代码 | 裸代码写一个四步 RAG：加载 → 分块 → 嵌入 → 检索 → 生成，不依赖框架 |
+| 2. 管道部件 | 同教程第 2–3 章（数据、嵌入、向量库、Milvus） | 同一语料上对比两种分块策略与两种索引配置，记录 Recall@k |
+| 3. 检索与查询 | 第 4 章（混合检索、查询构建、Text2SQL、查询重构） | 搭出 BM25 + 向量 + RRF + rerank 的流水线，说明每步为何需要 |
+| 4. 评估与保障 | 第 6 章 + `towardsai/ragbook-notebooks` | 建一个 20 条问题的黄金集，跑 RAG Triad，定位失败 case |
+| 5. 进阶二选一 | 任一进阶资料 | 同一批问题分别走向量 RAG、GraphRAG、Wiki 编译，写对比结论 |
 
 主线：**先跑通最小管道 → 再逐部件优化并有指标 → 最后按场景选高级形态**。
 

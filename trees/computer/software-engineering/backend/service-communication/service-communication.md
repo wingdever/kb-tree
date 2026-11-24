@@ -7,8 +7,6 @@ name: "Service Communication"
 
 # 服务通信（Service Communication）
 
-> 来源：NestJS 官方微服务文档及各协议官方文档。接口形态与版本变化快，以官方文档为准。
-
 服务通信解决的是**一个请求或事件如何跨进程边界到达另一个服务**。它位于服务治理之下：服务发现决定"发给谁"，传输层决定"怎么发"。同一个微服务框架常把多种传输机制抽象成统一接口，让应用代码在切换传输层时不用改。
 
 ## 两种消息风格
@@ -49,3 +47,7 @@ NestJS 的 `ClientProxy` 把各传输层的 `send()`（请求响应）与 `emit(
 - 无界队列堆积，最终 OOM 或雪崩。
 - 忽略序列化边界：跨语言时长度前缀、编码与 schema 不一致导致静默错位。
 - 为简单内部调用引入重型 broker，运维成本超过收益。
+
+## 参考资料
+
+- NestJS 微服务文档：https://docs.nestjs.com/microservices/basics

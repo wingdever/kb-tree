@@ -7,8 +7,6 @@ name: "MCP Memory Overlay"
 
 # MCP Memory Overlay（dsh）
 
-> 来源：DeepSeek Harness 官方指南 Connect a third-party memory MCP server。第三方配置仅为互操作示例，非背书；pin、路径与环境变量以官方文档为准。
-
 DeepSeek Harness（dsh）内置的会话日志与自动压缩都不跨会话。跨会话记忆可以通过 `@deepseek-ai/dsh-mcp-client` 挂载外部 MCP memory server——官方给了三份**默认关闭**的参考配置。
 
 ## 分工边界
@@ -72,3 +70,6 @@ dsh **不**下载 server、不初始化数据库、不选模型与 embedding pro
 
 **dsh 只负责把外部 MCP memory server 的工具挂进模型，存储与语义全归 provider；三份配置默认关闭，验证要跨新会话而不是同会话复述。**
 
+## 参考资料
+
+- DeepSeek Harness 指南：接入第三方记忆 MCP server，未附固定链接

@@ -7,8 +7,6 @@ name: "DeepSeek Files API"
 
 # 文件 API（Files）
 
-> 来源：DeepSeek Files API 官方 API Reference 与指南。字段与有效期规则变化快，以官方文档为准。
-
 四个端点共用同一个 **file object**：
 
 | 操作 | 端点 | 说明 |
@@ -40,3 +38,6 @@ name: "DeepSeek Files API"
 
 **上传拿 `file-api-...` id、在 Chat Completions 里用 `file_id` 引用；列表靠 `after` 游标翻页，有效期在上传时一次性设定。**
 
+## 参考资料
+
+- DeepSeek Files API：https://api-docs.deepseek.com

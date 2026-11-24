@@ -1,6 +1,6 @@
 ---
 description: "Knowledge tree for API and tool-calling specifications"
-描述: "API 与工具调用规范知识树导航"
+描述: "各厂商工具调用 API 的规范、字段与错误处理"
 name: "API and Tool-Calling Specs"
 名称: "API 与工具调用规范"
 ---

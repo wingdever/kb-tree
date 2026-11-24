@@ -54,3 +54,6 @@ Final Answer: The user paid $50 last month.
 
 在 2026 生产系统中，ReAct 通常是底座——自修正、验证器、记忆都叠加在它之上。
 
+## 参考资料
+
+- ReAct: Synergizing Reasoning and Acting in Language Models（arXiv:2210.03629）：https://arxiv.org/abs/2210.03629

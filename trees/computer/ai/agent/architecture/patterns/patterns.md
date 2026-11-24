@@ -1,6 +1,6 @@
 ---
 description: "Vocabulary of core agent architectures and design patterns"
-描述: "Agent 核心架构与设计模式的词汇表导航"
+描述: "Agent 架构模式词汇表：ReAct、Plan-Execute、Reflexion 等"
 name: "Core Architectures and Design Patterns"
 名称: "核心架构与设计模式"
 ---

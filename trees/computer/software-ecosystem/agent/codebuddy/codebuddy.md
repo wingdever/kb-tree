@@ -7,8 +7,6 @@ name: "CodeBuddy"
 
 # CodeBuddy
 
-> 来源：CodeBuddy 官方文档与发布说明。版本与能力变化快，以官方文档为准。
-
 CodeBuddy 是腾讯云的编码 Agent，覆盖 **CLI / IDE / 云** 三种形态。本页是生态样本视角。
 
 ## 形态与厂商
@@ -25,10 +23,6 @@ CodeBuddy 是腾讯云的编码 Agent，覆盖 **CLI / IDE / 云** 三种形态�
 - **A2A**：CLI 可作标准 A2A 客户端发现并调用其他授权 Agent，支持并行委派；`--a2a` 隐藏模式以 stdio 常驻服务供 SDK / CloudAgent 调用；`A2ASendMessage` 可带 URL 附件。
 - **无头与后台**：headless `-p` 输出 text / json / stream-json；后台任务实时推送输出，可主动取消；`--output-format json` + `--json-schema` 得结构化输出。
 - **精简产物**：`codebuddy-lite-wb` 面向 WorkBuddy 场景，冷启动更快、常驻内存更低。
-
-## 在树中的位置
-
-
 ## 官方入口
 
 `https://www.codebuddy.cn/docs/cli/overview`；发布说明 `https://www.codebuddy.cn/docs/cli/release-notes/v2.143.0`。
@@ -37,3 +31,6 @@ CodeBuddy 是腾讯云的编码 Agent，覆盖 **CLI / IDE / 云** 三种形态�
 
 **CodeBuddy 是「终端原生 + 云 IDE」双形态编码 Agent，差异化在 A2A 双向能力与 WorkBuddy 精简产物。**
 
+## 参考资料
+
+- CodeBuddy 官方文档与发布说明，未附固定链接

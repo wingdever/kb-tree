@@ -1,6 +1,6 @@
 ---
 description: "Knowledge tree for splitting documents into retrieval units"
-描述: "切块策略知识树导航"
+描述: "切块策略：八种方法、父子块与上下文增强"
 name: "Chunking Strategies"
 名称: "切块策略"
 ---
