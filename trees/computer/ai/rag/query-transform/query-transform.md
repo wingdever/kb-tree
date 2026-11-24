@@ -56,4 +56,3 @@ RAG 系统的质量取决于中间那一步搜索。用户问题含糊、用词�
 
 LangChain `MultiQueryRetriever` 从单问题生成多个变体并返回去重并集；LlamaIndex `HyDEQueryTransform` 配 `TransformQueryEngine` 包裹任意 retriever 透明应用变换。
 
-> 相关：混合检索与 RRF 见 `../retrieval/fusion/`；重排见 `../retrieval/rerank/`；查询路由与 Agent 决策见 `../agentic-rag/`；评估方法见 `../eval/`。

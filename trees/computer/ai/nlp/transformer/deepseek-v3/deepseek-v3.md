@@ -62,4 +62,3 @@ DeepSeek-V3 是把多个架构创新组装成一个 671B 生产模型的典型�
 
 两者共享同一 MoE 架构与 128K 上下文，区别在输出机制：V3 是通用指令模型，直接生成可见文本（输出上限 8192 token）；R1 是推理模型，用 GRPO 强化学习训练，输出含隐藏思维链（在 `reasoning_content` 字段）——R1 的 64K 输出上限由隐藏思考与可见回答共享，复杂数学题 4.5 万思考 token 会挤占可见回答空间。
 
-> 相关：MoE 通用原理见 `../moe/`；注意力变体（GQA 等）见 `../internals/`；Block 结构见 `../block/`；分布式训练与 DualPipe 所属领域见 `../../../model/distributed/`；推理部署见 `../../../model/inference/`。

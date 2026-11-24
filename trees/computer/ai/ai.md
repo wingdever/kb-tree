@@ -15,12 +15,12 @@ name: "Artificial Intelligence"
 
 | 领域 | 入口 | 回答的问题 |
 |---|---|---|
-| **agent** | `agent/agent.md` | 怎么设计、构建、评估、部署 Agent；multi、MCP、LangGraph、安全、obs |
-| **rag** | `rag/rag.md` | 怎么让模型检索自有知识；记忆机制与 Agentic RAG |
-| **model** | `model/model.md` | 模型怎么分词、预训练、训练、微调、distill、压缩、部署、eval；multimodal 与 RL |
-| **nlp** | `nlp/nlp.md` | Transformer 架构、意图识别、机器翻译、世界信息结构、语言模型谱系与应用 |
-| **world-model** | `world-model/world-model.md` | 世界模型如何预测环境状态以规划；JEPA/生成式/3D/模型基 RL 与具身智能 |
-| **api** | `api/api.md` | 各厂商工具调用 API 的具体字段、JSON 形状、控制参数与错误处理 |
+| **agent** || 怎么设计、构建、评估、部署 Agent；multi、MCP、LangGraph、安全、obs |
+| **rag** || 怎么让模型检索自有知识；记忆机制与 Agentic RAG |
+| **model** || 模型怎么分词、预训练、训练、微调、distill、压缩、部署、eval；multimodal 与 RL |
+| **nlp** || Transformer 架构、意图识别、机器翻译、世界信息结构、语言模型谱系与应用 |
+| **world-model** || 世界模型如何预测环境状态以规划；JEPA/生成式/3D/模型基 RL 与具身智能 |
+| **api** || 各厂商工具调用 API 的具体字段、JSON 形状、控制参数与错误处理 |
 
 ## 一句话主线
 

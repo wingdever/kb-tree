@@ -13,7 +13,7 @@ name: "DeepSeek Strict Mode"
 
 ## 启用条件
 
-1. `base_url="https://api.deepseek.com/beta"` 开启 Beta（见 `../formats/`）
+1. `base_url="https://api.deepseek.com/beta"` 开启 Beta
 2. tools 列表中**所有** function 都设 `"strict": true`
 3. 服务端校验 JSON Schema，不符合规范或含不支持类型则返回错误
 
@@ -84,4 +84,3 @@ string 示例：
 
 **Beta 通道 + 全部工具 strict + 受限 Schema 子集：转换前先把 schema 按支持的类型与约束改写，否则请求直接报错。**
 
-> 相关：基础工具调用见 `../tool-calls/`；通用 Schema 规范见 `../../common/common.md`。

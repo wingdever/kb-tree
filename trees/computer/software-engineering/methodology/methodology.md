@@ -43,4 +43,3 @@ name: "Software Development Methodologies"
 - 机械执行仪式（站会、回顾）而不解决真实阻塞。
 - 方法论之争掩盖了真正的问题：需求不清、边界不稳、反馈链断裂。
 
-> 相关：迭代在生命周期中的位置见 `../sdlc/sdlc.md`；交付节奏与 DORA 指标见 `../devops/devops.md`；规格驱动开发（AI 时代以规格为中心的开发范式）见 `../spec-driven/spec-driven.md`；软件工程总览见 `../software-engineering.md`；计算机学科总览见 `../../computer.md`。

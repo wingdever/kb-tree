@@ -63,12 +63,9 @@ Git 历史迁移以分钟计（镜像克隆 + 推送分支标签），但围绕�
 
 ## 与树中其它节点的关系
 
-- 编码 Agent 的操作循环见 `../../ai/agent/coding/`；PR 与评审流程见 `../../ai/agent/build/`、`../../software-engineering/quality/`。
-- MCP 协议本身见 `../../ai/agent/mcp/`；工具接入形态见 `../../ai/api/mcp-tools/`。
-- 工具注册与权限面见 `../../ai/agent/tool/`；CI/CD 的部署侧归云原生与 DevOps 子生态（尚未展开）。
+CI/CD 的部署侧归云原生与 DevOps 子生态（尚未展开）。
 
 ## 一句话主线
 
 **代码托管生态是「Git 工作树 + Forge 治理面 + 两层 MCP」的组合；Agent 能操作仓库，但真正保证安全的是分支规则、必需检查与最小权限，而不是接口有多顺。**
 
-> 相关：软件生态总览见 `../`；开发工具生态见 `../dev-tools/`；协作办公生态见 `../collaboration/`。

@@ -13,22 +13,12 @@ Agentic RAG 的核心：**用推理循环取代直线管道**。传统 RAG 只�
 
 本主题已拆成 3 个子知识点目录。
 
-## 子知识点目录
-
-| 目录 | 内容 |
-|---|---|
-| `patterns/` | 核心模式：Router、ReAct、Plan-and-Execute、Multi-hop、Self-RAG、CRAG、Adaptive；single vs multi-agent |
-| `self-correcting/` | 自检三机制深度对比：Self-RAG 反射 token、CRAG 检索评估三分支、Adaptive 复杂度路由 |
-| `retrieval-as-tool/` | 架构转变：检索即工具、迭代循环的成本延迟、工程投入转移 |
-
 ## 一句话主线
 
-先用 `patterns/` 选一个与问题复杂度匹配的架构（默认单 Agent Router）；当检索质量不稳时叠 `self-correcting/` 的自检循环；根本上是把检索从"确定性预处理"变成 `retrieval-as-tool/` 描述的"Agent 可调用决策"。记住：**Agentic RAG 是关系复杂场景的增强，不是 RAG 的替代**——成本 3–10×、延迟从 1–2s 升到 4–15s，需要先做 Adaptive 路由让简单查询走快路。
+记住：**Agentic RAG 是关系复杂场景的增强，不是 RAG 的替代**——成本 3–10×、延迟从 1–2s 升到 4–15s，需要先做 Adaptive 路由让简单查询走快路。
 
 ## 与兄弟目录的分工
 
-- 检索/重排/融合算法见 `../retrieval/`；查询改写见 `../query-transform/`；切块见 `../chunking/`。
-- 图检索见 `../graphrag/`；多模态检索见 `../multimodal-rag/`；评估见 `../eval/`；生产护栏见 `../prod/`。
 - 关键提醒：上述前提都假设底层数据干净、最新、治理良好——自检循环救不了陈旧或脏数据。
 
 > 核心判断：决策点不是"要不要用 Agentic RAG"，而是"哪类问题值得额外投入"。

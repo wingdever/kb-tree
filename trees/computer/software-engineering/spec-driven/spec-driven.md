@@ -48,16 +48,16 @@ Birgitta Boeckeler 的三层框架帮助团队判断"需要多少流程"：
 ## 工具生态
 
 - **GitHub Spec Kit**：不绑定特定 agent 的开源工具集，在 Claude Code、Copilot、Gemini CLI 等工具上加斜杠命令强制四阶段流程：`/constitution`（项目不变原则）、`/specify`（特性规格）、`/plan`（技术方案）、`/tasks`（任务拆解）、`/implement`（逐任务实现）；另有 `/clarify`、`/analyze`、`/checklist` 等辅助命令。用 `constitution` 文件记录项目长期不变的原则。
-- **AWS Kiro**：以 SDD 为核心设计的 agentic IDE，生成 `requirements.md`、`design.md`、`tasks.md` 三文件。需求用 **EARS（Easy Approach to Requirements Syntax）**表示——形如「WHEN 条件，THE SYSTEM SHALL 行为」，捕获可测试的验收标准。支持按任务依赖图并行执行独立任务（写同一文件的任务不并行，测试在被测代码之后），另有 quick plan 模式用于边界清晰的特性（一次生成三文件、事后可审）。
-- **更轻量的形式**：Claude Code 的 plan mode 先只读调研、提出方案，人批准后才切换到可写模式实现；Codex 没有正式多文档工作流，用 `AGENTS.md` 固化需求与约定、在 agentic loop 内规划多文件变更。二者共用"动手前先就方案达成一致"的内核，只是流程更轻。
+- **AWS Kiro**：以 SDD 为核心设计的 agentic IDE。需求用 **EARS（Easy Approach to Requirements Syntax）**表示——形如「WHEN 条件，THE SYSTEM SHALL 行为」，捕获可测试的验收标准。支持按任务依赖图并行执行独立任务（写同一文件的任务不并行，测试在被测代码之后），另有 quick plan 模式用于边界清晰的特性（一次生成三文件、事后可审）。
+- **更轻量的形式**：Claude Code 的 plan mode 先只读调研、提出方案，人批准后才切换到可写模式实现；Codex 没有正式多文档工作流。二者共用"动手前先就方案达成一致"的内核，只是流程更轻。
 
 ## 与相邻实践的关系
 
-- **需求工程**（`../sdlc/requirements/requirements.md`）：SDD 的规格阶段就是需求工程在 AI 时代的落地——非功能需求、量化验收标准、追溯矩阵同样适用；EARS 是另一种可测试的需求表示法。
-- **TDD / BDD / ATDD**（`../quality/quality.md`）：BDD 的 Given/When/Then 与 EARS 同属"可测试规格"的思路；SDD 把这类规格从测试环节前移到整个实现的驱动源。
-- **架构设计**（`../architecture/architecture.md`）：Plan 阶段本质是架构决策，质量属性权衡与 ADR 在这里发生。
-- **Agent 工程**（`../../ai/agent/agent.md`）：SDD 是"给 agent 一份可重读的持久上下文"的工程化，与 Agent 的上下文工程、工作流模式一脉相承。
-- **Vibe coding**（`../vibe-coding/vibe-coding.md`）：不写规格、直接靠提示词让 agent 生成代码，靠运行反馈引导、刻意减少逐行审查。在简单任务上快；在复杂任务和大代码库上因缺少决策记录与意图锚点而容易漂移。它与 SDD 是同一谱系两端——vibe 用来探索，spec 用来交付。
+- **需求工程**：SDD 的规格阶段就是需求工程在 AI 时代的落地——非功能需求、量化验收标准、追溯矩阵同样适用；EARS 是另一种可测试的需求表示法。
+- **TDD / BDD / ATDD**：BDD 的 Given/When/Then 与 EARS 同属"可测试规格"的思路；SDD 把这类规格从测试环节前移到整个实现的驱动源。
+- **架构设计**：Plan 阶段本质是架构决策，质量属性权衡与 ADR 在这里发生。
+- **Agent 工程**：SDD 是"给 agent 一份可重读的持久上下文"的工程化，与 Agent 的上下文工程、工作流模式一脉相承。
+- **Vibe coding**：不写规格、直接靠提示词让 agent 生成代码，靠运行反馈引导、刻意减少逐行审查。在简单任务上快；在复杂任务和大代码库上因缺少决策记录与意图锚点而容易漂移。它与 SDD 是同一谱系两端——vibe 用来探索，spec 用来交付。
 
 ## 何时用、何时不用
 
@@ -74,4 +74,3 @@ Birgitta Boeckeler 的三层框架帮助团队判断"需要多少流程"：
 - **把工具当成纪律**：以为跑一遍命令就是 SDD，真正的价值在关卡与"变更先改规格"的纪律，而非命令本身。
 - **规格与代码双向各自演进**：人有时改规格、有时直接改代码，失去单一真相源。
 
-> 相关：软件工程总览见 `../software-engineering.md`；方法论见 `../methodology/methodology.md`；AI 融入开发见 `../trends/trends.md`；需求工程见 `../sdlc/requirements/requirements.md`；测试实践见 `../quality/quality.md`；Agent 上下文工程见 `../../ai/agent/context/`；计算机学科总览见 `../../computer.md`。

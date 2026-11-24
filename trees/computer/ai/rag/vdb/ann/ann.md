@@ -46,6 +46,5 @@ name: "ANN Index Algorithms"
 
 ## 集合通信速记（训练侧对照）
 
-AllReduce = ReduceScatter + AllGather（见 `../../../model/distributed/`）；检索侧的关键是选对 ANN 索引。
+AllReduce = ReduceScatter + AllGather；检索侧的关键是选对 ANN 索引。
 
-> 相关：这些索引被哪些产品采用见 `../products/`；元数据过滤见 `../filter/`。

@@ -83,4 +83,3 @@ class Block(nn.Module):
 
 骨架自 2017 未变，改进集中在这些替换。
 
-> 相关：注意力的数学与变体见 `../internals/`；三种架构形态里 Block 如何组装见 `../families/`；MoE 把 FFN 换成专家池见 `../moe/`；推理时的归一化与量化见 `../../../model/inference/`。

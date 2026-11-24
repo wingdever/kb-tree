@@ -52,6 +52,4 @@ Facebook AI 基于 BERT 的优化版：以自监督方式利用无监督数据�
 | XLNet | Transformer-XL | 排列 LM | 长距离依赖 |
 | RoBERTa | Transformer Encoder | 改进 MLM | 鲁棒理解 |
 
-现代主流 decoder-only LLM（Llama、Qwen、GPT-4+）的架构深潜见 `../transformer/`，预训练见 `../../model/pretrain/`，微调见 `../../model/peft/`。
 
-> 相关：Transformer 架构与注意力见 `../transformer/`；预训练与 Scaling Law 见 `../../model/pretrain/`；模型蒸馏见 `../../model/distill/`；评测见 `../../model/eval/`。

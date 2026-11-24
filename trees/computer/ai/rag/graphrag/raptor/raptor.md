@@ -37,8 +37,7 @@ RAPTOR（Recursive Abstractive Processing for Tree-Organized Retrieval）用递�
 
 ## 何时用 / 不用
 
-**用**：长文档、答案需跨多节综合、需要不同抽象层级上下文（配 `../frameworks/` 里 Microsoft GraphRAG 的 Global 查询更完整）。
+**用**：长文档、答案需跨多节综合、需要不同抽象层级上下文。
 
 **不用**：简单事实查询、语料小、延迟敏感、语料频繁变动（重建成本高）。
 
-> 相关：GraphRAG 范式见 `../graphrag.md`；图数据库底座见 `../graphdb/`；层次摘要也可由 Microsoft GraphRAG 的社区摘要实现，见 `../frameworks/`。

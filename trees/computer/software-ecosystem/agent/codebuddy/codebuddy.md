@@ -9,7 +9,7 @@ name: "CodeBuddy"
 
 > 来源：CodeBuddy 官方文档与发布说明。版本与能力变化快，以官方文档为准。
 
-CodeBuddy 是腾讯云的编码 Agent，覆盖 **CLI / IDE / 云** 三种形态。本页是生态样本视角；Agent 机制见 `../../../ai/agent/`。
+CodeBuddy 是腾讯云的编码 Agent，覆盖 **CLI / IDE / 云** 三种形态。本页是生态样本视角。
 
 ## 形态与厂商
 
@@ -28,9 +28,6 @@ CodeBuddy 是腾讯云的编码 Agent，覆盖 **CLI / IDE / 云** 三种形态�
 
 ## 在树中的位置
 
-- A2A / ACP / MCP 的协议语义见 `../../../ai/agent/protocols/protocols.md`。
-- 技能与钩子机制见 `../../../ai/agent/skill/`、`../../../ai/agent/hooks/`；行动面见 `../../../ai/agent/action-surface/action-surface.md`。
-- 与其它 CLI  Agent 的对照见 `../qodercn/`、`../zcode/`。
 
 ## 官方入口
 
@@ -40,4 +37,3 @@ CodeBuddy 是腾讯云的编码 Agent，覆盖 **CLI / IDE / 云** 三种形态�
 
 **CodeBuddy 是「终端原生 + 云 IDE」双形态编码 Agent，差异化在 A2A 双向能力与 WorkBuddy 精简产物。**
 
-> 相关：Agent 子生态见 `../agent.md`；Agent 知识主树见 `../../../ai/agent/agent.md`。

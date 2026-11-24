@@ -44,4 +44,3 @@ name: "Transformer Architecture Families"
 
 **decoder-only**——生态与工具链都 decoder-first。但需要高质量文档向量时，选 encoder-only embedding 模型，别拿生成式大模型干 embedding 的活。
 
-> 相关：Block 结构见 `../block/`；注意力的数学见 `../internals/`；MoE 如何改造 FFN 见 `../moe/`；DeepSeek-V3 的 decoder-only + MoE 实例见 `../deepseek-v3/`。

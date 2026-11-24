@@ -9,7 +9,7 @@ name: "Trae"
 
 > 来源：Trae 官网与 2026 年编码 Agent 生态盘点。官方页面对本地区抓取受限，细节以官方产品页为准。
 
-Trae 是字节跳动的 **AI 原生 IDE**，走「免费层 + IDE 入口」路线。本页是生态样本视角，只记可核实的定位；Agent 机制见 `../../../ai/agent/`。
+Trae 是字节跳动的 **AI 原生 IDE**，走「免费层 + IDE 入口」路线。本页是生态样本视角，只记可核实的定位。
 
 ## 定位
 
@@ -24,8 +24,6 @@ Trae 是字节跳动的 **AI 原生 IDE**，走「免费层 + IDE 入口」路�
 
 ## 在树中的位置
 
-- IDE 与编码 Agent 的共性见 `../../../ai/agent/coding/`；框架对照见 `../../../ai/agent/frameworks/`。
-- 同类样本：`../codebuddy/`、`../qodercn/`、`../zcode/`。
 
 ## 官方入口
 
@@ -35,4 +33,3 @@ Trae 官网：`https://www.trae.ai/`。
 
 **Trae 是免费层 AI 原生 IDE 的代表性玩家；本节点只记生态定位，具体规格以官网为准。**
 
-> 相关：Agent 子生态见 `../agent.md`；编码 Agent 见 `../../../ai/agent/coding/`。

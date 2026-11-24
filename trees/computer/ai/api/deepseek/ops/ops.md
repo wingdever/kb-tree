@@ -15,7 +15,7 @@ name: "DeepSeek Operations Reference"
 |---|---|---|
 | 400 | 请求体格式错误 | 按错误信息改格式 |
 | 401 | API key 错误 | 检查或重新申请 key |
-| 402 | 余额不足 | 查余额 `../balance/` 并充值 |
+| 402 | 余额不足 ||
 | 408 | 请求超时（文件上传过慢，常见于 OCR/ASR） | 检查网络并重试，遵守文件大小限制 |
 | 413 | 请求体过大（文件过大） | 减小文件 |
 | 422 | 参数无效 | 按错误信息改参数 |
@@ -35,7 +35,7 @@ name: "DeepSeek Operations Reference"
 ## Token 用量
 
 - 估算：1 个英文字符 ≈0.3 token，1 个中文字符 ≈0.6 token；实际以返回的 `usage` 为准。官方提供离线 tokenizer 包，图片 token 按尺寸估算并受上限约束。
-- `usage` 常用字段：`prompt_tokens`、`prompt_cache_hit_tokens`、`prompt_cache_miss_tokens`、`completion_tokens`、`reasoning_tokens`（思考 token）、`safety_tokens`（`safety_check: high` 时，已计入 completion）、`server_tool_use`（搜索/抓取次数，全为 0 时省略）。流式响应取最终 usage，不要累加中间增量。字段细节见 `../caching/` 与 `../anthropic/`。
+- `usage` 常用字段：`prompt_tokens`、`prompt_cache_hit_tokens`、`prompt_cache_miss_tokens`、`completion_tokens`、`reasoning_tokens`（思考 token）、`safety_tokens`（`safety_check: high` 时，已计入 completion）、`server_tool_use`（搜索/抓取次数，全为 0 时省略）。流式响应取最终 usage，不要累加中间增量。
 
 ## 定价（每 1M token，USD）
 
@@ -55,4 +55,3 @@ name: "DeepSeek Operations Reference"
 
 **错误码决定重试还是改参数，限流决定并发设计，`usage` 决定成本归因——把三者接进监控，才能稳定压住账单。**
 
-> 相关：余额查询见 `../balance/`；工具 API 见 `../tools/`；缓存命中字段见 `../caching/`。

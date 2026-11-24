@@ -63,4 +63,3 @@ ColPali 多向量：1024 patch/页 × 128 维 × 4 字节 ≈ 512 KB/页 ≈ 128
 
 ViDoRe（视觉文档检索基准，含 DocVQA/InfoVQA 及能源、政府、医疗、AI 领域任务）；指标 NDCG@5、召回、bbox 引用准确性、生成答案的 groundedness。注意多数安全基准本身是机器生成的，存在循环评估问题。
 
-> 相关：切块与特殊文档见 `../chunking/special/`；嵌入模型见 `../embedding/`；向量库多向量支持见 `../vdb/products/`；Agentic RAG 循环见 `../agentic-rag/`；多模态模型见 `../../model/multimodal/`。

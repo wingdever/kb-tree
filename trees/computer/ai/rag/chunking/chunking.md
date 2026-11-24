@@ -11,16 +11,6 @@ name: "Chunking Strategies"
 
 核心权衡：**小块检索精确但缺上下文；大块保留上下文但匹配不准**。没有通用最佳块大小。本主题已拆成 5 个子知识点目录。
 
-## 子知识点目录
-
-| 目录 | 内容 |
-|---|---|
-| `basic/` | 固定大小+overlap、句子、递归字符、文档结构感知、块大小经验 |
-| `semantic/` | 语义分割（余弦突变）、层级父子分块（small-to-big） |
-| `contextual/` | Contextual Retrieval、Late Chunking、Agentic/Propositions |
-| `eval/` | 切块评估与调优：指标、黄金集、sweep 网格、失败诊断 |
-| `special/` | 特殊文档切块：表格、代码、PDF/OCR、幻灯片、转录、图片 |
-
 ## 八种方法总成本对照（每 1000 文档）
 
 | 方法 | Recall@5 | 成本 | 索引延迟 | 适用 |
@@ -39,12 +29,10 @@ name: "Chunking Strategies"
 - 同质散文 → 语义分割 + 10–15% overlap。
 - 结构化文档（PDF、wiki、docs）→ 结构感知 + 父子检索。
 - 引用密集长文档 → Contextual / Late；高价值小集合 → Agentic。
-- 表格/代码/PDF → 见 `special/`，绝不从中间切断表格与代码块。
+绝不从中间切断表格与代码块。
 - 生产推荐组合：**Contextual + Parent-Child**（recall@5 90.5%）。
-- 不确定选哪个 → 用 `eval/` 的方法在自己的黄金集上做对照，别靠直觉。
 
 ## 一句话主线
 
-从基础方法（`basic/`）起步，按文档结构升级到语义/父子（`semantic/`），对脱离文档就失去意义的块做上下文增强（`contextual/`），特殊格式走 `special/`，最后用 `eval/` 的指标与 sweep 把选择变成数据驱动的决策——而不是凭感觉定一个 512 token 的默认值。
+从基础方法起步，按文档结构升级到语义/父子，对脱离文档就失去意义的块做上下文增强。
 
-> 相关：这些块如何被检索见 `../retrieval/`；嵌入模型上下文窗口与切块粒度的耦合见 `../embedding/`；评估见 `../eval/`。

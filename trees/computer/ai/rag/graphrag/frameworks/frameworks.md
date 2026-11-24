@@ -68,4 +68,3 @@ name: "GraphRAG Frameworks and Selection"
 
 三层成本：① **Schema 设计**——最难的不是框架而是本体， Goldman Sachs/Deloitte 等成功部署在写检索代码前投入数周做本体。② **图维护**——文档变化后要重抽实体、与现有节点对账（"Microsoft Corp" 与 "Microsoft" 同一吗？），增量更新是核心难题。③ **无界遍历**——设跳数与结果上限，否则组合爆炸。
 
-> 相关：GraphRAG 范式与查询路由见 `../graphrag.md`；图数据库底座见 `../graphdb/`；知识图谱构建见 `../kg-construction/`；RAPTOR 层级摘要见 `../raptor/`；语义层见 `../semantic-layer/`。

@@ -70,4 +70,3 @@ name: "Chunking Evaluation and Tuning"
 
 若问题简单、语料小（几十条），固定切块 +  keywords 搜索就够。**结构化搜索**（早融合、多向量）能否定切块质量的价值，但那属于检索层。
 
-> 相关：被评估的方法见 `../basic/`、`../semantic/`、`../contextual/`；特殊格式的切块陷阱见 `../special/`；端到端 RAG 评估见 `../../eval/`。

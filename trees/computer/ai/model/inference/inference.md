@@ -58,7 +58,7 @@ KV Cache 缓存已生成 token 的 Key/Value，避免重复计算；但随 batch
 
 连续批处理吞吐相对简单批处理可 >20×。
 
-连续批处理本质是**请求级并发调度**——通用的并发模型、排队、限流与背压属于后端工程（见 `../../../software-engineering/backend/backend.md`），这里聚焦 GPU slot 与 KV cache 层面的特化。
+连续批处理本质是**请求级并发调度**——通用的并发模型、排队、限流与背压属于后端工程，这里聚焦 GPU slot 与 KV cache 层面的特化。
 
 ### 投机解码（Speculative Decoding）
 

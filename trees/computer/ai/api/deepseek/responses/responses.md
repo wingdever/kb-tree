@@ -9,7 +9,7 @@ name: "DeepSeek Responses API"
 
 > 来源：DeepSeek API 官方文档。参数与输入类型变化快，以官方文档为准。
 
-OpenAI Responses API 格式，**无状态**：服务和对话不存服务端，多轮需每轮在 `input` 带完整历史。端点见 `../formats/`。
+OpenAI Responses API 格式，**无状态**：服务和对话不存服务端，多轮需每轮在 `input` 带完整历史。
 
 ## 输入项
 
@@ -21,10 +21,9 @@ OpenAI Responses API 格式，**无状态**：服务和对话不存服务端，�
 - `reasoning.effort`：`none/low/high/max`（`minimal`→`low`，`medium`/`xhigh`→`high` 兼容映射）。
 - 图片：`deepseek-flash` 在 user/developer 消息及 function_call_output 中支持 `input_image`；system/assistant 消息中的图片返回 400。不支持文件输入。
 
-> 在对话中间插入工具调用请用 Responses 或 Anthropic API——Chat Completions 做不到（见 `../tool-calls/`）。
+> 在对话中间插入工具调用请用 Responses 或 Anthropic API——Chat Completions 做不到。
 
 ## 一句话主线
 
 **每轮带全量历史、用 `call_id` 配对工具结果与调用——无状态换来的好处是可以在历史中间插入工具调用。**
 
-> 相关：通用 Responses 流程见 `../../loop/loop.md`；Anthropic 兼容格式见 `../anthropic/`；图片成本见 `../caching/`。

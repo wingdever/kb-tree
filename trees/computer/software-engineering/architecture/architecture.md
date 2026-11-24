@@ -44,4 +44,3 @@ name: "Software Architecture"
 - 分布式引入的失败模式被忽略：网络分区、部分失败、时钟偏差、重试风暴。
 - 只关注功能需求，质量属性缺席，上线后加固成本剧增。
 
-> 相关：设计在生命周期中的位置见 `../sdlc/sdlc.md`；需求中的非功能项见 `../sdlc/requirements/requirements.md`；交付与运维见 `../devops/devops.md`；软件工程总览见 `../software-engineering.md`；计算机学科总览见 `../../computer.md`。

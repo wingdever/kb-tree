@@ -18,7 +18,7 @@ name: "Vector DB Cost and Operations"
 ## 成本优化手段
 
 - **量化**（PQ/OPQ/标量）：向量缩小 4–32×。
-- **Matryoshka 降维**：见 `../../embedding/matryoshka/`，3072→1024 维在 1000 万文档下省 ~80GB。
+3072→1024 维在 1000 万文档下省 ~80GB。
 - **int8/binary 输出**：Cohere Embed v4、Voyage 原生支持。
 - **分层存储**：热/温/冷分区（HNSW 热层 + IVF-PQ/DiskANN 冷层）。
 - **成本敏感负载换更小嵌入模型**。
@@ -46,4 +46,3 @@ name: "Vector DB Cost and Operations"
 
 > 若 Provider 无法在你的预期规模给出清晰成本，视作风险。
 
-> 相关：索引算法见 `../ann/`；产品成本模型见 `../products/`。

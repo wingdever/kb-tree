@@ -21,14 +21,13 @@ name: "NLP Applications and Preprocessing"
 - 摘要生成
 - 数据注释（Data Annotation）
 - 专家系统问答
-- 机器翻译（详见 `../machine-translation/`）
 - 推荐系统
 - 代码生成
 - 文档处理
 
 ## 数据集来源
 
-Kaggle、Google Dataset Search、Hugging Face、Data.gov、Wikipedia database。更多预训练语料见 `../../model/pretrain/` 与 `../../rag/embedding/training/`。
+Kaggle、Google Dataset Search、Hugging Face、Data.gov、Wikipedia database。
 
 ## 文本预处理
 
@@ -50,10 +49,9 @@ Kaggle、Google Dataset Search、Hugging Face、Data.gov、Wikipedia database。
 
 ## 典型模型
 
-Transformer 是复杂 NLP 应用的常见选择：Google BERT、OpenAI GPT-3（详见 `../models/`）。
+Transformer 是复杂 NLP 应用的常见选择：Google BERT、OpenAI GPT-3。
 
 ## 与 RAG 预处理的关系
 
-这里的文本预处理与 RAG 摄入阶段的清洗一脉相承（见 `../../rag/chunking/`），但目标不同：NLP 预处理为特征工程与模型输入，RAG 预处理为检索单元的边界与元数据。分句/分词质量同样决定下游效果。
+这里的文本预处理与 RAG 摄入阶段的清洗一脉相承，但目标不同：NLP 预处理为特征工程与模型输入，RAG 预处理为检索单元的边界与元数据。分句/分词质量同样决定下游效果。
 
-> 相关：语言模型谱系见 `../models/`；Transformer 见 `../transformer/`；意图识别见 `../intent/`；RAG 切块见 `../../rag/chunking/`。

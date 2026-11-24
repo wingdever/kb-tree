@@ -44,6 +44,5 @@ name: "Requirements Engineering"
 
 ## 工程衔接
 
-需求的下游是架构设计（把质量属性转成架构决策，见 `../../architecture/architecture.md`）与测试（验收标准转测试用例，见 `../../quality/quality.md`）。
+需求的下游是架构设计与测试。
 
-> 相关：生命周期总览见 `../sdlc.md`；软件工程总览见 `../../software-engineering.md`；计算机学科总览见 `../../../computer.md`。

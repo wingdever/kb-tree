@@ -55,4 +55,3 @@ Agentic RAG 不是单一算法，而是一族共享"Agent-in-the-loop"原则的�
 - 混合负载成本敏感 → Adaptive 路由先行（简单查询走快路，可为净负成本）。
 - 跨源、并行子任务、需专门角色 → 多 Agent；但先证明单 Agent 不够。
 
-> 相关：三种自检机制的深度对比见 `../self-correcting/`；架构转变与成本延迟见 `../retrieval-as-tool/`；查询改写见 `../../query-transform/`；多智能体协作见 `../../../agent/multi/`。

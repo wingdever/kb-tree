@@ -97,4 +97,3 @@ name: "Chat Completions Response Schema"
 
 **顶层只有 7 个字段，复杂度集中在 `choices[].message` 的 9 个字段与 `usage` 的两层明细；`finish_reason` 的 6 个取值是分支处理的关键。**
 
-> 相关：请求字段见 `../request/`；缓存命中计费见 `../../caching/`；用量与价格见 `../../ops/`。

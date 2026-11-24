@@ -74,4 +74,3 @@ def retrieve_and_rerank(query, k_retrieve=50, k_final=10):
 - **Adaptive RAG / Agentic 路由**：轻量 router 分析意图与复杂度——简单跳过检索，需内部事实触发混合搜索，需新鲜数据走 web 或 SQL。
 - **CRAG（Corrective RAG）/ Self-RAG**：评估器判断检索文档相关性；置信度低时触发备用动作（web 搜索），而非基于坏数据幻觉答案。
 
-> 相关：召回信号见 `../recall/`；重排器见 `../rerank/`；验证见 `../../eval/`。

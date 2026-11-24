@@ -66,7 +66,7 @@ print(response.choices[0].message.content)
 
 ## 思考模式
 
-- `thinking: {"type": "enabled" | "disabled"}`；`reasoning_effort` 控制思考强度（`none/low/high/max` 等，见 `../responses/`）。
+- `thinking: {"type": "enabled" | "disabled"}`；`reasoning_effort` 控制思考强度。
 - temperature 在思考模式固定为 1.0，在非思考模式有效（范围 0.0~2.0）。
 - 思考模式下的工具调用从 DeepSeek-V3.2 起支持；继续工具调用时必须回传助手完整 content 数组（含 thinking 与 tool-use 块）。
 
@@ -74,4 +74,3 @@ print(response.choices[0].message.content)
 
 **同一个 key、换 base_url 即可跨三种形态；扩展参数走 `extra_body`，思考模式决定 temperature 与工具回传方式。**
 
-> 相关：工具调用见 `../tool-calls/`；strict 见 `../strict/`；Responses 见 `../responses/`；Anthropic 兼容见 `../anthropic/`；Beta 的 FIM 见 `../fim/`。

@@ -7,7 +7,7 @@ name: "DevOps and Site Reliability Engineering"
 
 # DevOps 与站点可靠性工程（DevOps and SRE）
 
-DevOps 的协作、自动化、共担责任仍是基础；SRE 用工程手段把可靠性变成可度量、可管理的对象。两者共同目标：**让变更频繁、快速、安全地流动**。服务内部的并发、限流、幂等等实现机制见 `../backend/backend.md`——稳定性是实现与运行两个切面共同作用的结果。
+DevOps 的协作、自动化、共担责任仍是基础；SRE 用工程手段把可靠性变成可度量、可管理的对象。两者共同目标：**让变更频繁、快速、安全地流动**。
 
 ## CI/CD 流水线
 
@@ -66,4 +66,3 @@ DevOps 的协作、自动化、共担责任仍是基础；SRE 用工程手段把
 - 只监控 CPU/内存等系统指标，缺失用户视角 SLI。
 - 错误预算无人执行，SLO 沦为装饰。
 
-> 相关：部署在生命周期中的位置见 `../sdlc/sdlc.md`；测试左移与质量度量见 `../quality/quality.md`；架构的可部署性见 `../architecture/architecture.md`；AI Agent 的可观测性实践见 `../../ai/agent/obs/` 与评估见 `../../ai/agent/eval/`；软件工程总览见 `../software-engineering.md`；计算机学科总览见 `../../computer.md`。

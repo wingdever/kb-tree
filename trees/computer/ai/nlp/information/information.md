@@ -7,7 +7,7 @@ name: "World Information Structures"
 
 # 世界信息结构
 
-本页讨论"智能如何描述世界的信息数据结构"——从描述世界，到支持推理、检索、规划。它与本体论（`../../rag/graphrag/ontology/`）强相关：本体论关注由哪些基本范畴构成概念、属性和规则。
+本页讨论"智能如何描述世界的信息数据结构"——从描述世界，到支持推理、检索、规划。它与本体论强相关：本体论关注由哪些基本范畴构成概念、属性和规则。
 
 ## 十种基本表（描述世界的范式）
 
@@ -43,7 +43,7 @@ name: "World Information Structures"
 
 对应存在的秩序层次：**秩序 → 物理 → 化学 → 生物 → 社会 → 信息**。信息实例通过映射关系，以时空中的信号或实体时空排列的方式存在于具体时空。
 
-另一表述：**ontology 本体层 + instance 实例层 + evidence 证据层 + symbol 符号层**——与本体论的 TBox/ABox 划分呼应（`../../rag/graphrag/ontology/`）。
+另一表述：**ontology 本体层 + instance 实例层 + evidence 证据层 + symbol 符号层**——与本体论的 TBox/ABox 划分呼应。
 
 ## RDF 三元组
 
@@ -57,4 +57,3 @@ name: "World Information Structures"
 
 三元组是"描述"的最小原子，而十表是"认识"的组织范式——前者是表达层，后者是认知层。
 
-> 相关：本体论完整规范见 `../../rag/graphrag/ontology/`；知识图谱构建见 `../../rag/graphrag/kg-construction/`；图数据库见 `../../rag/graphrag/graphdb/`。

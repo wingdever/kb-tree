@@ -98,4 +98,3 @@ GraphRAG 的落地路径：**LLM 抽取实体关系 → 实体消歧 → 写入�
 
 一个生产知识库常同时跑四种：OLTP 在 PostgreSQL、分析在数仓、相似在 Qdrant/Pinecone、关系在 Neo4j/GraphDB，在 API 层联邦。
 
-> 相关：GraphRAG 范式见 `../graphrag.md`；图与向量混合检索见 `../../retrieval/`；元数据与 ACL 见 `../../vdb/filter/`；RAG 参考架构见 `../../basics/`。

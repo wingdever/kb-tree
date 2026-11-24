@@ -9,7 +9,7 @@ name: "DeepSeek Tool APIs"
 
 > 来源：DeepSeek Search、Fetch、OCR、Speech to Text、Text to Speech 官方 API Reference 与指南。限制与计费变化快，以官方文档为准。
 
-这些是可独立调用的能力，不走 `/chat/completions`；也能作为服务端工具在对话中启用（见 `../anthropic/`）。
+这些是可独立调用的能力，不走 `/chat/completions`；也能作为服务端工具在对话中启用。
 
 | API | 端点 | 用途 | 计费方式 |
 |---|---|---|---|
@@ -19,7 +19,6 @@ name: "DeepSeek Tool APIs"
 | Speech to Text | `POST /v1/tools/asr` | 音频转文字 | 按音频时长计费 |
 | Text to Speech | `POST /v1/tools/tts` | 文字转语音，流式返回 | 按字符计费 |
 
-具体价格见 `../ops/`。
 
 ## Search
 
@@ -35,11 +34,11 @@ name: "DeepSeek Tool APIs"
 
 `multipart/form-data`：`file`（带文件名）、`purpose` 取 `text_recognition`（Word/PowerPoint 直接抽文本，其他文件逐页识别）或 `rich_layout_recognition`（所有文件逐页识别）。
 
-响应 `object: ocr.result`：`id`（`ocr-...`）、`page_count`、`pages[].index/text/finish_reason`（`stop` 完整、`length` 超长被截断）。`usage` 仅供参考，**不用于计费**。OCR 上传的文件不进入 Files API（见 `../files/`）。
+响应 `object: ocr.result`：`id`（`ocr-...`）、`page_count`、`pages[].index/text/finish_reason`（`stop` 完整、`length` 超长被截断）。`usage` 仅供参考，**不用于计费**。OCR 上传的文件不进入 Files API。
 
 ## Speech to Text（ASR）
 
-`multipart/form-data`：`file` 为 16 位 PCM WAV 或 Ogg Opus，整段音频一次上传。响应 `request_id`、`text`、`duration_ms`。文件限制见官方指南；常见错误 400/408/413/504 见 `../ops/`。
+`multipart/form-data`：`file` 为 16 位 PCM WAV 或 Ogg Opus，整段音频一次上传。响应 `request_id`、`text`、`duration_ms`。文件限制见官方指南。
 
 ## Text to Speech（TTS）
 
@@ -51,4 +50,3 @@ HTTP 响应体直接流式输出音频：wav 为 `audio/wav`，pcm 为 24 kHz、
 
 **五个独立端点各管一种能力：Search/Fetch 补信息，OCR/ASR/TTS 处理文件与语音；按次、按页、按时长、按字符分别计费。**
 
-> 相关：对话内服务端 Web 工具见 `../anthropic/`；文件生命周期见 `../files/`；错误与限流见 `../ops/`。

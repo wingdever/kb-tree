@@ -22,8 +22,6 @@ LLM 自动生成并维护的一堆 Markdown 文件。页面类型：
 - 实体页（人物、公司、模型）
 - 概念页（Transformer、RAG、编译器模式）
 - 综述页、对比页
-- 索引页 `index.md`（相当于程序的符号表）
-- 日志页 `log.md`（只追加的构建日志）
 
 关键规则：
 
@@ -31,7 +29,7 @@ LLM 自动生成并维护的一堆 Markdown 文件。页面类型：
 - 页面带 YAML front-matter（title、tags、source list、timestamp）。
 - 所有页面用 `[[双向链接]]` 关联，形成知识图谱；用 `[[sources/...]]` 指回原始出处。
 
-## 第三层：Schema（规则层，`CLAUDE.md` / `AGENTS.md` / `SCHEMA.md`）
+## 第三层：Schema
 
 用自然语言写的规范，告诉 LLM 怎么干活：
 
@@ -51,4 +49,3 @@ LLM 自动生成并维护的一堆 Markdown 文件。页面类型：
 
 一致性来自这个边界：Raw 不可变保证可重建，Wiki 由 LLM 维护保证持续更新，Schema 保证更新方式可控——三者缺一，Wiki 就会退化为混乱的笔记堆。
 
-> 相关：三操作如何维护这三层见 `../lifecycle/`；与 RAG 各子领域的对比见 `../practice/`；本体论的"开放世界语义 vs 封闭世界校验"思想见 `../../graphrag/ontology/`。

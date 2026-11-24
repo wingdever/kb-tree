@@ -9,7 +9,7 @@ name: "DeepSeek JSON Output"
 
 > 来源：DeepSeek JSON Output 官方指南。参数与失败行为变化快，以官方文档为准。
 
-JSON Output 保证模型输出合法 JSON 字符串，便于结构化解析。它是 `response_format` 的一个取值，字段定义见 `../chat-completions-ref/request/`。
+JSON Output 保证模型输出合法 JSON 字符串，便于结构化解析。它是 `response_format` 的一个取值。
 
 ## 启用条件
 
@@ -78,4 +78,3 @@ print(json.loads(response.choices[0].message.content))
 
 **`response_format: json_object` + 提示词里写明 JSON 并给示例 + 足够的 `max_tokens`；解析前处理空 `content`，别把 `stop` 当成格式一定正确。**
 
-> 相关：请求字段见 `../chat-completions-ref/request/`；响应字段与 `finish_reason` 见 `../chat-completions-ref/response/`；用量与计费见 `../ops/`。

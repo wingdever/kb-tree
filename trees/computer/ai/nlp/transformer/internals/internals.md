@@ -94,7 +94,7 @@ y_t ~ softmax(LMHead(o_t'))
 - Decode 单步：O((n+t)·d_k)（1 个 query 对 n+t 个历史 key）。生成 T 个 token 总注意力成本 O(T(n+T)d_k)。
 - KV Cache 显存：O(L·(n+T)·d_k·2)，L 层数，系数 2 是 K/V，多头、batch 再乘相应维度。
 
-长上下文下 KV Cache 可超过权重本身，成为主要显存约束——这催生 GQA/MQA、PagedAttention、KV 量化（见 `../../../model/inference/`）。
+长上下文下 KV Cache 可超过权重本身，成为主要显存约束——这催生 GQA/MQA、PagedAttention、KV 量化。
 
 ## 注意力变体（2026）
 
@@ -106,4 +106,3 @@ y_t ~ softmax(LMHead(o_t'))
 - **全局+局部混合**：多数 token 看局部窗口，少数全局 token 看全部，保证远处信息通路。
 - **位置编码外推**：RoPE 的 NTK/YaRN 修正，扩展超训练长度的上下文。
 
-> 相关：推理引擎与量化见 `../../../model/inference/`；Embedding 与向量检索见 `../../../rag/embedding/`；预训练见 `../../../model/pretrain/`。

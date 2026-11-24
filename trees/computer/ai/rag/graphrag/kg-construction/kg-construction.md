@@ -59,4 +59,3 @@ name: "Knowledge Graph Construction"
 - [ ] 合并、回滚、纠错测试通过。
 - [ ] 发布不可变图版本与回滚清单；源文档保持权威。
 
-> 相关：图数据库底座见 `../graphdb/`；GraphRAG 实现选型见 `../frameworks/`；本体与指标治理见 `../semantic-layer/`；安全与 ACL 见 `../../prod/`。

@@ -28,7 +28,7 @@ name: "Parallel Architecture"
 
 ## 多核与缓存一致性
 
-多核各有私有缓存时，**一致性（coherence）**保证"同一地址的多份副本一致"（MESI/MOESI，见 `../memory/cache/cache.md`）。**内存一致性模型（consistency）**则规定"多个地址读写操作的可见顺序"：
+多核各有私有缓存时，**一致性（coherence）**保证"同一地址的多份副本一致"。**内存一致性模型（consistency）**则规定"多个地址读写操作的可见顺序"。
 
 - **顺序一致性**：所有核看到单一全局顺序，最易推理但限制优化。
 - **TSO（x86）**：允许写后读重排（store buffer 导致），其余保持较强顺序。
@@ -49,7 +49,7 @@ GPU 与 CPU 设计哲学不同：CPU 追求低延迟、强单线程；GPU 追求
 - **SIMT（单指令多线程）**：一个指令广播给一组线程（warp/wavefront），各线程处理不同数据。
 - **编程层次**（CUDA）：thread → block → grid；共享内存、全局内存、寄存器分级。
 - **访存优化**：合并访问（coalescing）、共享内存复用、避免分支发散。
-- **Tensor Core / AI 加速**：矩阵乘专用单元，支撑深度学习训练与推理，见 `../../ai/model/inference/`。
+- **Tensor Core / AI 加速**：矩阵乘专用单元，支撑深度学习训练与推理。
 - CPU-GPU 数据传输（PCIe）昂贵，应减少传输次数、增大批量。
 
 ## 加速比定律
@@ -71,4 +71,3 @@ Speedup = 1 / ((1 - f) + f / s)
 - GPU 程序分支发散、访存非合并，实际吞吐远低于峰值。
 - NUMA 系统跨节点访存，性能悄然下降。
 
-> 相关：缓存一致性协议见 `../memory/cache/cache.md`；存储层次见 `../memory/memory.md`；加速比与性能指标见 `../performance/performance.md`；AI 推理优化见 `../../ai/model/inference/`；计算机组成总览见 `../computer-organization.md`；计算机学科总览见 `../../computer.md`。

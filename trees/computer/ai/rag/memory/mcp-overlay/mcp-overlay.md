@@ -27,16 +27,6 @@ dsh **不**下载 server、不初始化数据库、不选模型与 embedding pro
 | MCP Reference Memory | `@modelcontextprotocol/server-memory@2026.7.4`（`6dd0a683e198783e30feabf7abaf42f925bd18b1`） | stdio | npm 全局安装 | `$HOME/.dsh-mcp-reference-memory.jsonl` |
 | Engram | `v1.20.0`（`ba9e46ced152c37a7cb9e576153c41995873e2fc`） | stdio | Go 1.25.10+ 或对应二进制 | `~/.engram` |
 
-## 子知识点目录
-
-| 目录 | 内容 |
-|---|---|
-| `memorix/` | 本地启发式、零 LLM/嵌入依赖；项目身份取工作目录，检索语义未文档化 |
-| `reference-memory/` | 本地知识图谱 + 子串检索，明确无语义、无冲突解决、无遗忘 |
-| `engram/` | 自管存储与项目选择，Go 生态；检索语义未文档化 |
-
-三份配置的接线共性已在上面说明，下面只保留启用、验证与运维的公共部分；各自细节进子知识点。
-
 ## 选型与学习顺序
 
 按**学习成本**从易到难：MCP Reference Memory → Memorix → Engram。这排的是「学会它要面对多少未知量」，不是能力强弱——最简单的那个语义也最弱。
@@ -82,4 +72,3 @@ dsh **不**下载 server、不初始化数据库、不选模型与 embedding pro
 
 **dsh 只负责把外部 MCP memory server 的工具挂进模型，存储与语义全归 provider；三份配置默认关闭，验证要跨新会话而不是同会话复述。**
 
-> 相关：MCP 协议本身见 `../../../agent/mcp/`；记忆层级与治理见 `../`；RAG 全景见 `../../rag.md`。

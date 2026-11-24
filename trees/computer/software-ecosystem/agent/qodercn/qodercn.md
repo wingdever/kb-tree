@@ -9,12 +9,12 @@ name: "QoderCN"
 
 > 来源：Qoder 官方 CLI 文档与阿里云帮助中心。版本与能力变化快，以官方文档为准。
 
-QoderCN 是阿里旗下 Qoder 的国内 CLI 形态（国际版称 Qoder），面向终端开发者。本页是生态样本视角；Agent 机制见 `../../../ai/agent/`。
+QoderCN 是阿里旗下 Qoder 的国内 CLI 形态（国际版称 Qoder），面向终端开发者。本页是生态样本视角。
 
 ## 形态与厂商
 
 - 厂商：阿里；国际文档 `docs.qoder.com`，国内命令 `qoderclicn`，本机已安装。
-- 核心是「Agent + 工具 + 权限 + 上下文」四要素：规划步骤、调工具、有副作用操作前按权限确认；上下文含对话历史、`AGENTS.md` 与长期记忆。
+- 核心是「Agent + 工具 + 权限 + 上下文」四要素：规划步骤、调工具、有副作用操作前按权限确认。
 
 ## 六种工作方式
 
@@ -39,8 +39,6 @@ QoderCN 是阿里旗下 Qoder 的国内 CLI 形态（国际版称 Qoder），面
 
 ## 在树中的位置
 
-- 同族对照：`../codebuddy/`、`../trae/`、`../zcode/`。
-- 协议与工具面见 `../../../ai/agent/protocols/protocols.md`、`../../../ai/agent/tool/`；技能与记忆见 `../../../ai/agent/skill/`、`../../../ai/rag/memory/`。
 
 ## 官方入口
 
@@ -50,4 +48,3 @@ QoderCN 是阿里旗下 Qoder 的国内 CLI 形态（国际版称 Qoder），面
 
 **QoderCN 的差异点是六种工作方式与调度能力，把 CLI Agent 从「一问一答」拉到「定时任务 + 目标驱动」的长运行场景。**
 
-> 相关：Agent 子生态见 `../agent.md`；Agent 知识主树见 `../../../ai/agent/agent.md`。

@@ -34,7 +34,7 @@ name: "FIM and Chat Prefix"
 
 响应 `object` 为 `text_completion`；`choices[].finish_reason` 可能为 `stop`/`length`/`content_filter`/`insufficient_system_resource`/`aborted`。`usage` 含 `prompt_tokens`、`prompt_cache_hit_tokens`、`prompt_cache_miss_tokens`、`completion_tokens`、`reasoning_tokens`，启用 `safety_check: high` 时另有 `safety_tokens`（已计入 completion）。
 
-流式以 `data: [DONE]` 结束；设置 `stream_options.include_usage: true` 时，最后一个内容块携带整次请求的 usage。用量字段见 `../ops/`。
+流式以 `data: [DONE]` 结束；设置 `stream_options.include_usage: true` 时，最后一个内容块携带整次请求的 usage。
 
 ## Chat Prefix Completion（Beta）
 
@@ -65,10 +65,9 @@ print(response.choices[0].message.content)
 
 - 已有后文、要补中间空洞 → FIM（`POST /completions`，仅非思考模式）。
 - 已写好开头、要让模型接着写 → Chat Prefix（assistant `prefix: true`）。
-- 普通问答与续写 → 标准 Chat Completions（见 `../formats/`）。
+- 普通问答与续写 → 标准 Chat Completions。
 
 ## 一句话主线
 
 **FIM 用 `prompt` + `suffix` 补中间，Chat Prefix 用 `prefix: true` 续写开头；两者都要 `/beta`，别再把 FIM 写成 chat 消息角色。**
 
-> 相关：Beta 通道与模型见 `../formats/`；缓存命中计费见 `../caching/`；用量字段与定价见 `../ops/`。

@@ -46,4 +46,3 @@ def adaptive_search(query_vec, filter_dict, k=10, selectivity_threshold=0.05):
 - 强 tenant 隔离需按 tenant_id 预过滤，避免跨租户泄露。
 - 过滤字段建索引（如 keyword/keyword 数组类型）以获得高效过滤。
 
-> 相关：这些过滤在检索流程里的位置见 `../../retrieval/`；RBAC 完整实践见 `../../prod/`。

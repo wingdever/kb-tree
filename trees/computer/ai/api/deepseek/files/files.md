@@ -26,7 +26,7 @@ name: "DeepSeek Files API"
 
 ## Upload File
 
-`multipart/form-data`。图片支持 JPEG/PNG/GIF/WebP，格式从内容检测；上传文档时 `purpose` 必须放在 `file` 字段**之前**。文档只有解析成功后才出现在 List Files 里（解析见官方文档 File Parsing 指南）。OCR 识别走 `../tools/` 的独立端点，不把文件存入 Files API。
+`multipart/form-data`。图片支持 JPEG/PNG/GIF/WebP，格式从内容检测；上传文档时 `purpose` 必须放在 `file` 字段**之前**。文档只有解析成功后才出现在 List Files 里（解析见官方文档 File Parsing 指南）。不把文件存入 Files API。
 
 ## List Files
 
@@ -40,4 +40,3 @@ name: "DeepSeek Files API"
 
 **上传拿 `file-api-...` id、在 Chat Completions 里用 `file_id` 引用；列表靠 `after` 游标翻页，有效期在上传时一次性设定。**
 
-> 相关：图片输入与 Vision 见 `../formats/`；文档解析计费见 `../ops/`；对话中的文件引用见 `../tool-calls/`。

@@ -52,4 +52,3 @@ name: "Security and Privacy Engineering"
 - 权限过大且长期不回收，账号成为持久攻击面。
 - 合规要求（留存、删除、审计）只写在文档里，没有自动化执行路径。
 
-> 相关：非功能需求中的安全与隐私项见 `../sdlc/requirements/requirements.md`；安全测试与非功能测试见 `../quality/quality.md`；架构中的安全属性见 `../architecture/architecture.md`；流水线中的安全扫描见 `../devops/devops.md`；AI Agent 的安全见 `../../ai/agent/safety/`；软件工程总览见 `../software-engineering.md`；计算机学科总览见 `../../computer.md`。

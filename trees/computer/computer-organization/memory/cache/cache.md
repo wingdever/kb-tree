@@ -57,4 +57,3 @@ LRU（最近最少使用）理论最优但硬件实现昂贵；**伪 LRU**、随
 - 随机访问模式破坏空间局部性，缓存形同虚设。
 - 多核程序忽略伪共享，误判为算法本身慢。
 
-> 相关：存储层次总览见 `../memory.md`；虚拟内存见 `../virtual/virtual.md`；一致性模型见 `../../parallel/parallel.md`；练习工具 cachegrind 见 `../../practice/practice.md`；计算机组成总览见 `../../computer-organization.md`；计算机学科总览见 `../../../computer.md`。

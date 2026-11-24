@@ -9,7 +9,7 @@ name: "ZCode"
 
 > 来源：ZCode 官方仓库与 2026 年开源报道。版本与功能变化快，以官方仓库为准。
 
-ZCode 是 Z.ai（原智谱）的 **Agentic Development Environment**，2026-09 以 Apache-2.0 开源。本页是生态样本视角；机制见 `../../../ai/agent/`。
+ZCode 是 Z.ai（原智谱）的 **Agentic Development Environment**，2026-09 以 Apache-2.0 开源。本页是生态样本视角。
 
 ## 形态与厂商
 
@@ -22,7 +22,6 @@ ZCode 是 Z.ai（原智谱）的 **Agentic Development Environment**，2026-09 �
 - **Agent 居中**：文件管理、终端、Git 面板、浏览器预览围绕对话排布，面向长周期任务。
 - **动态工作流**：用 Workflow 脚本编排多个 Sub-Agent，`/workflow` 启动。
 - **配套能力**：Goal、Remote Control、Browser Use、Skill 导入、Zread 知识库、Git 可视化、多端跟进（飞书 / 微信 Bot 接入同一工作区）。
-- **缓存命中**：生态报道称其在 DeepSeek 缓存命中率上表现突出——机制见 `../../../ai/api/deepseek/kv-cache/kv-cache.md`。
 
 ## 安全与来源背景
 
@@ -31,8 +30,6 @@ ZCode 是 Z.ai（原智谱）的 **Agentic Development Environment**，2026-09 �
 ## 在树中的位置
 
 - 名称撞车：另有个人项目 `zmccyy/ZCode--CLI--agent`，与本页无关。
-- 同类样本：`../codebuddy/`、`../qodercn/`、`../trae/`。
-- 动态工作流与多 Agent 见 `../../../ai/agent/multi/`；技能见 `../../../ai/agent/skill/`；渠道见 `../../../ai/agent/channel/`。
 
 ## 官方入口
 
@@ -42,4 +39,3 @@ GitHub 仓库 `zai-org/ZCode`（搜索即达）；产品信息以 Z.ai 官方页
 
 **ZCode 是「开源 + Agent 居中 + 动态工作流」的国产 IDE 样本；选型时把 2026 年的隐私整改作为信任边界的具体案例来看。**
 
-> 相关：Agent 子生态见 `../agent.md`；编码 Agent 见 `../../../ai/agent/coding/`。

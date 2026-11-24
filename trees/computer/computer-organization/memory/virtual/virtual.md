@@ -38,4 +38,3 @@ name: "Virtual Memory"
 - 工作集过大导致抖动，表现为系统"卡死"而 CPU 利用率并不高。
 - 忽略页表与 TLB 成本，在性能敏感路径上频繁跨大范围内存访问。
 
-> 相关：存储层次总览见 `../memory.md`；缓存机制见 `../cache/cache.md`；MMU 在 CPU 中的角色见 `../../cpu/cpu.md`；性能测量工具见 `../../practice/practice.md`；计算机组成总览见 `../../computer-organization.md`；计算机学科总览见 `../../../computer.md`。

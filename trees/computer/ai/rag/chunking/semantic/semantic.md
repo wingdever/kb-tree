@@ -46,4 +46,3 @@ splitter = SemanticSplitterNodeParser(
 - FAQ、文档 → 父子分块。
 - 预算为零、量大 → 滑动窗口或结构感知。
 
-> 上下文增强方法（Contextual Retrieval、Late Chunking、Agentic）见 `../contextual/`。

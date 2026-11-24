@@ -13,7 +13,7 @@ name: "Chat Completions Request Schema"
 
 | 字段 | 类型 | 必填 | 默认 / 约束 | 说明 |
 |---|---|---|---|---|
-| `messages` | `object[]` | 是 | 至少 1 项 | 对话消息列表，见 `../messages/` |
+| `messages` | `object[]` | 是 | 至少 1 项 ||
 | `model` | `string` | 是 | `deepseek-flash` / `deepseek-v4-pro` | 模型 ID |
 | `thinking` | `object \| null` | 否 | 省略时为 null | 思考模式开关；提供时 `type` 必填，优先级高于 `reasoning_effort` |
 | `reasoning_effort` | `string` | 否 | 默认 `high` | `none`/`low`/`high`/`max`；兼容映射 `minimal`→`low`，`medium`/`xhigh`→`high` |
@@ -46,7 +46,7 @@ name: "Chat Completions Request Schema"
 
 ### stream_options
 
-`include_usage`（`boolean`）：true 时所有块带 `usage`，除最后一块外均为 `null`；无论是否设置，`data: [DONE]` 前最后一块的 `usage` 都是整次请求的统计。见 `../streaming/`。
+`include_usage`（`boolean`）：true 时所有块带 `usage`，除最后一块外均为 `null`；无论是否设置，`data: [DONE]` 前最后一块的 `usage` 都是整次请求的统计。
 
 ### tools[]
 
@@ -61,7 +61,7 @@ Function 工具：
 | `function.description` | `string` | 否 | 供模型理解何时调用 |
 | `function.name` | `string` | 是 | a-z/A-Z/0-9/`_`/`-`，最长 128 |
 | `function.parameters` | `object` | 否 | JSON Schema；省略表示无参数 |
-| `function.strict` | `boolean` | 否 | 默认 false；true 启用 Beta strict 模式，见 `../../strict/` |
+| `function.strict` | `boolean` | 否 ||
 
 ### tool_choice
 
@@ -86,4 +86,3 @@ Function 工具：
 
 **六个必填/核心字段搭起请求骨架，DeepSeek 扩展字段（`thinking`、`safety_check`、`title`、`user_id`）走标准参数而非 `extra_body`（HTTP 直连场景）；SDK 不原生支持的才走 `extra_body`。**
 
-> 相关：消息结构见 `../messages/`；响应字段见 `../response/`；流式字段见 `../streaming/`。

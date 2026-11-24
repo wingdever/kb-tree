@@ -24,10 +24,9 @@ name: "DeepSeek Models API"
 
 ## 为什么用接口而不是写死
 
-模型版本、上下文窗口、模态与按协议开放的能力都会变。当前 `deepseek-flash` 由 DeepSeek-V4.1-Flash-1017 提供服务、`deepseek-v4-pro` 为 V4-Pro-0813（见 `../formats/`），但应用应在启动时拉一次 `/models`，用返回的 `id`、`context_window`、`max_output_tokens`、`effort.supported_levels` 驱动 UI 与参数校验，而不是硬编码。
+模型版本、上下文窗口、模态与按协议开放的能力都会变。当前 `deepseek-flash` 由 DeepSeek-V4.1-Flash-1017 提供服务、`deepseek-v4-pro` 为 V4-Pro-0813，但应用应在启动时拉一次 `/models`，用返回的 `id`、`context_window`、`max_output_tokens`、`effort.supported_levels` 驱动 UI 与参数校验，而不是硬编码。
 
 ## 一句话主线
 
 **`/models` 是模型能力的机器可读真相源：ID、上下文、输出上限、思考档位、按协议差异都从这里取。**
 
-> 相关：模型名与端点见 `../formats/`；价格与上下文用量见 `../ops/`；Anthropic 协议下的 system 提示差异见 `../anthropic/`。

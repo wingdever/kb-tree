@@ -11,29 +11,8 @@ name: "DeepSeek API Specification"
 
 DeepSeek API 兼容 OpenAI / Anthropic 形态，换 base_url 与少量扩展参数即可接入现有 SDK。本主题覆盖官方 API Reference 的 15 个端点，按端点形态与工程主题拆成 15 个子知识点。
 
-## 子知识点目录
-
-| 目录 | 内容 |
-|---|---|
-| `formats/` | 三种端点、模型名、首个调用、思考模式与扩展参数传入方式 |
-| `chat-completions-ref/` | Chat Completions 字段级参考：Request、Response、messages content parts 与流式 chunk |
-| `tool-calls/` | Chat Completions 工具调用完整循环、tool_calls 结构、中间插入的限制 |
-| `strict/` | Beta strict 模式的启用条件、JSON Schema 支持范围与样例 |
-| `responses/` | Responses API 的无状态多轮、input item 类型、call_id 与图片输入 |
-| `anthropic/` | Anthropic Messages 兼容：模型映射、工具字段、消息块、服务端 Web 工具与流式 |
-| `caching/` | 上下文缓存机制、命中统计、成本构成与省钱清单 |
-| `kv-cache/` | 官方 Context Caching 指南：前缀单元完整匹配、持久化时机、命中字段与边界 |
-| `json-mode/` | 官方 JSON Output 指南：response_format、提示词要求、失败行为与示例 |
-| `fim/` | Beta 的两种续写：FIM（`POST /completions`）与 Chat Prefix（assistant `prefix: true`） |
-| `tools/` | 五个独立工具 API：Search、Fetch、OCR、ASR、TTS |
-| `files/` | 文件 API 四端点：上传、列表、获取、删除 |
-| `models/` | `GET /models` 与模型能力元数据 |
-| `balance/` | `GET /user/balance` 与扣费顺序 |
-| `ops/` | 错误码、限流、token 用量与定价 |
-
 ## 建议阅读顺序
 
-接入：`formats` → `tool-calls`；字段细查：`chat-completions-ref`。加固：`strict` → `caching` → `kv-cache` / `json-mode`。需要中间插入或 Anthropic SDK：`responses` / `anthropic`。续写：`fim`。扩展能力：`tools` → `files` → `models`。运维：`ops` → `balance`。
 
 ## 与 OpenAI 原生 Function Calling 的关键差异
 
@@ -66,4 +45,3 @@ DeepSeek API 兼容 OpenAI / Anthropic 形态，换 base_url 与少量扩展参�
 
 **三种对话端点共用一套工具语义，差异集中在扩展参数、strict 的 Beta 限制与思考模式的回传要求；FIM、独立工具与文件接口补齐能力面，缓存、限流与定价决定成本和稳定性下限。**
 
-> 相关：通用函数调用流程见 `../common/common.md`；完整调用循环见 `../loop/loop.md`；API 子树导航见 `../api.md`。

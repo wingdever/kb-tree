@@ -69,4 +69,3 @@ LLM 的相对优势在上下文类：文档级一致、遵守风格指令、使�
 - **无参考质量估计、自适应翻译**（从译者会话内编辑中学习）是 2026 前沿。
 - **语义奖励 RL**（COMET 风格）可在无灾难性遗忘下把 LLM 扩展到低资源语言；DPO/CPO 正在替代 SFT 用于 LLM-MT。
 
-> 相关：encoder-decoder 架构与三家族见 `../transformer/families/`；注意力机制见 `../transformer/internals/`；分词 BPE 见 `../../model/tokenizer/`；BLEU 等生成指标见 `../../model/eval/`；多语言 embedding 见 `../../rag/embedding/`。

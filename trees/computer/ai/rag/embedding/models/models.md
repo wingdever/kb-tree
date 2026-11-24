@@ -68,4 +68,3 @@ BGE/E5 需要不对称指令前缀（如 "Represent this sentence for searching 
 - ada-002 已无理由用于新系统。
 - **升级时机**：黄金集 recall@K < 80%、领域重大切换、或新模型提升 >5% 时，先在自有数据重测再升级。text-embedding-3-large 比 small 贵 6.5×，多数应用只多拿 90–95% 质量。
 
-> 相关：训练原理与评估见 `../training/`；降维见 `../matryoshka/`。

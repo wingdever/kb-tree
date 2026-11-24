@@ -58,4 +58,3 @@ router 是学出来的，无约束会**坍塌**：少数专家吃下大多数 to
 
 MoE 已成为前沿标配：Mixtral 8x22B（176B/44B/8 专家）、DeepSeek-V3（671B/37B/256）、Qwen 2.5-MoE、DBRX（132B/36B/16），以及据称的 GPT-4、Gemini Ultra。趋势是**更多更小专家 + 共享专家 + 无辅助损失均衡**。
 
-> 相关：FFN 是什么见 `../block/`；DeepSeek-V3 如何把 MoE 与 MLA/MTP 组装见 `../deepseek-v3/`；专家并行属于分布式训练见 `../../../model/distributed/`；推理优化见 `../../../model/inference/`。

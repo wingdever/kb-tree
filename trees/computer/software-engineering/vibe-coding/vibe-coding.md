@@ -26,7 +26,6 @@ name: "Vibe Coding"
 | **AI 辅助编程** | 每个改动都审查 | 生产代码、既有代码库 | 传统工程 + 提示词熟练度 |
 | **Agentic Coding** | 自主执行 + 人在关键处监督批准 | 完整任务交给 agent，目标导向 | 任务拆解、上下文、结果验收 |
 
-详见 `../../ai/agent/coding/coding.md` 与 `../spec-driven/spec-driven.md`。
 
 ## 经验与实践
 
@@ -84,6 +83,5 @@ AI 遇到报错默认会重试，往往是同一个错误反复出现。正确�
 
 ## 与 SDD 的关系
 
-氛围编程与规格驱动开发不是对手，而是同一谱系的两端：**vibe 用来探索，spec 用来交付**。前期用氛围编程快速试错、把想法捏成形；一旦要进入生产、多人协作或需要审计，就切换到 `../spec-driven/spec-driven.md`，把已确认的意图固化成可审查的规格。判断切换时点的仍是风险与代码生命周期。
+氛围编程与规格驱动开发不是对手，而是同一谱系的两端：**vibe 用来探索，spec 用来交付**。前期用氛围编程快速试错、把想法捏成形；一旦要进入生产、多人协作或需要审计，把已确认的意图固化成可审查的规格。判断切换时点的仍是风险与代码生命周期。
 
-> 相关：软件工程总览见 `../software-engineering.md`；规格驱动开发见 `../spec-driven/spec-driven.md`；现代工程趋势见 `../trends/trends.md`；测试实践见 `../quality/quality.md`；安全工程见 `../security/security.md`；方法论见 `../methodology/methodology.md`；编码 Agent 见 `../../ai/agent/coding/coding.md`；Agent 上下文工程见 `../../ai/agent/context/`；计算机学科总览见 `../../computer.md`。

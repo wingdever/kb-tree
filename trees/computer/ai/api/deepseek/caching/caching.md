@@ -26,24 +26,23 @@ name: "Context Caching and Cost"
 ## 用量统计
 
 - OpenAI 兼容格式的 `usage` 区分缓存命中与未命中的输入 token：`prompt_cache_hit_tokens` / `prompt_cache_miss_tokens`，输出 token 单独统计。
-- Anthropic 兼容格式在最终 `message_delta.usage` 中给出 `input_tokens`、`cache_read_input_tokens`、`cache_creation_input_tokens`（见 `../anthropic/`）。
+- Anthropic 兼容格式在最终 `message_delta.usage` 中给出 `input_tokens`、`cache_read_input_tokens`、`cache_creation_input_tokens`。
 - 流式请求以最终 usage 为准，不要累加中间增量。
 
 ## 成本构成
 
-一次请求的账单通常由**缓存命中输入 + 未命中输入 + 输出 token**相加；思考模式还可能计入推理 token；启用服务端 Web 工具另有搜索调用计费（见 `../anthropic/` 的 `usage.server_tool_use`）。价格按模型与通道不同且变化快，本页不展开数值，价目表见 `../ops/`（落地前以官方定价页为准）。
+一次请求的账单通常由**缓存命中输入 + 未命中输入 + 输出 token**相加；思考模式还可能计入推理 token；启用服务端 Web 工具另有搜索调用计费。价格按模型与通道不同且变化快，本页不展开数值。
 
 ## 省钱清单
 
 - 稳定内容前置、变动内容后置，不要每轮重写 system prompt。
-- 同一会话保持消息顺序追加；Chat Completions 不支持在中间插入工具调用（见 `../tool-calls/`）。
-- 用 `reasoning_effort` 控制思考强度；简单任务关思考或选低档（见 `../formats/`）。
+- 同一会话保持消息顺序追加；Chat Completions 不支持在中间插入工具调用。
+- 用 `reasoning_effort` 控制思考强度；简单任务关思考或选低档。
 - 把命中率纳入监控：缓存命中输入 token / 总输入 token。
 - 输出是单价最高的部分，用 `stop`、`max_tokens` 与简洁提示控制长度。
-- 图片与文件输入会增加输入 token，传入前先裁剪与压缩（图片支持情况见 `../responses/` 与 `../anthropic/`）。
+- 图片与文件输入会增加输入 token，传入前先裁剪与压缩。
 
 ## 一句话主线
 
 **把不变的内容固定在最前面，让重复请求只付新增部分的钱；命中率是可观测、可优化的工程指标，不是黑盒。**
 
-> 相关：前缀设计见 `../fim/`；Anthropic 流式用量见 `../anthropic/`；完整差异对照见 `../deepseek.md`。

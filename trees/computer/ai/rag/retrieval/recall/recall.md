@@ -7,7 +7,7 @@ name: "Recall: Sparse and Dense"
 
 # 召回：Bi-Encoder、稠密与稀疏
 
-工程原则：**用轻量算法换取召回广度，再用昂贵算法换取排序精度**。两阶段流水线：召回（大中求快）→ 精排（准中求精，见 `../rerank/`）。
+工程原则：**用轻量算法换取召回广度，再用昂贵算法换取排序精度**。两阶段流水线：召回（大中求快）→ 精排。
 
 ## Bi-Encoder（双编码器）
 
@@ -49,7 +49,7 @@ Sparse Lexical and Expansion Retrieval：用 transformer（BERT MLM head）输�
 
 ## 向量召回
 
-暴力扫描不可行，需 ANN 索引（HNSW/IVF 等，详见 `../../vdb/ann/`）。HNSW 是多数 RAG 场景的稳妥默认。
+暴力扫描不可行，需 ANN 索引。HNSW 是多数 RAG 场景的稳妥默认。
 
 ## 典型召回栈
 
@@ -57,4 +57,3 @@ Sparse Lexical and Expansion Retrieval：用 transformer（BERT MLM head）输�
 
 若知识库不大或对延迟敏感，先用 HNSW + BGE 跑通，再按需叠加 BM25。
 
-> 相关：融合算法见 `../fusion/`；精排见 `../rerank/`。

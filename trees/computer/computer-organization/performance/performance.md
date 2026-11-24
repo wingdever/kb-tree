@@ -30,7 +30,7 @@ CPU 时间 = 指令数 × CPI × 时钟周期 = 指令数 × CPI / 主频
 
 ## 加速比定律
 
-- **Amdahl 定律**：`Speedup = 1 / ((1-f) + f/s)`，固定问题规模下受串行部分限制（例：40% 可并行 → 最大约 1.67×），见 `../parallel/parallel.md`。
+- **Amdahl 定律**：`Speedup = 1 / ((1-f) + f/s)`，固定问题规模下受串行部分限制（例：40% 可并行 → 最大约 1.67×）。
 - **Gustafson 定律**：问题规模可随时扩展时，加速比可近线性。
 - 两者提醒：**找对瓶颈比堆资源更重要**——串行段与内存带宽常是隐藏天花板。
 
@@ -55,4 +55,3 @@ Roofline 让"该优化哪里"有图可依，是 HPC 与 AI 性能分析的常用
 - 基准负载与真实负载差异巨大，优化后线上无收益。
 - 只优化局部热点，忽略 Amdahl 约束下的串行瓶颈。
 
-> 相关：并行加速与 Amdahl 见 `../parallel/parallel.md`；CPU 时间与流水线见 `../cpu/`；存储瓶颈见 `../memory/memory.md`；AI 推理性能见 `../../ai/model/inference/`；计算机组成总览见 `../computer-organization.md`；计算机学科总览见 `../../computer.md`。

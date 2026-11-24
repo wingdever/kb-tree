@@ -71,11 +71,10 @@ name: "Chat Messages Schema"
 ## 常见陷阱
 
 - 思考模式下继续工具调用，必须回传助手**完整** content 数组（含 `reasoning_content` 与 `tool_calls`）；只回传 ID 可能触发 400。
-- Chat Completions 不支持在历史中间插入工具调用，需改用 Responses 或 Anthropic 格式（见 `../../tool-calls/`）。
-- JSON 输出模式要求在 system/user 消息里明确指示模型生成 JSON（见 `../request/`）。
+- Chat Completions 不支持在历史中间插入工具调用，需改用 Responses 或 Anthropic 格式。
+- JSON 输出模式要求在 system/user 消息里明确指示模型生成 JSON。
 
 ## 一句话主线
 
 **user/tool 的 content 可以是字符串或带 `type` 的 parts 数组；图片用 `image_url`、文件用 `file_id`/`file_data` 二选一，assistant 的 `prefix` 是 Beta 续写入口。**
 
-> 相关：请求字段见 `../request/`；响应消息见 `../response/`；文件生命周期见 `../../files/`。

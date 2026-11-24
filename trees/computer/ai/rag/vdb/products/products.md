@@ -49,4 +49,3 @@ name: "Vector Database Selection"
 
 从第一天为迁移设计：保持 chunk ID 稳定、元数据版本化嵌入模型、解耦摄入与检索服务、抽象查询层避免 Provider 切换变成全应用重写。
 
-> 相关：索引算法原理见 `../ann/`；过滤见 `../filter/`；成本见 `../cost/`。

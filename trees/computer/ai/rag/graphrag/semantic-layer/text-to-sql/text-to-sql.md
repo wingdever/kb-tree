@@ -9,7 +9,7 @@ name: "Text-to-SQL"
 
 Text-to-SQL 让用户用自然语言查询结构化数据——LLM 针对数据库 schema 生成 SQL。它在管理良好的领域做内部分析已进入生产可用，但成败几乎完全取决于**上下文工程**，而非模型本身：干净基准上问题近乎解决（BIRD 约 83%），而未经准备的企业 schema 实际成功率仅 **10–30%**——这就是"企业悬崖"。
 
-一个 2026 的重要转向：更强的模式是 **text-to-semantic 而非 text-to-SQL**——Agent 输出结构化请求（measure、dimension、filter、time grain）给语义层，由层确定性地编译出安全 SQL（详见 `../semantic-layer.md`）。本页讲生成技术本身，二者互补。
+一个 2026 的重要转向：更强的模式是 **text-to-semantic 而非 text-to-SQL**——Agent 输出结构化请求（measure、dimension、filter、time grain）给语义层，由层确定性地编译出安全 SQL。本页讲生成技术本身，二者互补。
 
 ## 五阶段管线
 
@@ -50,7 +50,7 @@ Agentic 循环优于一次性翻译：schema 探索 → 对活库执行 → 从�
 | 错误 join 路径 | 重复行、SUM 膨胀（fan-out：订单×3 明细×2 支付 = 6 行） | FK 提示 + 显式 join 链 few-shot；声明关系基数、批准 join 路径；每次 join 前后测行数 |
 | 幻觉列 | "column X does not exist" | 对活 catalog 校验标识符；裁剪 schema 块 |
 | 错误聚合粒度 | 平均的平均、缺 GROUP BY | 标注 grain 的 few-shot 示例 |
-| 指标歧义 | revenue 指 gross/net/booked/recognized 中哪个？ | 语义层（见 `../semantic-layer.md`）；缺定义就问用户 |
+| 指标歧义 | revenue 指 gross/net/booked/recognized 中哪个？ ||
 | 日期误判 | "上季度"解析到训练时代 | 注入当前日期、时区、财年规则 |
 | 静默空结果 | 明明有数据却返回 0 行 | 零行重试 + 重过滤提示 |
 | 越界 | 查询碰到非白名单表 | allow-list 拒绝，再问澄清 |
@@ -93,4 +93,3 @@ Agentic 循环优于一次性翻译：schema 探索 → 对活库执行 → 从�
 
 Vanna 2.0 适合嵌入式开发工具，Wren AI 适合受治理企业 BI——解决不同问题，不是同一定价档。
 
-> 相关：语义层（更优的 text-to-semantic 路线）见 `../semantic-layer.md`；图数据库与 Text-to-Cypher 见 `../../graphdb/`；RAG 整体评估见 `../../../eval/`；提示注入防御见 `../../../../agent/safety/`。

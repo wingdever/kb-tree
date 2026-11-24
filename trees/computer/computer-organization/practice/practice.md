@@ -40,12 +40,10 @@ name: "Computer Organization in Practice"
 1. 先用 VENUS / Logisim 建立指令与电路的直觉。
 2. 用 Patterson & Hennessy 系统学 ISA、流水线、存储层次。
 3. 用 perf / cachegrind 在真实程序上验证概念——看到自己代码的缓存命中率，理解会跃升一个层次。
-4. 深入并行与性能分析见 `../parallel/parallel.md` 与 `../performance/performance.md`。
 
 ## 常见失败模式
 
 - 只记概念不做测量，知识停留在名词层面。
-- 用微基准推断整体性能，忽略真实负载特征，见 `../performance/performance.md`。
+- 用微基准推断整体性能，忽略真实负载特征。
 - 忽视硬件现实，写出缓存不友好或同步开销巨大的代码。
 
-> 相关：存储层次见 `../memory/memory.md`；流水线见 `../cpu/pipeline/pipeline.md`；性能分析见 `../performance/performance.md`；计算机组成总览见 `../computer-organization.md`；软件工程的工程应用侧见 `../../software-engineering/`；计算机学科总览见 `../../computer.md`。

@@ -44,7 +44,7 @@ name: "Intent Recognition and Slot Filling"
 - 槽位定义、few-shot、spec 加载、多意图的依赖分析。
 - 槽位填准本身是难题：SpokenWOZ（含语音噪声）上最强对话状态跟踪模型联合目标准确率仅 25.65%——**缺槽检测与槽位验证必须由代码把关，而非让模型自行决定是否跳过必填**。
 - 共形预测（conformal prediction）产出"可信意图集合"：集合唯一时直接执行，含多候选才触发澄清。
-- 置信度门槛与升级决策表：低置信度/平票 → 澄清或升级人工（见 `../../agent/multi/consensus/` 的同类思想）。
+- 置信度门槛与升级决策表：低置信度/平票 → 澄清或升级人工。
 
 ## 分层 Pipeline（三层语义）
 
@@ -60,4 +60,3 @@ name: "Intent Recognition and Slot Filling"
 - **别用 Agent 循环做意图识别**——它是前置路由，不是开放推理任务。
 - **测试集**：意图识别测试集 + 意图生成（生成式扩展用户意图）。
 
-> 相关：Agent 路由与编排见 `../../agent/multi/design/`；工具调用见 `../../agent/tool/`；意图歧义与对话的本体约束见 `../../rag/graphrag/ontology/`；提示词工程见 `../../agent/prompt/`。

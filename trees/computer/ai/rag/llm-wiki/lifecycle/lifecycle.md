@@ -50,4 +50,3 @@ Wiki 不止能回答事实问题，还能支撑六类更高阶查询：
 
 Ingest 让新知识复利累积，Query 让已编译的知识被直接消费（便宜且带引用），Lint 保证结构不腐化。三者配合，Wiki 才能长期可信——单有 Ingest 会累积错误，单有 Lint 没有新知，单有 Query 则无积累。
 
-> 相关：三层架构见 `../architecture/`；适用场景与 RAG 对比见 `../practice/`；增量维护的通用思想见 `../../../agent/context/`。

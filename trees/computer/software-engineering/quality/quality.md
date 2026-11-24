@@ -34,7 +34,7 @@ name: "Software Quality and Testing"
 ## 质量度量
 
 - **缺陷逃逸率**：上线后发现的缺陷占比，反映测试有效性。
-- **变更失败率 / 部署频率 / MTTR / 变更前置时间**：DORA 四项指标，衡量交付效能与稳定性，见 `../devops/devops.md`。
+- **变更失败率 / 部署频率 / MTTR / 变更前置时间**：DORA 四项指标，衡量交付效能与稳定性。
 - **测试覆盖率**：有用的信号而非目标；覆盖率 100% 不代表断言质量高。
 
 ## 常见失败模式
@@ -44,4 +44,3 @@ name: "Software Quality and Testing"
 - 测试与验收标准脱节：需求说"2 秒内完成"，测试却不测时间。
 - 左移变成"把工作甩给开发者"而不给工具与自动化支撑。
 
-> 相关：测试在生命周期中的位置见 `../sdlc/sdlc.md`；非功能需求到测试的映射见 `../sdlc/requirements/requirements.md`；架构可测试性见 `../architecture/architecture.md`；交付流水线见 `../devops/devops.md`；软件工程总览见 `../software-engineering.md`；计算机学科总览见 `../../computer.md`。

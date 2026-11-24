@@ -44,7 +44,7 @@ name: "RAG Frameworks and Tools"
 - **向量库**：Pinecone（托管）、Weaviate/Qdrant（开源）最常提及。
 - **重排**：Cohere Rerank 被反复推荐为精度选择。
 - **解析**：Unstructured.io。
-- **评估**：RAGAS（一致性选择，见 `../eval/`）。
+- **评估**：RAGAS。
 
 ## 迁移现实
 

@@ -94,4 +94,3 @@ print(message.content)                # "The current temperature in Hangzhou is 
 
 **标准 OpenAI 循环直接可用，扩展参数走 `extra_body`；唯一硬限制是 Chat Completions 不能在历史中间插入工具调用。**
 
-> 相关：通用循环见 `../../loop/loop.md`；OpenAI 原生字段见 `../../openai-function-calling/openai-function-calling.md`；思考模式回传要求见 `../formats/`。

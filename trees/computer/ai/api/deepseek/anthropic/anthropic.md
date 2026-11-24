@@ -97,4 +97,3 @@ message = client.messages.create(
 
 **换 base_url 和认证头即可用 Anthropic SDK 接入；字段等价但有专属差异——工具省略 `type`、`tool_result` 必须在文本前、思考模式回传完整内容、流式用量取最终 delta。**
 
-> 相关：工具调用循环见 `../tool-calls/`；Responses 的中间插入能力见 `../responses/`；缓存命中计费见 `../caching/`。

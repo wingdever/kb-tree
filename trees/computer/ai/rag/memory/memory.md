@@ -9,12 +9,6 @@ name: "Agent Memory Systems"
 
 没有记忆的 Agent 像金鱼，会无限重复同样的错误。记忆决定它是否重复检索、忘记用户上下文，或跨会话学到东西。向量库记忆只是实现语义召回，**不会训练模型**。
 
-## 子知识点目录
-
-| 目录 | 内容 |
-|---|---|
-| `mcp-overlay/` | 已展开子树：dsh 的 MCP memory 挂载边界与三份参考配置 Memorix / MCP Reference Memory / Engram（入口 `mcp-overlay/mcp-overlay.md`） |
-
 ## 短期记忆（工作记忆）
 
 - 当前会话、草稿纸、即时任务状态、中间推理。
@@ -38,7 +32,7 @@ name: "Agent Memory Systems"
 
 ## 状态与检查点
 
-对长运行或多步骤 Agent，持久化状态使运行可以：失败后恢复、人工交接后继续、不必从头开始。LangGraph 用 checkpointer + `thread_id` 实现（见 `../../agent/langgraph/`）。
+对长运行或多步骤 Agent，持久化状态使运行可以：失败后恢复、人工交接后继续、不必从头开始。LangGraph 用 checkpointer + `thread_id` 实现。
 
 ## 记忆治理
 
@@ -47,10 +41,9 @@ name: "Agent Memory Systems"
 - 只存储能改善结果的最少内容。
 - 明确留存策略与删除策略。
 - 谨慎处理个人数据。
-- 记忆投毒：错误内容进入共享记忆，下游 Agent 当作事实，准确率逐渐衰减且根因难查（见 `../../agent/multi/failure/`）。
+- 记忆投毒：错误内容进入共享记忆，下游 Agent 当作事实，准确率逐渐衰减且根因难查。
 
 ## 与上下文工程的关系
 
-记忆系统与上下文工程是同一问题的两面：前者管跨会话持久化，后者管单会话内窗口管理。上下文腐烂、context collapse、ACE（增量式剧本更新）详见 `../../agent/context/`。
+记忆系统与上下文工程是同一问题的两面：前者管跨会话持久化，后者管单会话内窗口管理。
 
-> 相关：RAG 作为"外部知识"的机制见 `../basics/`；Agentic RAG 中记忆作为循环状态见 `../agentic-rag/`。

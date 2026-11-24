@@ -7,13 +7,13 @@ name: "LLM Pretraining"
 
 # 大模型预训练（Pretraining）
 
-预训练是从零训练基座模型——把海量文本压缩进参数，建立语言与世界知识的基础。它和数据、算力、并行策略强绑定（并行见 `../distributed/`，分词见 `../tokenizer/`，微调见 `../peft/`）。
+预训练是从零训练基座模型——把海量文本压缩进参数，建立语言与世界知识的基础。它和数据、算力、并行策略强绑定。
 
 > 预训练是一笔" upfront 赌注"：需要预先承诺算力，耗时数周数月。这就是为什么微调现有模型成为主流——预训练成本只付一次，摊薄到数千下游任务。
 
 ## 数据管道
 
-预训练语料来源：Common Crawl（PB 级、噪声大）、C4（清洗版约 750GB）、FineWeb、 Books1/2、Wikipedia、The Stack v2（代码，67.5TB）、The Pile（825GB、22 子集）、RedPajama、Common Pile v0.1（8TB、公有领域/开放许可）。中文与专业语料见 `../../rag/embedding/training/` 的数据集部分。
+预训练语料来源：Common Crawl（PB 级、噪声大）、C4（清洗版约 750GB）、FineWeb、 Books1/2、Wikipedia、The Stack v2（代码，67.5TB）、The Pile（825GB、22 子集）、RedPajama、Common Pile v0.1（8TB、公有领域/开放许可）。
 
 流水线（相对体积示意）：
 
@@ -57,7 +57,7 @@ C ≈ 6 · N · D        （每参数每 token 约 6 FLOPs：前向+反向+更�
 ## 从零预训练实操
 
 1. **先定位**：数据是瓶颈不是模型——大多数团队不该从零预训练，微调/继续预训练更划算。
-2. **定规模**：受显存约束，先小后大（见 `../distributed/` 的并行策略、混合精度、梯度累积）。
+2. **定规模**：受显存约束，先小后大。
 3. **建数据管道**：上述六步，版本化、可重试（解析器升级要能重处理，OCR 失败按页范围重试）。
 4. **先跑代理实验**：小规模验证 loss 曲线与配比，再放大。
 5. **算力现实**：C≈6ND 是理论值，真实 FLOPs 因通信同步约 0.5–0.7×；现代 H100/H200 集群可达 600+ TFLOPs。超 10²¹ FLOPs 后偏向更大模型（对指令微调模型），base 模型仍等比例。
@@ -66,4 +66,3 @@ C ≈ 6 · N · D        （每参数每 token 约 6 FLOPs：前向+反向+更�
 
 主要看**训练 loss 曲线**与 held-out 的**困惑度（perplexity = e^cross-entropy loss**，越低越好，衡量模型对留出文本多"惊讶"），加上定期在标准 benchmark 上跑，跟踪能力涌现（而非只看终点）。监控数据管道各阶段损耗、重复率、污染检查。
 
-> 相关：并行与集群见 `../distributed/`；分词器见 `../tokenizer/`；嵌入模型训练见 `../../rag/embedding/training/`；微调与 PEFT 见 `../peft/`。

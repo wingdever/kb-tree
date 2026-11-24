@@ -11,21 +11,7 @@ name: "Computer Organization"
 
 这些不是考试题，而是**可观察行为的解释**：缓存友好的代码快 10×、分支预测影响循环性能、CPU-GPU 内存传输昂贵、内存延迟主导数据库负载。理解硬件在代码运行时实际做什么，才能做出多数从未学过组成原理的开发者做不到的工程决策。
 
-## 子树导航
-
-| 子树 | 关注点 | 入口 |
-|---|---|---|
-| 指令集架构 | ISA 作为软硬件契约、RISC/CISC、寻址、大小端、冯·诺依曼与哈佛 | `isa/isa.md` |
-| 处理器与数据通路 | 指令周期、控制器/ALU/MMU、超标量、乱序执行、分支预测 | `cpu/cpu.md` |
-| 存储层次 | 局部性、缓存机制、多核一致性、内存墙、虚拟内存与 TLB | `memory/memory.md` |
-| I/O 系统 | 程序查询/中断/DMA、设备控制器、总线、统一与独立编址 | `io/io.md` |
-| 并行架构 | Flynn 分类、SIMD、多核与一致性模型、NUMA、GPU/SIMT、Amdahl 定律 | `parallel/parallel.md` |
-| 性能指标 | CPU 时间公式、CPI/IPC、MIPS/FLOPS、加速比定律、基准测试 | `performance/performance.md` |
-| 实践与工具 | 为什么要学、gem5/VENUS/Logisim/perf/cachegrind、推荐教材 | `practice/practice.md` |
-| 硬件趋势 | Chiplet、HBM、NPU/TPU、RISC-V、存内计算、微架构安全 | `trends/trends.md` |
-
 ## 一句话主线
 
 **ISA 定义软硬件契约，微架构用流水线与乱序把它做快，存储层次用局部性掩盖 CPU 与内存的鸿沟，并行架构与专用单元突破单核上限，性能公式则把这一切变成可计算的取舍。**
 
-> 相关：计算机学科总览见 `../computer.md`；软件工程（本知识的工程应用侧）见 `../software-engineering/`；AI 芯片与推理优化见 `../ai/model/inference/`。

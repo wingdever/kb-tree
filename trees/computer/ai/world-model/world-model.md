@@ -97,4 +97,3 @@ name: "World Models"
 - **潜空间/RL**：V-JEPA 2（Meta）、DreamerV3/V4（Hafner）、Ada JEPA。
 - **规划/具身**：Physical Intelligence（π-0.6）、Skild、Figure Helix、1X NEO、Tesla Optimus、comma.ai。
 
-> 相关：决策与规划见 `../agent/`；模型基强化学习见 `../model/rl/`；3D/多模态生成见 `../model/multimodal/`；具身 Agent 见 `../agent/coding/`（电脑操作）与 `../agent/multi/`；视频生成与扩散见 `../model/multimodal/`。

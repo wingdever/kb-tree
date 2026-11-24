@@ -50,4 +50,3 @@ name: "Basic Chunking Methods"
 - 长生成：1000–2000 token。
 - 起点：512 token + 10–20% overlap，再按评估迭代。
 
-> 进阶方法（语义、父子、Contextual、Late、Agentic）见 `../semantic/` 和 `../contextual/`。
