@@ -1,0 +1,5 @@
+{"q":"Agent 的短期记忆是什么？","section":"短期记忆（工作记忆）","role":"primary"}
+{"q":"长期记忆一般存在哪里？","section":"长期记忆","role":"primary","aliases":["跨会话记忆怎么存"]}
+{"q":"记忆层级怎么划分？","section":"记忆层级（类似缓存层级）","role":"primary"}
+{"q":"长任务失败后怎么恢复状态？","section":"状态与检查点","role":"primary"}
+{"q":"记忆治理要管什么？","section":"记忆治理","role":"primary"}

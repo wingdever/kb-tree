@@ -1,0 +1,60 @@
+---
+description: "Structures for describing world information: ten tables, layers, RDF triples and the ontology connection"
+描述: "描述世界信息的结构：十表、分层、RDF 三元组与本体论关联"
+name: "World Information Structures"
+名称: "世界信息结构"
+---
+
+# 世界信息结构
+
+本页讨论"智能如何描述世界的信息数据结构"——从描述世界，到支持推理、检索、规划。它与本体论（`../../rag/graphrag/ontology/`）强相关：本体论关注由哪些基本范畴构成概念、属性和规则。
+
+## 十种基本表（描述世界的范式）
+
+| 表 | 定义 |
+|---|---|
+| 1. 实体表 entity | 世界中存在且唯一存在于一片时空的具体对象实例 |
+| 2. 类目表 category | 符合一系列模板特征约束的实例的抽象范式描述 |
+| 3. 性状表 trait | 描述实体的指标维度，关联实体 + 填写参数；最基本性状是时空分布。参数可为字面量或对其它表元素的索引 |
+| 4. 关系表 relation | 实体间的各种关系，可定义关系类型；最基本是时空分布的相对性（如作为基本结构被包含）。实体间、类目间可抽象出相似关系 |
+| 5. 关联表 association | 各基本表间构建关联，如类目与它涵盖的性状维度 |
+| 6. 别名表 alias | 名称作为一种索引，一个对象可有多个索引 |
+| 7. 符号表 symbol | 世界到对其描述的映射的基本元素或组合 |
+| 8. 方法表 method | 对象可表现的改变自身或他人性状的行为 |
+| 9. 事件表 event | 一段从起始到终止时间内，空间中相互关联的实体组合的变化或运动 |
+| 10. 场景表 scene | 只需考虑有限相关信息的局部场景 |
+
+## 分层
+
+```
+实例层    entity / event
+抽象层    category / trait / relation-type / function
+符号层    alias / symbol
+关联层    association
+```
+
+**relation-type 定义关系类型，可视为关系的本体论**。
+
+对象分层视角：
+
+- **具体对象（particular）**：实体、事件、关系实例、性状值实例——有时空位置。
+- **抽象对象（abstract）**：类目、性状维度、关系类型、方法模板、符号、规则。
+- **描述对象（representation）**：名称、文本、标识符、文档、符号串。
+
+对应存在的秩序层次：**秩序 → 物理 → 化学 → 生物 → 社会 → 信息**。信息实例通过映射关系，以时空中的信号或实体时空排列的方式存在于具体时空。
+
+另一表述：**ontology 本体层 + instance 实例层 + evidence 证据层 + symbol 符号层**——与本体论的 TBox/ABox 划分呼应（`../../rag/graphrag/ontology/`）。
+
+## RDF 三元组
+
+知识图谱的核心：**一切陈述都是三元组**。RDF（Resource Description Framework）基本单位 = 主语—谓语—宾语：
+
+- **主语**：被描述的资源，通常是 IRI（国际化资源标识符，类似全局唯一 URL/ID）。
+- **谓语**：属性或关系，通常也是 IRI。
+- **宾语**：另一个 IRI，或字面量（字符串、数字、日期）。
+
+这与属性图（节点-边-属性，内部 ID）形成对比：RDF 用全局 IRI、有 RDFS/OWL 形式语义、SPARQL 查询，适合跨组织数据集成与推理；属性图适合 GraphRAG、欺诈、推荐等遍历场景。
+
+三元组是"描述"的最小原子，而十表是"认识"的组织范式——前者是表达层，后者是认知层。
+
+> 相关：本体论完整规范见 `../../rag/graphrag/ontology/`；知识图谱构建见 `../../rag/graphrag/kg-construction/`；图数据库见 `../../rag/graphrag/graphdb/`。

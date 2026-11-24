@@ -1,0 +1,77 @@
+---
+description: "Spec-driven development: a reviewed specification becomes the source of truth that drives AI agent implementation"
+描述: "规格驱动开发：让经人工审核的规格成为驱动 AI Agent 实现的真相源"
+name: "Spec-Driven Development"
+名称: "规格驱动开发"
+---
+
+# 规格驱动开发（Spec-Driven Development, SDD）
+
+规格驱动开发把**规格（spec）而不是提示词或代码**放在开发流程的中心：先写出可审查的规格，人审核通过后，再让 AI Agent 按规格逐任务实现。规格是持久的真相源——agent 每个任务都重读它，而不是从眼前代码反推意图。
+
+它要解决的问题是 **agentic coding 的意图漂移（drift）**：没有持久规格时，agent 只能从当前代码重新推导意图，在多文件、多步骤的变更中把偏差层层累积，最终产出"语法正确但方向错误"的代码。SDD 用一份事先商定、可审查的规格把意图锚定下来。
+
+> 来源：GitHub Spec Kit 官方仓库与文档（2025-09 发布），定义 `/constitution`、`/specify`、`/plan`、`/tasks`、`/implement` 等命令。
+> 来源：AWS Kiro 官方文档与博客（kiro.dev，2025-07 推出、2026-05 正式可用），规定 requirements / design / tasks 三文件工作流与 EARS 需求表示法。
+> 来源：Martin Fowler 网站 Birgitta Boeckeler 关于 spec-driven development 的文章，提出 spec-first / spec-anchored / spec-as-source 三层框架。工具命令形态变化快，落地前对照官方文档。
+
+## 核心原则
+
+- **规格是真相源**：意图、决策、约束都写在规格里；代码只是"把规格编译出来"的产物。
+- **人工审核关卡（gate）**：每一阶段的产出都要人审查批准后才进入下一阶段——在文档阶段发现并修正模糊性，远比在生成五百行代码后返工便宜。
+- **变更先改规格**：实现中需求变化时，改的是 spec 并重新走后续阶段，而不是直接改代码——否则代码与规格分歧，agent 会锚定到过时真相。
+- **规格随代码演进**：规格是活文档（living document），决策变化就更新它、重新生成任务，让实现持续对齐。
+
+## 三层框架
+
+Birgitta Boeckeler 的三层框架帮助团队判断"需要多少流程"：
+
+| 层次 | 含义 | 适用 |
+|---|---|---|
+| **spec-first** | 先写好规格，用于当前这一次 AI 辅助任务 | 轻量入口，单次任务 |
+| **spec-anchored** | 任务完成后保留规格，持续用于该特性的演进与维护 | 需要长期维护的特性 |
+| **spec-as-source** | 规格成为主源文件，人只编辑规格、不直接改生成的代码 | 强追溯、代码几乎完全生成的场景 |
+
+三层是从轻到重的连续谱，不是非此即彼——按代码生命周期与追溯需求选择。
+
+## 四阶段工作流
+
+| 阶段 | 产出 | 确定什么 |
+|---|---|---|
+| Specify（规格） | 需求文档 | 做什么、为什么做（需求与约束） |
+| Plan（规划） | 设计文档 | 怎么做（技术栈、架构、方案） |
+| Tasks（任务） | 任务清单 | 按什么顺序做（拆解为可执行单元） |
+| Implement（实现） | 代码 | 逐任务按规格实现 |
+
+每个阶段都经过人工审核；需求变更回到规格，而不是在代码里打补丁。
+
+## 工具生态
+
+- **GitHub Spec Kit**：不绑定特定 agent 的开源工具集，在 Claude Code、Copilot、Gemini CLI 等工具上加斜杠命令强制四阶段流程：`/constitution`（项目不变原则）、`/specify`（特性规格）、`/plan`（技术方案）、`/tasks`（任务拆解）、`/implement`（逐任务实现）；另有 `/clarify`、`/analyze`、`/checklist` 等辅助命令。用 `constitution` 文件记录项目长期不变的原则。
+- **AWS Kiro**：以 SDD 为核心设计的 agentic IDE，生成 `requirements.md`、`design.md`、`tasks.md` 三文件。需求用 **EARS（Easy Approach to Requirements Syntax）**表示——形如「WHEN 条件，THE SYSTEM SHALL 行为」，捕获可测试的验收标准。支持按任务依赖图并行执行独立任务（写同一文件的任务不并行，测试在被测代码之后），另有 quick plan 模式用于边界清晰的特性（一次生成三文件、事后可审）。
+- **更轻量的形式**：Claude Code 的 plan mode 先只读调研、提出方案，人批准后才切换到可写模式实现；Codex 没有正式多文档工作流，用 `AGENTS.md` 固化需求与约定、在 agentic loop 内规划多文件变更。二者共用"动手前先就方案达成一致"的内核，只是流程更轻。
+
+## 与相邻实践的关系
+
+- **需求工程**（`../sdlc/requirements/requirements.md`）：SDD 的规格阶段就是需求工程在 AI 时代的落地——非功能需求、量化验收标准、追溯矩阵同样适用；EARS 是另一种可测试的需求表示法。
+- **TDD / BDD / ATDD**（`../quality/quality.md`）：BDD 的 Given/When/Then 与 EARS 同属"可测试规格"的思路；SDD 把这类规格从测试环节前移到整个实现的驱动源。
+- **架构设计**（`../architecture/architecture.md`）：Plan 阶段本质是架构决策，质量属性权衡与 ADR 在这里发生。
+- **Agent 工程**（`../../ai/agent/agent.md`）：SDD 是"给 agent 一份可重读的持久上下文"的工程化，与 Agent 的上下文工程、工作流模式一脉相承。
+- **Vibe coding**（`../vibe-coding/vibe-coding.md`）：不写规格、直接靠提示词让 agent 生成代码，靠运行反馈引导、刻意减少逐行审查。在简单任务上快；在复杂任务和大代码库上因缺少决策记录与意图锚点而容易漂移。它与 SDD 是同一谱系两端——vibe 用来探索，spec 用来交付。
+
+## 何时用、何时不用
+
+判断标准是**代码的生命周期**：
+
+- **用 SDD**：较大的、多文件、多步骤的 agentic 工作；从零构建的新特性；需要团队对齐或合规审计的系统；需要维护扩展数月以上的代码——在这些场景里 drift 是真实风险，一份持久规格能收回成本。
+- **不用 SDD**：本周就能丢弃的原型、一次性脚本、单行修复、纯重构（意图本就清晰）——三份文档的仪式开销超过收益，直接对话更快。
+
+## 常见失败模式
+
+- **小任务套重流程**：为一行改动生成全套规格，仪式开销超过收益。
+- **规格陈旧（spec rot）**：代码改了规格没改，agent 锚定到过时真相，drift 从另一个方向回来。
+- **规格变成 AI slop**：没人在关卡认真审查，规格本身就是含糊的生成物——人工审核才是安全保障，跳过它等于放弃 SDD 的全部价值。
+- **把工具当成纪律**：以为跑一遍命令就是 SDD，真正的价值在关卡与"变更先改规格"的纪律，而非命令本身。
+- **规格与代码双向各自演进**：人有时改规格、有时直接改代码，失去单一真相源。
+
+> 相关：软件工程总览见 `../software-engineering.md`；方法论见 `../methodology/methodology.md`；AI 融入开发见 `../trends/trends.md`；需求工程见 `../sdlc/requirements/requirements.md`；测试实践见 `../quality/quality.md`；Agent 上下文工程见 `../../ai/agent/context/`；计算机学科总览见 `../../computer.md`。

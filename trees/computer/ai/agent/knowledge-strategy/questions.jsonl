@@ -1,0 +1,6 @@
+{"q":"RAG 之外还有哪些给 Agent 补知识的方案？","section":"方案全景","role":"primary"}
+{"q":"做 Agent 时按什么顺序选知识与记忆方案？","section":"决策路径","role":"primary"}
+{"q":"哪些知识和记忆方案通常要组合使用？","section":"典型组合","role":"primary"}
+{"q":"选方案时常见的错误有哪些？","section":"选型陷阱","role":"primary"}
+{"q":"怎么验证方案选对了？","section":"验证选型","role":"primary"}
+{"q":"什么是上下文腐烂？","section":"选型陷阱","role":"perspective","owner":"../context/"}

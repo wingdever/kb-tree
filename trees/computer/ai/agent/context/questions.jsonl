@@ -1,0 +1,5 @@
+{"q":"什么是上下文腐烂？","section":"1. 上下文腐烂（Context Rot）","role":"primary","aliases":["Context Rot 是什么"]}
+{"q":"上下文坍塌和上下文腐烂有什么区别？","section":"2. 上下文坍塌（Context Collapse）","role":"primary"}
+{"q":"工具太多会影响 Agent 的判断吗？","section":"3. 工具与检索干扰（Tool & Retrieval Distraction）","role":"primary"}
+{"q":"ACE 是什么？","section":"ACE：Agentic Context Engineering","role":"primary"}
+{"q":"上下文快满时该什么时候压缩？","section":"3. 到极限前压缩，不是之后","role":"primary"}

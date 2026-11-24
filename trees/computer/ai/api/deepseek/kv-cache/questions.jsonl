@@ -1,0 +1,3 @@
+{"q":"第二轮请求里的 assistant 消息会命中缓存吗？","section":"命中规则：完整匹配缓存前缀单元","role":"primary","aliases":["assistant 历史消息算不算命中","助手回答那段会命中缓存吗"]}
+{"q":"怎么知道某次请求有没有命中缓存？","section":"命中状态字段","role":"primary","aliases":["缓存命中怎么看","prompt_cache_hit_tokens 是什么"]}
+{"q":"上下文缓存会保留多久？","section":"重要边界","role":"primary","aliases":["缓存什么时候被清理"]}

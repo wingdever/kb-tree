@@ -1,0 +1,8 @@
+{"q":"Chat Completions 请求有哪些必填字段？","section":"顶层字段","role":"primary"}
+{"q":"thinking 参数怎么传？","section":"thinking","role":"primary"}
+{"q":"response_format 支持哪些取值？","section":"response_format","role":"primary"}
+{"q":"流式请求怎么用 usage？","section":"stream_options","role":"primary"}
+{"q":"strict 模式在请求里怎么开启？","section":"tools[]","role":"primary"}
+{"q":"tool_choice 支持哪些值？","section":"tool_choice","role":"primary"}
+{"q":"思考模式下 temperature 和 top_p 怎么生效？","section":"行为规则","role":"primary"}
+{"q":"哪些请求参数已经废弃？","section":"顶层字段","role":"primary"}
