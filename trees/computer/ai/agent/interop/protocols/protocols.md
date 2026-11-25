@@ -115,3 +115,11 @@ Agent  A2A（跨组织） / 同团队内置编排
 
 **协议按「对面是谁」分工：MCP 连工具、A2A 连 Agent、ACP（Client）连编辑器、AG-UI 连前端、AP2 连支付；ACP 另有已并入 A2A 的同名协议——写全称才不会选错。**
 
+## 参考资料
+
+- MCP 规范：https://modelcontextprotocol.io
+- A2A 规范：https://a2a-protocol.org/latest/specification/
+- ACP 规范（Agent Client Protocol）：https://agentclientprotocol.com
+- AG-UI 文档：https://docs.ag-ui.com/
+- ANP 仓库与规范集：https://github.com/agent-network-protocol/AgentNetworkProtocol
+- AP2 仓库：https://github.com/google-agentic-commerce/AP2

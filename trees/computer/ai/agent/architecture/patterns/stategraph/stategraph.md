@@ -36,3 +36,7 @@ name: "State Machines and DAGs"
 
 **何时不用**：单次 LLM 调用 + 单次工具调用（直接用 SDK）；纯线性无分支（普通函数更清晰）。
 
+## 参考资料
+
+- LangGraph 官方概览（状态图与节点）：https://docs.langchain.com/oss/python/langgraph/overview
+- LangGraph 持久化与 Checkpointer：https://docs.langchain.com/oss/python/langgraph/persistence

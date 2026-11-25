@@ -41,3 +41,8 @@ Agent 不需要读完整历史消息线程。只传与当前子任务相关的�
 
 Hong et al. 2023（MetaGPT）让多智能体团队交换结构化制品而非自由对话，错误率降低约 40%。更重要的副作用是：结构化制品天然生成一份完整、可检查的系统决策记录——把"输入到输出之间"发生的每个失败变成可观测的。
 
+## 参考资料
+
+- Anthropic 多 Agent 研究系统工程实录：https://www.anthropic.com/engineering/multi-agent-research-system
+- MAST：多 Agent 系统失败模式：https://arxiv.org/abs/2503.13657
+- AutoGen 论文（角色与群聊机制）：https://arxiv.org/abs/2308.08155

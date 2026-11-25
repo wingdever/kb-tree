@@ -76,3 +76,8 @@ Middleware 不是独立运行时——hooks 在 `create_agent` 返回的编译�
 
 围绕 middleware 的追踪给出完整执行树（模型调用、工具调用、子 Agent、middleware hooks）。时间旅行：每个 super-step 写检查点，可从历史任一检查点分叉、改状态、重放——LLM 调用、工具调用、中断在重放时重新触发，走真实 Agent 循环而非桩。用于调试"为何选了工具 A 而非 B"、对比两个提示、从错误状态回退。
 
+## 参考资料
+
+- LangChain Middleware 官方文档：https://docs.langchain.com/oss/python/langchain/middleware
+- LangGraph 持久化与 Checkpointer 文档：https://docs.langchain.com/oss/python/langgraph/persistence
+- Claude Code Hooks 文档（docs.claude.com）

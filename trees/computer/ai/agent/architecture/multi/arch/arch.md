@@ -51,3 +51,9 @@ name: "Multi-Agent Architecture Patterns"
 
 实践规则：**可靠性重要的地方推向确定性控制，把自主性留给真正需要开放式判断的部分**。
 
+## 参考资料
+
+- Anthropic 工程博客《How we built our multi-agent research system》：https://www.anthropic.com/engineering/multi-agent-research-system
+- AutoGen 论文：https://arxiv.org/abs/2308.08155
+- MetaGPT 论文：https://arxiv.org/abs/2308.00352
+- 《Why Do Multi-Agent LLM Systems Fail?》（MAST）：https://arxiv.org/abs/2503.13657

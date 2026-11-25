@@ -83,3 +83,9 @@ name: "Agent Tool Design"
 3. **轨迹评估**：模拟环境里验证工具选择正确、参数有效、门控遵守、错误恢复。
 4. **Shadow mode / 金丝雀**：先 observe-only 对比人类/旧行为，再小流量灰度、自动回滚。
 
+## 参考资料
+
+- Anthropic《Writing effective tools for agents》：https://www.anthropic.com/engineering/writing-tools-for-agents
+- Anthropic《Tool Use》文档：https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview
+- MCP 规范（工具原语）：https://modelcontextprotocol.io
+- OpenAI Function Calling 文档：https://platform.openai.com/docs/guides/function-calling

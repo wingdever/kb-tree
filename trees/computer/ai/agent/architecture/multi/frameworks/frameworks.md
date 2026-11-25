@@ -44,3 +44,10 @@ name: "Multi-Agent Framework Implementations"
 - 从厂商 SDK 或你写的薄循环起步，只有当状态管理、多智能体协调、持久化执行真正成为瓶颈时才引入更重的框架。
 - 多智能体框架应"挣得自己的位置"——不要因为模式本身酷就用它。
 
+## 参考资料
+
+- AutoGen 仓库与文档：https://github.com/microsoft/autogen
+- CrewAI 文档：https://docs.crewai.com
+- LangGraph 官方文档：https://docs.langchain.com/oss/python/langgraph/overview
+- OpenAI Agents SDK 仓库：https://github.com/openai/openai-agents-python
+- Google ADK 文档：https://google.github.io/adk-docs/

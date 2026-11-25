@@ -64,3 +64,7 @@ Anthropic 的《Building Effective Agents》命名了六个模式，已成为全
 这些模式既能组合也能叠加（每个都会引入前一个没有的失败模式）：路由步骤可以把难题送进编排器-执行器系统，每个 worker 又可以是末尾带评估器的提示链，并行化可以嵌在任意模式内部。**架构就是组合**。多数生产系统组合两到三个模式。
 
 关键原则：从最简单能解决问题的模式起步，仅在有证据表明改善结果时才加复杂度。
+
+## 参考资料
+
+- Anthropic《Building effective agents》（六种模式的原文）：https://www.anthropic.com/engineering/building-effective-agents

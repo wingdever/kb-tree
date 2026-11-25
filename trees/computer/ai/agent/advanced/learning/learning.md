@@ -111,3 +111,10 @@ Harness 方向的专题书。
 
 **AI Agent 的学习主线是「先手写循环建立直觉 → 用模式与评估补判断 → 选一个 SDK 做生产 → 补系统与治理」；书与课程按这条线各取一段，不按榜单全读。**
 
+## 参考资料
+
+- Anthropic 工程博客《Building effective agents》：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic 工程博客《Effective context engineering for AI agents》：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- Prompt Engineering Guide：https://www.promptingguide.ai
+- HumanLayer《12-Factor Agents》：https://github.com/humanlayer/12-factor-agents
+- LangGraph 官方文档：https://docs.langchain.com/oss/python/langgraph/overview

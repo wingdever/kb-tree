@@ -52,3 +52,9 @@ name: "Prompt Engineering"
 6. 给便宜模型生成提示？→ 用前沿模型 Meta-Prompting。
 7. 输出格式不稳定？→ 加显式 schema + 角色约束。
 
+## 参考资料
+
+- Prompt Engineering Guide：https://www.promptingguide.ai
+- Chain-of-Thought 论文：https://arxiv.org/abs/2201.11903
+- 《Lost in the Middle》论文：https://arxiv.org/abs/2307.03172
+- Anthropic《Prompt Engineering》文档：https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview

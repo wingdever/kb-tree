@@ -146,3 +146,10 @@ print(result)
 上面的示例只是起点。原型的差距不在"能不能跑"，而在"能不能被组织依赖"——评估、权限、监控与上线路径。
 
 一个可运行的原型是一个周末的项目；从原型到可靠系统，靠的是工程化。
+
+## 参考资料
+
+- ReAct 论文（提示模板来源）：https://arxiv.org/abs/2210.03629
+- Anthropic《Tool Use》文档（Function Calling 示例）：https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview
+- LangChain 仓库：https://github.com/langchain-ai/langchain
+- CrewAI 文档：https://docs.crewai.com

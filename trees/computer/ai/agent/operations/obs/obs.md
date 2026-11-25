@@ -97,3 +97,10 @@ name: "Production Observability"
 | 编排 | 运行中的工具调用、压缩、预算控制 |
 
 调用量大的团队：可把全部遥测送主平台，抽样副本送 LLM 工具。Langfuse 网关位于应用与提供者之间，Rust 实现、低延迟，换 base URL 和 API key 即可无 SDK 追踪。
+
+## 参考资料
+
+- OpenTelemetry GenAI 语义约定：https://opentelemetry.io/docs/specs/semconv/gen-ai/
+- Langfuse 文档：https://langfuse.com/docs
+- LangSmith 文档：https://docs.smith.langchain.com
+- Arize Phoenix 仓库：https://github.com/Arize-ai/phoenix

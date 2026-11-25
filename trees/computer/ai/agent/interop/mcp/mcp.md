@@ -137,3 +137,9 @@ MCP 遵循 client-host-server 架构，每个 host 可运行多个 client 实例
 **构建 vs 采用**：通用 SaaS（Slack、GitHub、Jira、Salesforce、Notion）采用现成 server（9,400+ 公开 server）；公开 server 不错但 auth/策略需收紧的，采用后加固（Snowflake、Postgres）；内部系统、专有数据层、需领域塑造 agent-tool 契约的，自建。
 
 常见错误：每个系统一个巨型 server（难授权难审计，应小而按能力划分）；跳过网关（POC 可以，生产是安全审查噩梦）；把 MCP 当编排层（它不是）；未审查的公开 server 接私有数据；工具调用无回归测试（小模型改动一夜之间破坏工具调用契约）。
+
+## 参考资料
+
+- MCP 官网与规范索引：https://modelcontextprotocol.io
+- MCP 规范（2025-06-18 版本）：https://modelcontextprotocol.io/specification/2025-06-18
+- Anthropic 发布公告《Introducing MCP》：https://www.anthropic.com/news/model-context-protocol

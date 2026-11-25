@@ -45,3 +45,8 @@ Agent 也可以通过读写共享工作区（黑板）而非直接消息传递�
 - 上下文过时：给所有上下文打时间戳。
 - 竞态：给 handoff 编号排序；共享资源加锁或排队。
 
+## 参考资料
+
+- A2A 协议规范：https://a2a-protocol.org/latest/specification/
+- AutoGen 论文（消息传递与交接）：https://arxiv.org/abs/2308.08155
+- Anthropic 多 Agent 研究系统（委派与上下文隔离）：https://www.anthropic.com/engineering/multi-agent-research-system

@@ -111,3 +111,15 @@ Anthropic 的建议很明确：**开发者应先直接使用 LLM API**——许�
 - 多角色快速原型 → CrewAI。
 - 追求与控制、最小依赖 → 厂商 SDK 或自己写薄循环。
 - 框架只是工具：**先让正常路径跑通，再考虑样式与边界防御**；框架应随瓶颈出现而引入，而非一开始就堆满。
+
+## 参考资料
+
+- LangGraph 官方文档：https://docs.langchain.com/oss/python/langgraph/overview
+- LangChain Middleware 文档：https://docs.langchain.com/oss/python/langchain/middleware
+- CrewAI 文档：https://docs.crewai.com
+- AutoGen 仓库：https://github.com/microsoft/autogen
+- OpenAI Agents SDK 仓库：https://github.com/openai/openai-agents-python
+- Google ADK 文档：https://google.github.io/adk-docs/
+- PydanticAI 文档：https://ai.pydantic.dev
+- Mastra 文档：https://mastra.ai/docs
+- Anthropic《Building effective agents》（框架取舍立场）：https://www.anthropic.com/engineering/building-effective-agents

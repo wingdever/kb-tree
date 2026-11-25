@@ -65,3 +65,8 @@ name: "Consensus and Decision Making"
 - ❌ 把串行传递当投票：后手能看到前手答案时独立性消失，投票失效（p<0.5 时投票只会放大错误）。
 - ❌ 忽略答题者水平。
 
+## 参考资料
+
+- MAST：多 Agent 系统失败模式与方差：https://arxiv.org/abs/2503.13657
+- ChatDev 论文（多角色评审与讨论）：https://arxiv.org/abs/2307.07924
+- AutoGen 论文：https://arxiv.org/abs/2308.08155

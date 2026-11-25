@@ -131,3 +131,11 @@ Anthropic 对工具设计的补充：工具定义与文档要和提示词一样�
 - [ ] 护栏能处理提示注入与不良输出
 - [ ] 已接入完整追踪、成本/延迟/错误指标与告警
 - [ ] 发布从窄范围开始、feature flag、保留人工介入
+
+## 参考资料
+
+- Anthropic《Building effective agents》：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic《Effective context engineering for AI agents》：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- Anthropic《Tool Use》文档：https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview
+- RAG 原始论文：https://arxiv.org/abs/2005.11401
+- HumanLayer《12-Factor Agents》：https://github.com/humanlayer/12-factor-agents

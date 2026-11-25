@@ -74,3 +74,10 @@ Browser use 是「UI 控制」里被 DOM / a11y 约束得更紧的特例，不�
 
 **`-use` 家族是按行动面命名的一组外壳：模型提议、宿主执行是共同骨架；按工具表选型，按可恢复性设门禁，有 API 就别走 GUI。**
 
+## 参考资料
+
+- OSWorld 基准论文（真实桌面任务）：https://arxiv.org/abs/2404.07972
+- WebArena 基准论文（真实网页任务）：https://arxiv.org/abs/2307.13854
+- AgentBench 基准论文：https://arxiv.org/abs/2308.03688
+- browser-use 仓库：https://github.com/browser-use/browser-use
+- Anthropic《Computer Use》工具文档（docs.claude.com）

@@ -45,3 +45,8 @@ Anthropic 的研究系统是典范："主导 Agent 协调流程，同时把任�
 - 给 worker 计数和预算上限，防止过度拆解烧光预算。
 - 人在回路审批门可挂在监督者的综合输出之后。
 
+## 参考资料
+
+- Anthropic《Building effective agents》（Orchestrator-Workers）：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic 多 Agent 研究系统（编排器实测）：https://www.anthropic.com/engineering/multi-agent-research-system
+- AutoGen 论文：https://arxiv.org/abs/2308.08155

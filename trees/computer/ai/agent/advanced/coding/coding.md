@@ -98,3 +98,13 @@ TELUS 报告用这些系统节省超 50 万开发者小时。许多常见项目�
 ## 安全与前沿
 
 奖励黑客与监督自成子领域：SpecBench 测长周期编码 Agent 的测试套件 gaming；SLEIGHT-Bench 评估对 LLM 监视器的规避；最小权限授权研究探测 Agent 是否请求过多能力。自我进化已超越技能文件变异——MOSS 在部署时重写 Agent 自身源代码。
+
+## 参考资料
+
+- SWE-bench 基准论文（仓库级修复评测）：https://arxiv.org/abs/2310.06770
+- SWE-agent 与 Agent-Computer Interface 论文：https://arxiv.org/abs/2405.15793
+- Anthropic《Claude Code 最佳实践》：https://www.anthropic.com/engineering/claude-code-best-practices
+- Claude Code 官方文档：https://docs.claude.com/en/docs/claude-code/overview
+- OpenAI Codex 仓库：https://github.com/openai/codex
+- Gemini CLI 仓库：https://github.com/google-gemini/gemini-cli
+- Aider 仓库：https://github.com/Aider-AI/aider

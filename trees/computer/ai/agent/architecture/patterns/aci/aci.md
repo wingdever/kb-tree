@@ -47,3 +47,7 @@ Anthropic 提出的实现 Agent 的三条核心原则：保持简单、优先透
 - 建议**开发者先直接用 LLM API**——许多模式几行代码就能实现。若用框架，务必理解底层代码；对底层机制的错误假设是常见错误来源。
 - 进入生产时，不要犹豫减少抽象层、改用基础组件构建。
 
+## 参考资料
+
+- SWE-agent：Agent-Computer Interface 原始论文：https://arxiv.org/abs/2405.15793
+- Anthropic《Building effective agents》（ACI 与工具设计立场）：https://www.anthropic.com/engineering/building-effective-agents

@@ -66,3 +66,9 @@ name: "Production Practices and Pitfalls"
 > 把任务收敛清楚 → 能用工作流就不用 Agent → 审慎选模型 → 亲手掌握循环 → 像设计 API 一样设计工具 → 用 RAG 接地业务数据 → 谨慎管理记忆 → 加护栏 → 把评估做成永久系统 → 全链路追踪 → 控制成本延迟 → 窄范围带人工监督发布。
 
 把评估与监控当作一等公民而非附加品的团队，才是那些 Agent 能活过 demo 阶段的团队。
+
+## 参考资料
+
+- Anthropic《Building effective agents》：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic 多 Agent 研究系统工程实录：https://www.anthropic.com/engineering/multi-agent-research-system
+- HumanLayer《12-Factor Agents》：https://github.com/humanlayer/12-factor-agents

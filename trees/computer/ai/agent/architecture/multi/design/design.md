@@ -60,3 +60,8 @@ name: "Multi-Agent Design Judgment"
 
 2026 生产实践：把失效模式当作设计输入。你的架构不算"够好"，直到你能对着 MAST 的每个类别说出部署了哪种缓解措施。
 
+## 参考资料
+
+- Anthropic《Building effective agents》（何时拆多 Agent）：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic 多 Agent 研究系统（成本与收益实测）：https://www.anthropic.com/engineering/multi-agent-research-system
+- MAST：多 Agent 系统失败模式：https://arxiv.org/abs/2503.13657

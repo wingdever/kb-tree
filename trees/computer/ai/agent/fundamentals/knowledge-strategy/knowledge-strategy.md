@@ -75,3 +75,8 @@ name: "Knowledge and Memory Strategies"
 
 **先问信息放在哪里，再按时效、可溯源与更新成本取舍；方案通常叠加而非互斥，选完还要用评估验证。**
 
+## 参考资料
+
+- RAG 原始论文：https://arxiv.org/abs/2005.11401
+- Self-RAG 论文：https://arxiv.org/abs/2310.11511
+- Anthropic《Effective context engineering for AI agents》：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents

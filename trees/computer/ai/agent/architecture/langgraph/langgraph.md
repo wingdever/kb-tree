@@ -165,3 +165,9 @@ for event in graph.stream(
 **用**：控制流需要循环（ReAct、重试、自我批评）；Agent 必须能崩后恢复；想要一等公民的人工审批门；需要向前端流式输出中间状态；已用 LangChain 组件；工作流有 5+ 步骤且带条件分支。
 
 **不用**：Agent 只是一次 LLM 调用 + 一次工具调用（直接用 LLM SDK）；需要严格 TypeScript 类型（考虑 Mastra 或 Vercel AI SDK）；团队零 LangChain 经验且是一次性脚本；需要毫秒级路由（图编译与分发开销虽小但真实存在）；纯线性无分支的工作流（普通函数顺序调用更清晰）。
+
+## 参考资料
+
+- LangGraph 官方概览：https://docs.langchain.com/oss/python/langgraph/overview
+- LangGraph 持久化与 Checkpointer：https://docs.langchain.com/oss/python/langgraph/persistence
+- langchain-ai/langgraph 仓库：https://github.com/langchain-ai/langgraph
