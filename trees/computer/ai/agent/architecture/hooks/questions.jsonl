@@ -2,3 +2,5 @@
 {"q": "LangChain v1 的中间件能做什么？", "section": "LangChain v1 中间件（2026 主流实现）"}
 {"q": "hooks 一般用来解决什么问题？", "section": "典型用途"}
 {"q": "hooks 和回放、时间旅行是什么关系？", "section": "可观测性与时间旅行"}
+{"q": "什么需求该用 hook，什么该用提示词？", "section": "什么时候用 hook，什么时候别用", "aliases": ["这条规则该写成 hook 还是提示"]}
+{"q": "中间件常见的问题有哪些？", "section": "失败模式"}

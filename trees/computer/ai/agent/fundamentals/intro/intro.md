@@ -1,6 +1,6 @@
 ---
-description: "Agent definition, chatbot/workflow/agent distinction and core components"
-描述: "Agent 的定义、与聊天机器人和工作流的区别及核心组件"
+description: "Agent definition, chatbot/workflow/agent distinction, core components, minimal loop and failure surface"
+描述: "Agent 的定义、与聊天机器人和工作流的区别、核心组件、最小循环与失败面"
 name: "What Is an Agent"
 名称: "什么是 Agent"
 ---
@@ -30,6 +30,21 @@ Agent 的行为特征是：**动态地指导自己的流程和工具使用，而
 | **Agent（智能体）** | LLM 动态决定走多少步、调用哪些工具、如何追求目标。 | LLM 在运行时 |
 
 从 Chatbot 到 Agent 的关键一步，是**给模型工具**；而这一步也正是权限与护栏开始变得重要的地方。
+
+三者不是成熟度阶梯，而是三种成本结构：Chatbot 便宜但做不完事，Workflow 可控但覆盖不了没枚举的情况，Agent 能覆盖开放情况但把可预测性换了出去。
+
+## 名词对齐
+
+同一个东西在不同文档里有四种叫法，先对齐再读后面的内容：
+
+| 说法 | 指什么 | 常见混淆 |
+|---|---|---|
+| tool use / function calling / tool calling | 模型输出一个结构化调用请求，由运行时执行并把结果回填 | 以为模型"执行"了工具，其实执行在后端 |
+| agentic loop / control loop | 「模型决策 → 执行 → 观察回填」的循环本身 | 把单次多轮对话也叫循环，其实没有行动回填 |
+| harness / scaffold / runtime | 循环、工具注册、上下文拼装、重试与停止条件的载体 | 把 harness 当成框架，框架只是它的一种实现 |
+| autonomy | 运行时决策权的多少，不是"聪明程度" | 把自主性当等级，其实应按维度拆 |
+
+> 判断：这四个词混用会直接导致设计错误——把 harness 的能力（停止条件、重试、并发）当成模型能力去"提示词解决"，是 Agent 工程里最常见的一类返工。
 
 ## 实践准则：用能解决问题的最不动态的系统
 
@@ -78,6 +93,8 @@ Anthropic 的指导很直接：**只有在能明确改善结果时才增加复�
 
 > 一旦掌握了架构，具体用哪个 LLM 模型就变成可替换的了。
 
+组件之间的关系也有方向：**模型的能力上限决定工具该给多细，工具的粒度反过来决定上下文会被多快填满。** 给一个能力有限的模型配一套粗粒度工具，它会用错；给一个强模型配一堆原子工具，它会在选择上耗尽预算。
+
 ## 认知循环：Observe → Think → Act
 
 每个 Agent 系统本质上都在运行某种 OODA 循环（Observe, Orient, Decide, Act），在 AI 领域通常简化为 **观察 → 思考 → 行动**：
@@ -97,6 +114,54 @@ Anthropic 的指导很直接：**只有在能明确改善结果时才增加复�
 
 一个健康的生产循环还需要：硬性的停止条件（迭代数、token、时间上限）、状态传递策略（摘要 / 裁剪，避免永久传递全部历史）、错误处理（捕获失败、把干净的错误反馈给模型重试），以及尽可能在非确定性的模型调用周围包裹确定性的、可测试的代码。
 
+## 最小可运行的循环
+
+抛开框架，一个能跑的最小 Agent 只有五个部件：一个 while 循环、一份消息列表、一张工具表、一个执行器、一组出口条件。
+
+```python
+messages = [system_prompt, user_task]
+for step in range(MAX_STEPS):
+    resp = llm(messages, tools=tool_specs, budget=remaining)
+    if resp.tool_calls:
+        for call in resp.tool_calls:
+            result = execute(call)          # 校验参数、限权、超时
+            messages.append(tool_result(result))  # 回填，而不是追加全文
+        continue
+    return resp.text                        # 出口 1：给出答案
+raise StepLimitExceeded(step)               # 出口 2：步数耗尽
+```
+
+五个出口缺一不可：**正常完成**、**步数上限**、**token 或时间预算耗尽**、**工具连续失败**、**需要人确认**。只写了"循环直到模型不再调工具"的实现，在模型陷入重复调用时会一直烧钱。
+
+两个容易被忽略的细节：
+
+- **回填的是结果摘要，不是原始大对象**。把整个网页 HTML 塞回消息列表，下一轮上下文就被它吃掉了。
+- **工具参数在执行前校验**，不是执行后修补。参数不合 schema 的调用直接以错误信息返回给模型，比让它调到一半再回滚便宜得多。
+
+## 常见误解
+
+| 误解 | 实际情况 |
+|---|---|
+| 有工具调用就是 Agent | 单轮"调用一次工具再回答"仍是增强型 LLM；Agent 的判据是**运行时决定走几步** |
+| 多步、多次模型调用就是 Agent | 步骤若由代码预先确定，那是工作流 |
+| Agent 会自己规划，所以不用设计流程 | 规划质量取决于工具描述与上下文；流程边界（预算、出口、权限）仍要人定 |
+| 自主性越高越好 | 自主性按维度取用，越高意味着越多不可测路径与越多护栏成本 |
+| 记忆就是向量库 | 记忆是"写什么、何时写、何时召回、如何作废"的策略，向量库只是其中一种存储 |
+| 换个更强的模型就能解决 | 模型换强通常提升单步质量，路径发散、成本失控、工具选错属于系统问题 |
+
+## 不确定性从哪来
+
+Agent 的不可预测性有四个来源，分开看才知道该在哪加控制：
+
+| 来源 | 表现 | 主要手段 |
+|---|---|---|
+| 路径不确定 | 同样输入走不同步数、不同顺序 | 步数与预算上限、状态机约束、阶段性检查点 |
+| 观察不确定 | 工具返回不稳定（限流、超时、数据变化） | 超时与重试、结果缓存、把失败当一等结果回填 |
+| 上下文不确定 | 长会话里早期约束被稀释 | 摘要与裁剪、关键约束重述、结构化状态而非全文历史 |
+| 模型不确定 | 采样随机、版本升级后行为漂移 | 低温度用于判定类步骤、模型版本固定、回归集 |
+
+这四类里只有最后一类能靠"提示词写清楚"缓解，前三类都要靠运行时机制。把它们混成一句"Agent 就是不稳定"，就失去了可改进的抓手。
+
 ## 两类高价值应用场景
 
 Anthropic 特别指出两个最有前景的应用方向：
@@ -105,7 +170,14 @@ Anthropic 特别指出两个最有前景的应用方向：
 
 **编码 Agent**：软件开发是从代码补全演进到自主解决问题的天然土壤。代码方案可通过自动化测试验证，Agent 能以测试结果为反馈迭代；问题空间定义明确、结构清晰；输出质量可客观衡量。Anthropic 的实现已经能仅凭 PR 描述解决 SWE-bench Verified 中的真实 GitHub issue。注意：自动测试能验证功能，但人工审查对确保方案符合更广泛系统要求仍然关键。
 
+两个场景的共同点值得记住：**都有廉价、频繁、可自动判定的反馈信号**（问题是否解决、测试是否通过）。没有这种反馈信号的任务，Agent 的迭代就失去方向，只剩成本。
+
+## 一句话主线
+
+Agent 不是"更聪明的聊天机器人"，而是**把决策权从代码移交给模型的系统**；判断它值不值得建，只看三件事：路径是否真开放、成败是否可判定、错误代价是否兜得住。
+
 ## 参考资料
 
-- Anthropic：Building Effective Agents：https://www.anthropic.com/research/building-effective-agents
+- Anthropic《Building Effective Agents》：https://www.anthropic.com/research/building-effective-agents
 - ReAct（arXiv:2210.03629）：https://arxiv.org/abs/2210.03629
+- Anthropic《Effective context engineering for AI agents》：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents

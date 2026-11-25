@@ -1,3 +1,4 @@
 {"q": "多 Agent 系统常见的失败类型有哪些？", "section": "MAST 分类法（Cemri et al., NeurIPS 2025, arXiv:2503.13657）", "aliases": ["多 Agent 失败分类"]}
+{"q": "多 Agent 出问题该按什么顺序排查？", "section": "诊断顺序：先查哪一类", "aliases": ["日志里全是重试，是不是协调问题"]}
 {"q": "群体思维在多 Agent 里怎么表现？", "section": "群体思维家族（Groupthink, arXiv:2508.05687）"}
 {"q": "多 Agent 的失败怎么缓解？", "section": "缓解实践"}

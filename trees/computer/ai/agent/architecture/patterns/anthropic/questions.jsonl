@@ -5,3 +5,5 @@
 {"q": "评估器-优化器怎么配才有效？", "section": "P05 Evaluator-Optimizer（评估器-优化器）"}
 {"q": "自主 Agent 什么时候才该用？", "section": "P06 Autonomous Agent（自主智能体）"}
 {"q": "这些模式能组合使用吗？", "section": "模式可组合"}
+{"q": "几种模式拼起来实际长什么样？", "section": "三个典型组合", "aliases": ["客服、调研、代码修复分别怎么组合模式"]}
+{"q": "用这些模式常犯什么错？", "section": "常见误用"}

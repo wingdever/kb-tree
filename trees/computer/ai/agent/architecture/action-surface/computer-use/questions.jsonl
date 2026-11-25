@@ -2,3 +2,7 @@
 {"q": "computer use 和浏览器自动化、RPA 的边界在哪？", "section": "与相邻方案的边界"}
 {"q": "各家的 computer use 方案有什么区别？", "section": "厂商方案与部署形态"}
 {"q": "computer use 的基准成绩和实际代价差多少？", "section": "基准与代价"}
+{"q": "computer use 跑长任务要注意什么？", "section": "长任务的三个工程约束", "aliases": ["GUI Agent 的检查点和幂等怎么做"]}
+{"q": "computer use 该怎么评估？", "section": "怎么评估", "aliases": ["OSWorld 分数能直接比较吗"]}
+{"q": "浏览器自动化与桌面截图方案的感知差别在哪？", "section": "浏览器与桌面的感知差别"}
+{"q": "computer use 常见的失败有哪些？", "section": "常见失败模式"}

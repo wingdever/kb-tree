@@ -1,3 +1,6 @@
-{"q": "各个多 Agent 框架分别对应哪种模式？", "section": "各框架与模式的对应"}
+{"q": "各个多 Agent 框架分别对应哪种模式？", "section": "各框架与模式的对应", "aliases": ["LangGraph、CrewAI、AutoGen 分别擅长什么模式"]}
+{"q": "引入框架到底买到了什么？", "section": "框架真正买到的三件事", "aliases": ["为什么不该为了多智能体上框架"]}
+{"q": "框架的版本与文档有哪些坑？", "section": "版本与文档陷阱"}
+{"q": "什么时候该自研薄循环而不是上框架？", "section": "自研薄循环的判断"}
 {"q": "多 Agent 框架该怎么选？", "section": "选择与取舍", "aliases": ["AutoGen、CrewAI 怎么选"]}
 {"q": "多 Agent 实施有哪些硬规则？", "section": "实施规则"}

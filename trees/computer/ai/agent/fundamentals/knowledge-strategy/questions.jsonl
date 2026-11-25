@@ -1,5 +1,9 @@
 {"q":"RAG 之外还有哪些给 Agent 补知识的方案？","section":"方案全景","role":"primary"}
+{"q":"选知识方案主要该权衡哪几个维度？","section":"五个取舍维度","role":"primary","aliases":["知识与记忆方案该看时效还是可溯源"]}
 {"q":"做 Agent 时按什么顺序选知识与记忆方案？","section":"决策路径","role":"primary"}
+{"q":"从提示词到检索到微调该怎么逐步升级？","section":"迁移路径","role":"primary","aliases":["什么时候该从提示词换成 RAG"]}
+{"q":"长上下文、检索和工具的成本延迟差在哪？","section":"成本与延迟的量级","role":"primary"}
+{"q":"索引、记忆库这些方案会怎么悄悄变坏？","section":"治理与失效","role":"primary","aliases":["怎么发现索引检索到的是旧文档"]}
 {"q":"哪些知识和记忆方案通常要组合使用？","section":"典型组合","role":"primary"}
 {"q":"选方案时常见的错误有哪些？","section":"选型陷阱","role":"primary"}
 {"q":"怎么验证方案选对了？","section":"验证选型","role":"primary"}

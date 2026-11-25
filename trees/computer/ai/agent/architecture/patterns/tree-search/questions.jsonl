@@ -1,5 +1,8 @@
 {"q": "Tree of Thoughts 是怎么展开和评估分支的？", "section": "Tree of Thoughts（ToT，Yao et al., NeurIPS 2023）", "aliases": ["ToT 怎么工作"]}
 {"q": "ToT 和 GoT 有什么区别？", "section": "Graph of Thoughts（GoT，Besta et al., AAAI 2024）"}
 {"q": "MCTS 和 LATS 怎么用到 Agent 上？", "section": "MCTS 与 LATS"}
+{"q": "树搜索的成本主要花在哪？", "section": "成本结构", "aliases": ["树搜索值不值得，先算哪三笔账"]}
+{"q": "ToT 这类方法落地时要定哪几件事？", "section": "怎么落地", "aliases": ["树搜索的剪枝和停止条件怎么设"]}
 {"q": "什么任务值得用树搜索？", "section": "何时用 / 何时不用", "aliases": ["树搜索的适用场景"]}
+{"q": "树搜索常见的失败模式有哪些？", "section": "失败模式"}
 {"q": "用树搜索最重要的前提是什么？", "section": "最重要的前提"}

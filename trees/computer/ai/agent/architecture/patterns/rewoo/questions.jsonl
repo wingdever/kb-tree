@@ -3,3 +3,6 @@
 {"q": "ReWOO 适合什么任务，什么任务不能用？", "section": "禁忌与权衡"}
 {"q": "ReWOO 在模式图谱里处在什么位置？", "section": "在模式图谱中的位置"}
 {"q": "ReWOO 实测能省多少？", "section": "效果数字"}
+{"q": "ReWOO 的计划为什么要写成带依赖和类型的 DSL？", "section": "计划 DSL：三个必须写死的约定"}
+{"q": "ReWOO 的 worker 能自己改计划吗？", "section": "Worker 执行：并发与单步失败"}
+{"q": "怎么判断一个任务该不该用 ReWOO？", "section": "一个可算的判据：结构熵"}

@@ -16,9 +16,9 @@ Agentic RL 是后训练（post-training）的前沿：在多轮、使用工具�
 ## RLHF vs RLVR
 
 - **RLHF（人类反馈强化学习）**：SFT → 训练奖励模型（人类偏好对）→ PPO 优化策略。适合无法用规则捕捉的细微人类偏好（同理心、语气），但需要偏好数据、奖励模型和精细训练基础设施。
-- **RLVR（可验证奖励强化学习）**：任务可算法验证时（代码通过测试、数学等于真值、工具参数合规、JSON 合法、CLI 命令正确、模拟结果成功），**直接用验证器当奖励信号**，跳过奖励模型。2026 年前沿实验室的主流（DeepSeek R1、Nemotron 3）。
+- **RLVR（可验证奖励强化学习）**：任务可算法验证时（代码通过测试、数学等于真值、工具参数合规、JSON 合法、CLI 命令正确、模拟结果成功），**直接用验证器当奖励信号**，跳过奖励模型。近年推理模型的主流做法，公开配方里 DeepSeek R1 一类都以可验证奖励为主，Nemotron 系列也在同一方向上。
 
-> 2022 年的 RLHF 配方（SFT → 奖励模型 → PPO）在 2026 生产环境大体已被 GRPO + 可验证奖励取代。
+> 判断：2022 年的 RLHF 配方（SFT → 奖励模型 → PPO）在今天的生产环境大体已被「可验证奖励 + PPO/GRPO」取代，原因不是 RLHF 失效，而是**验证器比人类偏好便宜、稳定、可扩**——凡是有判定器的任务，都不该再绕一层奖励模型。
 
 ## 关键算法
 
@@ -81,7 +81,21 @@ def grpo_advantages(rewards):
 - 长度效率（惩罚冗余工具调用的轨迹）
 - 校准（置信度是否匹配准确率）
 
-**奖励稀疏是陷阱**：若 99% rollout 得 0，GRPO 没有信号 → 加中间奖励或课程学习。**奖励黑客**：Agent gaming 弱验证器 → 始终配留出对抗评估。**KL 过低**：策略漂移离 SFT 基座，英语退化 → `kl_coef ≥ 0.02`。
+**奖励稀疏是陷阱**：若 99% rollout 得 0，GRPO 没有信号 → 加中间奖励或课程学习。**奖励黑客**：Agent gaming 弱验证器 → 始终配留出对抗评估。**KL 过低**：策略漂移离 SFT 基座，英语退化 → 常见起点把 `kl_coef` 设在 0.02 附近，再按模型规模与任务调（经验值，不同配方差别很大，不当作固定超参）。
+
+## 验证器决定训练的上限
+
+「奖励错了，RL 会优化错的行为」可以再往前推一步：**验证器本身就是能力的天花板**。模型再强，也强不过一个只会说"通过/不通过"的判定器。
+
+| 坏法 | 表现 | 训练结果 |
+|---|---|---|
+| 太松 | 几乎任何轨迹都通过 | 学到"随便试试就交" |
+| 太严 | 99% 轨迹得 0，无中间信号 | 梯度消失，训练停滞 |
+| 可被 hack | 只查文件是否存在、日志是否打印 | 学会满足检查而非解决问题 |
+| 太慢 | 验证耗时高于生成耗时 | 吞吐塌陷，训练成本失控 |
+| 不稳定 | 同一轨迹多次判定结果不一致 | 奖励变噪声，策略来回摆 |
+
+> 判断：验证器上线前做三项体检——**通过率分布**应落在 20–80%（太低没有信号、太高没有区分度）；**一致性**上同一轨迹重判三次结果应相同；**作弊面**上显式喂一个"看起来通过但没解决问题"的补丁，看它能否识破。三项都过再投算力，比训完再找问题便宜一个数量级。
 
 ## 多轮 Rollout 基础设施
 
@@ -106,16 +120,16 @@ verl、OpenRLHF、（部分）TRL 在 2025 开始加多轮支持，模式仍在�
 
 ## 开源框架
 
-| 框架 | Owner | 焦点 |
+| 框架 | 仓库 | 焦点 |
 |---|---|---|
-| **verl** | verl-project/verl | 可扩展 RLHF/Agentic RL，GRPO/PPO |
-| **OpenRLHF** | OpenRLHF | 分布式 RLHF、Agentic RL |
-| **TRL** | Hugging Face | transformers 上的 RLHF/GRPO |
-| **SkyRL** | NovaSky / Berkeley | Agentic RL、长周期 |
-| **RAGEN** | mll-lab-nu/RAGEN | 多轮 Agent RL |
-| **ART** | OpenPipe | Agent RL 训练器、RULER 奖励 |
+| **verl** | https://github.com/verl-project/verl | 可扩展 RLHF/Agentic RL，GRPO/PPO |
+| **OpenRLHF** | https://github.com/OpenRLHF/OpenRLHF | 分布式 RLHF、Agentic RL |
+| **TRL** | https://github.com/huggingface/trl | transformers 上的 RLHF/GRPO |
+| **SkyRL** | https://github.com/skyrl-project/SkyRL | Agentic RL、长周期 |
+| **RAGEN** | https://github.com/mll-lab-nu/RAGEN | 多轮 Agent RL |
+| **ART** | https://github.com/OpenPipe/ART | Agent RL 训练器、RULER 奖励 |
 
-按契合度而非热度选：长周期工具用 SkyRL/RAGEN；大规模训练用 verl/OpenRLHF；transformer 原生 RLHF/GRPO 用 TRL。注意仓库归属变化（如 verl 现归 verl-project/verl，许多列表仍引用旧的 volcengine/verl）。
+按契合度而非热度选：长周期工具用 SkyRL/RAGEN；大规模训练用 verl/OpenRLHF；transformer 原生 RLHF/GRPO 用 TRL。注意仓库归属变化——verl 已迁到 `verl-project/verl`，SkyRL 迁到 `skyrl-project/SkyRL`，RAGEN 迁到 `mll-lab-nu/RAGEN`，许多旧列表仍指向原组织，克隆失败多半是这个原因。
 
 ## 五阶段实践流水线
 
@@ -133,7 +147,7 @@ verl、OpenRLHF、（部分）TRL 在 2025 开始加多轮支持，模式仍在�
 
 长运行编码 Agent 可能需要多次工具调用才让测试通过；数据分析 Agent 要检查文件、跑查询、生成图表、验证结果；科学 Agent 要搜文献、调模拟器、修正假设。环境可以简单（数学的解析器 + 答案检查器）或复杂（带工具、文件、轮次限制和任务特定成功标准的沙箱）。
 
-NVIDIA NeMo Gym 提供可扩展、可复现的环境构建方式，覆盖单步、多步、有状态、真实世界、LLM-as-judge 环境。合成数据扩覆盖：生成任务变体、边界案例、工具调用场景和期望输出，再用验证器、奖励模型或 LLM-as-judge 过滤。**合成数据不是真值**：保留人工质量种子集、激进去重、留出评估任务、使用前检查失败案例。
+[NVIDIA NeMo Gym](https://github.com/NVIDIA-NeMo/Gym) 提供可扩展、可复现的环境构建方式，覆盖单步、多步、有状态、真实世界、LLM-as-judge 环境。合成数据扩覆盖：生成任务变体、边界案例、工具调用场景和期望输出，再用验证器、奖励模型或 LLM-as-judge 过滤。**合成数据不是真值**：保留人工质量种子集、激进去重、留出评估任务、使用前检查失败案例。
 
 ## 何时不该上 RL
 

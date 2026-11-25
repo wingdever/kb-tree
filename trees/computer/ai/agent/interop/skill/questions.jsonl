@@ -2,3 +2,6 @@
 {"q": "SKILL.md 的 frontmatter 要写什么？", "section": "YAML Frontmatter"}
 {"q": "渐进式披露在 Skill 里怎么做？", "section": "Markdown 正文（渐进式披露）"}
 {"q": "多个技能之间怎么管理关系？", "section": "技能关系管理"}
+{"q": "技能是怎么被模型选中的？", "section": "技能怎么被选中", "aliases": ["description 怎么写才容易被触发"]}
+{"q": "什么情况不该做成技能？", "section": "什么时候不该做成技能"}
+{"q": "技能改动怎么管理版本？", "section": "版本与演进"}

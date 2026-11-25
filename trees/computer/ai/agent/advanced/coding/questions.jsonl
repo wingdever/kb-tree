@@ -1,4 +1,7 @@
 {"q": "Agentic Coding 收敛出的架构原语有哪些？", "section": "收敛的架构原语"}
-{"q": "SWE-bench 的成绩该怎么看？", "section": "SWE-bench 与基准演进"}
+{"q": "编码 Agent 的脚手架主要差在哪几个设计决策上？", "section": "三个真正的设计决策", "aliases": ["补丁该整文件重写还是给 diff"]}
 {"q": "为什么说脚手架差距比模型差距更重要？", "section": "脚手架差距：架构比模型更重要"}
-{"q": "现在主流的编码 Agent 有哪些？", "section": "主流工具（2026）"}
+{"q": "SWE-bench 这类基准的成绩该怎么看？", "section": "基准怎么读", "aliases": ["为什么 Verified 分数饱和了还要看 Pro"]}
+{"q": "企业选编码 Agent 该怎么评估？", "section": "企业评估清单", "aliases": ["怎么测脚手架的错误恢复能力"]}
+{"q": "IDE 嵌入、CLI 和云端编码 Agent 的天花板各在哪？", "section": "工具形态与天花板", "aliases": ["现在主流的编码 Agent 有哪些"]}
+{"q": "电脑操作 Agent 和编码 Agent 差在哪？", "section": "Computer Use 与编码 Agent 的差别", "aliases": ["浏览器 Agent 为什么更难验证"]}

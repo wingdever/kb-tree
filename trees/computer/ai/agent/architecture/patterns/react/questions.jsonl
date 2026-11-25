@@ -1,5 +1,8 @@
 {"q": "ReAct 的循环具体怎么跑？", "section": "循环", "aliases": ["ReAct 是怎么工作的"]}
+{"q": "ReAct 的提示模板长什么样？", "section": "ReAct 提示模板示例", "aliases": ["有原生工具调用还需要文本模板吗"]}
 {"q": "ReAct 为什么比直接回答更准？", "section": "为什么有效"}
+{"q": "ReAct 的 token 成本为什么涨得快？", "section": "成本结构", "aliases": ["ReAct 该先优化哪里"]}
 {"q": "ReAct 有哪些固有问题？", "section": "问题", "aliases": ["ReAct 的缺点"]}
-{"q": "ReAct 加验证器之后解决了什么？", "section": "2026 演进：ReAct + Verifier"}
-{"q": "ReAct 的提示模板长什么样？", "section": "ReAct 提示模板示例"}
+{"q": "什么情况下不该用 ReAct？", "section": "何时不该用 ReAct"}
+{"q": "能上线的 ReAct 循环至少要有什么？", "section": "最小实现清单", "aliases": ["ReAct 的停止条件和重复检测怎么设"]}
+{"q": "ReAct 加验证器之后解决了什么？", "section": "ReAct + Verifier"}

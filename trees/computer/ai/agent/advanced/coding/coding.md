@@ -1,11 +1,13 @@
 ---
-description: "Coding agent scaffolds, SWE-bench and computer-use agents"
-描述: "编码 Agent 的脚手架、SWE-bench 与电脑操作 Agent"
+description: "Coding agent scaffolds, SWE-bench reading, computer-use differences and safety frontier"
+描述: "编码 Agent 的脚手架、基准怎么读、电脑操作 Agent 的差别与安全前沿"
 name: "Coding and Computer-Use Agents"
 名称: "编码与操作 Agent"
 ---
 
 # A9 编码 Agent 与电脑操作 Agent
+
+编码 Agent 是 Agent 研究的主战场，原因不是程序员多，而是**这个领域的对错能被廉价验证**：跑一遍测试就知道答案对不对，于是可以大规模自动评测、自动回归、自动改进。把这条经验搬到别的领域，第一件事是找"这个领域的测试"；找不到，就先造一个判定器，否则所有优化都缺反馈。
 
 ## Agentic Coding 是什么
 
@@ -15,7 +17,7 @@ AI 系统自主规划、写、测、调、部署代码，极少人工指导。�
 
 ## 收敛的架构原语
 
-到 2026 年，多数 agentic coding 系统收敛到一组共同原语：
+多数 agentic coding 系统收敛到一组共同原语：
 
 - **持久项目上下文**：通过专门文件（CLAUDE.md、AGENTS.md）维护对项目目标、约定、架构的长期记忆，跨可持续数天或数周的会话。
 - **集成工具使用**：数字工具箱镜像人类开发者环境——Git、shell、自动测试框架、包管理器、研究用浏览器、代码智能的 LSP 集成。
@@ -23,87 +25,88 @@ AI 系统自主规划、写、测、调、部署代码，极少人工指导。�
 - **长运行执行**：会话从几分钟到数天，带检查点和自愈机制，能从瞬时失败恢复而无需人工。
 - **人机协作**：Agent 标记不确定处、对模糊需求或高风险决策（部署生产）请求人工输入。开发者角色从写代码转为监督、架构指导、最终批准。
 
-## 主导架构
+## 三个真正的设计决策
 
-LLM（Claude Opus、GPT-4.1/o3 级、DeepSeek-V3、Qwen3-Coder）驱动一个 **ReAct 式循环**，跑在受限工具集上：文件查看/编辑、shell、搜索（ripgrep/AST）、测试运行器。
+脚手架之间的差别，最后都落在三个选择上；模型换一代，这三件事的答案基本不变：
 
-脚手架差异主要在：
+| 决策 | 两种做法 | 代价 |
+|---|---|---|
+| 怎么找到要改的文件 | 检索式（先建索引/关键词定位，再读） vs Agent 式（自己 grep、浏览、试探） | 检索式省步数但依赖索引质量；浏览式灵活但容易在仓库里迷路 |
+| 补丁怎么落 | 整文件重写 vs diff 片段 | 整文件简单但大文件会截断、易误删；diff 省 token 但要求上下文定位准 |
+| 怎么算做完 | 跑测试 / 写复现脚本 / 自洽性检查 | 有测试就信测试；没有测试时，"看起来对"是最大的风险来源 |
 
-- **定位策略**：检索式 vs Agent 式浏览
-- **补丁生成**：整文件 vs diff
-- **验证**：回归测试、复现脚本、自洽性
-
-代表性脚手架：SWE-Agent、OpenHands、Agentless、Moatless、Aider、Claude Code。
-
-## SWE-bench 与基准演进
-
-SWE-bench Verified 成为标准基准。2026 年结果：顶级模型（Claude Opus、GPT-5.x）配合适 harness，在标准基准上成功率超过 70~90%，相比 2023 年约 4% 大幅提升。更难 "pro" 变体通常 50~77%。**Agent 的脚手架（harness）与底层模型同样重要**。
-
-强势任务：bug 修复、按详细规格实现新功能、依赖迁移、测试生成、重构。困难任务：创造全新系统架构、高度模糊需求下无具体指导的行动。
-
-基准已从 resolve-rate 转向轨迹指标：步骤效率、计划遵循、级联恢复、事后可审计性。2026 年新波次针对能力边界：
-
-- **RoadmapBench**：数月级版本升级（长周期）
-- **SaaSBench**：从零构建企业 SaaS
-- **WebGameBench**：需求到浏览器应用，评估交付物而非 diff
-- **ProcBench**：控制保持与反复执行缺陷
-- **SpecBench**：测试套件 gaming（奖励黑客）
-- **1GC-7RC**：单 GPU 从零构建并训练 ML 模型
-- **SWE-bench Pro**：更难、多文件、架构复杂——分数对脚手架质量极度敏感
+> 判断：三个决策里**验证方式**最该先定。没有可靠验证的编码 Agent，无论脚手架多精巧，都只是一个更快的猜测器；反之，验证强到能自动判定，架构可以很朴素。
 
 ## 脚手架差距：架构比模型更重要
 
-同一 Claude 3.5 Sonnet 下三个框架的对比：
+同一个模型、同一个基准，不同脚手架的分数差距常见在十个百分点以上；被反复引用的极端对比里，一个带完整执行环境的多 Agent 脚手架与一个单 Agent 定制接口的脚手架，差距接近 20 个百分点——而它们跑的是完全相同的模型。
 
-| 框架 | 架构 | 得分 | 关键创新 |
-|---|---|---|---|
-| OpenHands (CodeAct v2.1) | 多 Agent、Web UI、生产特性 | 41.67% | 完整执行环境含浏览器 |
-| Agentless (v1.5) | 无 Agent 循环——规划、搜索、打补丁 | 40.67% | 消除自主决策 |
-| SWE-Agent | 单 Agent、定制 ACI | 23.00% | Agent-Computer Interface 抽象 |
+更值得注意的反例是**无循环方案**：规划 → 定位 → 打补丁 → 验证，全程不让模型自主决定下一步，分数却能贴近多 Agent 方案。这说明对相当一部分任务分布，结构化搜索与规划胜过自主探索。**"必须让模型自己决定"不是公理，是一个要按任务分布验证的假设。**
 
-OpenHands 与 SWE-Agent 相差 **18.67 个百分点**，跑的是完全相同的模型——脚手架架构几乎能让有效性能翻倍。Agentless 没有任何 Agent 循环却接近 OpenHands，说明对某些任务分布，结构化搜索与规划胜过自主探索。
+基准越难，脚手架差异越被放大：在简单任务上，平庸脚手架配强模型能靠蛮力刷分；在多文件、跨模块、需要长程一致性的任务上，脚手架是门控因素——模型再强，也补不回"没找到正确文件"和"改完没有验证"。
 
-SWE-bench Pro 暴露 Verified 隐藏的东西：Verified 分数趋于饱和（六个前沿模型 >80%，不再能区分），Pro 上最好模型从 70%+ 掉到约 23%（后来 Opus 4.5 在标准脚手架达 45.9%）。结构洞察：**Pro 的难题放大脚手架差异而非模型差异**——Verified 简单任务上平庸脚手架配好模型能蛮力刷分，Pro 多文件复杂问题上脚手架是门控因素。企业选编码 Agent 应更看重 Pro 分数。
+## 基准怎么读
 
-企业评估清单：用自己代码库任务、同一底层模型测脚手架而非只测模型；测上下文检索质量（让框架定位已知 bug 的相关文件）；测错误恢复（故意中途制造失败，看它分类错误、智能重试、回溯，还是螺旋式重复失败）。
+基准不是排行榜，是不同问题的探针。读分数前先确认这个基准考的是哪一层：
 
-## 主流工具（2026）
+| 基准类型 | 考什么 | 误用风险 |
+|---|---|---|
+| 单仓修复（SWE-bench 系） | 定位 + 打补丁 + 让测试通过 | 分数饱和后不再区分模型，只剩榜单位次 |
+| 长程版本升级类 | 跨数月的连续修改、依赖迁移、保持行为 | 用短任务分数推断长任务能力 |
+| 从零构建类 | 需求到可运行交付物，评交付物而非 diff | 与"改存量代码"是两种能力，不可互换 |
+| 奖励黑客类 | 是否在测试套件上作弊、绕过监视器 | 只测合规性，不测能力 |
+| 轨迹指标 | 步骤效率、计划遵循、级联恢复、可审计性 | 被当成软指标忽略，其实更接近生产成本 |
 
-- **OpenAI Codex**：整体执行能力强，GPT-5.x，多 Agent worktree 并行，AGENTS.md 上下文系统。
-- **Claude Code (Anthropic)**：推理与规划顶尖，超大上下文（100 万+ token），擅长复杂重构与大型代码库导航；SWE-bench Pro 领先。
-- **Cursor / Copilot / Windsurf**：IDE 嵌入，让你成为更高效的编辑者——天花板是你的注意力和 review diff 的速度。
-- **Devin / Jules**：浏览器/云端 Agent，可运行数小时，把你移出循环——天花板是模型推理与指令质量。
-- 轨迹：市场明确从"需要你在场的 IDE 工具"转向"不需要你参加会议的 Agent"；IDE 工具正尽快加云/异步模式，但从 IDE 中心架构加异步比从头构建更难。
+> 判断：选编码 Agent 供应商时，**看最难的那一档，不看最容易的那一档**。Verified 这类基准在头部已经饱和，用它做横向对比等于在噪声里排序；长程与从零构建类基准才区分得开脚手架质量。具体数字随榜单每周变化，用之前去官方榜单核对当时的结果。
 
-## 生产力影响
+## 企业评估清单
 
-TELUS 报告用这些系统节省超 50 万开发者小时。许多常见项目的 SDLC 从数周压缩到数小时或数天；陌生代码库的 onboarding 从数周研究变成数小时（Agent 提供引导式探索和上下文摘要）。
+- 用**自己的代码库任务**，不要用公开基准的题。
+- 固定同一个底层模型，只换脚手架，否则测的是模型不是架构。
+- 测**上下文检索质量**：给它一个已知 bug，看它能否定位到相关文件，而不是直接看最终分数。
+- 测**错误恢复**：故意在中途制造失败，看它分类错误、智能重试、回溯，还是螺旋式重复失败。
+- 测**长任务续航**：让任务跨越上下文窗口，看检查点与状态压缩是否撑得住。
 
-## Computer Use / Browser Agent
+## 工具形态与天花板
 
-编码 Agent 之外，操作电脑的 Agent 需要"接地"的世界。本节只留基准入口。
+- **IDE 嵌入**（Cursor / Copilot / Windsurf）：让你成为更高效的编辑者——天花板是你的注意力和 review diff 的速度。
+- **终端 / CLI**（Claude Code、Codex CLI、Gemini CLI）：在真实仓库里跑命令与测试，天花板是工具面设计与权限模型。
+- **云端异步**（Devin / Jules、Codex 云端任务）：可运行数小时，把你移出循环——天花板是模型推理与指令质量。
+- **开源可拆**（[OpenHands](https://github.com/All-Hands-AI/OpenHands)、[SWE-agent](https://github.com/SWE-agent/SWE-agent)、[Aider](https://github.com/Aider-AI/aider)）：可以读它的提示、工具面与恢复逻辑，是理解 harness 最快的路径。
 
-- **WebArena**：网页交互与表单完成。
-- **OSWorld**：跨 Ubuntu/Windows/macOS 的电脑控制任务（文件系统、应用使用、多步工作流）。
-- **OpenComputer**：验证器接地的电脑操作世界。
-- 国产开源 Agent 编程模型在 Web 自动化基准报告 91% 操作成功率，强调动态抓取、表单填充、多标签协同，对反爬和动态渲染页面表现突出。
+轨迹很清楚：市场从"需要你在场的 IDE 工具"转向"不需要你参加会议的 Agent"；IDE 工具正尽快加云/异步模式，但从 IDE 中心架构加异步，比从头构建更难。
 
-## 学习路径
+## Computer Use 与编码 Agent 的差别
 
-1. 前置：扎实 Python、git、Linux shell；能调 LLM API；理解 transformer 推理与工具调用。
-2. 按顺序读论文：ReAct（Yao 2022）→ Toolformer（Schick 2023）→ SWE-Bench（Jimenez 2023）→ SWE-Agent（Yang 2024）→ Agentless、AutoCodeRover（检索式替代）→ OpenHands（完整开源平台）。
-3. 动手：clone OpenHands 或 SWE-Agent，用开放模型（Qwen3-Coder、DeepSeek-V3）复现小规模 SWE-Bench Lite，检查轨迹；在自己仓库试 Aider。
-4. 进阶训练：研究 SWE-Gym、SWE-RL，用小模型在合成轨迹上微调。
+把同一套循环搬到屏幕前，三个前提全变了：
+
+| 维度 | 编码 Agent | 电脑操作 Agent |
+|---|---|---|
+| 状态 | 文件系统可读、可 diff、可回滚 | 屏幕状态不可直接读，操作会留下不可逆痕迹 |
+| 验证 | 测试自动判定 | 多数任务没有自动判定器，靠人看结果 |
+| 错误代价 | 改错代码可回退 | 点错按钮可能已经把邮件发出去 |
+
+由此产生三类特有失败：**定位失败**（不知道目标元素在哪，靠坐标猜）、**状态失败**（界面异步刷新，动作与观察错位）、**验证失败**（做完了但无法确认是否真的完成）。对应的工程手段是：优先用语义定位（DOM、可访问性标签）而不是像素坐标；每个动作后等状态稳定再观察；把"完成判定"写成可检查的断言，而不是让模型自称完成。
+
+常见基准：WebArena（网页交互与表单）、OSWorld（跨 Ubuntu/Windows/macOS 的电脑控制）、OpenComputer（验证器接地的操作世界）。这些基准的共同假设是"有验证器"，真实业务里往往没有，所以落地时那部分要自己补。
 
 ## 安全与前沿
 
-奖励黑客与监督自成子领域：SpecBench 测长周期编码 Agent 的测试套件 gaming；SLEIGHT-Bench 评估对 LLM 监视器的规避；最小权限授权研究探测 Agent 是否请求过多能力。自我进化已超越技能文件变异——MOSS 在部署时重写 Agent 自身源代码。
+奖励黑客与监督自成子领域：有的基准专测长周期编码 Agent 是否在测试套件上作弊，有的评估 Agent 对 LLM 监视器的规避，也有研究探测 Agent 是否请求了超出任务所需的权限。自我进化已从"改技能文件"走到"部署时重写自身源码"，这使权限边界与可审计性成为比分数更重要的指标。
+
+> 判断：编码 Agent 的风险不在"写错代码"，而在**它能执行**。给它 shell 与网络，等于给它一台生产机器的入口；最小权限、可回滚的工作区、对外写的审批点，优先级高于再提升几个点的解决率。
+
+## 一句话主线
+
+编码 Agent 的强弱，一半在模型，一半在**脚手架怎么找文件、怎么落补丁、怎么验证**；而它之所以能持续变强，是因为这个领域有廉价可自动判定的对错信号——换到别的领域，先造出那个信号，再谈优化。
 
 ## 参考资料
 
-- SWE-bench 基准论文（仓库级修复评测）：https://arxiv.org/abs/2310.06770
+- SWE-bench 论文（仓库级修复评测）：https://arxiv.org/abs/2310.06770
 - SWE-agent 与 Agent-Computer Interface 论文：https://arxiv.org/abs/2405.15793
-- Anthropic《Claude Code 最佳实践》：https://www.anthropic.com/engineering/claude-code-best-practices
+- SWE-Bench Pro 论文（长程软件工程任务）：https://arxiv.org/abs/2509.16941
+- SWE-bench 官方榜单（数字以当时榜单为准）：https://www.swebench.com/
+- Anthropic 工程博客《Claude Code 最佳实践》：https://www.anthropic.com/engineering/claude-code-best-practices
 - Claude Code 官方文档：https://docs.claude.com/en/docs/claude-code/overview
 - OpenAI Codex 仓库：https://github.com/openai/codex
 - Gemini CLI 仓库：https://github.com/google-gemini/gemini-cli

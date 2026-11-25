@@ -1,5 +1,8 @@
 {"q": "先规划再执行和边想边做有什么区别？", "section": "结构", "aliases": ["Plan-and-Execute 的结构"]}
 {"q": "Plan-and-Execute 的优势在哪？", "section": "优势"}
 {"q": "规划税是什么，什么时候会超过收益？", "section": "规划税（Planning Tax）", "aliases": ["什么时候不该做规划"]}
-{"q": "Plan-and-Execute 和 ReAct、ReWOO 是什么关系？", "section": "与其他模式的关系"}
 {"q": "Plan-and-Execute 的局限是什么？", "section": "局限"}
+{"q": "可执行的计划每一步要写清什么？", "section": "计划怎么写才可执行"}
+{"q": "重规划什么时候触发，代价是什么？", "section": "重规划的触发与代价"}
+{"q": "Plan-and-Execute 的常见失败有哪些？", "section": "常见失败"}
+{"q": "前置规划和边做边定该怎么选？", "section": "与相邻形态的差别", "aliases": ["规划时看不看执行结果有什么区别"]}

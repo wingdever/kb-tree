@@ -1,5 +1,8 @@
 {"q": "为什么基础模型不够，还要做 Agentic RL？", "section": "基础模型为什么不够"}
 {"q": "RLHF 和 RLVR 有什么区别？", "section": "RLHF vs RLVR"}
 {"q": "GRPO 的核心技巧是什么？", "section": "GRPO 的核心技巧"}
+{"q": "怎么判断奖励函数设计得好不好？", "section": "奖励设计", "aliases": ["奖励稀疏和奖励黑客怎么防"]}
+{"q": "验证器可能怎么坏，上线前该查什么？", "section": "验证器决定训练的上限", "aliases": ["验证器通过率多少才算有信号"]}
 {"q": "多轮 rollout 的基础设施要做什么？", "section": "多轮 Rollout 基础设施"}
+{"q": "轨迹级和步级信用分配该怎么选？", "section": "信用分配：轨迹级 vs 步级"}
 {"q": "什么时候不该上 RL？", "section": "何时不该上 RL"}
