@@ -52,3 +52,7 @@ name: "Security and Privacy Engineering"
 - 权限过大且长期不回收，账号成为持久攻击面。
 - 合规要求（留存、删除、审计）只写在文档里，没有自动化执行路径。
 
+
+## 参考资料
+
+- OWASP Top 10：https://owasp.org/Top10/

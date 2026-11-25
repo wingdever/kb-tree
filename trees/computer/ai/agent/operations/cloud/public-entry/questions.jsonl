@@ -1,0 +1,9 @@
+{"q": "公网 HTTP 能装 PWA 吗？", "section": "Service Worker 的 HTTPS 判定"}
+{"q": "自签 HTTPS 下 Service Worker 会被拒吗？", "section": "Service Worker 的 HTTPS 判定"}
+{"q": "PWA 必须买域名吗？", "section": "域名、证书与 PWA 安装"}
+{"q": "国内服务器不备案能开公网吗？", "section": "中国内地服务器与 ICP 备案"}
+{"q": "免费域名能备案吗？", "section": "中国内地服务器与 ICP 备案"}
+{"q": "不想备案又想手机访问，有哪些方案？", "section": "公网入口方案对比"}
+{"q": "Cloudflare Quick Tunnel 能长期用吗？", "section": "Cloudflare Quick Tunnel 的真实边界"}
+{"q": "IM 机器人需要公网入口吗？", "section": "IM 长连接机器人"}
+{"q": "公网入口为什么还要应用层鉴权？", "section": "鉴权与能力收窄"}
