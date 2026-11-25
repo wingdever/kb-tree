@@ -76,7 +76,7 @@ Google DeepMind 论文《Defeating Prompt Injections by Design》。扩展双 LL
 - **Planner LLM**：输出受限子集的代码，操作**引用**而非直接读敏感内容。
 - **Orchestrator**：携带能力（capability）和污点（taint）元数据，对数据流执行策略。
 
-安全思想：对数据如何在系统中流动施加约束；planner 能操作引用，但从不真正读取受保护数据。论文报告：约 **77%** 基准任务在可证明安全下完成，对比无防御 Agent 约 **84%**——用小的能力代价换大的安全收益。
+安全思想：对数据如何在系统中流动施加约束；planner 能操作引用，但从不真正读取受保护数据。论文报告：加上安全策略后仍能完成绝大多数基准任务，相比无防御 Agent 只有小幅能力下降——用小的能力代价换可证明的注入安全。
 
 ## Plan-then-Execute 与 Taint Tracking
 

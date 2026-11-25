@@ -36,7 +36,7 @@ name: "Tree Search: ToT, GoT, MCTS, LATS"
 - 节点保存：环境状态、动作历史、观察、反思、价值估计、访问统计。
 - 迭代：Select → Generate candidate actions → Execute/Simulate → Observe → Evaluate & Reflect → Update statistics → Expand/Revisit/Backtrack。
 - 环境反馈是核心：代码修复的"候选补丁→跑测试→观察失败→更新分支价值"，浏览器交互的"候选点击→新 DOM→衡量进展"。
-- 数字：论文报告在 HumanEval 上 GPT-4 pass@1 达 94.4%，优于 ReAct、Reflexion、CoT、ToT；代价是每请求约 71 次 LLM 调用（标准 ReAct 约 9 次）。
+- 数字：论文报告在 HumanEval 上 GPT-4 pass@1 达 **92.7%**，优于 ReAct、Reflexion、CoT、ToT；另在网页决策任务上报告无梯度平均分 75.9。代价是每道题要做多轮 rollout、价值评估与回溯，模型调用量比单次推理高一个数量级。
 - 前提：有廉价可靠的价值函数。
 
 ## 成本结构

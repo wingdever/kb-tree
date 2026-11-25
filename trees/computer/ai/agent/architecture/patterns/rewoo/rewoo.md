@@ -23,9 +23,8 @@ ReWOO 把规划集中在一次前置调用中完成：规划器生成带占位�
 
 ## 效果数字
 
-- 论文报告：多步基准上 token 减少约 **5×**，准确率相当或更好。
-- HotpotQA：ReWOO 用 2000 token 达 42.4% 准确率，ReAct 用 10000 token 达 40.8%（IBM）。
-- HotpotQA 上少用 64% token、准确率提升 4.4%。
+- 论文摘要的口径：在六个公开基准上报告 **5× token 效率**，HotpotQA 上约 **4% 准确率提升**。
+- HotpotQA 的具体数字（论文表格）：ReWOO 约 1986 token、42.4% 准确率；ReAct 约 9795 token、40.8% 准确率。也就是说 token 用量约是对照的五分之一，准确率略高。
 - 六步任务的演示计算：ReAct ~9300 token vs ReWOO ~2800 token，约 3.3×；节省随步数增长（ReAct 近似平方，ReWOO 近似平坦）。
 
 ## 禁忌与权衡

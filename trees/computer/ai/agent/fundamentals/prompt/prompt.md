@@ -59,7 +59,7 @@ name: "Prompt Engineering"
 
 ## 结构化输出
 
-不要靠"返回 JSON"的自然语言请求——那 10–20% 的时候会失败并破坏下游解析器。做法：用 Pydantic/Zod 定义精确 schema，再用 provider 的 structured output API（OpenAI response_format + JSON schema、Anthropic tool definition）。**JSON mode 只保证语法有效，strict structured output 才约束形状**；两者都不证明提取值真实，要对源数据校验。
+不要靠"返回 JSON"的自然语言请求——相当一部分调用会失败并破坏下游解析器。做法：用 Pydantic/Zod 定义精确 schema，再用 provider 的 structured output API（OpenAI response_format + JSON schema、Anthropic tool definition）。**JSON mode 只保证语法有效，strict structured output 才约束形状**；两者都不证明提取值真实，要对源数据校验。
 
 解析失败按四类分开处理，别一律重试：
 
