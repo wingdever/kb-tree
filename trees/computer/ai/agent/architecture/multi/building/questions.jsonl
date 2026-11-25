@@ -1,0 +1,5 @@
+{"q": "多 Agent 之间怎么隔离角色和提示？", "section": "1. 隔离的角色与提示（Isolated Personas）"}
+{"q": "Agent 之间交接该用什么 schema？", "section": "2. 标准化状态与交接 schema"}
+{"q": "多 Agent 的工具权限怎么管？", "section": "3. 受控工具注册表"}
+{"q": "多个 Agent 要不要共享上下文和记忆？", "section": "4. 上下文隔离与选择性记忆"}
+{"q": "人工评审门应该插在哪一步？", "section": "5. 人在回路评估门（HITL Gate）"}

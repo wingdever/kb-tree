@@ -1,0 +1,6 @@
+{"q": "LangGraph 的核心概念和 LangChain 怎么对应？", "section": "核心概念对照"}
+{"q": "LangGraph 的状态和 reducer 怎么用？", "section": "状态与 Reducer"}
+{"q": "LangGraph 怎么做崩溃恢复？", "section": "崩溃恢复就是再次 invoke"}
+{"q": "LangGraph 里人在回路怎么实现？", "section": "人在回路：interrupt"}
+{"q": "LangGraph 有哪几种拓扑？", "section": "三种拓扑"}
+{"q": "什么样的项目不该用 LangGraph？", "section": "何时用 / 不用"}

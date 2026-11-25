@@ -1,0 +1,5 @@
+{"q": "为什么基础模型不够，还要做 Agentic RL？", "section": "基础模型为什么不够"}
+{"q": "RLHF 和 RLVR 有什么区别？", "section": "RLHF vs RLVR"}
+{"q": "GRPO 的核心技巧是什么？", "section": "GRPO 的核心技巧"}
+{"q": "多轮 rollout 的基础设施要做什么？", "section": "多轮 Rollout 基础设施"}
+{"q": "什么时候不该上 RL？", "section": "何时不该上 RL"}

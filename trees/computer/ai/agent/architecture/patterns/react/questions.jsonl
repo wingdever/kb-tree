@@ -1,0 +1,5 @@
+{"q": "ReAct 的循环具体怎么跑？", "section": "循环", "aliases": ["ReAct 是怎么工作的"]}
+{"q": "ReAct 为什么比直接回答更准？", "section": "为什么有效"}
+{"q": "ReAct 有哪些固有问题？", "section": "问题", "aliases": ["ReAct 的缺点"]}
+{"q": "ReAct 加验证器之后解决了什么？", "section": "2026 演进：ReAct + Verifier"}
+{"q": "ReAct 的提示模板长什么样？", "section": "ReAct 提示模板示例"}

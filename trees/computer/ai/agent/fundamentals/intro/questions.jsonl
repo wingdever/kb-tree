@@ -1,0 +1,6 @@
+{"q": "Agent 和工作流、单次 LLM 调用有什么区别？", "section": "三类系统的区别", "aliases": ["三类系统怎么区分"]}
+{"q": "哪些任务不适合做成 Agent？", "section": "不适合用 Agent 的场景"}
+{"q": "Agent 由哪几个核心组件构成？", "section": "Agent 的核心组件"}
+{"q": "为什么能用工作流解决就别上 Agent？", "section": "实践准则：用能解决问题的最不动态的系统", "aliases": ["什么任务该用工作流而不是 Agent"]}
+{"q": "Observe-Think-Act 循环是怎么转起来的？", "section": "认知循环：Observe → Think → Act", "aliases": ["Agent 的认知循环是什么"]}
+{"q": "什么业务场景最适合用 Agent？", "section": "两类高价值应用场景"}

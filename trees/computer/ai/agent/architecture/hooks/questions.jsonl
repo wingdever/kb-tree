@@ -1,0 +1,4 @@
+{"q": "Agent 运行时有哪些可挂钩的事件？", "section": "事件类型体系", "aliases": ["Agent 的 hook 有哪些"]}
+{"q": "LangChain v1 的中间件能做什么？", "section": "LangChain v1 中间件（2026 主流实现）"}
+{"q": "hooks 一般用来解决什么问题？", "section": "典型用途"}
+{"q": "hooks 和回放、时间旅行是什么关系？", "section": "可观测性与时间旅行"}

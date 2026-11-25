@@ -1,0 +1,5 @@
+{"q": "ReWOO 为什么比 ReAct 省 token？", "section": "要解决的问题：ReAct 的规划税"}
+{"q": "ReWOO 里 Planner、Worker、Solver 各干什么？", "section": "三个角色", "aliases": ["ReWOO 的三个角色"]}
+{"q": "ReWOO 适合什么任务，什么任务不能用？", "section": "禁忌与权衡"}
+{"q": "ReWOO 在模式图谱里处在什么位置？", "section": "在模式图谱中的位置"}
+{"q": "ReWOO 实测能省多少？", "section": "效果数字"}

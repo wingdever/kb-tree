@@ -1,0 +1,6 @@
+{"q": "MCP 的 Host、Client、Server 是怎么分工的？", "section": "架构：Host–Client–Server", "aliases": ["MCP 架构"]}
+{"q": "MCP 的能力协商是做什么的？", "section": "能力协商（Capability Negotiation）"}
+{"q": "MCP 的三个原语是什么？", "section": "三个原语", "aliases": ["MCP 的 tools/resources/prompts"]}
+{"q": "MCP 支持哪些传输方式？", "section": "传输（Transport）"}
+{"q": "MCP 的安全风险主要有哪些？", "section": "五大安全风险（2025–2026 均在野出现）", "aliases": ["MCP 有哪些安全问题"]}
+{"q": "MCP 在企业里怎么部署？", "section": "企业架构"}

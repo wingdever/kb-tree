@@ -1,0 +1,4 @@
+{"q": "为什么 Agent 工具接口要尽量简单？", "section": "1. 保持简单（Simplicity）"}
+{"q": "工具返回结果该怎么设计格式？", "section": "格式建议", "aliases": ["工具输出格式怎么定"]}
+{"q": "poka-yoke 在工具设计里指什么？", "section": "测试与防错（poka-yoke）"}
+{"q": "框架和接口设计哪个更影响效果？", "section": "框架取舍（Anthropic 立场）"}

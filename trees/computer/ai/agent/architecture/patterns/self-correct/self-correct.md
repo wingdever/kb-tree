@@ -63,7 +63,7 @@ name: "Self-Correction Family"
 - 过程监督（逐步评估而非只查最终答案）比结果检查增益大。
 - 纯叙述性自我批评最弱。
 
-##  Detect-then-Patch 拆分
+## Detect-then-Patch 拆分
 
 所有严肃的 Reflector 都分解为两个函数：
 

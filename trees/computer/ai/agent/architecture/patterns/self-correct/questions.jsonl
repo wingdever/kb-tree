@@ -1,0 +1,6 @@
+{"q": "自我修正有哪几种原型？", "section": "五种原型（按错误信号来源）", "aliases": ["Agent 自我修正的方式有哪几种"]}
+{"q": "Reflexion 和 Self-Refine 有什么区别？", "section": "逐个说明"}
+{"q": "让模型自己检查自己的答案靠谱吗？", "section": "重要警告：内在自我修正很弱", "aliases": ["模型能自己发现自己错了么"]}
+{"q": "生成者和评判者分开有什么好处？", "section": "Judge-Writer（生成者与评判者分离）"}
+{"q": "detect-then-patch 为什么要拆成两步？", "section": "Detect-then-Patch 拆分"}
+{"q": "自我修正在生产环境怎么用？", "section": "生产模式"}

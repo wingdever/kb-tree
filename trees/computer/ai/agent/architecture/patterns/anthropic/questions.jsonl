@@ -1,0 +1,7 @@
+{"q": "提示链适合什么任务？", "section": "P01 Prompt Chaining（提示链）"}
+{"q": "路由模式解决什么问题？", "section": "P02 Routing（路由）"}
+{"q": "并行化在什么场景能省时间？", "section": "P03 Parallelization（并行化）"}
+{"q": "编排器-执行器什么时候该用？", "section": "P04 Orchestrator-Workers（编排器-执行器）"}
+{"q": "评估器-优化器怎么配才有效？", "section": "P05 Evaluator-Optimizer（评估器-优化器）"}
+{"q": "自主 Agent 什么时候才该用？", "section": "P06 Autonomous Agent（自主智能体）"}
+{"q": "这些模式能组合使用吗？", "section": "模式可组合"}

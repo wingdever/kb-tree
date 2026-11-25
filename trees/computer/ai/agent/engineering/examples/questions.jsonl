@@ -1,0 +1,3 @@
+{"q": "ReAct 提示模板的完整示例在哪？", "section": "示例 1：ReAct 提示模板（最基础的推理-行动结构）"}
+{"q": "Function Calling 的最小可运行示例怎么写？", "section": "示例 2：Function Calling 最小示例（Anthropic API）"}
+{"q": "怎么把示例改成真正的 Agent？", "section": "把示例变成真正的 Agent"}
