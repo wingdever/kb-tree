@@ -38,7 +38,7 @@ ReWOO 把规划集中在一次前置调用中完成：规划器生成带占位�
 ## 在模式图谱中的位置
 
 - **特化 Plan-and-Execute**：用占位变量 DAG 把规划与观察彻底解耦，比一般 Plan-and-Execute 更省。
-- **被 LLMCompiler 泛化**：把 ReWOO 的 plan-as-DAG 用任务分发器并行执行独立步骤，原论文声称比顺序执行快 3.6×。
+- **被 LLMCompiler 泛化**：把 ReWOO 的 plan-as-DAG 用任务分发器并行执行独立步骤，原论文报告延迟最多提速 3.7×、成本最多省 6.7×。
 
 ## 计划 DSL：三个必须写死的约定
 

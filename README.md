@@ -22,6 +22,7 @@
 - `skills/kb-tree/scripts/lint.py` 检查结构、front matter、跨节点引用、操作痕迹、可疑数字、跨页重复断言与 `questions.jsonl` 字段。
 - 用法：`python3 skills/kb-tree/scripts/lint.py trees/computer/ai/agent`，`--strict` 时警告也判失败。
 - 错误（E）必须修；警告（W）逐条判断——论文引用的数字可以保留，自己估的数要么标成判断、要么删掉。
+- 数字警告逐条判断后，把核对结论写进 `skills/kb-tree/references/number-sources.json`（路径 + 页面上的原始数字 + 核对来源），巡检即不再报该数字；没把握核实的不要登记，改写成定性表述。
 
 ## 维护规则
 

@@ -180,8 +180,30 @@ def check_node_mentions(mds):
 
 NUM_PAT = re.compile(r"(\d+(?:\.\d+)?\s*[%％])|(\d+(?:\.\d+)?\s*(?:×|[xX]\b))|(\d+(?:\.\d+)?\s*倍)")
 
+REGISTRY = {}
 
-def check_numbers(mds):
+
+def norm_num(tok):
+    return tok.replace(" ", "").replace("％", "%")
+
+
+def load_registry():
+    """读取人工核对过的数字登记表：{相对路径: {数字}}。"""
+    here = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "references", "number-sources.json")
+    if not os.path.exists(here):
+        return {}
+    try:
+        data = json.load(open(here, encoding="utf-8"))
+    except Exception:
+        return {}
+    out = defaultdict(set)
+    for e in data.get("entries", []):
+        for n in e.get("numbers", []):
+            out[e.get("path", "")].add(norm_num(str(n)))
+    return out
+
+
+def check_numbers(mds, root):
     for p in mds:
         text = read(p)
         body = body_of(text).split("## 参考资料")[0]
@@ -194,7 +216,11 @@ def check_numbers(mds):
                 continue
             if not claim.search(ln):
                 continue
-            warn(p, "数字需核对出处: " + ln.strip()[:60], i + off)
+            registered = REGISTRY.get(os.path.relpath(p, root), set())
+            unreg = [m.group(0) for m in NUM_PAT.finditer(ln) if norm_num(m.group(0)) not in registered]
+            if not unreg:
+                continue
+            warn(p, "数字需核对出处（未登记 " + "、".join(unreg) + "）: " + ln.strip()[:60], i + off)
 
 
 SENT_SPLIT = re.compile(r"[。！？]")
@@ -284,13 +310,14 @@ def main():
     root = os.path.abspath(args.root)
     mds = sorted(glob.glob(os.path.join(root, "**", "*.md"), recursive=True))
     mds = [p for p in mds if "/skills/" not in p]
+    REGISTRY.update(load_registry())
 
     check_structure(root)
     check_front(root, mds)
     check_sources(root, mds)
     check_cross_refs(root, mds)
     check_node_mentions(mds)
-    check_numbers(mds)
+    check_numbers(mds, root)
     check_duplicates(mds)
     nfiles, nq = check_questions(root)
 
