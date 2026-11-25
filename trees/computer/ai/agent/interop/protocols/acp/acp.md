@@ -26,8 +26,12 @@ MCP 连的是 Agent 与工具、数据源；A2A 连的是 Agent 与 Agent；ACP 
 
 ## 采用现状
 
-Zed 主导、社区共建，已被多个编辑器与编码 Agent 实现；它是「把 Agent 嵌进 IDE」这一层的事实标准候选，但版本迭代快、能力协商依赖双方实现，跨客户端行为不完全一致。
+Zed 发起并主导，Apache 许可，社区共建。Gemini CLI 是最早的参考实现，Claude Code、Codex、GitHub Copilot 等也在 ACP 生态内；JetBrains 侧已接入。2026 年 7 月发布 v2 草案，重点是把更多会话状态表达出来、统一此前分散的模式。
+
+它是「把 Agent 嵌进 IDE」这一层的事实标准候选，但版本迭代快、能力协商依赖双方实现，跨客户端行为不完全一致；v1 与 v2 的能力差异要按客户端实际支持情况核对。
 
 ## 参考资料
 
+- ACP 规范与协议仓库（Apache 许可）：https://agentclientprotocol.com
+- 协议实现仓库：https://github.com/agentclientprotocol/agent-client-protocol
 - Zed Agent Client Protocol 文档：https://zed.dev/acp

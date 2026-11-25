@@ -52,7 +52,7 @@ MCP / A2A / ACP 解决「连谁」，下面这圈解决另外三件事：**界�
 
 ### 界面层：AG-UI 与 A2UI
 
-- **AG-UI**（Agent–User Interaction Protocol）：**事件驱动**的双向协议，连接 Agent 后端与用户界面。建在 HTTP / WebSocket 之上，标准化状态、UI 意图与用户交互的流动。能力包括 token 流式、typed attachments、生成式 UI、共享状态（带事件源 diff 与冲突解决）、思考步骤可视化、前端工具调用、中断/审批/编辑/重试、子 Agent 编排与 steer。客户端**不一定是网页**——终端、移动 App、Slack / Teams 都可作 client。
+- **AG-UI**（Agent–User Interaction Protocol）：连接 Agent 后端与用户界面的**事件驱动**协议，1.0 已是冻结规范。载体可以是网页、移动端、终端、Slack / Teams——客户端不限于网页。
 - **A2UI** 是另一个东西：生成式 UI 规范，让 Agent 交付 UI 组件树；AG-UI 负责把事件传过去。两者互补，**不要混淆名称**。
 
 ### 支付层：授权 / 结算 / 结账三条线
