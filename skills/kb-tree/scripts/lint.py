@@ -105,6 +105,20 @@ def check_front(root, mds):
             err(p, f"name 含非英文字符: {fields['name']}")
 
 
+NO_SOURCE_PAGES = set()
+
+
+def load_no_source_pages():
+    """读取「确认无外部来源」清单，避免对着纯经验页反复报警。"""
+    here = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "references", "no-source-pages.json")
+    if not os.path.exists(here):
+        return set()
+    try:
+        return {str(x) for x in json.load(open(here, encoding="utf-8")).get("pages", [])}
+    except Exception:
+        return set()
+
+
 def check_sources(root, mds):
     for p in mds:
         text = read(p)
@@ -115,7 +129,8 @@ def check_sources(root, mds):
         body = body_of(text)
         secs = sections(body)
         if "参考资料" not in secs:
-            warn(p, "无「## 参考资料」小节（确认确实无外部来源）")
+            if os.path.relpath(p, root) not in NO_SOURCE_PAGES:
+                warn(p, "无「## 参考资料」小节（确认确实无外部来源）")
         else:
             last = [s for s in secs if not s.startswith(" ")]
             tail = body.rsplit("## 参考资料", 1)[0]
@@ -311,6 +326,7 @@ def main():
     mds = sorted(glob.glob(os.path.join(root, "**", "*.md"), recursive=True))
     mds = [p for p in mds if "/skills/" not in p]
     REGISTRY.update(load_registry())
+    NO_SOURCE_PAGES.update(load_no_source_pages())
 
     check_structure(root)
     check_front(root, mds)

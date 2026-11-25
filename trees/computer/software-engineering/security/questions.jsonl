@@ -1,0 +1,8 @@
+{"q": "威胁建模具体怎么做，输出应该是什么？", "section": "威胁建模", "aliases": ["STRIDE 怎么用", "威胁建模的产出"]}
+{"q": "安全默认配置应该包含哪些内容？", "section": "安全默认", "aliases": ["secure by default 怎么做"]}
+{"q": "应用层安全主要防哪些问题？", "section": "应用安全", "aliases": ["应用安全要检查什么"]}
+{"q": "隐私设计在功能设计阶段要问哪些问题？", "section": "隐私设计（Privacy-by-Design）", "aliases": ["privacy by design 怎么落地"]}
+{"q": "安全左移具体移到哪一步？", "section": "安全左移", "aliases": ["shift left 是什么意思"]}
+{"q": "安全建设里最常见的失败模式是什么？", "section": "常见失败模式", "aliases": ["安全工作为什么落不了地"]}
+{"q": "新服务上线前的安全检查怎么做？", "section": "落地清单", "aliases": ["上线安全 checklist"]}
+{"q": "安全与隐私工程从哪开始做？", "section": "落地清单", "aliases": ["安全工程落地顺序"]}

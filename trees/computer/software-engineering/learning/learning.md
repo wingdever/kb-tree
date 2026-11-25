@@ -13,7 +13,7 @@ name: "Software Engineering Learning Resources"
 
 | 仓库 / 站点 | 内容 | 在线 / 许可 |
 |---|---|---|
-| `se-edu/se-book` | 《Software Engineering for Self-Directed Learners》在线书：需求、设计、UML、OOP、测试、重构、Git、质量、团队协作、项目管理，章节可按路径学习 | GitHub 仓库在线读；许可未在核对中确认，不擅自标注 |
+| `se-edu/se-book` | 《面向自学者的软件工程》在线书：需求、设计、UML、OOP、测试、重构、Git、质量、团队协作、项目管理，章节可按路径学习 | GitHub 仓库在线读；许可未在核对中确认，不擅自标注 |
 | `Vonng/ddia` | 《设计数据密集型应用》DDIA 中文翻译，第二版 14 章已全上线并持续校订，第一版另在 `/v1` | `ddia.vonng.com`；CC BY 4.0，但译者声明仅供学习研究、不用于公开分发或商用 |
 | `donnemartin/system-design-primer` | 大规模系统设计资源索引 + 面试真题与示例解答 + Anki 抽认卡；有简体中文 README | GitHub 仓库；许可证未在核对中确认，不擅自标注 |
 | `Admol/SystemDesign` | Alex Xu《System Design Interview》两卷中文翻译，卷一 15 章、卷二部分完成，进度用 checkbox 公开 | GitBook 在线；BSD-3-Clause，译者声明非商用 |
@@ -27,7 +27,7 @@ name: "Software Engineering Learning Resources"
 | `jesselpalmer/the-engineering-managers-booklist` | 面向工程经理的书单 |
 | `wambugucoder/SOFTWARE-ENGINEERING-BOOKS` | 软件工程书籍集合 |
 
-## 怎么配本树读
+## 学习路径怎么排
 
 但**示例解用来对照校准，不用来背诵**。
 
@@ -49,5 +49,5 @@ name: "Software Engineering Learning Resources"
 
 ## 一句话主线
 
-**软件工程的开源学习资源分三类：完整在线书（se-book、DDIA 译本）、系统设计面试资源（primer、SystemDesign）、书单索引；按本树的生命周期阶段对照读，比按 star 排序更有效。**
+**软件工程的开源学习资源分三类：完整在线书（se-book、DDIA 译本）、系统设计面试资源（primer、SystemDesign）、书单索引；按需求、设计、实现、测试、交付这几个阶段对照读，比按 star 排序更有效。**
 

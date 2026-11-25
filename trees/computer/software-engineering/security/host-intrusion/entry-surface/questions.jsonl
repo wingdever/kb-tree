@@ -2,3 +2,7 @@
 {"q": "root 为什么要禁止密码登录？", "section": "密码认证与 root 直登", "aliases": ["为什么 root 只允许密钥登录"]}
 {"q": "数据库账户可以开放 SSH 登录吗？", "section": "账户与来源收敛", "aliases": ["postgres 账户能不能登录系统"]}
 {"q": "管理端口应该绑在哪个地址？", "section": "监听面", "aliases": ["网关端口能不能监听 0.0.0.0"]}
+{"q": "SSH 允许密码登录和 root 直登危险在哪？", "section": "密码认证与 root 直登", "aliases": ["公网 SSH 怎么配才安全"]}
+{"q": "怎么收窄可以登录 SSH 的账户范围？", "section": "账户与来源收敛", "aliases": ["SSH 允许哪些账户登录"]}
+{"q": "管理端口应该暴露在公网吗？", "section": "监听面", "aliases": ["SSH 端口要不要对公网开放"]}
+{"q": "怎么确认 SSH 的实际生效配置？", "section": "落地清单", "aliases": ["怎么检查 sshd 配置是否生效"]}
