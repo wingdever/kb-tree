@@ -7,7 +7,7 @@ name: "Agent Interoperability Protocols"
 
 # Agent 互操作协议
 
-协议按「对面是谁」分层，不是为了追新。**工具走 MCP，Agent 走 A2A，前端走 AG-UI，支付走 AP2**。本节点讲协议地图与同名消歧。
+协议按「对面是谁」分层，不是为了追新。**工具走 MCP，Agent 走 A2A，前端走 AG-UI，支付走 AP2**。下面按这条线索讲协议地图与同名消歧。
 
 ## 官方入口
 

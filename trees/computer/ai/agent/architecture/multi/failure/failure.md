@@ -39,7 +39,6 @@ name: "Multi-Agent Failure Modes"
 
 ## 其他关键失败
 
-- 在更简单的模式跑通之前上多智能体，只是装饰。
 - 编排器失败在没有重试逻辑时不可恢复。
 - 编排器过度拆解（尤其 Orchestrator-Workers 最贵）——给 worker 数量和预算设上限。
 - 动态 swarm 缺乏确定性路由 → 对话乒乓，烧光 API 预算。受监管团队通常避免完全自主 swarm。

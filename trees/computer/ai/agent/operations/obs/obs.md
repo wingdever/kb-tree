@@ -9,7 +9,7 @@ name: "Production Observability"
 
 > 看不见内部的 Agent，就无法运维。可观测性不是可选工具，而是整个系统的控制面板。
 
-2026 年调查：89% 企业已实施 Agent 可观测性；市场分化为追踪层（Langfuse、Helicone）与评估层（Braintrust、Phoenix），没有单一工具主导。OpenTelemetry 标准化正推动厂商中立的追踪。
+市场已分化为追踪层（Langfuse、Helicone）与评估层（Braintrust、Phoenix），没有单一工具主导；OpenTelemetry 标准化正推动厂商中立的追踪。
 
 ## 三大集成方式
 

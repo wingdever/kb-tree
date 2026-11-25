@@ -1,13 +1,13 @@
 ---
-description: "Foundational concepts of agents: definition, prompting and context"
-描述: "Agent 基础认知：定义、边界、提示与上下文"
+description: "Foundational concepts of agents: definition, prompting, context and retrieval"
+描述: "Agent 基础认知：定义、边界、提示、上下文与检索"
 name: "Agent Fundamentals"
 名称: "Agent 基础"
 ---
 
 # Agent 基础
 
-这一组回答「Agent 是什么、什么时候该用、有限窗口怎么用」。这三个问题在开工前必须回答，否则后面所有的架构选择都建在沙子上。
+这一组回答「Agent 是什么、什么时候该用、有限窗口怎么用、外部知识怎么取回来」。前三个问题在开工前必须回答，否则后面所有的架构选择都建在沙子上；最后一个决定 Agent 是凭记忆作答，还是能给出可核对的依据。
 
 ## 三个必须先定的问题
 
@@ -23,7 +23,7 @@ name: "Agent Fundamentals"
 
 ## 怎么读这一组
 
-先读 Agent 的定义与边界，确认你要做的确实是 Agent；再读提示与上下文，把窗口当成预算来分配；最后读知识策略，决定外部知识是走检索、走文件、还是走微调。这一组的结论会被后面所有方向引用，值得慢读。
+先读 Agent 的定义与边界，确认你要做的确实是 Agent；再读提示与上下文，把窗口当成预算来分配；然后读知识策略，决定外部知识是走检索、走文件、还是走微调；最后读检索实现，把"该检索"落成"检索得对、引得出、更新得动"。这一组的结论会被后面所有方向引用，值得慢读。
 
 ## 一句话主线
 

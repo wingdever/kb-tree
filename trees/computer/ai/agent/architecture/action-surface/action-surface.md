@@ -7,7 +7,7 @@ name: "Agent Action Surfaces"
 
 # Agent 行动面谱系
 
-`-use` 已经成为一组命名家族：tool use、computer use、browser use、code use……它们**不是不同技术，而是同一个动作链的不同外壳**。本节点写这组家族的全貌、共同骨架与选择顺序。
+`-use` 已经成为一组命名家族：tool use、computer use、browser use、code use……它们**不是不同技术，而是同一个动作链的不同外壳**。下面讲这组家族的全貌、共同骨架与选择顺序。
 
 ## `-use` 家族
 

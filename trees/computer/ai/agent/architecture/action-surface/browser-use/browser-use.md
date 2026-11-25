@@ -43,7 +43,7 @@ name: "Browser-Use Agents"
 
 ## 成本与生产模式
 
-每一步都可能是一次模型调用：新颖任务可接受，重复流程很贵。**2026 年的生产模式是分层**：把重复 80% 用 Playwright 等确定性脚本缓存下来，只把需要推理的 20% 交给 Browser Use；视觉路线比 DOM 路线每步贵 4–8 倍，且常见任务上成功率低十几分。
+每一步都可能是一次模型调用：新颖任务可接受，重复流程很贵。**生产里的做法是分层**：把稳定步骤固化成确定性脚本（Playwright 一类），只把需要判断的少数步骤交给 Browser Use；视觉路线每步都要一张截图加一次推理，比直接读 DOM 更贵，常见任务上的成功率也更低。
 
 可观测性必需：记录轨迹、动作高亮、失败判定与 prompt injection 检测。Browser Use 的运行后 judge 会给出 `success`、`failure_reason`、`prompt_injection_detected` 等信号——这些是评估输入，不是保证。
 

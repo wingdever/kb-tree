@@ -17,6 +17,12 @@
 - **子节点**：子节点放在父节点目录下继续嵌套，层级不限；父文档不列子节点链接表。
 - **工具目录例外**：`skills/` 目录存放可直接加载的 agent 技能，属工具文件而非知识节点，不适用四字段 front matter 与同名 md 规则，也不在知识文档里登记。
 
+## 一致性巡检
+
+- `skills/kb-tree/scripts/lint.py` 检查结构、front matter、跨节点引用、操作痕迹、可疑数字、跨页重复断言与 `questions.jsonl` 字段。
+- 用法：`python3 skills/kb-tree/scripts/lint.py trees/computer/ai/agent`，`--strict` 时警告也判失败。
+- 错误（E）必须修；警告（W）逐条判断——论文引用的数字可以保留，自己估的数要么标成判断、要么删掉。
+
 ## 维护规则
 
 - 新知识点按"目录 + 同名 md + 四字段 front matter"建立，放入父节点目录；父文档不放链接或登记表格。
