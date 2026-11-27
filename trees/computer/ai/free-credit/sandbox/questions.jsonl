@@ -1,0 +1,5 @@
+{"q": "免费 AI 沙箱的额度有哪几种形态？", "section": "一句话主线", "aliases": ["沙箱 一次性额度 每月额度", "AI 沙箱怎么计费"]}
+{"q": "E2B 免费档能给多少额度？", "section": "E2B：给 Agent 用的 microVM", "aliases": ["E2B 100 美元额度", "E2B 并发 10 个"]}
+{"q": "Modal 免费额度每月多少？GPU 贵吗？", "section": "Modal：按秒买 GPU", "aliases": ["Modal 30 美元", "Modal H100 每小时"]}
+{"q": "跑 Agent 代码该选 E2B 还是 Modal？", "section": "怎么选", "aliases": ["沙箱选型", "代码执行 用哪个"]}
+{"q": "用免费沙箱最容易踩哪些坑？", "section": "四个坑", "aliases": ["E2B 会话 1 小时", "沙箱并发上限"]}

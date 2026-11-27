@@ -1,0 +1,5 @@
+{"q": "免费监控要分成哪几条链路？", "section": "一句话主线", "aliases": ["免费监控有哪些", "错误日志探测区别"]}
+{"q": "Sentry 免费档额度是多少？", "section": "错误追踪：Sentry 免费档", "aliases": ["Sentry 5000 errors 免费", "Sentry 免费 只能一个人"]}
+{"q": "Grafana Cloud 免费档能用多少？", "section": "日志与指标：Grafana Cloud 免费档", "aliases": ["Grafana 免费 50GB 日志", "Grafana 10k series"]}
+{"q": "存活探测用什么免费方案？", "section": "存活探测与自托管", "aliases": ["Uptime Kuma 免费", "uptime 监控 免费"]}
+{"q": "免费监控最容易踩哪些坑？", "section": "四个坑", "aliases": ["Sentry 超量丢弃", "Grafana 14天 保留"]}

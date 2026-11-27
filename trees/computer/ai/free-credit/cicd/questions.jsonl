@@ -1,0 +1,5 @@
+{"q": "免费 CI/CD 的额度有哪几种计量单位？", "section": "一句话主线", "aliases": ["CI 分钟 core-hours 存储", "免费 CI 怎么算"]}
+{"q": "GitHub Actions 免费额度是多少？", "section": "GitHub：CI 与云端环境", "aliases": ["Actions 2000 分钟", "公开仓库 CI 免费"]}
+{"q": "GitHub Codespaces 免费能用多久？", "section": "GitHub：CI 与云端环境", "aliases": ["Codespaces 120 core-hours", "Codespaces 15GB"]}
+{"q": "GitLab 免费档给多少 CI 分钟？", "section": "GitLab：CI 分钟更少，但公开项目有额外通道", "aliases": ["GitLab 400 分钟", "GitLab 免费 存储 10GiB"]}
+{"q": "免费 CI 最容易踩哪些坑？", "section": "四个坑", "aliases": ["Codespaces 核数 消耗", "CI 分钟 不是墙钟"]}

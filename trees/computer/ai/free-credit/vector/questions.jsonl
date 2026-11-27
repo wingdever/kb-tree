@@ -1,0 +1,6 @@
+{"q": "向量库的免费额度按什么口径给？", "section": "一句话主线", "aliases": ["向量存储换算", "向量免费额度怎么看"]}
+{"q": "Pinecone 免费档有多少额度？", "section": "三条托管路线", "aliases": ["Pinecone Starter 2GB", "Pinecone 超额阻断"]}
+{"q": "Qdrant Cloud 免费集群能装多少向量？", "section": "三条托管路线", "aliases": ["Qdrant 1GB 100万向量", "Qdrant 闲置删除"]}
+{"q": "Upstash Vector 的 2 亿是怎么算的？", "section": "三条托管路线", "aliases": ["Upstash 向量 乘积", "Upstash 每天1万查询"]}
+{"q": "不想额外花钱怎么做向量检索？", "section": "最省钱的一条：复用已有 Postgres", "aliases": ["pgvector 免费", "Supabase 向量"]}
+{"q": "用免费向量库最容易踩哪些坑？", "section": "四个坑", "aliases": ["免费向量库 回收", "向量 2亿 误解"]}

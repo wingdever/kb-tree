@@ -1,0 +1,70 @@
+---
+description: "Free AI sandbox quotas: E2B Hobby $100 one-time credits with 1-hour sessions, Modal Starter $30 monthly compute with GPU access"
+描述: "免费 AI 沙箱额度：一次性额度、每月算力、按秒计费三种形态"
+name: "Free AI Sandbox"
+名称: "免费 AI 沙箱"
+---
+
+# 免费 AI 沙箱
+
+沙箱卖的不是"存储"也不是"token"，而是**一台隔离的机器 + 一段时间**。所以它的免费额度有三种完全不同的形态：
+
+- **一次性额度**：开户送一笔钱，用完就没有，不按月重置。
+- **每月额度**：每月给固定金额的算力，月底清零。
+- **按秒计费 + 并发上限**：单价极低，但能同时跑几个沙箱是硬顶。
+
+选之前先问："我是要跑一段代码，还是要跑一次 GPU 推理？"两者的最优平台不同。
+
+## E2B：给 Agent 用的 microVM
+
+Hobby 档 $0 月费，开户送**一次性 $100 用量额度**，不用绑卡（部分账号会被要求一次性 $5 验证，这 $5 也转成额度）<RichMediaReference>["https://e2b.dev/pricing.md"]</RichMediaReference>。硬限制是：
+
+- **单会话最长 1 小时**，到点强制暂停；暂停后沙箱可以无限期保留，恢复即续<RichMediaReference>["https://docs.e2b.dev/billing"]</RichMediaReference>。
+- 并发上限 10 个（官方另一个页面写 20，口径冲突，以控制台为准）。
+- 单沙箱最多 8 vCPU / 8 GiB，磁盘 10 GiB 免费。
+
+计费按秒：vCPU 每秒 $0.000014、内存每 GiB 每秒 $0.0000045。默认 2 vCPU + 4 GiB 组合约 **$0.166/小时**，所以 $100 额度大约能跑 600 小时——听起来很多，但并发 10 个一起跑就是每小时 $1.66，额度消耗快 10 倍。
+
+它的核心价值是**每个 Agent 会话一台独立 microVM**：有 shell、文件系统、浏览器、网络出口，代码在里面跑，密钥不进沙箱。
+
+## Modal：按秒买 GPU
+
+Starter 档 $0 月费，**每月 $30 算力额度**，可跑 CPU 与 GPU，3 个席位、100 个容器、10 个 GPU 并发<RichMediaReference>["https://agentdeals.dev/vendor/modal"]</RichMediaReference>。GPU 单价按型号差很多：
+
+| 型号 | 每秒 | 折算每小时 |
+|---|---|---|
+| T4 16GB | $0.000164 | 约 $0.59 |
+| H100 80GB | $0.001097 | 约 $3.95 |
+| B300 | $0.001972 | 约 $7.10 |
+
+也就是说 $30 的月额度，跑 T4 约 50 小时，跑 H100 只有约 7.5 小时。CPU 是每物理核每秒 $0.0000131，存储卷每月含 1 TiB 免费。
+
+一个容易忽略的变更：Shared Endpoints 从 2026-09-01 起**按 token 计费、不吃那 $30 额度**；从 2026-10-01 起出网超过 1 TiB 按 $0.04/GiB 计费。
+
+## 怎么选
+
+| 需求 | 方案 |
+|---|---|
+| 让 Agent 跑代码、开 shell | E2B Hobby（microVM 隔离，1 小时会话够单轮任务） |
+| 批量生成嵌入、跑推理 | Modal Starter（每月 $30，GPU 按秒） |
+| 只是要个 Linux 环境装依赖 | 自己的云主机或 Docker，平台费为 0 |
+| 长任务超过 1 小时 | E2B 需升 Pro（24 小时会话），或改用 Modal 的长时函数 |
+
+## 四个坑
+
+1. **"一次性"不是"每月"**：E2B 的 $100 用完就没有，不会像 Modal 那样每月回血；长期跑要按消耗速度算总账。
+2. **并发是隐藏上限**：E2B 10 个、Modal 10 个 GPU 并发，超了要么排队要么报错，不是加钱就能立刻解决。
+3. **会话时长会截断任务**：E2B Hobby 1 小时强制暂停，长任务必须自己拆分或做检查点。
+4. **GPU 单价看着小**：$0.001/秒 折算成小时接近 4 美元，跑一天就是近百美元，免费额度只够验证流程，不够跑训练。
+
+## 一句话主线
+
+免费沙箱的额度本质是**"一段时间 + 一个并发上限"**：E2B 适合短会话的代码执行，Modal 适合按月小额试 GPU；真要长期跑，成本会落在"小时 × 并发 × 单价"上，而不是某个固定的免费额度。
+
+## 参考资料
+
+- E2B 定价（Hobby：一次性 $100、10 并发、1 小时会话、10GiB 磁盘）：https://e2b.dev/pricing.md
+- E2B 计费与限额文档（按秒计费、暂停无限保留、会话时长含义）：https://docs.e2b.dev/billing
+- E2B 定价页（另一处写 20 并发，口径冲突）：https://www.e2b.dev/pricing
+- Modal 免费额度（Starter：每月 $30、3 席位、100 容器、10 GPU 并发）：https://agentdeals.dev/vendor/modal
+- Modal 单价与计费变更（GPU 每秒单价、Shared Endpoints 按 token、出网超 1TiB 计费）：https://aitrendtool.com/tools/modal

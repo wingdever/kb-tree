@@ -1,0 +1,8 @@
+{"q": "免费搜索 API 的额度按哪三种东西计量？", "section": "一句话主线", "aliases": ["搜索 请求数 记录数 更新次数", "免费搜索怎么算"]}
+{"q": "Algolia 免费档能给多少？", "section": "有长期免费档的：Algolia", "aliases": ["Algolia 1万请求 5万记录", "Algolia 免费 限制"]}
+{"q": "Meilisearch 和 Typesense 有长期免费托管吗？", "section": "只有试用额度的：Meilisearch 与 Typesense", "aliases": ["Meilisearch 14天试用", "Typesense 720 小时"]}
+{"q": "知乎、Brave、Tavily 这类搜索 API 免费额度是多少？", "section": "内容源与全网搜索 API", "aliases": ["Brave 2000次 每月", "Tavily 1000 credit", "知乎 全网搜索 5000"]}
+{"q": "搜别人索引和自己建索引有什么区别？", "section": "内容源与全网搜索 API", "aliases": ["联网检索 API 选型", "搜索结果不可控"]}
+{"q": "Orama Cloud 免费额度是多少？", "section": "轻量托管：Orama Cloud", "aliases": ["Orama 3 索引", "Orama 150 次更新"]}
+{"q": "完全不想付费怎么做站内搜索？", "section": "真正的零成本方案", "aliases": ["数据库全文检索", "自托管 Meilisearch"]}
+{"q": "免费搜索服务最容易踩什么坑？", "section": "四个坑", "aliases": ["搜索 试用额度 一次性", "Algolia 10KB 单条"]}
