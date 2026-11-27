@@ -136,7 +136,24 @@ Manus 把文件系统描述为"大小无限、天然持久、可直接操作的�
 - **让失败可见**：抹掉失败就移除了模型适应所需的证据。
 - **闭环验证**：Agent 改了文件要重读、写了测试要运行、发了 API 要检查响应。可靠性来自"行动→观察→对照目标验证→纠错"，而非假设成功。
 
+## 压缩之外的第三条路：上下文折叠
+
+摘要把历史压成一段更短的文本；折叠（context folding）则把长轨迹压成**分层的、可回溯的结构**——每一层既能独立阅读，也能按需展开回原文。二者差别在于信息能否还原：
+
+| 做法 | 形态 | 可回溯性 | 代价 |
+|---|---|---|---|
+| 摘要 | 一段更短的叙述 | 低，细节永久丢失 | 一次额外模型调用 |
+| 折叠 | 树状层级，叶子保留原始片段 | 高，可按层展开 | 结构与索引维护成本 |
+| 卸载 | 移出窗口，存文件或数据库 | 高，需检索取回 | 取回延迟与检索质量 |
+
+实践者的用法是把三者叠加：长任务每完成一个阶段就把该阶段折叠成一层并落盘，窗口里只留"当前层 + 上层摘要"；需要复述早期决策时再展开对应叶子。这与增量追加的原则一致——折叠是追加结构，不是重写正文。
+
+可信度提示：这类说法目前主要来自实践者对论文的解读与自述经验，落地前应在自己的任务轨迹上量一次——同一任务分别用摘要与折叠，比较答案质量与总 token。
+
 ## 参考资料
 
 - Anthropic：Effective context engineering for AI agents：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
 - Lost in the Middle（arXiv:2307.03172）：https://arxiv.org/abs/2307.03172
+- 知乎：AI Agent 的上下文工程——构建 Manus 的六个实战经验：https://zhuanlan.zhihu.com/p/2109228801792152452?utm_medium=openapi_platform&utm_source=b38f6831b176
+- 知乎：别再只卷 Prompt 了，真正拉开 Agent 差距的是 Context Engineering：https://zhuanlan.zhihu.com/p/2082840666342699445?utm_medium=openapi_platform&utm_source=b38f6831b176
+- 知乎：Agent 与上下文工程（三）上下文压缩方法（Context Folding 与记忆卸载）：https://zhuanlan.zhihu.com/p/2027149841969558700?utm_medium=openapi_platform&utm_source=b38f6831b176
