@@ -1,0 +1,6 @@
+{"q": "免费 Python 托管的额度有哪几种计量方式？", "section": "一句话主线", "aliases": ["CPU-秒 实例小时 资源上限", "免费托管怎么算"]}
+{"q": "PythonAnywhere 免费档能用什么？", "section": "PythonAnywhere：CPU-秒按天算", "aliases": ["PythonAnywhere 512MB 100 CPU-秒", "PythonAnywhere 出网白名单"]}
+{"q": "Render 免费档的 750 小时够用吗？", "section": "Render：实例小时按 workspace 算", "aliases": ["Render 750 hours", "Render 15分钟 休眠"]}
+{"q": "Streamlit 和 Hugging Face Spaces 免费额度是多少？", "section": "展示型：Streamlit 与 Hugging Face Spaces", "aliases": ["Streamlit 2.7GB", "Spaces 2 vCPU 16GB"]}
+{"q": "想 24 小时常驻该选哪个免费平台？", "section": "怎么选", "aliases": ["常驻服务 免费托管", "免费 VPS 替代"]}
+{"q": "免费 Python 托管最容易踩哪些坑？", "section": "五个坑", "aliases": ["临时文件系统 丢数据", "免费数据库 30 天 过期"]}
