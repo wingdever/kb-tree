@@ -1,0 +1,8 @@
+{"q": "免费邮箱和推送通道要分成哪几条链路？", "section": "一句话主线", "aliases": ["收信发信推送区别", "免费通知总览"]}
+{"q": "怎么用自己的域名免费收信？", "section": "入站：给自己的域名开邮箱", "aliases": ["Cloudflare Email Routing 免费", "catch-all 邮箱"]}
+{"q": "Resend 和 Brevo 的免费额度是多少？", "section": "出站：发信 API 的免费额度", "aliases": ["免费发邮件 API", "3000封 每月 100封 每天"]}
+{"q": "ntfy 免费能发多少条推送？", "section": "推送：手机与 IM 的免费通道", "aliases": ["ntfy 250 条每天", "ntfy 自建"]}
+{"q": "Server酱 免费额度是多少？", "section": "推送：手机与 IM 的免费通道", "aliases": ["Server酱 5条 每天", "SendKey 免费"]}
+{"q": "飞书群机器人 webhook 有频率限制吗？", "section": "推送：手机与 IM 的免费通道", "aliases": ["飞书自定义机器人 100次/分钟", "群机器人限流"]}
+{"q": "个人 Agent 怎么用零成本搭通知链路？", "section": "一套零成本组合", "aliases": ["免费通知方案", "邮件加推送 组合"]}
+{"q": "免费发邮件和推送最容易踩什么坑？", "section": "四个坑", "aliases": ["SPF DKIM DMARC", "免费发信进垃圾箱"]}

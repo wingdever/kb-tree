@@ -1,0 +1,8 @@
+{"q": "免费数据库的额度为什么不能只看 GB 数？", "section": "一句话主线", "aliases": ["数据库计费模型", "免费数据库怎么选"]}
+{"q": "Supabase 免费档有哪些限制？", "section": "Postgres：两家的免费档思路不同", "aliases": ["Supabase 500MB 闲置暂停", "Supabase 2个项目"]}
+{"q": "Neon 免费档的额度怎么算？", "section": "Postgres：两家的免费档思路不同", "aliases": ["Neon 100 CU-hours", "Neon 缩零"]}
+{"q": "Turso 免费档能开多少个库？", "section": "SQLite 托管：按行计费", "aliases": ["Turso 100 库", "Turso 5亿行读"]}
+{"q": "Firestore 免费配额是多少？", "section": "文档库与 KV", "aliases": ["Firestore 5万读 2万写", "Spark 免费额度"]}
+{"q": "MongoDB Atlas 免费集群有多大？", "section": "文档库与 KV", "aliases": ["Atlas 512MB", "M0 免费集群限制"]}
+{"q": "Upstash Redis 免费额度是每天还是每月？", "section": "缓存：Redis 的免费档最小", "aliases": ["Upstash 50万命令", "Upstash 250MB"]}
+{"q": "用免费数据库最容易踩哪些坑？", "section": "五个坑", "aliases": ["免费库闲置暂停", "免费配额只有一个库"]}

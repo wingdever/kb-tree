@@ -1,0 +1,6 @@
+{"q": "Cloudflare 免费档都有哪些服务和额度？", "section": "额度总表", "aliases": ["CF 免费计划有哪些", "Workers Free 额度"]}
+{"q": "Cloudflare 免费档里哪几项额度最值钱？", "section": "三个最值钱的额度", "aliases": ["R2 出网为什么免费", "D1 免费 5GB 够用吗"]}
+{"q": "Cloudflare Tunnel 是免费的吗？怎么用？", "section": "Cloudflare Tunnel：把内网服务挂到公网", "aliases": ["内网穿透 Cloudflare", "cloudflared 免费额度"]}
+{"q": "Quick Tunnel 和正式 Tunnel 有什么区别？", "section": "Tunnel 的免费边界", "aliases": ["trycloudflare 限制", "Tunnel 200 在途请求"]}
+{"q": "用 Cloudflare 免费档最容易踩哪些坑？", "section": "三个容易撞墙的地方", "aliases": ["KV 写额度 1000", "Workers 10ms CPU"]}
+{"q": "Cloudflare 免费额度的重置规则是什么？", "section": "额度总表", "aliases": ["免费额度每天几点重置"]}
