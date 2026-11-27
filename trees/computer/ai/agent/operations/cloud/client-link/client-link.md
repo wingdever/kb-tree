@@ -1,6 +1,6 @@
 ---
-description: "Client-side design for cloud agents: thin client duties, transport choices, takeover and preview links"
-描述: "云端 Agent 客户端：瘦客户端职责、传输选择、多端接管与预览链接"
+description: "Cloud client design: thin client duties, transport, multi-server profiles, takeover and preview links"
+描述: "云端 Agent 客户端：瘦客户端职责、传输、多服务器配置、多端接管与预览"
 name: "Cloud Client Link"
 名称: "客户端接入与传输"
 ---
@@ -48,6 +48,12 @@ name: "Cloud Client Link"
 - 切设备时走显式**接管**流程：新端申请、旧端收到"已被接管"、租约转移。静默抢占会让旧端用户以为自己还在输入。
 - 输入归属要可见：界面上标明"当前由哪台设备控制"，避免两端同时打字造成交错。
 - 移动端的现实约束：后台容易被系统挂起，重连要快、状态要能从快照重建，不能假设长连接常驻。
+
+## 多服务器节点
+
+通用客户端把服务器配置当作一等对象：每个节点有 `serverId`、地址、TLS 策略、凭据、推送方式与能力集。用户侧只扫码或导入节点清单，管理员侧承担证书、端口、备案与推送配置。切换节点时必须关闭旧连接、按 profile 隔离本地数据；token 与缓存都不能跨节点复用。
+
+推送不是节点清单里的一个 key：它涉及 App 长连接、系统推送通道与厂商保活三层，相关取舍已展开为独立子树。
 
 ## 文件与预览
 

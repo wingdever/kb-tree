@@ -1,6 +1,6 @@
 ---
-description: "Exposing a cloud agent publicly: trusted TLS, PWA constraints, ICP filing and access alternatives"
-描述: "云端 Agent 公网入口：受信任 HTTPS、PWA 限制、ICP 备案与接入替代方案"
+description: "Exposing a cloud agent publicly: trusted TLS, IP certs, PWA limits, ICP filing and access alternatives"
+描述: "云端 Agent 公网入口：受信任 HTTPS、IP 证书、PWA 限制、ICP 备案与接入替代方案"
 name: "Public Entry and Hosting"
 名称: "公网入口与托管"
 ---
@@ -54,6 +54,56 @@ PWA 的安装条件不是"有个网页"这么宽。浏览器要求：
 
 域名通常按年付费，价格随后缀与注册商变化。证书可以免费，Let's Encrypt、ZeroSSL、Cloudflare 都能签发受信任的 DV 证书；付费 DV/OV/EV 不是 PWA 的必需项。真正可能产生持续成本的是域名，而不是证书。
 
+## 原生客户端的加密入口
+
+原生 App 不依赖浏览器，因此不需要 PWA，也不需要域名才能加密。TLS 只要求客户端信任服务端证书；域名只是取得公共受信任证书的一种方式，不是协议前提。
+
+| 路线 | 需要域名 | 用户是否装 CA | 适用 |
+|---|---|---|---|
+| 公网 IP + 公共 IP 证书 | 不需要 | 不需要 | 有固定公网 IP 的原生 App，首选 |
+| 域名 + 公共 CA 证书 | 需要 | 不需要 | Web/PWA、IP 会变、希望换服务器不改 App |
+| 自签证书 + App 证书固定 | 不需要 | 不需要，信任内置在 App | 自己控制 App，能管理证书轮换 |
+| 私有网络 + HTTP | 不需要 | 不需要 | Tailscale 等加密隧道内，仅自己设备 |
+
+### 公网 IP + 公共 IP 证书
+
+Let's Encrypt 从 2026 年起一般可用地签发 IP 地址证书，支持 IPv4 与 IPv6。证书直接绑定 IP，不需要域名，属于公共受信任证书，主流系统与客户端默认信任。
+
+这条路线有几个硬条件：
+
+- 必须是 **shortlived** 证书，有效期约 **6 天**，需要自动续期并监控；
+- 只能用 `http-01` 或 `tls-alpn-01` 验证，不能用 DNS 验证，因此 80 或 443 要能从公网访问；
+- Certbot 5.4+ 支持 `--ip-address` 参数；acme.sh 需要指定 `shortlived` profile；
+- IP 必须固定且是公网地址；云主机换 IP，证书与 App 里的地址都要跟着换；
+- 证书到期前要完成续期，否则第 7 天开始全线报证书错误。
+
+服务端结构可以保持简单：
+
+```text
+手机 App --HTTPS / WSS--> 公网 IP:443（Caddy / Nginx，持有 IP 证书）
+                              |
+                              --> 127.0.0.1:18765（Agent，明文只在本机回环）
+```
+
+App 直接连 `https://公网IP`，WebSocket 用 `wss://`。TLS 在入口层终止，Agent 进程仍然只监听回环地址。公共 IP 证书也满足 iOS ATS 与 Android 默认的 HTTPS 要求，不需要为明文 HTTP 开例外。
+
+Caddy 的 automatic HTTPS 主要面向域名；IP 证书通常要用 Certbot 或 acme.sh 单独申请，再让 Caddy/Nginx 加载并定期 reload。把续期脚本、reload 与失败告警一起纳入部署，才算真正可用。
+
+> 判断：如果原生 App 有固定公网 IP，又不想买域名，公共 IP 证书是比自签证书更干净的方案；代价是要把 6 天证书周期纳入运维，而不是把续期当一次性配置。
+
+### 自签证书 + App 证书固定
+
+不想用公共 CA 时，可以让服务端使用自签证书或私有 CA，App 内固定证书公钥（SPKI pinning），只信任这一张证书。用户不需要安装 CA，TLS 仍然加密。
+
+代价在轮换：换证书要同步更新 App 里的 pin，或者设计双 pin 过渡；一旦漏掉，全体用户会连不上。它适合 App 完全由自己控制、用户量小的场景，不如公共 IP 证书省心。
+
+### 边界
+
+- 公网裸 HTTP 仍然是明文：token、聊天内容、工具调用结果、终端输出都可能被中间链路读取或篡改；原生 App 能连，不等于安全。
+- 公共 IP 证书只解决加密与客户端信任，不解决中国内地公网服务的 ICP/APP 备案要求。
+- 自签证书固定在客户端，不适合需要浏览器直接访问的公开 Web；浏览器不会因为 App 信任就跟着信任。
+- 不建议自己写应用层加密协议来替代 TLS；前向保密、重放保护、证书验证这些环节很容易做错。
+
 ## Service Worker 的 HTTPS 判定
 
 Service Worker 只在**安全上下文**中可用。公网 HTTP 不是安全上下文，注册会直接失败；`http://localhost` 与 `127.0.0.1` 被特殊视为可信，所以本地开发可以不用证书。
@@ -97,6 +147,31 @@ An SSL certificate error occurred when fetching the script.
 > 判断：免费二级域名通常不能用于备案。备案核验要求域名由备案主体依法注册所有，而免费子域名的所有权、实名主体与注册商资质通常都不满足；即使能解析，也过不了备案核验。
 
 备案不是 PWA 的技术要求，而是中国内地主机提供 Web 服务的合规要求。它不会让 HTTP 变成安全上下文，也不会替代证书；反过来，配了 HTTPS 也不等于完成备案。
+
+### 80/443 被拦时
+
+中国内地未备案服务器经常被云厂商拦截 80/443。这不是协议层限制，而是接入管理：备案完成后端口才能正常开通。IP 证书只支持 `http-01`（80）或 `tls-alpn-01`（443），不支持 DNS 验证；两个端口都不通，公共 IP 证书就签不出来。
+
+端口被拦后，可选路线变成：
+
+| 路线 | 80/443 | 域名 | 备案 | 判断 |
+|---|---|---|---|---|
+| 内地服务器 + 域名 + ICP 备案 | 备案后可开 | 需要 | 需要 | 合规公开服务的首选 |
+| 香港/海外服务器 + 域名或 IP 证书 | 正常开 | 可选 | 通常不需要 | 公开服务最省事，接受跨境延迟 |
+| 自签证书 + App 证书固定 + 8443 | 不需要 | 不需要 | 不合规风险 | 原生 App 原型或自用 |
+| 域名 + DNS-01 证书 + 8443 | 不需要 | 需要 | 不合规风险 | 技术可行，不能当备案豁免 |
+| Cloudflare Tunnel | 不需要入站 | Named 需要 | 合规需评估 | Quick 不支持 SSE |
+| IM 长连接 / Tailscale | 不需要 | 不需要 | 不需要 | 私有访问或手机聊天 |
+
+几个判断：
+
+- **IP 证书在内地未备案服务器上基本不可用**。没有 80/443，就没有 `http-01` / `tls-alpn-01` 验证；IP 证书又不支持 DNS-01，没有替代验证方式。
+- **非标端口不是备案豁免**。把服务挪到 8443 只绕开了端口拦截，域名解析到内地服务器并提供公开服务，备案义务还在；云厂商也可能继续扫描和阻断。
+- **纯 IP 很难作为备案入口**。备案通常按域名走；内地公开服务想合规，实际路径仍是域名 + ICP。
+- **DNS-01 可以解决“没有 80/443 也能签公共证书”**，但只对域名证书成立；证书签出来后可以跑在 8443。它解决的是证书获取，不解决主机合规。
+- **自签证书 + App 固定**可以做到无域名、无 80/443、无公共 CA，但只适合自己控制客户端的场景；证书轮换、iOS ATS/Android 信任与公开分发都要额外处理。
+
+> 判断：80/443 被拦时，正确选择是换合规路径（备案或换境外主机），而不是把公开服务挪到非标端口继续跑。后者只是把“打不开”换成了“可能被封、且合规风险更高”。
 
 ## 公网入口方案对比
 
@@ -166,4 +241,7 @@ Tailscale 把设备放进一个私有虚拟网络，手机装客户端后可以�
 - 腾讯云《ICP 备案域名》（域名实名、注册商资质与备案核验要求）：https://cloud.tencent.cn/document/product/243/18905
 - 阿里云《域名准备与检查》（工信部批复后缀、实名主体与境外注册商转入要求）：https://help.aliyun.com/zh/icp-filing/basic-icp-service/user-guide/prepare-and-check-the-domain-name
 - 阿里云《备案流程 FAQ》（中国内地服务器备案、非内地服务器免工信备案的说明）：https://help.aliyun.com/zh/icp-filing/basic-icp-service/support/for-the-record-process-faq
-- Caddy《Automatic HTTPS》（自动证书与域名前提）：https://caddyserver.com/docs/automatic-https
+- Let's Encrypt《6-day and IP Address Certificates are Generally Available》（IP 地址证书与 6 天有效期）：https://letsencrypt.org/2026/01/15/6day-and-ip-general-availability
+- Let's Encrypt《Six-Day and IP Address Certificates Available in Certbot》（Certbot 的 IP 证书参数）：https://letsencrypt.org/2026/03/11/shorter-certs-certbot
+- Let's Encrypt《We've Issued Our First IP Address Certificate》（IP 证书的验证方式与 shortlived 配置）：https://letsencrypt.org/2025/07/01/issuing-our-first-ip-address-certificate
+- Caddy《Automatic HTTPS》（自动证书与域名配置）：https://caddyserver.com/docs/automatic-https
