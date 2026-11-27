@@ -1,0 +1,7 @@
+{"q": "翻译、OCR、语音识别的免费额度分别按什么单位算？", "section": "先分清五种计费单位", "aliases": ["免费 API 额度单位", "字符 页 次 秒 怎么换算"]}
+{"q": "百度翻译标准版免费是真的不限字符量吗？", "section": "翻译", "aliases": ["百度翻译免费额度 5万字符 还是不限", "百度翻译 QPS 限制"]}
+{"q": "Cloudflare Workers AI 的免费向量化一天能跑多少？", "section": "向量化", "aliases": ["Workers AI 10000 neurons 换算 embedding", "免费 embedding API 持续可用"]}
+{"q": "重排（rerank）有免费 API 吗？", "section": "重排（rerank）", "aliases": ["免费 rerank 模型", "bge-reranker 本地部署"]}
+{"q": "腾讯云 OCR 免费额度是怎么算的？", "section": "OCR", "aliases": ["腾讯 OCR 1000次每月", "OCR 免费额度为什么自动扣费"]}
+{"q": "阿里云语音识别每月免费多少小时？", "section": "语音识别（ASR）", "aliases": ["Paraformer 免费额度", "录音文件识别试用版规则"]}
+{"q": "用免费工具型 API 最容易踩哪些坑？", "section": "四个通用坑", "aliases": ["免费额度为什么被清零", "共享资源包"]}

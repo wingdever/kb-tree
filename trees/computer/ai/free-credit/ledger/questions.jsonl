@@ -3,3 +3,4 @@
 {"q": "额度快到期了应该提前多久准备替代方案？", "section": "到期与预警", "aliases": ["额度到期预警"]}
 {"q": "额度用完后换平台要注意什么？", "section": "切换方案", "aliases": ["换模型供应商怎么迁移"]}
 {"q": "明明有免费额度为什么还会被扣费？", "section": "常见失败模式", "aliases": ["免费期扣费原因"]}
+{"q": "为什么一次 Agent 会话会消耗几百万 token？", "section": "为什么 Agent 会话会烧掉几百万 token", "aliases": ["编码 Agent 一次用 2M token 正常吗", "M tokens 是兆字节吗"]}
