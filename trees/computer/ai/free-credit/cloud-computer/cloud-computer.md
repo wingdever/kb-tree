@@ -34,10 +34,29 @@ token 是边际成本，云机是固定成本：一台实例要占 CPU、内存�
 | 中国电信 TeleAgent | 网页端限时免费；免费版 0 元含免费积分，注册与每月登录赠送 | 个人 69 元/月（折后，原价 99）、高级 139 元/月（原价 199）；企业首月 0 元试用、限 10 席 | 积分制 + 订阅 |
 | Claude Duet | 预览期不额外收费 | 与 Claude 其它能力共用订阅额度 | 订阅含机时 |
 | Grok Bot | 无免费档，低价档不含 | 30 美元/月起，100 与 200 美元档用量更高 | 订阅含机时 |
-| 阿里无影个人版 | 无长期免费机时 | 按配置与时长购买 | 按量计费 |
+| 阿里无影个人版 | 新客免费试用 1 台、1 个月，含 40 核时，另送 200 灵豆；试用后按配置与时长购买 | 经济模式 4 核 8G 每小时 4 灵豆，流畅 8 核 16G 每小时 8 灵豆 | 按量计费 |
+| 移动云电脑 | 4C8G 办公型/信创型免费体验一个月（预制 OpenClaw），另有首月 1 元档；注册送 2500 万 tokens | 按配置包月，随活动调整 | 订阅含机时 |
+| 天翼云电脑（公众版） | 推广期免费试用，渠道口径为 60 天或 2 个月 8C16G | 公众版按开机时长计费 | 按量计费 |
 | 腾讯云云手机/云桌面 | 无长期免费 | 按量或包年包月 | 按量计费 |
 | Windows 365 for Agents | 无 | 按小时计费，常驻机型另收月费 | 按量 + 席位 |
 | Simular box | 一次性试用额度 | 按小时计费或按月订阅 | 按量计费 |
+
+## 一次性试用额度
+
+试用额度与持续注入的额度不是一回事：前者只够验证，后者才能撑服务。
+
+| 产品 | 试用内容 | 到期规则 |
+|---|---|---|
+| 阿里无影个人版 | 1 台、1 个月、40 核时；系统盘 60G、数据盘 40G；另赠 200 灵豆（一年有效） | 时长用尽或到期后 15 天内可续费，超期资源释放；开通即默认开机，10 分钟无连接自动关机 |
+| 移动云电脑 | 4C8G 办公型或信创型免费体验一个月，镜像预装 OpenClaw | 活动型，随活动上下线，需按当期规则报名 |
+| 天翼云电脑（公众版） | 推广期赠送一段时间的高配机时，渠道口径从 60 天到 2 个月不等 | 推广期结束转按开机时长计费 |
+| Simular box | 一次性试用额度 | 用完转按小时或月订阅 |
+
+三条使用要点：
+
+1. **核时不是小时**。核时的算法是 vCPU 数 × 开机时长，4 核机跑一小时等于消耗 4 核时；无影试用的 40 核时，按经济模式算只有十小时左右。
+2. **试用期只做验证**。把试用当生产环境，到期当天服务直接断，迁移成本比一开始付费更高。
+3. **先看清释放规则**。到期后多少天内可续费、闲置多久自动关机、资源何时回收，决定了试用的真实可用窗口。
 
 ## 免费额度的三个真实边界
 
@@ -72,10 +91,16 @@ token 是边际成本，云机是固定成本：一台实例要占 CPU、内存�
 - 豆包：工作任务功能须知（云电脑模式与产物存放）：https://www.doubao.com/legal/DoubaoAgentModeNotice
 - AutoGLM 订阅与积分规则（月卡、加油包、积分过期）：https://autoglm.zhipuai.cn/pay/product
 - AutoClaw 积分充值服务协议（积分为统一计价凭证）：https://autoglm.aminer.cn/web/md2html/index.html?favicon=autoglm&md=autoclaw_pay_agreement
+- AutoGLM 安卓安装包直链（智谱官网页面内提供的 APK，2026-11 可用）：https://autoglm.aminer.cn/web/deep_research/apk/autoglm.apk
+- AutoGLM 下载页（PC 客户端与浏览器入口，网页端启动云电脑）：https://autoglm.zhipuai.cn/htdocs/download.html
+- 应用宝：AutoGLM 版本与更新记录（安卓分发渠道）：https://sj.qq.com/appdetail/com.zhipu.agent
 - 中国电信 TeleAgent 定价页（免费版、个人标准与高级版）：https://ta.teleai.com.cn/pricing
 - 天翼 AI 更新日志（积分体系、免费积分与错峰折扣）：https://www.teleai.com.cn/doc/YMP2z8La01W7T5qIHEww/vl1kQ5tUwikhl5urqiuD
 - 天翼 AI 网页端手册（限时免费体验期说明）：https://www.teleai.com.cn/doc/IxaFWb5NsmbgdWG3lffl/Yk2rSh2YgON6Y5JHmoDz
 - Grok Bot 定价（各档是否包含云电脑与用量倍数口径）：https://www.gosearch.ai/blog/grok-bot-pricing-and-alternatives/
 - 云电脑平台计价对比（Windows 365 for Agents、Simular box 的按量与月费）：https://www.simular.ai/alternatives/cloud-computers-for-ai-agents
-- 阿里云无影云电脑个人版（按配置与时长购买）：https://www.aliyun.com/product/wuying/gws/personal_edition
+- 阿里云无影云电脑个人版（免费试用与规格说明）：https://www.aliyun.com/product/wuying/gws/personal_edition
+- 阿里云帮助中心：无影个人版新用户免费试用（1 台 1 个月、40 核时、灵豆扣减规则）：https://help.aliyun.com/zh/edsp/getting-started/free-trial-for-new-users
+- 移动云：云电脑产品页（公众版、政企版与订购入口）：https://ecloud.10086.cn/portal/product/computer
+- 移动云：一键部署 OpenClaw 活动（4C8G 云电脑免费体验一个月、2500 万 tokens）：https://www.hubpd.com/detail/index.html?contentId=2305843009218705024
 - 腾讯云：Computer Use Agent 云手机与云桌面计费：https://cloud.tencent.com/act/pro/cvp
