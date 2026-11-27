@@ -4,7 +4,7 @@
 
 ## 结构
 
-- `trees/<树名>/` — 一棵知识树，树内只放知识文档，不放规则文档。当前收录 `trees/computer/`。
+- `trees/<树名>/` — 一棵知识树，树内只放知识文档，不放规则文档。当前收录 `trees/computer/`（技术与工程知识）与 `trees/vendor-entity/`（AI 服务商经营主体）。
 - `skills/` — 可直接加载的 agent 技能，属工具目录。
 
 ## 组织规则
