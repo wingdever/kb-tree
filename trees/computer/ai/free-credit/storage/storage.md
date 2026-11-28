@@ -19,9 +19,9 @@ name: "Free Image & File Storage"
 
 | 平台 | 免费额度 | 有效期 | 只抵什么 |
 |---|---|---|---|
-| 七牛云 | 标准存储 10GB/月、CDN 回源 10GB/月、PUT/DELETE 10 万次/月、GET 100 万次/月，图片处理 10TB/月 | 每月自动发放，不结转 | 存储、回源流量、请求；外网流出流量无免费额度<RichMediaReference>["https://developer.qiniu.com/af/12968/freequota"]</RichMediaReference> |
-| 腾讯云 COS | 个人 50GB、企业 1TB 标准存储 | 6 个月（180 天） | 仅标准存储容量；流量与请求需另购<RichMediaReference>["https://cloud.tencent.com/document/product/436/6240"]</RichMediaReference> |
-| 阿里云 OSS | 20GB 标准存储 + 2GB 外网流出 + 20 万次请求 | 3 个月 | 仅标准存储（本地冗余）、外网流量、请求；图片处理不抵<RichMediaReference>["https://help.aliyun.com/zh/oss/free-quota-for-new-users"]</RichMediaReference> |
+| 七牛云 | 标准存储 10GB/月、CDN 回源 10GB/月、PUT/DELETE 10 万次/月、GET 100 万次/月，图片处理 10TB/月 | 每月自动发放，不结转 | 存储、回源流量、请求；外网流出流量无免费额度 |
+| 腾讯云 COS | 个人 50GB、企业 1TB 标准存储 | 6 个月（180 天） | 仅标准存储容量；流量与请求需另购 |
+| 阿里云 OSS | 20GB 标准存储 + 2GB 外网流出 + 20 万次请求 | 3 个月 | 仅标准存储（本地冗余）、外网流量、请求；图片处理不抵 |
 
 三家的差别在"续不续"：七牛是**每月重置的长期免费**，适合长期放着的小站点；腾讯和阿里是**一次性试用包**，到期后全部按量计费，测试完要么删桶要么付费。阿里在部分海外地域还能叠加每月 5GB，试用期内合计约 25GB/月。
 
@@ -30,14 +30,14 @@ name: "Free Image & File Storage"
 把图片放进 Git 仓库、用 Pages 或 CDN 分发，是零成本方案里最稳的一种，因为带宽由托管方出：
 
 - GitHub Pages 对公开仓库的静态资源不限流量，适合博客配图与文档截图。
-- 大文件走 Git LFS：GitHub Free/Pro 自带 **10 GiB 存储 + 10 GiB 下载带宽/月**，单文件上限 2 GB；Team 与 Enterprise 是 250 GiB<RichMediaReference>["https://techdows.com/download-git-lfs-for-pc-windows-11-10-mac.html"]</RichMediaReference>。注意普通 Git 仓库单文件硬上限 100 MB，超过就必须走 LFS。
+- 大文件走 Git LFS：GitHub Free/Pro 自带 **10 GiB 存储 + 10 GiB 下载带宽/月**，单文件上限 2 GB；Team 与 Enterprise 是 250 GiB。注意普通 Git 仓库单文件硬上限 100 MB，超过就必须走 LFS。
 - LFS 超出免费额度且预算上限设为 0 时，当月 LFS 操作会被直接阻断，不会偷偷扣费——这算是比较友好的失败方式。
 
 仓库当图床的代价是**图片进了版本历史就删不掉**（除非重写历史），所以只适合放"一次定稿"的素材，不适合频繁替换的图。
 
 ## 公共图床
 
-公共图床的免费档普遍存在一个隐性降级：**免费能上传，但直链与 API 被划进付费档**。以 ImgBB 为例，免费档单张上限 32 MB，而"直链（Direct Linking）"和"API Access"列在 Pro 权益里<RichMediaReference>["https://ibb.co"]</RichMediaReference>。这意味着程序化上传、稳定外链这些真正有用的能力，免费档可能拿不到。
+公共图床的免费档普遍存在一个隐性降级：**免费能上传，但直链与 API 被划进付费档**。以 ImgBB 为例，免费档单张上限 32 MB，而"直链（Direct Linking）"和"API Access"列在 Pro 权益里。这意味着程序化上传、稳定外链这些真正有用的能力，免费档可能拿不到。
 
 公共图床的固有风险还有三条：图片可能因政策或长期无人访问被清理、外链有防盗链与 Referer 限制、服务关停时全部链接同时失效。所以它只适合临时分享，不适合当 Agent 产物的长期存储。
 

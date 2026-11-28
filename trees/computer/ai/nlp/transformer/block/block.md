@@ -44,7 +44,7 @@ class RMSNorm(nn.Module):
 
 ### SwiGLU（FFN 激活）
 
-2017 用 ReLU，2026 用 SwiGLU：`Swish(W1 x) ⊙ W3 x`，在 Llama、PaLM、Qwen 论文中一致优于 ReLU/GELU 约 0.5 ppl。SwiGLU 用三个矩阵，扩展比降到约 2.6× 以保持总参数相当。
+2017 用 ReLU，2026 用 SwiGLU：\( \mathrm{Swish}(W_{gate}x) \odot W_{up}x \)，在 Llama、PaLM、Qwen 论文中一致优于 ReLU/GELU 约 0.5 ppl。SwiGLU 用三个矩阵，扩展比降到原来的六成左右以保持总参数相当。
 
 ## 完整的 pre-norm Block（代码）
 
@@ -83,3 +83,8 @@ class Block(nn.Module):
 
 骨架自 2017 未变，改进集中在这些替换。
 
+## 参考资料
+
+- Attention Is All You Need（Vaswani et al., 2017）：https://arxiv.org/abs/1706.03762
+- On Layer Normalization in the Transformer Architecture：https://arxiv.org/abs/2002.04745
+- Root Mean Square Layer Normalization：https://arxiv.org/abs/1910.07467

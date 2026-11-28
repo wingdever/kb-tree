@@ -14,7 +14,7 @@ name: "Model Evaluation and Benchmarks"
 | 能力维度 | 代表指标 | 测量范式 | 2026 状态 |
 |---|---|---|---|
 | 通用知识 | MMLU / MMLU-Pro | 静态 MCQ | MMLU 饱和（92%+）；Pro 仍有区分度 |
-| 专家推理 | GPQA Diamond / HLE / FrontierMath | 博士/研究级静态 | 主力换代指标；GPQA Diamond ~65–68% |
+| 专家推理 | GPQA Diamond / HLE / FrontierMath | 博士/研究级静态 | 主力换代指标；GPQA Diamond 六成五到七成 |
 | 数学推理 | GSM8K / MATH / AIME | CoT 评分 | GSM8K 饱和；AIME 仍有区分度 |
 | 编码 | HumanEval / SWE-bench Verified | pass@1 / 轨迹 | HumanEval 饱和且污染；SWE-bench 是主战场 |
 | 对话偏好 | Chatbot Arena Elo / MT-Bench / AlpacaEval | 人类盲选 / LLM-as-Judge | Arena 持续有效；后两者饱和 |
@@ -88,3 +88,10 @@ MMMU / MMMU-Pro（大学学科 MCQ）、MathVista、ChartQA、DocVQA、VideoMME�
 > 公开基准塑造候选名单，私有评测决定上线哪个。
 
 公开基准用于筛掉不靠谱候选；真正决定发布的是在你自己的流量、你自己的 rubric 上的评测。生产 RAG 的最低可行评测四层：检索指标 + 生成质量 + 失败模式目录 + 生产样本回流。
+
+## 参考资料
+
+- MMLU: Measuring Massive Multitask Language Understanding：https://arxiv.org/abs/2009.03300
+- HELM: Holistic Evaluation of Language Models：https://arxiv.org/abs/2211.09110
+- GPQA: A Graduate-Level Google-Proof Q&A Benchmark：https://arxiv.org/abs/2311.12022
+- HumanEval: Evaluating Large Language Models Trained on Code：https://arxiv.org/abs/2107.03374

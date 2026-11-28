@@ -58,3 +58,8 @@ router 是学出来的，无约束会**坍塌**：少数专家吃下大多数 to
 
 MoE 已成为前沿标配：Mixtral 8x22B（176B/44B/8 专家）、DeepSeek-V3（671B/37B/256）、Qwen 2.5-MoE、DBRX（132B/36B/16），以及据称的 GPT-4、Gemini Ultra。趋势是**更多更小专家 + 共享专家 + 无辅助损失均衡**。
 
+## 参考资料
+
+- Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer：https://arxiv.org/abs/1701.06538
+- Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity：https://arxiv.org/abs/2101.03961
+- Mixtral of Experts：https://arxiv.org/abs/2401.04088

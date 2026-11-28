@@ -52,3 +52,8 @@ float32 每维 4 字节：
 - **分层存储**：热/温/冷分区。
 
 > 降维直接关系向量库成本。
+
+## 参考资料
+
+- Matryoshka Representation Learning：https://arxiv.org/abs/2205.13147
+- MTEB: Massive Text Embedding Benchmark：https://arxiv.org/abs/2210.07316

@@ -58,8 +58,8 @@ name: "GraphRAG Frameworks and Selection"
 ## 客观看待效果
 
 - Microsoft GraphRAG 论文：约一百万 token 语料的全局 sensemaking 问题，在全面性与多样性上大幅优于向量 RAG；社区摘要对 Global 查询胜率 **72–83%**。
-- 但 **HippoRAG 2（ICML 2025）**：强向量检索器七个 QA 数据集平均 57.0 F1，Microsoft 社区 GraphRAG 仅 49.6——直白事实问题上图不如向量。
-- **GraphRAG-Bench（2026）**：简单事实检索基础 RAG 持平或胜出，图在复杂推理与跨语料总结才领先；图索引构建慢 **40–57 倍**。
+- 但 **HippoRAG 2（ICML 2025）**：强向量检索器七个 QA 数据集平均 F1 高于 Microsoft 社区 GraphRAG——直白事实问题上图不如向量。
+- **GraphRAG-Bench（2026）**：简单事实检索基础 RAG 持平或胜出，图在复杂推理与跨语料总结才领先；图索引构建慢一到两个数量级。
 - 多基准：GraphRAG-Bench novel/medical 分数各家差异大（Microsoft 50.93/45.16、LightRAG 45.09/62.59、TypeGraph 62.65/67.68）——同一框架在不同语料表现不一。
 
 **结论**：GraphRAG 不是替代 RAG，而是关系复杂场景的增强。生产共识是**混合路由**——简单事实查询走向量，复杂推理走图，让合适的技术解决合适的问题。务必用自己语料做 A/B（Naive vs GraphRAG vs Hybrid，同一 LLM 底座），而非信论文分数。
@@ -68,3 +68,7 @@ name: "GraphRAG Frameworks and Selection"
 
 三层成本：① **Schema 设计**——最难的不是框架而是本体， Goldman Sachs/Deloitte 等成功部署在写检索代码前投入数周做本体。② **图维护**——文档变化后要重抽实体、与现有节点对账（"Microsoft Corp" 与 "Microsoft" 同一吗？），增量更新是核心难题。③ **无界遍历**——设跳数与结果上限，否则组合爆炸。
 
+## 参考资料
+
+- LightRAG: Simple and Fast Retrieval-Augmented Generation：https://arxiv.org/abs/2410.05779
+- From Local to Global: A Graph RAG Approach to Query-Focused Summarization：https://arxiv.org/abs/2404.16130

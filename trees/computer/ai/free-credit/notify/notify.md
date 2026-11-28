@@ -17,9 +17,9 @@ name: "Free Email & Push"
 
 ## 入站：给自己的域名开邮箱
 
-Cloudflare Email Routing 是这一档的天花板：所有套餐免费，前提是域名托管在 Cloudflare DNS。可以为域名创建任意数量的自定义地址（`support@`、`billing@`、甚至 catch-all），邮件转发到你指定的邮箱，**Cloudflare 不存储也不访问邮件内容**<RichMediaReference>["https://developers.cloudflare.com/email-routing/?ref=blog.cloudflare.com"]</RichMediaReference>。
+Cloudflare Email Routing 是这一档的天花板：所有套餐免费，前提是域名托管在 Cloudflare DNS。可以为域名创建任意数量的自定义地址（`support@`、`billing@`、甚至 catch-all），邮件转发到你指定的邮箱，**Cloudflare 不存储也不访问邮件内容**。
 
-它的硬限制写在文档里：每个域最多 200 条路由规则、每个账号最多 200 个已验证目标地址、单封入站邮件上限 25 MiB；一个规则只能映射到一个目标或一个 Worker，要一对多就得用 Worker 里多次调用转发<RichMediaReference>["https://developers.cloudflare.com/email-service/platform/limits/"]</RichMediaReference>。
+它的硬限制写在文档里：每个域最多 200 条路由规则、每个账号最多 200 个已验证目标地址、单封入站邮件上限 25 MiB；一个规则只能映射到一个目标或一个 Worker，要一对多就得用 Worker 里多次调用转发。
 
 这套组合的实际价值是：**注册各种服务时不再暴露主邮箱**，垃圾邮件在转发层就被拦掉，而且完全不花钱。
 
@@ -27,9 +27,9 @@ Cloudflare Email Routing 是这一档的天花板：所有套餐免费，前提�
 
 | 平台 | 免费额度 | 关键细节 |
 |---|---|---|
-| Resend | 3,000 封/月，**100 封/天** | 收信也计入配额；3 个域名、3 个收件箱；数据保留 30 天<RichMediaReference>["https://resend.com/pricing"]</RichMediaReference> |
-| Brevo | 300 封/天（9,000/月），永久免费 | 超限的事务邮件最多 1,000 封进重试队列，再多直接不投递<RichMediaReference>["https://help.brevo.com/hc/en-us/articles/208580669-FAQs-What-are-the-limits-of-the-Free-plan"]</RichMediaReference> |
-| Cloudflare Email Sending | Workers Free 档可发，但**只能发到已验证目标地址** | 要发给任意收件人需 Workers Paid + 已接入发送域名<RichMediaReference>["https://developers.cloudflare.com/email-service/platform/limits/"]</RichMediaReference> |
+| Resend | 3,000 封/月，**100 封/天** | 收信也计入配额；3 个域名、3 个收件箱；数据保留 30 天 |
+| Brevo | 300 封/天（9,000/月），永久免费 | 超限的事务邮件最多 1,000 封进重试队列，再多直接不投递 |
+| Cloudflare Email Sending | Workers Free 档可发，但**只能发到已验证目标地址** | 要发给任意收件人需 Workers Paid + 已接入发送域名 |
 
 Resend 的日限是 UTC 自然日（00:00–24:00），不是滚动 24 小时；一封邮件多个收件人（To/CC/BCC）按多人分别计数，这一点最容易把额度算爆。Brevo 的 300 封/天同样不累积，当天没用完不结转。
 
@@ -39,8 +39,8 @@ Resend 的日限是 UTC 自然日（00:00–24:00），不是滚动 24 小时；
 |---|---|---|
 | ntfy 公共实例 | **250 条/天**（按访客 IP 计），留存 12 小时 | 无需账号、一个 HTTP PUT 就发；topic 名就是密码 |
 | ntfy 自建 | 不限条数 | 单个 Go 二进制，官方 apt/Docker 源，数据自己拿 |
-| Server酱 Turbo | **5 条/天**，每分钟 50 条 | 推微信/企微/钉钉/飞书/Bark/PushDeer，一个 SendKey 打通多落点<RichMediaReference>["https://sct.ftqq.com/docs/getting-started/faq/"]</RichMediaReference> |
-| 飞书自定义机器人 | 免费，**100 次/分钟、5 次/秒**，请求体 ≤20 KB | 群 webhook 即插即用，不需要管理员审核<RichMediaReference>["https://open.feishu.cn/document/server-docs/api-call-guide/frequency-control?lang=zh-CN"]</RichMediaReference> |
+| Server酱 Turbo | **5 条/天**，每分钟 50 条 | 推微信/企微/钉钉/飞书/Bark/PushDeer，一个 SendKey 打通多落点 |
+| 飞书自定义机器人 | 免费，**100 次/分钟、5 次/秒**，请求体 ≤20 KB | 群 webhook 即插即用，不需要管理员审核 |
 | Bark | iOS 客户端免费，服务端开源自建 | 官方服务器可用；自建则完全无配额 |
 | 企业微信 / 钉钉群机器人 | 免费 webhook | 频率限制按各自文档，社区常见口径 20 条/分钟，接入前核对 |
 

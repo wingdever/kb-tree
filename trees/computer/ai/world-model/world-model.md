@@ -97,3 +97,7 @@ name: "World Models"
 - **潜空间/RL**：V-JEPA 2（Meta）、DreamerV3/V4（Hafner）、Ada JEPA。
 - **规划/具身**：Physical Intelligence（π-0.6）、Skild、Figure Helix、1X NEO、Tesla Optimus、comma.ai。
 
+## 参考资料
+
+- World Models（Ha & Schmidhuber, 2018）：https://arxiv.org/abs/1803.10122
+- Mastering Diverse Domains through World Models（DreamerV3）：https://arxiv.org/abs/2301.04104

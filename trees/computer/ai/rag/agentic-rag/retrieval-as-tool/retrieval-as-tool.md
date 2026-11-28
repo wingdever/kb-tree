@@ -52,3 +52,7 @@ Agentic RAG 不是免费升级：
 
 有一类工作负载里，循环本身就是成本瓶颈——这时出现了"编译知识一次"的替代路线（把知识预编译成持久 Wiki，查询直接读成品）。它与检索即工具是两种哲学：前者把决策放到运行时，后者把决策前移到摄入期。
 
+## 参考资料
+
+- ReAct: Synergizing Reasoning and Acting in Language Models：https://arxiv.org/abs/2210.03629
+- Toolformer: Language Models Can Teach Themselves to Use Tools：https://arxiv.org/abs/2302.04761

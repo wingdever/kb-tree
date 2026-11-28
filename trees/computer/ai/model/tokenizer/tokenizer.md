@@ -177,3 +177,9 @@ num_added = tok.add_tokens(["<.domain_token>", "..."])
 - 字节级 BPE 是当前 decoder-only LLM 主流（覆盖全、无 UNK）。
 - 分词器要与模型配套；用错 chat template 或与基座不匹配的词表会静默破坏效果。
 - 分词影响 token 频率分布、标点/空格处理乃至推理成本，不是纯工程细节。
+
+## 参考资料
+
+- Neural Machine Translation of Rare Words with Subword Units（BPE）：https://arxiv.org/abs/1508.07909
+- Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates（Unigram / SentencePiece）：https://arxiv.org/abs/1804.10959
+- Google's Neural Machine Translation System（WordPiece）：https://arxiv.org/abs/1609.08144

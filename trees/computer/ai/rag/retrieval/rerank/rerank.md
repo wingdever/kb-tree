@@ -7,7 +7,7 @@ name: "Reranking"
 
 # 重排（Reranking）
 
-标准模式：从混合索引召回 50–100 个候选（50–100ms），再用 cross-encoder 或 LLM 重排器对候选精排（100–400ms），保留 top 5–20 给生成。端到端约 200–500ms 换 10× 质量提升。
+标准模式：从混合索引召回 50–100 个候选（50–100ms），再用 cross-encoder 或 LLM 重排器对候选精排（100–400ms），保留 top 5–20 给生成。端到端约 200–500ms，换来明显的质量提升。
 
 ## 为什么需要重排
 
@@ -56,5 +56,9 @@ name: "Reranking"
 - **Context Recall < 0.70**：正确块根本没召回——问题是切块/嵌入覆盖/索引缺失，重排救不了。
 - **Recall > 0.85 但精度低**：正确块在 top-100 却没浮到 top-5——这正是重排的目标。
 
-降低重排延迟的技巧：候选池 top-100→top-50（损失 <2% 召回、时间减半）、候选截断 256 token、按 (query, 候选集 hash) 缓存重排分（成熟系统命中率 30–60%）。
+降低重排延迟的技巧：候选池减半（召回损失很小、时间明显下降）、候选截断、按 (query, 候选集 hash) 缓存重排分（成熟系统命中率可观）。
 
+## 参考资料
+
+- ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT：https://arxiv.org/abs/2004.12832
+- Cohere Rerank 文档：https://docs.cohere.com/docs/rerank

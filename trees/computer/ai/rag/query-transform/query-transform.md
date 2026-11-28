@@ -56,3 +56,7 @@ RAG 系统的质量取决于中间那一步搜索。用户问题含糊、用词�
 
 LangChain `MultiQueryRetriever` 从单问题生成多个变体并返回去重并集；LlamaIndex `HyDEQueryTransform` 配 `TransformQueryEngine` 包裹任意 retriever 透明应用变换。
 
+## 参考资料
+
+- Precise Zero-Shot Dense Retrieval without Relevance Labels（HyDE）：https://arxiv.org/abs/2212.10496
+- RAG-Fusion: a New Take on Retrieval-Augmented Generation：https://arxiv.org/abs/2402.03367

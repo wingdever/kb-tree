@@ -16,3 +16,9 @@ name: "Model Engineering"
 ## 与其他领域的关系
 
 - 模型能力eval与 Agent 行为评估是两个层次：这里评模型。
+
+## 参考资料
+
+- Attention Is All You Need（Vaswani et al., 2017）：https://arxiv.org/abs/1706.03762
+- Scaling Laws for Neural Language Models（Kaplan et al., 2020）：https://arxiv.org/abs/2001.08361
+- Training Compute-Optimal Large Language Models（Hoffmann et al., 2022）：https://arxiv.org/abs/2203.15556

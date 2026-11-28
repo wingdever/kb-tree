@@ -22,3 +22,9 @@ Agentic RAG 的核心：**用推理循环取代直线管道**。传统 RAG 只�
 - 关键提醒：上述前提都假设底层数据干净、最新、治理良好——自检循环救不了陈旧或脏数据。
 
 > 核心判断：决策点不是"要不要用 Agentic RAG"，而是"哪类问题值得额外投入"。
+
+## 参考资料
+
+- ReAct: Synergizing Reasoning and Acting in Language Models：https://arxiv.org/abs/2210.03629
+- Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection：https://arxiv.org/abs/2310.11511
+- Corrective Retrieval Augmented Generation（CRAG）：https://arxiv.org/abs/2401.15884

@@ -18,9 +18,9 @@ name: "Free Web Hosting"
 
 ## 静态站与前端平台
 
-**Vercel Hobby**（免费）：每月 **100GB 快速数据传输、100 万次函数调用、4 CPU 小时活跃 CPU、360 GB 小时预置内存、100 万次 CDN 请求**，单次构建上限 45 分钟、每天最多 100 次部署<RichMediaReference>["https://vercel.com/docs/plans/hobby"]</RichMediaReference>。两条容易忽略的条款：Hobby **仅限个人、非商业用途**；超出额度后不是扣费，而是**整个账号被暂停**，等 30 天才能恢复<RichMediaReference>["https://vercel.com/docs/plans"]</RichMediaReference>。
+**Vercel Hobby**（免费）：每月 **100GB 快速数据传输、100 万次函数调用、4 CPU 小时活跃 CPU、360 GB 小时预置内存、100 万次 CDN 请求**，单次构建上限 45 分钟、每天最多 100 次部署。两条容易忽略的条款：Hobby **仅限个人、非商业用途**；超出额度后不是扣费，而是**整个账号被暂停**，等 30 天才能恢复。
 
-**Netlify Free**：约 100GB 带宽、300 构建分钟/月、12.5 万次函数请求、最多 500 个站点，允许商用，带表单与 Identity 的免费额度——这组数字来自第三方对比，接入前回官方定价页核对<RichMediaReference>["https://www.productsrelay.com/blog/vercel-vs-netlify-free-tier"]</RichMediaReference>。
+**Netlify Free**：约 100GB 带宽、300 构建分钟/月、12.5 万次函数请求、最多 500 个站点，允许商用，带表单与 Identity 的免费额度——这组数字来自第三方对比，接入前回官方定价页核对。
 
 **Cloudflare Pages**：静态资源带宽不计量，这点和上面两家有本质差别——流量高峰不会变成账单；构建次数有月上限（第三方口径 500 次/月）。如果站点是纯静态且可能被突然推爆，这是最省心的一档。
 
@@ -39,11 +39,11 @@ name: "Free Web Hosting"
 
 ## 真机：Oracle Always Free
 
-这是主流云里唯一长期免费给**真虚拟机**的：每个租户 **2 台 AMD 微实例（各 1/8 OCPU、1GB 内存）**，外加 **ARM Ampere A1 共 2 OCPU / 12GB 内存**（可拆成 1 台或 2 台），按月给 **1,500 OCPU 小时 + 9,000 GB 小时**，配 **200GB 块存储**与 2 个 Autonomous Database<RichMediaReference>["https://www.oracle.com/cn/cloud/free/?t=62s"]</RichMediaReference>。
+这是主流云里唯一长期免费给**真虚拟机**的：每个租户 **2 台 AMD 微实例（各 1/8 OCPU、1GB 内存）**，外加 **ARM Ampere A1 共 2 OCPU / 12GB 内存**（可拆成 1 台或 2 台），按月给 **1,500 OCPU 小时 + 9,000 GB 小时**，配 **200GB 块存储**与 2 个 Autonomous Database。
 
 必须知道的两件事：
 
-- **额度被悄悄减半过**。2026 年 6 月，ARM 从 4 OCPU / 24GB 降到 2 OCPU / 12GB，官方文档现在的口径就是"相当于 2 OCPU、12GB"，旧教程里的 4/24 已经过时<RichMediaReference>["https://prodogon.com/blog/devops/deploy-free-app-oracle/"]</RichMediaReference>。
+- **额度被悄悄减半过**。2026 年 6 月，ARM 从 4 OCPU / 24GB 降到 2 OCPU / 12GB，官方文档现在的口径就是"相当于 2 OCPU、12GB"，旧教程里的 4/24 已经过时。
 - **闲置会被回收**。长期没有负载的实例可能被回收，注册验证也以"难过"著称；想长期持有就得让它真的跑点东西。
 
 它对 Agent 项目的价值很直接：一台 2 核 12GB 的 ARM 机器，足够跑常驻进程、自建 Postgres、挂 Cloudflare Tunnel 当入口，是"零成本常驻"唯一现实的选项。

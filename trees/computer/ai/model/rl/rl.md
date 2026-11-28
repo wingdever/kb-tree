@@ -122,3 +122,9 @@ PPO 常用 GAE 计算 Â_t，在偏差与方差间用参数 λ 权衡（多步 T
 ## 与语言模型对齐的衔接
 
 经典 RLHF 链路：SFT → 训练奖励模型（人类偏好对）→ PPO 优化策略。2026 年主流转向 **RLVR（可验证奖励）+ GRPO**：跳过奖励模型，用验证器（测试通过、数学答案正确、工具参数合规）当奖励，GRPO 用组内相对优势替代 PPO 的 value network，省内存、少超参、更适合推理与工具使用。DPO 则是离线偏好对优化，不做 rollout。
+
+## 参考资料
+
+- Reinforcement Learning: An Introduction（Sutton & Barto）：http://incompleteideas.net/book/the-book-2nd.html
+- Proximal Policy Optimization Algorithms（Schulman et al., 2017）：https://arxiv.org/abs/1707.06347
+- Training language models to follow instructions with human feedback（InstructGPT）：https://arxiv.org/abs/2203.02155

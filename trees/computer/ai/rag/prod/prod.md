@@ -32,7 +32,7 @@ name: "RAG Production Practices"
 - **Post-filter**：先检索再过滤——快但可能返回不足 k 条。
 - **自适应**：查询规划器估计选择性，按查询选 pre/post。
 
-元数据富化还能提升质量：IEEE 研究显示带归属、血缘、质量分、分类的元数据检索精度 82.5% vs 仅内容 73.3%。
+元数据富化还能提升质量：IEEE 研究显示带归属、血缘、质量分、分类的元数据，检索精度明显高于仅用内容。
 
 ## 索引新鲜度
 
@@ -68,3 +68,7 @@ name: "RAG Production Practices"
 - [ ] 索引重建与数据同步机制就位。
 - [ ] 延迟分解（改写/检索/重排/生成）已埋点。
 
+## 参考资料
+
+- Retrieval-Augmented Generation for Large Language Models: A Survey：https://arxiv.org/abs/2312.10997
+- OWASP Top 10 for LLM Applications：https://owasp.org/www-project-top-10-for-large-language-model-applications/

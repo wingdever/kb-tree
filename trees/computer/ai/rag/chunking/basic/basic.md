@@ -50,3 +50,7 @@ name: "Basic Chunking Methods"
 - 长生成：1000–2000 token。
 - 起点：512 token + 10–20% overlap，再按评估迭代。
 
+## 参考资料
+
+- LangChain Text Splitters 文档：https://python.langchain.com/docs/concepts/text_splitters/
+- Anthropic: Introducing Contextual Retrieval：https://www.anthropic.com/news/contextual-retrieval

@@ -25,10 +25,10 @@ name: "Free Domains"
 
 这是免费域名里唯一能"自己管 NS"的一档，因此可以托管到任意 DNS 商、甚至接 Cloudflare 免费档。
 
-- **eu.org**：1996 年运营至今的志愿者项目，发放 `xxx.eu.org`，**永久免费、没有到期概念**，支持自定义 NS 与 DNSSEC<RichMediaReference>["https://nic.eu.org/"]</RichMediaReference>。人工审核，通常几天到几周；申请前填的 NS 必须已经能为该域名提供解析（会做区域检查）；直属子域只接受 4 个字符以上的名字；验证邮件常被 Gmail 拒收，要换邮箱<RichMediaReference>["https://bbs.huaweicloud.com/blogs/511987"]</RichMediaReference>。
-- **deSEC（dedyn.io）**：德国非营利 DNS 托管，免费、原生 DNSSEC、有 REST API，适合 DDNS 与自动化<RichMediaReference>["https://desec.io/#!/en/product/anydns"]</RichMediaReference>。但官方页面已注明 `dedyn.io` 的注册**暂停**，只能先当 DNS 托管用，新子域要等恢复。
-- **DuckDNS**：`xxx.duckdns.org`，免费动态 DNS，token 更新、可无限建子域、只有基础 A/AAAA 记录、不支持绑自有域名<RichMediaReference>["https://www.duckdns.org/about.jsp"]</RichMediaReference>。给家用宽带、NAS、自建服务做入口最省事。
-- **pp.ua**：免费但**按年续期、每年要重新激活**，手机号有配额限制，当天可用<RichMediaReference>["https://bbs.huaweicloud.com/blogs/511987"]</RichMediaReference>。
+- **eu.org**：1996 年运营至今的志愿者项目，发放 `xxx.eu.org`，**永久免费、没有到期概念**，支持自定义 NS 与 DNSSEC。人工审核，通常几天到几周；申请前填的 NS 必须已经能为该域名提供解析（会做区域检查）；直属子域只接受 4 个字符以上的名字；验证邮件常被 Gmail 拒收，要换邮箱。
+- **deSEC（dedyn.io）**：德国非营利 DNS 托管，免费、原生 DNSSEC、有 REST API，适合 DDNS 与自动化。但官方页面已注明 `dedyn.io` 的注册**暂停**，只能先当 DNS 托管用，新子域要等恢复。
+- **DuckDNS**：`xxx.duckdns.org`，免费动态 DNS，token 更新、可无限建子域、只有基础 A/AAAA 记录、不支持绑自有域名。给家用宽带、NAS、自建服务做入口最省事。
+- **pp.ua**：免费但**按年续期、每年要重新激活**，手机号有配额限制，当天可用。
 - **us.kg / dpdns.org 等 DigitalPlat 系**：需 GitHub 授权验证，可改 NS 到 Cloudflare；这条来自二手整理，条款与审核口径要自己核。
 
 ## 第三类：免费顶级域名已经没有了
@@ -37,7 +37,7 @@ Freenom 的 `.tk/.ml/.ga/.cf/.gq` 曾是最有名的"免费真域名"，2026 年
 
 ## 最接近免费的真域名：成本价注册商
 
-如果目的只是"便宜"，而不是"零成本"，成本价注册商是更稳的答案：Cloudflare Registrar 按注册局批发价销售与续费，**不加价、无隐藏费用**，附送 WHOIS 隐私与一键 DNSSEC，但注册的域名必须使用 Cloudflare DNS<RichMediaReference>["https://www.cloudflare.com/pg/registrar-domain-registration/"]</RichMediaReference>。它把"域名"从年费陷阱变成了接近成本的基础设施开销，且和免费档的 CDN、Tunnel 天然同栈。
+如果目的只是"便宜"，而不是"零成本"，成本价注册商是更稳的答案：Cloudflare Registrar 按注册局批发价销售与续费，**不加价、无隐藏费用**，附送 WHOIS 隐私与一键 DNSSEC，但注册的域名必须使用 Cloudflare DNS。它把"域名"从年费陷阱变成了接近成本的基础设施开销，且和免费档的 CDN、Tunnel 天然同栈。
 
 ## 四个坑
 

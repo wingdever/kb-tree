@@ -48,7 +48,7 @@ Contextual 与 Late 解决的是同一个问题（块脱离文档丢失上下文
 
 三者都是**叠加层**，可作用于任意基础/语义切块之上：
 
-- **Contextual + Parent-Child**（生产推荐）：结构感知切父块，语义切子块，再给子块加上下文。报告 recall@5 **90.5%**、答案质量 **88.3%**，优于任一单独使用（`Contextual alone` 88.2%、`Parent-child alone` 84.1%）。
+- **Contextual + Parent-Child**（生产推荐）：结构感知切父块，语义切子块，再给子块加上下文。组合后的 recall@5 与答案质量都高于任一单独使用（`Contextual alone` 与 `Parent-child alone` 均不及组合）。
 - Contextual 尤其适合与混合检索配合——它让同一个块同时携带语义信号和可被 BM25 命中的关键词（公司名、季度、主题）。
 
 ## 参考资料

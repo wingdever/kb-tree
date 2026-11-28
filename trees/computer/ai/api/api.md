@@ -24,3 +24,8 @@ DeepSeek 兼容 OpenAI/Anthropic 两套格式，扩展参数走 `extra_body`、s
 ## 可靠性提示
 
 模型版本、参数名、API 形态变化很快，记录的是 2026-11 形态，落地前对照官方文档。
+
+## 参考资料
+
+- OpenAI Function Calling 文档：https://platform.openai.com/docs/guides/function-calling
+- Model Context Protocol 规范：https://modelcontextprotocol.io/

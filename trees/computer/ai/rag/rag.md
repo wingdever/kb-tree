@@ -13,3 +13,8 @@ RAG（检索增强生成）让模型在查询时从自有数据中检索相关�
 从"检索而非记忆"的基础出发，把文档切好块、选对嵌入与索引、用混合检索与重排精排。
 
 若想要一条**非向量的替代路线**——把知识编译成持续维护、Git 版本控制的可读 Wiki，它是 RAG 从解释器模式到编译器模式的演进。
+
+## 参考资料
+
+- Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks（Lewis et al., 2020）：https://arxiv.org/abs/2005.11401
+- Retrieval-Augmented Generation for Large Language Models: A Survey：https://arxiv.org/abs/2312.10997

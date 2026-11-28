@@ -19,7 +19,7 @@ name: "Agent Interaction Design"
 | 1 秒–1 分钟 | 仍在等待 | 阶段名 + 当前动作的人话描述（「正在读第 3 个文件」） |
 | 分钟以上 | 已经离开 | 后台继续 + 完成通知 + 可放弃入口 |
 
-三条通用规则来自可用性研究：0.1 秒内算「即时」，1 秒内算「思路不中断」，10 秒是注意力的分界线；超过 10 秒必须有进度反馈，否则用户会转去做别的事。<RichMediaReference>["https://www.nngroup.com/articles/response-times-3-important-limits/"]</RichMediaReference>
+三条通用规则来自可用性研究：0.1 秒内算「即时」，1 秒内算「思路不中断」，10 秒是注意力的分界线；超过 10 秒必须有进度反馈，否则用户会转去做别的事。
 
 ## 确认：只在关键处打断
 

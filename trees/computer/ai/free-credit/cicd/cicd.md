@@ -17,15 +17,15 @@ name: "Free CI & Cloud Dev"
 
 ## GitHub：CI 与云端环境
 
-**GitHub Actions** 免费档每月 2,000 分钟，**公开仓库不计分钟**；私有仓库超出后按分钟计费<RichMediaReference>["http://raw.githubusercontent.com/api-evangelist/github-actions/refs/heads/main/plans/github-actions-plans-pricing.yml"]</RichMediaReference>。对个人项目来说，把仓库设为公开是最直接的省钱手段——开源项目的 CI 基本等于无限。
+**GitHub Actions** 免费档每月 2,000 分钟，**公开仓库不计分钟**；私有仓库超出后按分钟计费。对个人项目来说，把仓库设为公开是最直接的省钱手段——开源项目的 CI 基本等于无限。
 
-**Codespaces** 给个人的免费额度是**每月 120 core-hours**（即 2 核机器跑 60 小时）+ **15GB 存储**<RichMediaReference>["http://pullreminders.com/features/codespaces"]</RichMediaReference>。它的计费细节值得注意：环境**闲置 30 分钟自动暂停**，暂停后不再扣 core-hours，所以"开着不用"不会持续烧额度<RichMediaReference>["https://learn.microsoft.com/en-in/copilot/employee-self-service/get-started-codespaces"]</RichMediaReference>。
+**Codespaces** 给个人的免费额度是**每月 120 core-hours**（即 2 核机器跑 60 小时）+ **15GB 存储**。它的计费细节值得注意：环境**闲置 30 分钟自动暂停**，暂停后不再扣 core-hours，所以"开着不用"不会持续烧额度。
 
 按核数换算：2 核 60 小时、4 核 30 小时、8 核 15 小时。写代码、改配置用 2 核足够；只有编译大项目或跑容器编排才需要往上加。
 
 ## GitLab：CI 分钟更少，但公开项目有额外通道
 
-GitLab.com 免费档每月 **400 计算分钟**，每个项目 10 GiB 存储（Git 仓库与 LFS 合计），私有顶级群组限 5 人<RichMediaReference>["http://www.shturl.cc/de56e50529789f51869c4c50cf08183b"]</RichMediaReference>。400 分钟大约是"每天跑两三次、每次几分钟"的量，跑一次超过 10 分钟的流水线很快就会见底。
+GitLab.com 免费档每月 **400 计算分钟**，每个项目 10 GiB 存储（Git 仓库与 LFS 合计），私有顶级群组限 5 人。400 分钟大约是"每天跑两三次、每次几分钟"的量，跑一次超过 10 分钟的流水线很快就会见底。
 
 开源项目、教育机构与符合条件的初创可以申请额外额度（口径为每月 50,000 分钟），这是 GitLab 免费档之外的一条正式通道。
 

@@ -71,3 +71,7 @@ Speedup = 1 / ((1 - f) + f / s)
 - GPU 程序分支发散、访存非合并，实际吞吐远低于峰值。
 - NUMA 系统跨节点访存，性能悄然下降。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- CUDA C Programming Guide：https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html

@@ -17,13 +17,13 @@ name: "Free Observability"
 
 ## 错误追踪：Sentry 免费档
 
-Sentry 的 Developer 档是 $0、无期限，但**只给一个人用**：每月 5,000 个错误、500 万 spans、50 次会话回放、5GB 日志、5GB 应用指标、1GB 附件、1 个定时任务监控、1 个 uptime 监控、30 天回看<RichMediaReference>["https://sentry.io/pricing/?gad_source=1"]</RichMediaReference>。
+Sentry 的 Developer 档是 $0、无期限，但**只给一个人用**：每月 5,000 个错误、500 万 spans、50 次会话回放、5GB 日志、5GB 应用指标、1GB 附件、1 个定时任务监控、1 个 uptime 监控、30 天回看。
 
-它的取舍很关键：免费档**没有按量付费预算**，第 5,001 个错误直接被丢弃，等下个周期重置；也**没有 API 与第三方集成**，告警只能走邮件，接不了 Slack 或群机器人<RichMediaReference>["https://maple.dev/ja/guides/sentry-pricing/"]</RichMediaReference>。所以它适合"单人 + 小项目 + 能接受邮件告警"的场景，一旦要多人协作就得升 Team。
+它的取舍很关键：免费档**没有按量付费预算**，第 5,001 个错误直接被丢弃，等下个周期重置；也**没有 API 与第三方集成**，告警只能走邮件，接不了 Slack 或群机器人。所以它适合"单人 + 小项目 + 能接受邮件告警"的场景，一旦要多人协作就得升 Team。
 
 ## 日志与指标：Grafana Cloud 免费档
 
-Grafana Cloud 的 free 是"永远免费、不用绑卡"，各项上限分别是：**1 万个活跃指标序列**、日志 50GB/月、链路追踪 50GB/月、性能剖析 50GB/月、**保留 14 天**、3 个活跃用户；负载测试 500 虚拟用户小时，合成监控 10 万次 API 测试 + 1 万次浏览器测试<RichMediaReference>["https://grafana.com/pricing/?pg=grafana-vs-arize"]</RichMediaReference>。
+Grafana Cloud 的 free 是"永远免费、不用绑卡"，各项上限分别是：**1 万个活跃指标序列**、日志 50GB/月、链路追踪 50GB/月、性能剖析 50GB/月、**保留 14 天**、3 个活跃用户；负载测试 500 虚拟用户小时，合成监控 10 万次 API 测试 + 1 万次浏览器测试。
 
 对个人项目来说 50GB 日志几乎用不完，真正的约束是**14 天保留**和**3 个用户**：出问题超过两周再回头查就没了，团队第四个人进不来。
 

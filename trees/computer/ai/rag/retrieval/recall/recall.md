@@ -57,3 +57,7 @@ Sparse Lexical and Expansion Retrieval：用 transformer（BERT MLM head）输�
 
 若知识库不大或对延迟敏感，先用 HNSW + BGE 跑通，再按需叠加 BM25。
 
+## 参考资料
+
+- Introduction to Information Retrieval（Manning et al.）：https://nlp.stanford.edu/IR-book/
+- SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking：https://arxiv.org/abs/2107.05720

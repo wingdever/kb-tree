@@ -70,3 +70,7 @@ name: "Chunking Evaluation and Tuning"
 
 若问题简单、语料小（几十条），固定切块 +  keywords 搜索就够。**结构化搜索**（早融合、多向量）能否定切块质量的价值，但那属于检索层。
 
+## 参考资料
+
+- BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models：https://arxiv.org/abs/2104.08663
+- RAGAS: Automated Evaluation of Retrieval Augmented Generation：https://arxiv.org/abs/2309.15217

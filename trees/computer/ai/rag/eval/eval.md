@@ -48,3 +48,7 @@ name: "RAG Evaluation"
 - 数据质量缺陷会沿整条链路放大，且难以从答案侧归因；语料来源与更新节奏要可追溯。
 - 陈旧信息：每块打发布日期与来源标签，检索器可对新鲜度打分。
 
+## 参考资料
+
+- RAGAS: Automated Evaluation of Retrieval Augmented Generation：https://arxiv.org/abs/2309.15217
+- BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models：https://arxiv.org/abs/2104.08663

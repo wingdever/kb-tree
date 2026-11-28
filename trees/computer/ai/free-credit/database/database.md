@@ -17,27 +17,27 @@ name: "Free Databases & Cache"
 
 ## Postgres：两家的免费档思路不同
 
-**Supabase** 卖的是"全家桶"：500MB 数据库 / 项目、50,000 月活用户、5GB 出网 + 5GB 缓存出网、1GB 文件存储、最多 2 个活跃项目、25 个 Edge Functions<RichMediaReference>["https://supabase.com/pricing?id=12"]</RichMediaReference>。它的关键条款是**项目闲置 1 周自动暂停**，要手动恢复；暂停的项目不计入 2 个项目上限。数据库 500MB 是按项目算，不是按账号算<RichMediaReference>["https://supabase.com/docs/guides/platform/billing-on-supabase"]</RichMediaReference>。
+**Supabase** 卖的是"全家桶"：500MB 数据库 / 项目、50,000 月活用户、5GB 出网 + 5GB 缓存出网、1GB 文件存储、最多 2 个活跃项目、25 个 Edge Functions。它的关键条款是**项目闲置 1 周自动暂停**，要手动恢复；暂停的项目不计入 2 个项目上限。数据库 500MB 是按项目算，不是按账号算。
 
-**Neon** 卖的是"纯 Postgres + 分支"：100 个项目、每项目 10 个分支、每项目 1GB 存储（全账号合计上限 20GB）、每项目每月 100 CU-hours 计算、5GB 公网传输<RichMediaReference>["https://neon.com/faqs/free-plan-limits-and-quotas"]</RichMediaReference>。0.25 CU 跑 400 小时差不多就是 100 CU-hours，所以"每天跑十来个小时"的小应用能长期留在免费档；闲置 5 分钟自动缩零，且**不能关掉**。
+**Neon** 卖的是"纯 Postgres + 分支"：100 个项目、每项目 10 个分支、每项目 1GB 存储（全账号合计上限 20GB）、每项目每月 100 CU-hours 计算、5GB 公网传输。0.25 CU 跑 400 小时差不多就是 100 CU-hours，所以"每天跑十来个小时"的小应用能长期留在免费档；闲置 5 分钟自动缩零，且**不能关掉**。
 
 一句话：要 Auth、存储、函数一整套，选 Supabase，但得接受闲置暂停；只要一个干净的 Postgres 加分支做迁移测试，选 Neon，计算额度按项目独立发。
 
 ## SQLite 托管：按行计费
 
-**Turso** 的免费档给 100 个数据库、5GB 存储、每月 5 亿行读、1,000 万行写、3GB 同步、1 天时间点恢复<RichMediaReference>["https://turso.tech/pricing?frequency=monthly"]</RichMediaReference>。SQLite 库是"一个文件"，所以闲置库只占存储、不占计算，很适合"一用户一库/一 Agent 一库"的多租户结构。
+**Turso** 的免费档给 100 个数据库、5GB 存储、每月 5 亿行读、1,000 万行写、3GB 同步、1 天时间点恢复。SQLite 库是"一个文件"，所以闲置库只占存储、不占计算，很适合"一用户一库/一 Agent 一库"的多租户结构。
 
-注意口径冲突：定价页写 100 个库，对比页写 500 个<RichMediaReference>["https://turso.tech/comparisons/neon"]</RichMediaReference>，接入前以定价页和控制台实际显示为准。
+注意口径冲突：定价页写 100 个库，对比页写 500 个，接入前以定价页和控制台实际显示为准。
 
 ## 文档库与 KV
 
-**Firestore（Spark 档）**：1 GiB 存储、每天 5 万次文档读、2 万次写、2 万次删、每月 10 GiB 出网<RichMediaReference>["https://firebase.google.cn/docs/firestore/quotas?hl=zh-cn"]</RichMediaReference>。配额按**美国太平洋时间零点**重置，且**每个项目只有一个库能享免费配额**，第二个库开始直接计费。
+**Firestore（Spark 档）**：1 GiB 存储、每天 5 万次文档读、2 万次写、2 万次删、每月 10 GiB 出网。配额按**美国太平洋时间零点**重置，且**每个项目只有一个库能享免费配额**，第二个库开始直接计费。
 
-**MongoDB Atlas 免费集群（M0）**：512MB 存储（含索引的未压缩 BSON 字节）、每 7 天滚动周期 10GB 入 / 10GB 出、排序内存 32MB、每个项目只能有 1 个免费集群<RichMediaReference>["https://www.mongodb.com/docs/atlas/reference/free-shared-limitations/"]</RichMediaReference>。512MB 是硬顶，到了就只能升配或删数据。
+**MongoDB Atlas 免费集群（M0）**：512MB 存储（含索引的未压缩 BSON 字节）、每 7 天滚动周期 10GB 入 / 10GB 出、排序内存 32MB、每个项目只能有 1 个免费集群。512MB 是硬顶，到了就只能升配或删数据。
 
 ## 缓存：Redis 的免费档最小
 
-**Upstash Redis** 免费档：250MB 数据、每月 50 万条命令、10GB 带宽、单账号 1 个数据库<RichMediaReference>["https://upstash.com/pricing/redis"]</RichMediaReference>。这里有个容易被旧文章误导的点：早期文档写的是"每天 1 万条命令"，现行定价口径已改成"**每月 50 万条**"——按天算反而更少，别看错版本。
+**Upstash Redis** 免费档：250MB 数据、每月 50 万条命令、10GB 带宽、单账号 1 个数据库。这里有个容易被旧文章误导的点：早期文档写的是"每天 1 万条命令"，现行定价口径已改成"**每月 50 万条**"——按天算反而更少，别看错版本。
 
 自建 Redis、PocketBase、Postgres 当然"软件免费"，但要一台常开的机器，真正的成本是服务器而不是数据库。免费托管的价值就在于把这台机器省掉。
 

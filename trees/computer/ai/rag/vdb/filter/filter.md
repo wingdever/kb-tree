@@ -27,7 +27,7 @@ def adaptive_search(query_vec, filter_dict, k=10, selectivity_threshold=0.05):
 生产系统里元数据（时间、部门、标签）通常存在关系库，向量库存坐标，两者通过 ID 关联，查询时先条件过滤再做相似检索。
 
 - **安全 RBAC**：用户在 SharePoint 看不到的文档，不能通过 RAG 检索到其块。把 ACL 嵌入向量元数据（如 `allowed_groups: [hr, management]`），检索前按用户组过滤。
-- **质量提升**：IEEE 研究显示带归属、血缘、质量分、分类、policy context 的元数据检索精度 **82.5% vs 仅内容 73.3%**；Atlan 研究称治理型元数据使 Agent SQL 准确率提升 38%。
+- **质量提升**：IEEE 研究显示带归属、血缘、质量分、分类、policy context 的元数据，检索精度明显高于仅用内容；Atlan 研究称治理型元数据能明显提升 Agent SQL 准确率。
 - 时间戳、来源类型、溯源标记让检索器可对新鲜度打分，生成器可标记过时证据。
 
 ## 生产系统里的元数据字段
@@ -46,3 +46,7 @@ def adaptive_search(query_vec, filter_dict, k=10, selectivity_threshold=0.05):
 - 强 tenant 隔离需按 tenant_id 预过滤，避免跨租户泄露。
 - 过滤字段建索引（如 keyword/keyword 数组类型）以获得高效过滤。
 
+## 参考资料
+
+- Qdrant Filtering 文档：https://qdrant.tech/documentation/concepts/filtering/
+- Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs：https://arxiv.org/abs/1603.09320

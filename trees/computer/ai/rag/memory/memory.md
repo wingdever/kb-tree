@@ -47,3 +47,7 @@ name: "Agent Memory Systems"
 
 记忆系统与上下文工程是同一问题的两面：前者管跨会话持久化，后者管单会话内窗口管理。
 
+## 参考资料
+
+- MemGPT: Towards LLMs as Operating Systems：https://arxiv.org/abs/2310.08560
+- Generative Agents: Interactive Simulacra of Human Behavior：https://arxiv.org/abs/2304.03442

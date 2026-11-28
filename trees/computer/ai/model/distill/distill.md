@@ -86,8 +86,13 @@ DeepSeek 把 R1（671B）的推理行为蒸馏到 1.5B、7B、8B、14B、32B、7
 |---|---|
 | 有教师权重 + 充足 GPU | 白盒 logit 蒸馏，质量最高 |
 | 有教师权重 + GPU 有限 | 灰盒两阶段，知识保留 ~80% |
-| 仅有 API | 黑盒 response 蒸馏 + 数据增强，~70% |
+| 仅有 API | 黑盒 response 蒸馏 + 数据增强，大部分能力可保留 |
 | 推理任务 | Reasoning 蒸馏（CoT + 拒绝采样） |
 | 多任务 | 混合策略 + EWC/Replay 防灾难性遗忘 |
 
 先确认能否拿到教师权重，再决定白盒还是黑盒；没有权重时，预算应更多投在数据质量与增强上，而不是调蒸馏温度。
+
+## 参考资料
+
+- Distilling the Knowledge in a Neural Network（Hinton et al., 2015）：https://arxiv.org/abs/1503.02531
+- DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning：https://arxiv.org/abs/2501.12948

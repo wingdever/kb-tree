@@ -170,3 +170,8 @@ LangChain v1 对 agent 创建有迁移（`create_react_agent` → `create_agent`
 - **LangSmith**：追踪、调试、评估，框架无关。
 
 工具定义本身在三者间通用——`@tool` / Pydantic schema / ToolNode 是核心原语。
+
+## 参考资料
+
+- LangChain Tools 文档：https://python.langchain.com/docs/concepts/tools/
+- Model Context Protocol 规范：https://modelcontextprotocol.io/

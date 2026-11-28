@@ -48,3 +48,8 @@ Spectre、Meltdown 等**微架构侧信道攻击**利用推测执行、乱序执
 - 忽略异构编程的复杂性，以为"有加速器就自动快"。
 - 软件假设硬件是安全的，忽视侧信道等实现层威胁。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- RISC-V 指令集规范：https://riscv.org/technical/specifications/
+- A New Golden Age for Computer Architecture（Hennessy & Patterson, 2019）：https://dl.acm.org/doi/10.1145/3282307

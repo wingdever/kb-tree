@@ -11,7 +11,7 @@ name: "Instruction Pipelining"
 
 ## 五级流水线
 
-经典模型：IF（取指）→ ID（译码/读寄存器）→ EX（执行/地址计算）→ MEM（访存）→ WB（写回）。理想情况下，5 级流水线在填满后每周期完成 1 条指令，吞吐提升接近 5×（忽略填充与冒险）。
+经典模型：IF（取指）→ ID（译码/读寄存器）→ EX（执行/地址计算）→ MEM（访存）→ WB（写回）。理想情况下，5 级流水线在填满后每周期完成 1 条指令，吞吐接近流水线级数倍（忽略填充与冒险）。
 
 关键在于各阶段之间的**流水线寄存器**保存中间结果；阶段时间由最慢的一段决定，因此平衡各段长度是设计要点。
 
@@ -42,3 +42,7 @@ name: "Instruction Pipelining"
 - 误以为转发能解决所有数据冒险：load-use 仍需停顿。
 - 循环展开与访存模式不考虑分支预测器行为，导致可预测性下降。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- Computer Systems: A Programmer's Perspective（Bryant & O'Hallaron）：https://csapp.cs.cmu.edu/

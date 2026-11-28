@@ -13,3 +13,7 @@ name: "Transformer Architecture"
 
 骨架自 2017 未变，2026 的改进集中在位置编码、归一化、激活、专家化与注意力压缩。
 
+## 参考资料
+
+- Attention Is All You Need（Vaswani et al., 2017）：https://arxiv.org/abs/1706.03762
+- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding：https://arxiv.org/abs/1810.04805

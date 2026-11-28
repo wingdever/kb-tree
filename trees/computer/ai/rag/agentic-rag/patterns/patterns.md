@@ -55,3 +55,7 @@ Agentic RAG 不是单一算法，而是一族共享"Agent-in-the-loop"原则的�
 - 混合负载成本敏感 → Adaptive 路由先行（简单查询走快路，可为净负成本）。
 - 跨源、并行子任务、需专门角色 → 多 Agent；但先证明单 Agent 不够。
 
+## 参考资料
+
+- ReAct: Synergizing Reasoning and Acting in Language Models：https://arxiv.org/abs/2210.03629
+- Toolformer: Language Models Can Teach Themselves to Use Tools：https://arxiv.org/abs/2302.04761

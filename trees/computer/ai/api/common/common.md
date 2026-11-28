@@ -92,3 +92,8 @@ name: "Common Tool-Calling Specification"
 - 打破"致命三要素"：私有数据 + 不可信内容 + 对外通道三者不能同时具备。
 - 出口白名单 + 出口监控；高风险动作人工审批。
 - 用普通代码（确定性护栏）授权每次工具调用，而非指望模型自觉。
+
+## 参考资料
+
+- OpenAI API 错误码文档：https://platform.openai.com/docs/guides/error-codes
+- Model Context Protocol 规范：https://modelcontextprotocol.io/

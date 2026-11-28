@@ -101,7 +101,7 @@ seq_len 到 32K/128K/1M 时，激活 B×S×H 本身爆显存，TP 切不动。�
 
 ## 训练稳定性：万卡集群的日常
 
-Llama 3 报告：16384 张 H100 训练时平均每 3 小时有一张卡硬故障，停机占总时间 9%+。工业级必须：
+Llama 3 报告：16384 张 H100 训练时平均每 3 小时有一张卡硬故障，停机占总时间约一成。工业级必须：
 
 - 高频 Checkpoint（每 30 min 全量，节省约 70% 损失）
 - 5–10% 热备卡、故障检测（温度/功耗/ECC）、自动恢复（切卡→加载 ckpt→续训）
@@ -112,3 +112,10 @@ Llama 3 报告：16384 张 H100 训练时平均每 3 小时有一张卡硬故障
 ## MFU 与前沿集群
 
 显存之外还有内存带宽墙和集合通信墙。并行化目标不是"能装下"，而是在通信代价与 MFU（模型算力利用率）间平衡。工业预训练目标：密集模型 40%+、MoE 30%+、稳到 50% 算优秀。前沿规模：Google PaLM 用 6144 TPUv4；xAI Colossus 达 10 万 H100。DeepSeek-V3 用 2048 H100、FP8、DualPipe 把成本压到约 557 万美元，说明工程可部分抵消硬件劣势。
+
+## 参考资料
+
+- Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism：https://arxiv.org/abs/1909.08053
+- ZeRO: Memory Optimizations Toward Training Trillion Parameter Models：https://arxiv.org/abs/1910.02054
+- GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism：https://arxiv.org/abs/1811.06965
+- The Llama 3 Herd of Models：https://arxiv.org/abs/2407.21783

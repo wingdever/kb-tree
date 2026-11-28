@@ -36,3 +36,8 @@ name: "Chunking Strategies"
 
 从基础方法起步，按文档结构升级到语义/父子，对脱离文档就失去意义的块做上下文增强。
 
+## 参考资料
+
+- Anthropic: Introducing Contextual Retrieval：https://www.anthropic.com/news/contextual-retrieval
+- RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval：https://arxiv.org/abs/2401.18059
+- Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models：https://arxiv.org/abs/2409.04701

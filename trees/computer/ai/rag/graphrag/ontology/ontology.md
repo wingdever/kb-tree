@@ -84,3 +84,7 @@ Evontree 等框架少样本自适应演进：挖掘 LLM 内部领域概念划分
 
 单团队、无跨系统共享、无合规推理需求——标签约定可能就够。本体是活工件，"完成"指当前范围被证明覆盖，不是彻底完备。
 
+## 参考资料
+
+- OWL 2 Primer（W3C）：https://www.w3.org/TR/owl2-primer/
+- A Survey on Knowledge Graphs: Representation, Acquisition and Applications：https://arxiv.org/abs/2003.02320

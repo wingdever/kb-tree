@@ -1,16 +1,23 @@
 {
   "说明": "经确认确实没有外部一手来源的页面（纯归纳、经验或资源索引）。巡检不再要求这些页面写「## 参考资料」；新增来源时应把该页从本清单移除。",
   "pages": [
-    "architecture/architecture.md",
-    "backend/backend.md",
-    "devops/devops.md",
-    "learning/learning.md",
-    "methodology/methodology.md",
-    "quality/quality.md",
-    "sdlc/requirements/requirements.md",
-    "sdlc/sdlc.md",
-    "software-engineering.md",
-    "trends/trends.md",
-    "vibe-coding/vibe-coding.md"
+    "software-engineering/architecture/architecture.md",
+    "software-engineering/backend/backend.md",
+    "software-engineering/devops/devops.md",
+    "software-engineering/learning/learning.md",
+    "software-engineering/methodology/methodology.md",
+    "software-engineering/quality/quality.md",
+    "software-engineering/sdlc/requirements/requirements.md",
+    "software-engineering/sdlc/sdlc.md",
+    "software-engineering/software-engineering.md",
+    "software-engineering/trends/trends.md",
+    "software-engineering/vibe-coding/vibe-coding.md",
+    "ai/rag/learning/learning.md",
+    "ai/rag/llm-wiki/llm-wiki.md",
+    "ai/rag/llm-wiki/architecture/architecture.md",
+    "ai/rag/llm-wiki/lifecycle/lifecycle.md",
+    "ai/rag/llm-wiki/practice/practice.md",
+    "ai/ai.md",
+    "computer.md"
   ]
 }

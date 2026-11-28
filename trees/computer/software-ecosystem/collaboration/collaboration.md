@@ -39,3 +39,7 @@ name: "Collaboration Suite Ecosystem"
 
 **协作办公生态提供的是「组织内的合规通道」：开放平台成熟、机器人与事件齐全，但审核、数据边界与套件重量决定它不是消费级 IM 的替代品。**
 
+## 参考资料
+
+- GitHub Docs：https://docs.github.com/
+- Git 文档：https://git-scm.com/doc

@@ -17,11 +17,11 @@ name: "Free Vector Search"
 
 ## 三条托管路线
 
-**Pinecone Starter**：免费，含 **2GB 存储、每月 100 万次读 / 100 万次写、每月 500 万嵌入 token**（2026-11-04 至 12-31 促销翻倍到 1000 万，按模型计）<RichMediaReference>["https://www.pinecone.io/blog/turn-azure-data-into-an-ai-ready-knowledge-base"]</RichMediaReference>。它是"超额阻断"型：超出月额度直接挡住，不扣费，下个周期重置<RichMediaReference>["https://www.pinecone.io/pricing/"]</RichMediaReference>。限制是 **Starter 只能在 AWS us-east-1**，且索引数、项目数、协作人数都很紧。
+**Pinecone Starter**：免费，含 **2GB 存储、每月 100 万次读 / 100 万次写、每月 500 万嵌入 token**（2026-11-04 至 12-31 促销翻倍到 1000 万，按模型计）。它是"超额阻断"型：超出月额度直接挡住，不扣费，下个周期重置。限制是 **Starter 只能在 AWS us-east-1**，且索引数、项目数、协作人数都很紧。
 
-**Qdrant Cloud Free**：永久免费的单节点集群，**0.5 vCPU / 1GB RAM / 4GB 磁盘**，官方说大约装得下 **100 万条 768 维向量**<RichMediaReference>["https://qdrant.tech/cloud/"]</RichMediaReference>。要留意回收规则：**闲置 1 周挂起、4 周不激活就删除**——它不适合"建好放着以后用"。
+**Qdrant Cloud Free**：永久免费的单节点集群，**0.5 vCPU / 1GB RAM / 4GB 磁盘**，官方说大约装得下 **100 万条 768 维向量**。要留意回收规则：**闲置 1 周挂起、4 周不激活就删除**——它不适合"建好放着以后用"。
 
-**Upstash Vector**：免费档给"2 亿 向量×维度"的乘积上限、**1GB 数据、每天 1 万次查询/更新、100 个命名空间、10 个索引、维度上限 1536**<RichMediaReference>["https://upstash.com/pricing/vector"]</RichMediaReference>。按 1536 维折算，2 亿乘积其实只相当于约 13 万条，别被数字误导。
+**Upstash Vector**：免费档给"2 亿 向量×维度"的乘积上限、**1GB 数据、每天 1 万次查询/更新、100 个命名空间、10 个索引、维度上限 1536**。按 1536 维折算，2 亿乘积其实只相当于约 13 万条，别被数字误导。
 
 另有两个常见选项只作线索：Weaviate Cloud 有"1 集群 / 10 万对象 / 1GB 内存"的长期免费档，Zilliz Cloud 免费档给 5GB 存储与每月 250 万向量计算单元——两者都来自第三方汇总，接入前请回官方页核对。
 

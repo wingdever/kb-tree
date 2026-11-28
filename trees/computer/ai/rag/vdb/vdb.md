@@ -15,3 +15,7 @@ name: "Vector Databases and ANN Indexes"
 - **别上**：数据量很小，或查询本质是精确键匹配与事务操作。
 - 2026 模式：前 90 天用嵌入式（LanceDB、Chroma、FAISS），毕业到生产再迁专用库。
 
+## 参考资料
+
+- Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs：https://arxiv.org/abs/1603.09320
+- Billion-scale similarity search with GPUs（FAISS）：https://arxiv.org/abs/1702.08734

@@ -59,3 +59,7 @@ name: "Knowledge Graph Construction"
 - [ ] 合并、回滚、纠错测试通过。
 - [ ] 发布不可变图版本与回滚清单；源文档保持权威。
 
+## 参考资料
+
+- From Local to Global: A Graph RAG Approach to Query-Focused Summarization：https://arxiv.org/abs/2404.16130
+- A Survey on Knowledge Graphs: Representation, Acquisition and Applications：https://arxiv.org/abs/2003.02320

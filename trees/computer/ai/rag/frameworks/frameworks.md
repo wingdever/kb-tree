@@ -51,3 +51,8 @@ name: "RAG Frameworks and Tools"
 架构要允许分阶段演进：单库先跑通，再按查询复杂度换引擎，最后补排序与观测。迁移设计应从第一天就存在——稳定 ID、元数据版本化、摄入与检索解耦、查询层抽象。
 
 > 注：排名来自厂商相邻的评测文章，承诺前先核对当前价格与特性。
+
+## 参考资料
+
+- LlamaIndex 文档：https://docs.llamaindex.ai/
+- LangChain 文档：https://python.langchain.com/

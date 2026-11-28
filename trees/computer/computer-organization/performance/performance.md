@@ -55,3 +55,8 @@ Roofline 让"该优化哪里"有图可依，是 HPC 与 AI 性能分析的常用
 - 基准负载与真实负载差异巨大，优化后线上无收益。
 - 只优化局部热点，忽略 Amdahl 约束下的串行瓶颈。
 
+## 参考资料
+
+- Computer Systems: A Programmer's Perspective（Bryant & O'Hallaron）：https://csapp.cs.cmu.edu/
+- Amdahl's Law（Amdahl, 1967）：https://dl.acm.org/doi/10.1145/1465482.1465560
+- Roofline: An Insightful Visual Performance Model（Williams et al., 2009）：https://dl.acm.org/doi/10.1145/1498765.1498785

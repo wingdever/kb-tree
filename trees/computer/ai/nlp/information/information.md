@@ -57,3 +57,7 @@ name: "World Information Structures"
 
 三元组是"描述"的最小原子，而十表是"认识"的组织范式——前者是表达层，后者是认知层。
 
+## 参考资料
+
+- Speech and Language Processing（Jurafsky & Martin, 3rd ed.）：https://web.stanford.edu/~jurafsky/slp3/
+- Introduction to Information Retrieval（Manning et al.）：https://nlp.stanford.edu/IR-book/

@@ -50,8 +50,8 @@ C ≈ 6 · N · D        （每参数每 token 约 6 FLOPs：前向+反向+更�
 **局限与 2026 演进**：
 
 - Chinchilla 的 20:1 是启发式，实际在 15:1–25:1 间漂移（数据质量高可少些、冗余多需多些），且**只适用于预训练阶段**——指令微调/RLHF 的规则不同（常 4:1–5:1，基础模型有未用容量，5 万高质量样本就能微调）。
-- **训练最优 ≠ 推理最优**：训练是一次性成本，推理主导总拥有成本。Chinchilla 优化了错误目标——2026 实验室普遍**过度训练**换推理经济：推理最优比例达 100–2000 tokens/parameter。Epoch AI：开放权重模型的平均 token/参数从 2022 的 10 升到 2025 的 300（每年 3.1×），极端如 Qwen3-0.6B 达 60,000:1。
-- 新前沿：推理最优过度训练、test-time compute scaling、architecture-conditional laws（ICLR 2026 某论文推理吞吐 +42%）、post-training scaling（数据重复到约 4 epoch 仍有约 85% 唯一数据效果）。
+- **训练最优 ≠ 推理最优**：训练是一次性成本，推理主导总拥有成本。Chinchilla 优化了错误目标——2026 实验室普遍**过度训练**换推理经济：推理最优比例达 100–2000 tokens/parameter。Epoch AI：开放权重模型的平均 token/参数从 2022 的 10 升到 2025 的 300（每年约三倍），极端如 Qwen3-0.6B 达 60,000:1。
+- 新前沿：推理最优过度训练、test-time compute scaling、architecture-conditional laws（ICLR 2026 某论文报告推理吞吐明显提升）、post-training scaling（数据重复到几个 epoch 仍保留大部分唯一数据效果）。
 - **数据墙**：Epoch AI 估计约 300 万亿 token 的高质量公开人类文本，预计 2026–2032 间耗尽。
 
 ## 从零预训练实操
@@ -66,3 +66,8 @@ C ≈ 6 · N · D        （每参数每 token 约 6 FLOPs：前向+反向+更�
 
 主要看**训练 loss 曲线**与 held-out 的**困惑度（perplexity = e^cross-entropy loss**，越低越好，衡量模型对留出文本多"惊讶"），加上定期在标准 benchmark 上跑，跟踪能力涌现（而非只看终点）。监控数据管道各阶段损耗、重复率、污染检查。
 
+## 参考资料
+
+- Scaling Laws for Neural Language Models（Kaplan et al., 2020）：https://arxiv.org/abs/2001.08361
+- Training Compute-Optimal Large Language Models（Chinchilla）：https://arxiv.org/abs/2203.15556
+- Language Models are Few-Shot Learners（GPT-3）：https://arxiv.org/abs/2005.14165

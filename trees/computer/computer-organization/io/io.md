@@ -49,3 +49,7 @@ I/O 系统负责 CPU、内存与外部设备之间的数据交换。核心矛盾
 - DMA 缓冲区未做缓存一致性处理，读到陈旧数据。
 - 忽略设备寄存器不可缓存属性，编译器/硬件重排导致设备操作失效。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- Computer Systems: A Programmer's Perspective（Bryant & O'Hallaron）：https://csapp.cs.cmu.edu/

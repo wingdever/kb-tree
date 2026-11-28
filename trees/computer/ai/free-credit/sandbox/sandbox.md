@@ -17,9 +17,9 @@ name: "Free AI Sandbox"
 
 ## E2B：给 Agent 用的 microVM
 
-Hobby 档 $0 月费，开户送**一次性 $100 用量额度**，不用绑卡（部分账号会被要求一次性 $5 验证，这 $5 也转成额度）<RichMediaReference>["https://e2b.dev/pricing.md"]</RichMediaReference>。硬限制是：
+Hobby 档 $0 月费，开户送**一次性 $100 用量额度**，不用绑卡（部分账号会被要求一次性 $5 验证，这 $5 也转成额度）。硬限制是：
 
-- **单会话最长 1 小时**，到点强制暂停；暂停后沙箱可以无限期保留，恢复即续<RichMediaReference>["https://docs.e2b.dev/billing"]</RichMediaReference>。
+- **单会话最长 1 小时**，到点强制暂停；暂停后沙箱可以无限期保留，恢复即续。
 - 并发上限 10 个（官方另一个页面写 20，口径冲突，以控制台为准）。
 - 单沙箱最多 8 vCPU / 8 GiB，磁盘 10 GiB 免费。
 
@@ -29,7 +29,7 @@ Hobby 档 $0 月费，开户送**一次性 $100 用量额度**，不用绑卡（
 
 ## Modal：按秒买 GPU
 
-Starter 档 $0 月费，**每月 $30 算力额度**，可跑 CPU 与 GPU，3 个席位、100 个容器、10 个 GPU 并发<RichMediaReference>["https://agentdeals.dev/vendor/modal"]</RichMediaReference>。GPU 单价按型号差很多：
+Starter 档 $0 月费，**每月 $30 算力额度**，可跑 CPU 与 GPU，3 个席位、100 个容器、10 个 GPU 并发。GPU 单价按型号差很多：
 
 | 型号 | 每秒 | 折算每小时 |
 |---|---|---|

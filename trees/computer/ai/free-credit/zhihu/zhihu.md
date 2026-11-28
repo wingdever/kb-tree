@@ -129,7 +129,7 @@ X-Request-Timestamp: <秒级时间戳>
 ## 参考资料
 
 - 知乎数据开放平台（申请 Access Secret 与接口文档入口）：https://developer.zhihu.com
-- 知乎开放平台 API 文档（知乎搜索接口参数与返回字段）：http://106.54.226.30:19120/zhihu-api
+- 知乎开放平台 API 文档（知乎搜索接口参数与返回字段）：https://developer.zhihu.com/document
 - 威易网：AI Agent 不用爬知乎了，官方 API 每天免费 1000 次（上线初期口径）：https://www.weste.net/2026/05-19/zhihu-API-MCP-Skill.html
 - AI 优惠雷达：知乎开放平台搜索 API 实名后每天免费调用 1 万次（2026 年 11 月额度与单价汇总）：https://www.aipromonow.com/promos/zhihu-search-api-free-10000-calls-daily
 - 知乎开放平台个人中心「各接口限免额度」（九类接口分池额度实测截图，2026-11-28）：https://developer.zhihu.com

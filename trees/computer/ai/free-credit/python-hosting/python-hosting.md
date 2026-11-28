@@ -18,11 +18,11 @@ name: "Free Python Hosting"
 
 ## PythonAnywhere：CPU-秒按天算
 
-Beginner 免费档，不用绑卡：**1 个 web 应用**（只能跑在 `yourname.pythonanywhere.com` 子域）、**512MiB 磁盘**、**每天 100 CPU-秒**、**2 个控制台**<RichMediaReference>["https://www.pythonanywhere.com/pricing/"]</RichMediaReference>。
+Beginner 免费档，不用绑卡：**1 个 web 应用**（只能跑在 `yourname.pythonanywhere.com` 子域）、**512MiB 磁盘**、**每天 100 CPU-秒**、**2 个控制台**。
 
 几条与直觉相反的规则：
 
-- 那 100 CPU-秒**只算控制台、定时任务、常驻任务，不算 web 应用**；web 应用有独立配额<RichMediaReference>["https://agentdeals.dev/vendor/pythonanywhere"]</RichMediaReference>。所以"网页能跑"不代表"脚本能跑"。
+- 那 100 CPU-秒**只算控制台、定时任务、常驻任务，不算 web 应用**；web 应用有独立配额。所以"网页能跑"不代表"脚本能跑"。
 - 超额后进程进 **tarpit**（低优先级继续跑），不会立刻被杀，但被判定影响他人时可能被终止。
 - **出网走白名单**：免费账号只能访问约 6,500 个允许的站点（含 `api.openai.com`、`api.stripe.com`）。接自建 API、冷门第三方服务会直接连不上，这是最容易踩的一条。
 - **闲置会过期**：免费 web 应用 1 个月没人登录续期就停止，2026 年 1 月起从 3 个月缩短到 1 个月。
@@ -32,12 +32,12 @@ Beginner 免费档，不用绑卡：**1 个 web 应用**（只能跑在 `yournam
 
 ## Render：实例小时按 workspace 算
 
-Free 档：**0.1 CPU / 512MB RAM / 1 实例**，**每个 workspace 每月 750 实例小时**，附 100GB 出网带宽与 500 构建分钟<RichMediaReference>["https://render.com/docs/free"]</RichMediaReference>。
+Free 档：**0.1 CPU / 512MB RAM / 1 实例**，**每个 workspace 每月 750 实例小时**，附 100GB 出网带宽与 500 构建分钟。
 
 关键细节：
 
 - **闲置 15 分钟自动休眠**，下次请求约 1 分钟冷启动；休眠期间不扣实例小时。
-- 750 小时 × 12 个月折算下来，**一台服务 24 小时常驻就刚好用完全部额度**，第二台一开就超额；超额后所有免费服务一起被挂起，等下月 1 日重置<RichMediaReference>["https://justinmckelvey.com/blog/is-render-free"]</RichMediaReference>。
+- 750 小时 × 12 个月折算下来，**一台服务 24 小时常驻就刚好用完全部额度**，第二台一开就超额；超额后所有免费服务一起被挂起，等下月 1 日重置。
 - 免费 Postgres **1GB、创建 30 天后到期**，再有 14 天宽限期，之后连数据一起删。
 - **文件系统是临时的**：每次休眠/重启，写在磁盘上的上传文件、SQLite 库都会丢。
 
@@ -45,8 +45,8 @@ Free 档：**0.1 CPU / 512MB RAM / 1 实例**，**每个 workspace 每月 750 �
 
 这两个不是通用 PaaS，更像"把脚本变成网页"的托管：
 
-- **Streamlit Community Cloud**：免费，资源上限约 **2 核 CPU / 2.7GB RAM / 50GB 存储**（0.078 核、690MB 起），**连续 7 天无访问自动休眠**，访问即唤醒<RichMediaReference>["https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app"]</RichMediaReference>。超限时页面直接显示"🤯 超出资源限制"。
-- **Hugging Face Spaces**：CPU Basic 档免费，**2 vCPU / 16GB RAM / 50GB 临时磁盘**，免费硬件闲置约 48 小时后休眠；升级到 GPU 档按小时计费（T4 约 $0.60/小时）<RichMediaReference>["https://huggingface.com/docs/hub/spaces-overview"]</RichMediaReference>。
+- **Streamlit Community Cloud**：免费，资源上限约 **2 核 CPU / 2.7GB RAM / 50GB 存储**（0.078 核、690MB 起），**连续 7 天无访问自动休眠**，访问即唤醒。超限时页面直接显示"🤯 超出资源限制"。
+- **Hugging Face Spaces**：CPU Basic 档免费，**2 vCPU / 16GB RAM / 50GB 临时磁盘**，免费硬件闲置约 48 小时后休眠；升级到 GPU 档按小时计费（T4 约 $0.60/小时）。
 
 它们的共同优势是**不用管服务器**，把仓库一连就出公网地址；共同代价是**资源上限硬、休眠频繁、不能跑常驻后台任务**。
 

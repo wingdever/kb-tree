@@ -50,3 +50,7 @@ name: "Software Ecosystems"
 
 **软件生态按「人在哪、代码在哪、流程在哪、数据在哪」划分子生态；每个子生态都用身份、接口、扩展机制与治理四个维度观察。**
 
+## 参考资料
+
+- The Cathedral and the Bazaar（Raymond, 1999）：http://www.catb.org/~esr/writings/cathedral-bazaar/
+- Git 文档：https://git-scm.com/doc

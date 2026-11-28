@@ -42,3 +42,8 @@ name: "Developer Tools Ecosystem"
 ## 一句话主线
 
 **开发工具生态的核心是「可插拔」：IDE / 终端是宿主，LSP 与扩展市场是连接面，Skills / Hooks / MCP / AGENTS.md 是 Agent 能力的分发格式。**
+
+## 参考资料
+
+- Git 文档：https://git-scm.com/doc
+- GitHub Docs：https://docs.github.com/

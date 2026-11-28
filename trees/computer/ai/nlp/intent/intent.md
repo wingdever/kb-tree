@@ -33,7 +33,7 @@ name: "Intent Recognition and Slot Filling"
 
 零样本提示策略，在工具调用**之前**插入 reflection 步：评估意图是否清晰、信息是否充分；发现歧义或缺参则先问澄清问题，全部参数 resolve 后才进工具阶段。模块化，可集成进现有 Agent 工作流，无需昂贵微调。
 
-效果：IMKI 任务上 GPT-4o 正确识别歧义（A1）从 52%→90%，后续 API 执行与答案准确率同步提升。高推理模型（DeepSeek-R1、o3-mini）即使不问也可能猜对，但强制 reflection 后可靠性仍提升。且 AwN 不损害清晰指令上的表现。
+效果：IMKI 任务上 GPT-4o 正确识别歧义（A1）从约一半升到九成，后续 API 执行与答案准确率同步提升。高推理模型（DeepSeek-R1、o3-mini）即使不问也可能猜对，但强制 reflection 后可靠性仍提升。且 AwN 不损害清晰指令上的表现。
 
 **"Knowing but Not Showing"（Cornell 2026, arXiv 2605.25284）**：直接问模型"这句有歧义吗"它多半判断得出，但放进实际问答情境压倒性选择直接作答而非回问——给检索上下文后倾向更强。**Ask or Assume**（2026）算清代价：指令完整时解决率 70.8%，刻意留白不许互动时掉到 54.8%——16 个百分点全来自系统拿假设当事实执行。
 
@@ -42,7 +42,7 @@ name: "Intent Recognition and Slot Filling"
 典型步骤：**识别意图 → 提取已有槽位 → 追问缺失槽位 → 直至集齐**。
 
 - 槽位定义、few-shot、spec 加载、多意图的依赖分析。
-- 槽位填准本身是难题：SpokenWOZ（含语音噪声）上最强对话状态跟踪模型联合目标准确率仅 25.65%——**缺槽检测与槽位验证必须由代码把关，而非让模型自行决定是否跳过必填**。
+- 槽位填准本身是难题：SpokenWOZ（含语音噪声）上最强对话状态跟踪模型联合目标准确率仅约四分之一——**缺槽检测与槽位验证必须由代码把关，而非让模型自行决定是否跳过必填**。
 - 共形预测（conformal prediction）产出"可信意图集合"：集合唯一时直接执行，含多候选才触发澄清。
 - 置信度门槛与升级决策表：低置信度/平票 → 澄清或升级人工。
 
@@ -60,3 +60,7 @@ name: "Intent Recognition and Slot Filling"
 - **别用 Agent 循环做意图识别**——它是前置路由，不是开放推理任务。
 - **测试集**：意图识别测试集 + 意图生成（生成式扩展用户意图）。
 
+## 参考资料
+
+- Speech and Language Processing（Jurafsky & Martin, 3rd ed.）：https://web.stanford.edu/~jurafsky/slp3/
+- BERT for Joint Intent Classification and Slot Filling：https://arxiv.org/abs/1902.10909

@@ -77,3 +77,8 @@ Yan et al. 2024（arXiv:2401.15884）。在检索与生成间加一个**独立�
 
 **更便宜的第一步**：语料干净时，重排器 + 相关性阈值就够——自检只在它不够时才加。
 
+## 参考资料
+
+- Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection：https://arxiv.org/abs/2310.11511
+- Corrective Retrieval Augmented Generation（CRAG）：https://arxiv.org/abs/2401.15884
+- Self-Refine: Iterative Refinement with Self-Feedback：https://arxiv.org/abs/2303.17651

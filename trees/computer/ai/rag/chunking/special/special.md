@@ -71,5 +71,9 @@ PDF 是高风险输入：多栏文档在朴素抽取下会左右栏交错、表�
 
 ## 数据质量护栏
 
-页面级/结构级切块只在源数据可信时有效。Pryon 医疗 RAG 研究：限定在高质量策展内容时幻觉趋近于零，同样检索架构喂未 vet 数据时 52% 的问题产生编造答案。Gartner 调查：63% 组织缺乏 AI-ready 数据实践，预计 2026 年 60% 的 AI 项目因数据未就绪被放弃。切块再精，垃圾进仍垃圾出。
+页面级/结构级切块只在源数据可信时有效。Pryon 医疗 RAG 研究：限定在高质量策展内容时幻觉趋近于零，同样检索架构喂未 vet 数据时过半问题产生编造答案。Gartner 调查称多数组织缺乏 AI-ready 数据实践，预计 2026 年相当比例的 AI 项目因数据未就绪被放弃。切块再精，垃圾进仍垃圾出。
 
+## 参考资料
+
+- Unstructured 文档：https://docs.unstructured.io/
+- Anthropic: Introducing Contextual Retrieval：https://www.anthropic.com/news/contextual-retrieval

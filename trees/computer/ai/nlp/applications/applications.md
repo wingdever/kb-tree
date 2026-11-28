@@ -55,3 +55,7 @@ Transformer 是复杂 NLP 应用的常见选择：Google BERT、OpenAI GPT-3。
 
 这里的文本预处理与 RAG 摄入阶段的清洗一脉相承，但目标不同：NLP 预处理为特征工程与模型输入，RAG 预处理为检索单元的边界与元数据。分句/分词质量同样决定下游效果。
 
+## 参考资料
+
+- Speech and Language Processing（Jurafsky & Martin, 3rd ed.）：https://web.stanford.edu/~jurafsky/slp3/
+- A Survey of Large Language Models：https://arxiv.org/abs/2303.18223

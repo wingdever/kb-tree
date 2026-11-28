@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "资本实体（vendor entity）",
+  "volatility": "low",
+  "verify": "工商登记与证券披露文件"
+}

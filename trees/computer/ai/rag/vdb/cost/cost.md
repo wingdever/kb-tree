@@ -46,3 +46,7 @@ name: "Vector DB Cost and Operations"
 
 > 若 Provider 无法在你的预期规模给出清晰成本，视作风险。
 
+## 参考资料
+
+- pgvector：https://github.com/pgvector/pgvector
+- Milvus 文档：https://milvus.io/docs

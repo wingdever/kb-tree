@@ -20,9 +20,9 @@ name: "Cloud Computer Agents"
 | 远控本机 | 用户自己的电脑 | 停止 | 本机 |
 | 云端沙箱 | 厂商临时容器 | 通常回收 | 临时盘，闲置即销毁 |
 
-豆包的工作任务模式把云电脑与"本地电脑模式"并列，云电脑在隔离环境里跑，产物存云端，本地关机也不影响任务<RichMediaReference>["https://www.doubao.com/legal/DoubaoAgentModeNotice"]</RichMediaReference>；它的云端沙箱闲置一段时间会销毁，装进去的工具与包不保留<RichMediaReference>["https://www.doubao.com/work/docs/zh-cn/articles/047323472965-work-task-mode"]</RichMediaReference>。
+豆包的工作任务模式把云电脑与"本地电脑模式"并列，云电脑在隔离环境里跑，产物存云端，本地关机也不影响任务；它的云端沙箱闲置一段时间会销毁，装进去的工具与包不保留。
 
-智谱 AutoGLM 2.0 走的是"云手机 + 云电脑"，目的明确：不占用用户的手机与电脑，任何设备都能发起任务<RichMediaReference>["https://developer.volcengine.com/articles/7540557887958057002"]</RichMediaReference>。阿里无影则把云电脑做成可托管 Agent 的"云工位"，提供 Windows 与 Linux 桌面与远程接管<RichMediaReference>["https://www.alibabacloud.com/zh/product/jvs"]</RichMediaReference>。
+智谱 AutoGLM 2.0 走的是"云手机 + 云电脑"，目的明确：不占用用户的手机与电脑，任何设备都能发起任务。阿里无影则把云电脑做成可托管 Agent 的"云工位"，提供 Windows 与 Linux 桌面与远程接管。
 
 ## 判据四问
 
@@ -64,7 +64,7 @@ name: "Cloud Computer Agents"
 
 ## 安全与合规
 
-- **隔离**：云机应与真实设备隔离，敏感账号不登录在云机里。智谱明确选择放弃操作微信等隐私密集应用，并把动作做成可回放、可审计、可干预<RichMediaReference>["https://www.zhipuai.cn/zh/research/145"]</RichMediaReference>。
+- **隔离**：云机应与真实设备隔离，敏感账号不登录在云机里。智谱明确选择放弃操作微信等隐私密集应用，并把动作做成可回放、可审计、可干预。
 - **凭证**：让 Agent 在云机里登录你的账号，等于把凭证托管给第三方；要有撤销、二次确认与操作留痕。
 - **临时性**：沙箱销毁会带走环境与文件，长任务要做产物落盘与检查点，否则一次回收就前功尽弃。
 - **数据**：任务资料上传即产生处理关系，留存位置、跨境与删除方式要写进协议。

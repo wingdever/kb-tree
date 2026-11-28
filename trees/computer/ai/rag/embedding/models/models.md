@@ -66,5 +66,10 @@ BGE/E5 需要不对称指令前缀（如 "Represent this sentence for searching 
 - **内容哈希缓存嵌入**：语料增量更新时不重嵌未变文档。
 - **版本化**：嵌入模型变更必须重嵌；过渡期维护两个索引双写。
 - ada-002 已无理由用于新系统。
-- **升级时机**：黄金集 recall@K < 80%、领域重大切换、或新模型提升 >5% 时，先在自有数据重测再升级。text-embedding-3-large 比 small 贵 6.5×，多数应用只多拿 90–95% 质量。
+- **升级时机**：黄金集 recall@K 明显低于目标、领域重大切换、或新模型带来可观提升时，先在自有数据重测再升级。text-embedding-3-large 比 small 贵数倍，多数应用只多拿很小一截质量。
 
+## 参考资料
+
+- MTEB: Massive Text Embedding Benchmark：https://arxiv.org/abs/2210.07316
+- BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings：https://arxiv.org/abs/2402.03216
+- Text Embeddings by Weakly-Supervised Contrastive Pre-training（E5）：https://arxiv.org/abs/2212.03533

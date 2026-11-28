@@ -55,3 +55,7 @@ RISC-V 是开放的模块化 ISA：基础整数指令集（RV32I / RV64I）+ 标
 - 忽略大小端与对齐，导致跨平台数据解析错误。
 - 以为"复杂指令一定更快"——现代性能瓶颈多在访存与并行，而非单条指令功能强弱。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- RISC-V 指令集规范：https://riscv.org/technical/specifications/

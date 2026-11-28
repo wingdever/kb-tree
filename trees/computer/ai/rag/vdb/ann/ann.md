@@ -48,3 +48,8 @@ name: "ANN Index Algorithms"
 
 AllReduce = ReduceScatter + AllGather；检索侧的关键是选对 ANN 索引。
 
+## 参考资料
+
+- Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs：https://arxiv.org/abs/1603.09320
+- Billion-scale similarity search with GPUs（FAISS）：https://arxiv.org/abs/1702.08734
+- DiskANN: Fast Accurate Billion-point Nearest Neighbor Search on a Single Node：https://arxiv.org/abs/1806.05141

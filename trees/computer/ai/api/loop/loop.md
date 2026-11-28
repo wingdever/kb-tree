@@ -157,3 +157,8 @@ def run_agent(prompt, model, tools, tool_functions, max_iterations=5):
 ## 十、一句话总结
 
 > 工具调用的本质是"模型声明意图、你执行、结果回灌"的循环。可靠性不来自更聪明的提示词，而来自：精确的工具声明、严格的 schema、封顶的循环、干净的错误自愈、确定性的护栏，以及对并行/流式/多轮细节的正确处理。
+
+## 参考资料
+
+- ReAct: Synergizing Reasoning and Acting in Language Models：https://arxiv.org/abs/2210.03629
+- Toolformer: Language Models Can Teach Themselves to Use Tools：https://arxiv.org/abs/2302.04761

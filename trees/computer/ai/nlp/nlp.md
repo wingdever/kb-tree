@@ -11,3 +11,8 @@ name: "Natural Language Processing"
 ## 与其他领域的关系
 
 意图识别是 Agent 路由的基础。
+
+## 参考资料
+
+- Speech and Language Processing（Jurafsky & Martin, 3rd ed.）：https://web.stanford.edu/~jurafsky/slp3/
+- Attention Is All You Need（Vaswani et al., 2017）：https://arxiv.org/abs/1706.03762

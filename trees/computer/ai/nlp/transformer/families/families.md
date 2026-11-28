@@ -44,3 +44,9 @@ name: "Transformer Architecture Families"
 
 **decoder-only**——生态与工具链都 decoder-first。但需要高质量文档向量时，选 encoder-only embedding 模型，别拿生成式大模型干 embedding 的活。
 
+## 参考资料
+
+- Attention Is All You Need（Vaswani et al., 2017）：https://arxiv.org/abs/1706.03762
+- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding：https://arxiv.org/abs/1810.04805
+- Language Models are Few-Shot Learners（GPT-3）：https://arxiv.org/abs/2005.14165
+- The Llama 3 Herd of Models：https://arxiv.org/abs/2407.21783

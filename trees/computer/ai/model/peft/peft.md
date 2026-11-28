@@ -144,3 +144,4 @@ model.save_pretrained_merged("merged", tok, save_method="lora")
 
 - LoRA: Low-Rank Adaptation of Large Language Models（arXiv:2106.09685）：https://arxiv.org/abs/2106.09685
 - QLoRA（arXiv:2305.14314）：https://arxiv.org/abs/2305.14314
+- Hugging Face PEFT 文档：https://huggingface.co/docs/peft

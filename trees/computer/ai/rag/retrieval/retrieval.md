@@ -15,3 +15,7 @@ name: "Retrieval Algorithms"
 
 规模不大或对延迟敏感时，先用 HNSW + BGE 跑通，再按需叠加 BM25 与重排。
 
+## 参考资料
+
+- Introduction to Information Retrieval（Manning et al.）：https://nlp.stanford.edu/IR-book/
+- ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT：https://arxiv.org/abs/2004.12832

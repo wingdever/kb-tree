@@ -30,7 +30,7 @@ name: "Tool Call Reliability"
 - **JSON 模式**只保证语法合法，不保证字段对——模型仍能自创键名、漏必填。
 - **schema 约束解码**把采样限制在 schema 的语法内，模型物理上无法吐出违反结构的 token。
 
-主流厂商都已提供后者：OpenAI 的 `response_format: {type:"json_schema", strict:true}`、Gemini 的 `response_schema`；Claude 的等价做法是**强制工具调用**——把目标结构定义成工具的 `input_schema`，用 `tool_choice` 指定该工具，让模型「填参数」而不是「写 JSON」。这类模型在函数调用路径上最可靠。<RichMediaReference>["https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview"]</RichMediaReference>
+主流厂商都已提供后者：OpenAI 的 `response_format: {type:"json_schema", strict:true}`、Gemini 的 `response_schema`；Claude 的等价做法是**强制工具调用**——把目标结构定义成工具的 `input_schema`，用 `tool_choice` 指定该工具，让模型「填参数」而不是「写 JSON」。这类模型在函数调用路径上最可靠。
 
 严格模式有代价也有坑：schema 表达能力受限（例如要求所有字段进 `required`、禁止任意额外属性），部分特性（复杂的 `oneOf`、递归）可能被拒。用严格模式前先把 schema 降级到它支持的子集，否则会得到「请求被拒」而不是「输出更好」。
 

@@ -38,9 +38,9 @@ name: "Free Generation APIs"
 
 阿里云智能语音交互的试用版是当前最宽松的一档：
 
-- 新用户开通后可免费试用 3 个月，语音合成在试用期内**调用量不限**，并发限制为 2<RichMediaReference>["https://help.aliyun.com/zh/isi/getting-started/user-guide-for-non-developers"]</RichMediaReference>。
+- 新用户开通后可免费试用 3 个月，语音合成在试用期内**调用量不限**，并发限制为 2。
 - 单次请求最多 300 字符（汉字、字母、标点各算 1 个），超出截断——长文要自己切片再拼接。
-- 流式文本语音合成（CosyVoice 大模型）**不支持试用**，要商用版才能用<RichMediaReference>["https://help.aliyun.com/zh/isi/product-overview/faq-about-concurrency-and-monitoring"]</RichMediaReference>。
+- 流式文本语音合成（CosyVoice 大模型）**不支持试用**，要商用版才能用。
 - 试用期内若升级商用再降回试用，并发会被置为 0，服务直接不可用，这个操作不可逆。
 
 海外平台的额度按字符/月计，社区整理的常见口径是：Azure 语音每月数十万字符免费，Google 标准音色每月约 400 万字符、WaveNet 音色约 100 万字符——**这些数字来自第三方整理，接入前要回官方定价页核对**，且各家免费层通常限定标准音色、不含自定义声音克隆。

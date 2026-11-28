@@ -56,3 +56,7 @@ CPU-内存带宽与延迟是数据库、科学计算与 AI 负载的主导瓶颈
 - 误把一致性问题归因于程序 bug——多核共享数据的可见性需要一致性协议与内存屏障共同保证。
 - 只看容量不看延迟与带宽，选错存储层。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- Computer Systems: A Programmer's Perspective（Bryant & O'Hallaron）：https://csapp.cs.cmu.edu/

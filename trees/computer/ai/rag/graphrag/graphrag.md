@@ -14,7 +14,7 @@ name: "GraphRAG and Structured Retrieval"
 索引期用 LLM 从文本抽取实体与关系，建知识图谱（实体、关系、层级社区）；查询期遍历关系拼上下文。
 
 - Microsoft GraphRAG 论文（Edge et al. 2024）：**局部问题与向量 RAG 相当，全局问题（"总结整个语料主题"）显著更好**，社区摘要对 Global 查询胜率 72–83%。
-- 但 HippoRAG 2（ICML 2025）中强向量检索器平均 57.0 F1、社区 GraphRAG 仅 49.6——直白事实问题上图不如向量；图索引构建慢 40–57 倍。
+- 但 HippoRAG 2（ICML 2025）中强向量检索器在七个 QA 数据集上的平均 F1 高于社区 GraphRAG——直白事实问题上图不如向量；图索引构建也慢一到两个数量级。
 - **适用**：高价值、低查询量语料——监管文件、研究文献、并购尽调、大型内部知识库；关系推理、可解释路径、全局综合。
 - **过度设计**：多数查询是单实体事实的客服场景。
 
@@ -43,3 +43,7 @@ name: "GraphRAG and Structured Retrieval"
 - 多跳检索（agentic）与 GraphRAG 互补：前者靠 Agent 多次调用工具，后者靠图结构一次遍历。
 - 元数据/ACL 必须贯穿图与向量两侧。
 
+## 参考资料
+
+- From Local to Global: A Graph RAG Approach to Query-Focused Summarization：https://arxiv.org/abs/2404.16130
+- HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models：https://arxiv.org/abs/2405.14831

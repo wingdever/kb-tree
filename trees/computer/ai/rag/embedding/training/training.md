@@ -69,3 +69,8 @@ L = -log( exp(sim(q, p⁺)/τ) / Σ_j exp(sim(q, p_j)/τ) )
 
 嵌入模型呈一致 scaling 行为：更大模型/更多数据/更长训练持续提升 MTEB（类似生成模型的 power law）。Qwen3-Embedding 显示 8B 模型（MTEB 70.6）显著高于同数据训练的 1B 模型。
 
+## 参考资料
+
+- Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks：https://arxiv.org/abs/1908.10084
+- Text Embeddings by Weakly-Supervised Contrastive Pre-training（E5）：https://arxiv.org/abs/2212.03533
+- SimCSE: Simple Contrastive Learning of Sentence Embeddings：https://arxiv.org/abs/2104.08821

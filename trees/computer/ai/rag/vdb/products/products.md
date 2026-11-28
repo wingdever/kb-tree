@@ -49,3 +49,8 @@ name: "Vector Database Selection"
 
 从第一天为迁移设计：保持 chunk ID 稳定、元数据版本化嵌入模型、解耦摄入与检索服务、抽象查询层避免 Provider 切换变成全应用重写。
 
+## 参考资料
+
+- Milvus 文档：https://milvus.io/docs
+- Qdrant 文档：https://qdrant.tech/documentation/
+- pgvector：https://github.com/pgvector/pgvector

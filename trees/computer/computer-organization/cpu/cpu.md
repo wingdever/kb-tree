@@ -45,3 +45,7 @@ CPU 时间 = 指令数 × CPI / 主频。微架构的所有努力都可归入三
 - 忽略推测执行的副作用：Spectre / Meltdown 等微架构侧信道。
 - 把乱序执行理解为"程序语义乱序"——对外仍按序提交，乱序只是内部优化。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- Computer Systems: A Programmer's Perspective（Bryant & O'Hallaron）：https://csapp.cs.cmu.edu/

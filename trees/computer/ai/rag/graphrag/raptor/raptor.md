@@ -41,3 +41,7 @@ RAPTOR（Recursive Abstractive Processing for Tree-Organized Retrieval）用递�
 
 **不用**：简单事实查询、语料小、延迟敏感、语料频繁变动（重建成本高）。
 
+## 参考资料
+
+- RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval：https://arxiv.org/abs/2401.18059
+- Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models：https://arxiv.org/abs/2409.04701

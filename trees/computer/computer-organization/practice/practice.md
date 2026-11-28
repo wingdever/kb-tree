@@ -7,7 +7,7 @@ name: "Computer Organization in Practice"
 
 # 组成原理实践（Computer Organization in Practice）
 
-学习组成原理的目的不是应付考试，而是获得**解释可观察行为的能力**：为什么缓存友好的代码快 10×、为什么分支影响循环性能、为什么 CPU-GPU 传输昂贵、为什么内存延迟主导数据库负载。
+学习组成原理的目的不是应付考试，而是获得**解释可观察行为的能力**：为什么缓存友好的代码快一个数量级、为什么分支影响循环性能、为什么 CPU-GPU 传输昂贵、为什么内存延迟主导数据库负载。
 
 ## 映射：概念 → 可观察现象
 
@@ -47,3 +47,8 @@ name: "Computer Organization in Practice"
 - 用微基准推断整体性能，忽略真实负载特征。
 - 忽视硬件现实，写出缓存不友好或同步开销巨大的代码。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- Computer Systems: A Programmer's Perspective（Bryant & O'Hallaron）：https://csapp.cs.cmu.edu/
+- perf wiki：https://perf.wiki.kernel.org/

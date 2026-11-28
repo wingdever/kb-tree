@@ -53,7 +53,7 @@ ColPali 多向量：1024 patch/页 × 128 维 × 4 字节 ≈ 512 KB/页 ≈ 128
 
 ## 何时用 / 不用
 
-**用**：文档视觉密集（财报、科研论文、扫描表单、幻灯片，布局承载意义）；财务 PDF 上 62%→84% 的 recall 跃升能证明索引成本合理；表格/图表/工程图/签章的视觉问答。
+**用**：文档视觉密集（财报、科研论文、扫描表单、幻灯片，布局承载意义）；财务 PDF 上的 recall 跃升能证明索引成本合理；表格/图表/工程图/签章的视觉问答。
 
 **不用**：干净的纯文本文档——经典文本 RAG 更简单更便宜；偶有 logo 的散文语料不值得多向量税。
 
@@ -63,3 +63,7 @@ ColPali 多向量：1024 patch/页 × 128 维 × 4 字节 ≈ 512 KB/页 ≈ 128
 
 ViDoRe（视觉文档检索基准，含 DocVQA/InfoVQA 及能源、政府、医疗、AI 领域任务）；指标 NDCG@5、召回、bbox 引用准确性、生成答案的 groundedness。注意多数安全基准本身是机器生成的，存在循环评估问题。
 
+## 参考资料
+
+- CLIP: Learning Transferable Visual Models From Natural Language Supervision：https://arxiv.org/abs/2103.00020
+- ColPali: Efficient Document Retrieval with Vision Language Models：https://arxiv.org/abs/2407.01449

@@ -18,7 +18,7 @@ splitter = SemanticSplitterNodeParser(
 )
 ```
 
-- **代价**：索引期要嵌入每个句子（约 2–5× 嵌入调用），但 recall@5 通常提升 10–20%。
+- **代价**：索引期要嵌入每个句子（嵌入调用增至数倍），但 recall@5 通常提升一到两成。
 - 2026 年 LlamaIndex 与 LangChain 都已把语义分割作为一等选项。
 - 适合：主题不可预测切换的非结构化散文、topic 多样的文章；小规模语料（摄入成本可接受）。
 - 不适合：结构化文档（结构切分几乎零成本达到同样连贯性）；结果依赖敏感度设置与嵌入模型。
@@ -41,8 +41,12 @@ splitter = SemanticSplitterNodeParser(
 
 ## 怎么选
 
-- homogeneous 散文（文章、报告）→ 语义分割 + 10–15% overlap。
+- homogeneous 散文（文章、报告）→ 语义分割 + 一到两成 overlap。
 - 结构化文档（PDF、wiki、docs）→ 结构感知 + 父子检索。
 - FAQ、文档 → 父子分块。
 - 预算为零、量大 → 滑动窗口或结构感知。
 
+## 参考资料
+
+- Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models：https://arxiv.org/abs/2409.04701
+- RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval：https://arxiv.org/abs/2401.18059

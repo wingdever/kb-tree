@@ -42,6 +42,24 @@
       ],
       "source": "Anthropic《Introducing Contextual Retrieval》：上下文嵌入使 top-20 检索失败率降 35%（5.7%→3.7%），叠加上下文 BM25 降 49%（5.7%→2.9%），再加 reranker 降 67%",
       "verified": "2026-11-28"
+    },
+    {
+      "path": "ai/rag/graphrag/graphrag.md",
+      "numbers": [
+        "72%",
+        "83%"
+      ],
+      "source": "arXiv 2404.16130（Microsoft GraphRAG）：全局 sensemaking 问题上全面性胜率 72–83%；KDD 2026 讲义转述同口径",
+      "verified": "2026-11-28"
+    },
+    {
+      "path": "ai/rag/graphrag/frameworks/frameworks.md",
+      "numbers": [
+        "72%",
+        "83%"
+      ],
+      "source": "arXiv 2404.16130（Microsoft GraphRAG）：全局 sensemaking 问题上全面性胜率 72–83%；KDD 2026 讲义转述同口径",
+      "verified": "2026-11-28"
     }
   ]
 }

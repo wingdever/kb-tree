@@ -17,9 +17,9 @@ name: "Free Search APIs"
 
 ## 有长期免费档的：Algolia
 
-Algolia 的 Free 是明确写着"无需信用卡"的长期档：**每月 1 万次搜索请求、5 万条记录、5,000 次推荐请求、5,000 次抓取**<RichMediaReference>["https://www.algolia.com/pricing"]</RichMediaReference>。
+Algolia 的 Free 是明确写着"无需信用卡"的长期档：**每月 1 万次搜索请求、5 万条记录、5,000 次推荐请求、5,000 次抓取**。
 
-条款里有几条硬限制：单条记录最大 **10 KB**、单个应用最大 **1 GB**、单个索引最大 **1 GB**、**每个账号只能有 1 个应用**；账号 **30 天不活跃可能被删除数据**，超出用量时服务会被挂起或在搜索结果里插入品牌标识<RichMediaReference>["https://www.algolia.com/policies/free-plan-details"]</RichMediaReference>。
+条款里有几条硬限制：单条记录最大 **10 KB**、单个应用最大 **1 GB**、单个索引最大 **1 GB**、**每个账号只能有 1 个应用**；账号 **30 天不活跃可能被删除数据**，超出用量时服务会被挂起或在搜索结果里插入品牌标识。
 
 记录数存在口径冲突：定价页写 50,000，部分 FAQ 写 Build 档 100 万条、Grow 档 10 万条。差异来自"Build（开发档）"与"Grow（上线档）"的免费层不同，接入前看自己账号的实际配额页。
 
@@ -27,8 +27,8 @@ Algolia 的 Free 是明确写着"无需信用卡"的长期档：**每月 1 万�
 
 这两家都开源，但**托管版没有长期免费档**：
 
-- **Meilisearch Cloud**：只有 **14 天试用**、不用绑卡，之后 $20/月起（XS 实例 0.5 vCPU / 1GB RAM / 32 GiB 磁盘）<RichMediaReference>["https://www.meilisearch.com/pricing"]</RichMediaReference>。开源引擎 MIT 许可，**自托管永久免费、无用量上限**。
-- **Typesense Cloud**：新用户给 **720 小时集群时长 + 10GB 带宽**，按连续运行折算约 30 天，属于一次性试用<RichMediaReference>["https://www.meilisearch.com/blog/typesense-pricing"]</RichMediaReference>。开源版同样可自托管。
+- **Meilisearch Cloud**：只有 **14 天试用**、不用绑卡，之后 $20/月起（XS 实例 0.5 vCPU / 1GB RAM / 32 GiB 磁盘）。开源引擎 MIT 许可，**自托管永久免费、无用量上限**。
+- **Typesense Cloud**：新用户给 **720 小时集群时长 + 10GB 带宽**，按连续运行折算约 30 天，属于一次性试用。开源版同样可自托管。
 
 结论很直接：想长期免费，就别用它们的云，用它们的二进制。
 
@@ -37,14 +37,14 @@ Algolia 的 Free 是明确写着"无需信用卡"的长期档：**每月 1 万�
 上面几家解决的是"给自己的数据建索引"，另一类是"直接搜别人已经建好的索引"，常见于 Agent 的联网检索：
 
 - **知乎开放平台**：同时提供"知乎搜索"与"全网搜索"两个接口，各自 **5,000 次/天**，额度按日、北京零点重置、九类接口分池不互通；前者只检索知乎站内内容，后者覆盖公开网页。它把"中文长尾经验"和"网页检索"放在同一套鉴权下，是中文场景里比较少见的一档。
-- **Brave Search API**：独立索引、不依赖第三方搜索引擎。免费档 **2,000 次/月、1 次/秒限速**；另一套更常见的口径是"每个套餐每月 $5 抵用额，按 $5/千次折算约 1,000 次"，两种说法目前并存，接入前看控制台<RichMediaReference>["https://brave.com/learn/index.xml"]</RichMediaReference>。注意**注册需要绑卡**，但可以把用量上限设为免费额度，做到不产生扣费；官方也提示免费层存在取消的可能（文中提到 2027-01-01 这个时间点）。
-- **Tavily**：面向 Agent 的搜索接口，免费档 **每月 1,000 credits**，不用绑卡；Basic Search 每次 1 credit、Advanced 2 credits、Extract 每 5 个成功 URL 收 1 credit，失败不计费<RichMediaReference>["https://docs.tavily.com/documentation/api-credits?ref=apidog.com"]</RichMediaReference>。它还提供**免密钥（keyless）调用**，无需注册即可限量试用，额度用尽后再换 API key。
+- **Brave Search API**：独立索引、不依赖第三方搜索引擎。免费档 **2,000 次/月、1 次/秒限速**；另一套更常见的口径是"每个套餐每月 $5 抵用额，按 $5/千次折算约 1,000 次"，两种说法目前并存，接入前看控制台。注意**注册需要绑卡**，但可以把用量上限设为免费额度，做到不产生扣费；官方也提示免费层存在取消的可能（文中提到 2027-01-01 这个时间点）。
+- **Tavily**：面向 Agent 的搜索接口，免费档 **每月 1,000 credits**，不用绑卡；Basic Search 每次 1 credit、Advanced 2 credits、Extract 每 5 个成功 URL 收 1 credit，失败不计费。它还提供**免密钥（keyless）调用**，无需注册即可限量试用，额度用尽后再换 API key。
 
 这三家的共同点：额度按"次/天"或"credit/月"发，**比自建索引便宜，但结果不可控**——排序、收录范围、时效都由平台决定，且随时可能改条款。
 
 ## 轻量托管：Orama Cloud
 
-Orama 的核心库是 Apache-2.0，可嵌在浏览器、服务端或边缘函数里，**库本身不计费**。Cloud 版有一个免费额度：**最多 3 个索引、每索引 10 万文档、每月 150 次索引更新**——最后这个数字是全表最紧的，基本上只够"文档站偶尔同步"<RichMediaReference>["https://www.exploreai.directory/open-source-alternatives/orama"]</RichMediaReference>。该额度来自第三方整理，接入前请核对官方页。
+Orama 的核心库是 Apache-2.0，可嵌在浏览器、服务端或边缘函数里，**库本身不计费**。Cloud 版有一个免费额度：**最多 3 个索引、每索引 10 万文档、每月 150 次索引更新**——最后这个数字是全表最紧的，基本上只够"文档站偶尔同步"。该额度来自第三方整理，接入前请核对官方页。
 
 ## 真正的零成本方案
 
@@ -92,3 +92,4 @@ Orama 的核心库是 Apache-2.0，可嵌在浏览器、服务端或边缘函数
 - Brave 社区答复（$5/月免费抵用额需绑卡、可设用量上限）：https://community.brave.app/t/clarification-about-search-api-free-monthly-credits/656627
 - Tavily 免费额度与 credit 计费（1,000/月、Basic 1 credit、Extract 每 5 URL 1 credit）：https://docs.tavily.com/documentation/api-credits
 - Tavily 免密钥试用（keyless 限量、无需注册）：https://docs.tavily.com/documentation/keyless
+- Tavily API Credits 文档：https://docs.tavily.com/documentation/api-credits

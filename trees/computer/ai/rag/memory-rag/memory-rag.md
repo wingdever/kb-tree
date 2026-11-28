@@ -27,3 +27,8 @@ name: "Memory and RAG"
 - 生产：RBAC、索引新鲜度、成本、上线清单。
 
 > 检索质量应作为一等指标，而不是事后补充。
+
+## 参考资料
+
+- MemGPT: Towards LLMs as Operating Systems：https://arxiv.org/abs/2310.08560
+- Generative Agents: Interactive Simulacra of Human Behavior：https://arxiv.org/abs/2304.03442

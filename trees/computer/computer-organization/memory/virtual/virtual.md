@@ -38,3 +38,7 @@ name: "Virtual Memory"
 - 工作集过大导致抖动，表现为系统"卡死"而 CPU 利用率并不高。
 - 忽略页表与 TLB 成本，在性能敏感路径上频繁跨大范围内存访问。
 
+## 参考资料
+
+- Computer Organization and Design（Patterson & Hennessy）：https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6
+- Computer Systems: A Programmer's Perspective（Bryant & O'Hallaron）：https://csapp.cs.cmu.edu/

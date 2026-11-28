@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "particular",
+  "canonical": "Tesla, Inc.",
+  "volatility": "medium",
+  "verify": "SEC 10-K"
+}

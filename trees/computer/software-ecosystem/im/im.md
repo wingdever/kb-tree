@@ -53,3 +53,7 @@ IM 是软件生态里第一个成形的子生态：它以「把人、机器人�
 
 **IM 子生态的核心是「身份 + 接口 + 会话边界」；在大陆可直连的消费级开放 IM 这一窄生态位，云湖目前最完整，而企业协作平台、海外 Bot API、自托管开放协议分别属于不同生态位。**
 
+## 参考资料
+
+- Matrix 规范：https://spec.matrix.org/
+- XMPP 标准（RFC 6120）：https://www.rfc-editor.org/rfc/rfc6120.html

@@ -61,7 +61,7 @@ DB-Engines 2026-11 纯图数据库前五：Neo4j、Memgraph、JanusGraph、Tiger
 
 经验法则：**90% 的软件用关系型就够；向量库只存语义文本做 RAG；只有遍历高度复杂的多跳实体关系时才上图库**。
 
-基准证据：HippoRAG 2（ICML 2025）中强向量检索器在七个 QA 数据集平均 57.0 F1，Microsoft 社区 GraphRAG 仅 49.6——在直白事实问题上，图不如向量。2026 GraphRAG-Bench 也同意：简单事实检索基础 RAG 持平或胜出，图在复杂推理与跨语料总结才领先，且**图索引构建慢 40–57 倍**。
+基准证据：HippoRAG 2（ICML 2025）中强向量检索器在七个 QA 数据集上的平均 F1 高于 Microsoft 社区 GraphRAG——在直白事实问题上，图不如向量。2026 GraphRAG-Bench 也同意：简单事实检索基础 RAG 持平或胜出，图在复杂推理与跨语料总结才领先，且图索引构建慢一到两个数量级。
 
 > 用向量回答"给我找到那段话"；用图回答"跨记录推导出答案"。混合流量下，混合方案胜过任一单独方案。
 
@@ -98,3 +98,7 @@ GraphRAG 的落地路径：**LLM 抽取实体关系 → 实体消歧 → 写入�
 
 一个生产知识库常同时跑四种：OLTP 在 PostgreSQL、分析在数仓、相似在 Qdrant/Pinecone、关系在 Neo4j/GraphDB，在 API 层联邦。
 
+## 参考资料
+
+- Neo4j 文档：https://neo4j.com/docs/
+- Cypher 手册：https://neo4j.com/docs/cypher-manual/

@@ -41,7 +41,7 @@ LLM 推理的三大挑战：内存限制（模型常超单卡）、延迟与吞�
 
 KV Cache 缓存已生成 token 的 Key/Value，避免重复计算；但随 batch 和序列长度线性增长，是大 batch 下的显存主导者。
 
-- **PagedAttention（vLLM）**：受操作系统虚拟内存启发，把 KV Cache 存到非连续块，消除内部碎片，多个序列可共享物理块（共享 system prompt、并行 beam search）。配合 vLLM 吞吐最高提升约 24×（相对 HF Transformers）。
+- **PagedAttention（vLLM）**：受操作系统虚拟内存启发，把 KV Cache 存到非连续块，消除内部碎片，多个序列可共享物理块（共享 system prompt、并行 beam search）。配合 vLLM 吞吐提升数倍（相对 HF Transformers）。
 - **GQA（分组查询注意力）**：多组 query head 共享 K/V head，介于 MHA 与 MQA 之间，大幅减小 KV Cache 而无严重质量损失。
 - **MQA**：所有 head 共享 K/V，KV Cache 最小但精度可能下降。Character.AI 通过激进注意力优化实现 >20× KV Cache 缩减。
 - 注意力优化可组合：GQA、跨层共享 KV、局部/窗口注意力避免 O(n²) 增长。
@@ -85,7 +85,7 @@ system prompt 跨请求相同 → 处理一次、复用 KV Cache。Anthropic：�
 
 | 引擎 | 特点 |
 |---|---|
-| **vLLM** | PagedAttention + 连续批处理，默认的高吞吐多租户选择，相对 HF 最高 24× 吞吐 |
+| **vLLM** | PagedAttention + 连续批处理，默认的高吞吐多租户选择，相对 HF 吞吐提升数倍 |
 | **TensorRT-LLM** | NVIDIA,图优化、层融合、精度校准，针对 NVIDIA GPU |
 | **SGLang** | RadixAttention/Radix 缓存、复杂控制流、Token Healing；与 vLLM 在执行上各有侧重 |
 | **TGI** | HuggingFace, Rust/Python |
@@ -125,3 +125,5 @@ system prompt 跨请求相同 → 处理一次、复用 KV Cache。Anthropic：�
 - FlashAttention（arXiv:2205.14135）：https://arxiv.org/abs/2205.14135
 - Efficient Memory Management for LLM Serving with PagedAttention（vLLM，arXiv:2309.06180）：https://arxiv.org/abs/2309.06180
 - Fast Inference from Transformers via Speculative Decoding（arXiv:2211.17192）：https://arxiv.org/abs/2211.17192
+- GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers：https://arxiv.org/abs/2210.17323
+- AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration：https://arxiv.org/abs/2306.00978

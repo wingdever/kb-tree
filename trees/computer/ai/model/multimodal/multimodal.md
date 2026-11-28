@@ -14,7 +14,7 @@ name: "Multimodal Models"
 | 架构 | 做法 | 优点 | 缺点 | 代表 |
 |---|---|---|---|---|
 | **Late Fusion（后融合）** | 各模态独立编码成向量，末端 concat/pooling | 模块化、可独立换编码器 | 模态交互弱、细粒度接地难 | CLIP 式嵌入模型 |
-| **Early Fusion（早融合）** | 图像 patch token 与文本 token 拼成一个序列，送单一 transformer | 第 1 层起强交叉注意力、随数据扩展好 | 图像 token 吃上下文预算（1024×1024 图 ≈ 256–1024 token） | GPT-4o（推测）、Chameleon、Fuyu |
+| **Early Fusion（早融合）** | 图像 patch token 与文本 token 拼成一个序列，送单一 transformer | 第 1 层起强交叉注意力、随数据扩展好 | 图像 token 吃上下文预算（单图常吃掉数百到上千 token） | GPT-4o（推测）、Chameleon、Fuyu |
 | **Cross-Attention / Projector（桥接）** | 视觉编码器出特征，小 projector 映射到 LLM embedding 空间，作为"伪 token"喂入 | 复用预训练 LLM（训练便宜）、实现简单 | projector 容量成瓶颈、细节受 token 预算限 | LLaVA、Qwen-VL、Llama 3.2-Vision |
 
 第四种：**Attention-gated（Flamingo 式）**——把交叉注意力层插入 LLM 特定深度，冻结主干、只训 adapter。优点是不增长 token 预算的多点交互；缺点是自定义架构、复用标准栈难。代表：Flamingo、IDEFICS、Kosmos。
@@ -47,7 +47,7 @@ Higher-res 方案：InternVL 用**动态分块（dynamic tiling）**——把图
 1. **阶段一：特征对齐预训练**。只训桥接层（projector / 交叉注意力），冻结视觉编码器与 LLM，在大规模图文描述数据上建立基础视觉接地，不破坏已有能力。
 2. **阶段二：端到端指令微调**。训全模型或 LoRA adapter，用高质量"图像+问题/描述/推理"指令数据。阶段二数据的质量与多样性决定视觉指令跟随的上限。
 
-视觉指令数据比文本更难规模化：当前靠 GPT-4V 等自动标注流水线，但引入教师模型的质量天花板。LLaVA 用纯语言 GPT-4 基于 COCO 生成 158K 条图文指令（58K 对话、23K 详细描述、77K 复杂推理）。LLaVA-1.5 仅用公开数据、单 8×A100 节点约 1 天训完，在 11 个基准达 SOTA。
+视觉指令数据比文本更难规模化：当前靠 GPT-4V 等自动标注流水线，但引入教师模型的质量天花板。LLaVA 用纯语言 GPT-4 基于 COCO 生成 158K 条图文指令（58K 对话、23K 详细描述、77K 复杂推理）。LLaVA-1.5 仅用公开数据、单节点约一天训完，在多个基准达 SOTA。
 
 ## 音频与视频扩展
 
@@ -71,3 +71,9 @@ Higher-res 方案：InternVL 用**动态分块（dynamic tiling）**——把图
 - 开源组件快速起步：**projector 式 VLM 是务实默认**，Qwen-VL、Llama 3.2-Vision 是强默认选择。
 - 服务：projector 式图片增加固定 ~300–1000 token，易与 vLLM 集成；早融合图片可能主导上下文，吞吐强依赖图片 batch 大小；交叉注意力式推理路径定制、运行时支持较薄。
 - 统一多模态是方向——2026 仍早期，研究侧四种架构都活。
+
+## 参考资料
+
+- CLIP: Learning Transferable Visual Models From Natural Language Supervision：https://arxiv.org/abs/2103.00020
+- Flamingo: a Visual Language Model for Few-Shot Learning：https://arxiv.org/abs/2204.14198
+- Visual Instruction Tuning（LLaVA）：https://arxiv.org/abs/2304.08485
