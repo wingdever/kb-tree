@@ -1,0 +1,18 @@
+name,group,source,url,note
+s01 Agent Loop：一个循环就够了,循环与工具,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s01_agent_loop,一个循环把模型从“会说”变成“会做”。
+s02 Tool Use：加工具只加一个 handler,循环与工具,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s02_tool_use,工具不是新能力，是把模型意图变成结构化接口。
+s03 Permission：执行前先做权限判断,边界与扩展,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s03_permission,权限是工具执行前的门，不是提示词里的劝告。
+s04 Hooks：挂在循环上，不写进循环里,边界与扩展,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s04_hooks,扩展点挂在循环外，核心循环才保持稳定。
+s05 TodoWrite：先有计划再执行,规划与上下文,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s05_todo_write,先列步骤再执行，长任务才有锚点。
+s06 Subagent：给子任务独立上下文,规划与上下文,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s06_subagent,委派隔离的是上下文，不是工作区。
+s07 Skill Loading：用到时再加载,规划与上下文,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s07_skill_loading,先给目录，再按需加载正文。
+s08 Context Compact：先整理，再总结,规划与上下文,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s08_context_compact,先整理可恢复的，再总结不可恢复的。
+s09 Memory：跨会话保留重要信息,规划与上下文,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s09_memory,记忆是索引加按需召回，不是把历史全塞进 prompt。
+s10 Task System：从清单到任务图,持久化与协作,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s10_task_system,任务图让目标跨会话存在，让依赖可计算。
+s11 Background Tasks：慢操作放后台,持久化与协作,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s11_background_tasks,慢操作放后台，主循环继续思考。
+s12 Cron Scheduler：按时间启动任务,持久化与协作,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s12_cron_scheduler,定时不是闹钟，是把 prompt 在正确时间放进队列。
+s13 Agent Teams：团队运行时与协作协议,持久化与协作,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s13_agent_teams,团队运行时把分工、消息、任务认领和目录隔离变成协议。
+s14 MCP Tools：发现并调用外部工具,持久化与协作,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s14_mcp_plugin,MCP 把外部能力变成可发现、可调用的工具池。
+s15 Agent Harness 集成：多种机制，一个循环,集成与编排,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s15_integrated_harness,Harness 的复杂度在循环外，循环本身仍然只有几行。
+s16 Workflow Runtime：脚本编排，模型决策,集成与编排,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s16_workflow_runtime,模型决定单步，脚本决定编排，journal 决定可恢复。
+s17 Goal Loop：停止由判断器决定,集成与编排,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code/tree/main/s17_goal_loop,停止由模型提出，完成由独立判断器决定。
