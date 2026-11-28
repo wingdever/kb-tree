@@ -1,0 +1,9 @@
+term,target
+负载与算力形态,trees/computer/aidc/workload
+供电与配电,trees/computer/aidc/power
+制冷与液冷,trees/computer/aidc/cooling
+网络与集群互联,trees/computer/aidc/network
+规划、选址与建设,trees/computer/aidc/planning
+运维、监控与可靠性,trees/computer/aidc/ops
+能效、水耗与合规,trees/computer/aidc/green
+投资、成本与利用率,trees/computer/aidc/economics

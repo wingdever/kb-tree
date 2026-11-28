@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "AI 数据中心（AIDC）",
+  "volatility": "medium",
+  "verify": "Uptime Institute、ASHRAE、OCP 与厂商技术文档"
+}
