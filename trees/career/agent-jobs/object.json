@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "Agent 开发岗位求职",
+  "volatility": "medium",
+  "verify": "招聘 JD、面试记录与招聘平台数据"
+}

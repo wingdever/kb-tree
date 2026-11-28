@@ -18,6 +18,15 @@
     "ai/rag/llm-wiki/lifecycle/lifecycle.md",
     "ai/rag/llm-wiki/practice/practice.md",
     "ai/ai.md",
-    "computer.md"
+    "computer.md",
+    "agent-jobs/agent-jobs.md",
+    "agent-jobs/channels/channels.md",
+    "agent-jobs/decision/decision.md",
+    "agent-jobs/interview/interview.md",
+    "agent-jobs/market/market.md",
+    "agent-jobs/plan/plan.md",
+    "agent-jobs/proof/proof.md",
+    "agent-jobs/role-map/role-map.md",
+    "agent-jobs/skills/skills.md"
   ]
 }
