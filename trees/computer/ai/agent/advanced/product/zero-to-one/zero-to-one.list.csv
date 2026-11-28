@@ -1,0 +1,8 @@
+name,group,source,url,note
+需求梳理,阶段,知乎：从0到1开发一个商用 Agent（智能体）,https://zhuanlan.zhihu.com/p/1944072815566362307,从岗位工作流水账识别可提效场景
+软件选型,阶段,知乎：从0到1开发一个商用 Agent（智能体）,https://zhuanlan.zhihu.com/p/1944072815566362307,平台、模型与工具三线选型
+提示工程,阶段,知乎：从0到1开发一个商用 Agent（智能体）,https://zhuanlan.zhihu.com/p/1944072815566362307,系统提示与用户提示分层
+数据库,阶段,知乎：从0到1开发一个商用 Agent（智能体）,https://zhuanlan.zhihu.com/p/1944072815566362307,文章框架；案例用飞书多维表格承接
+构建 UI 界面,阶段,知乎：从0到1开发一个商用 Agent（智能体）,https://zhuanlan.zhihu.com/p/1944072815566362307,文章框架；案例以对话入口为主
+测试评估,阶段,知乎：从0到1开发一个商用 Agent（智能体）,https://zhuanlan.zhihu.com/p/1944072815566362307,用真实链接与失败样例验收
+部署发布,阶段,知乎：从0到1开发一个商用 Agent（智能体）,https://zhuanlan.zhihu.com/p/1944072815566362307,按渠道能力发布并持续迭代
