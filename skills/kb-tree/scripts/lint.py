@@ -9,6 +9,7 @@
 """
 
 import argparse
+import csv
 import glob
 import json
 import os
@@ -272,6 +273,79 @@ def norm_q(q):
 
 
 
+
+
+def find_repo_root(root):
+    cur = os.path.abspath(root)
+    while True:
+        if os.path.isdir(os.path.join(cur, ".git")):
+            return cur
+        parent = os.path.dirname(cur)
+        if parent == cur:
+            break
+        cur = parent
+    parts = os.path.abspath(root).split(os.sep)
+    if "trees" in parts:
+        return os.sep.join(parts[: parts.index("trees")])
+    return os.path.abspath(root)
+
+
+def check_links(root, mds):
+    repo_root = find_repo_root(root)
+    files = 0
+    rows_total = 0
+    for md in mds:
+        d = os.path.dirname(md)
+        fp = os.path.join(d, "links.csv")
+        if not os.path.exists(fp):
+            err(fp, "缺 links.csv")
+            continue
+        files += 1
+        body = body_of(read(md)).split("## 参考资料")[0]
+        seen = set()
+        try:
+            with open(fp, encoding="utf-8", newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    err(fp, "空文件，缺表头 term,target")
+                    continue
+                header[0] = header[0].lstrip("\ufeff")
+                if [x.strip() for x in header] != ["term", "target"]:
+                    err(fp, f"表头应为 term,target，实际为 {header}")
+                for lineno, row in enumerate(reader, 2):
+                    if not row or all(not x.strip() for x in row):
+                        continue
+                    rows_total += 1
+                    if len(row) != 2:
+                        err(fp, f"应为 2 列，实际 {len(row)} 列", lineno)
+                        continue
+                    term, target = row[0].strip(), row[1].strip()
+                    if not term or not target:
+                        err(fp, "term/target 不能为空", lineno)
+                        continue
+                    if term not in body:
+                        err(fp, f"term 未在正文出现: {term}", lineno)
+                    if os.path.isabs(target) or ".." in target.split("/"):
+                        err(fp, f"target 必须是仓库内相对路径: {target}", lineno)
+                        continue
+                    td = os.path.normpath(os.path.join(repo_root, target))
+                    if not os.path.isdir(td):
+                        err(fp, f"target 目录不存在: {target}", lineno)
+                        continue
+                    if not os.path.exists(os.path.join(td, os.path.basename(td) + ".md")):
+                        err(fp, f"target 不是知识节点目录: {target}", lineno)
+                    if os.path.normpath(td) == os.path.normpath(d):
+                        err(fp, "target 不能指向自己", lineno)
+                    key = (term, target)
+                    if key in seen:
+                        err(fp, f"重复行: {term} -> {target}", lineno)
+                    seen.add(key)
+        except (OSError, csv.Error) as e:
+            err(fp, f"读 CSV 失败: {e}")
+    return files, rows_total
+
+
 OBJ_ENUM = {
     "realm": {"logical", "material", "symbolic"},
     "kind": {"thing", "event", "relation"},
@@ -386,10 +460,11 @@ def main():
     check_numbers(mds, root)
     check_duplicates(mds)
     check_objects(mds)
+    nlink_files, nlinks = check_links(root, mds)
     missing_q = check_questions_coverage(mds, args.coverage)
     nfiles, nq = check_questions(root)
 
-    print(f"节点 md={len(mds)}  questions 文件={nfiles} 条目={nq}  覆盖 {len(mds)-missing_q}/{len(mds)}")
+    print(f"节点 md={len(mds)}  questions 文件={nfiles} 条目={nq}  links 文件={nlink_files} 条目={nlinks}  覆盖 {len(mds)-missing_q}/{len(mds)}")
     print(f"错误 {len(errors)}  警告 {len(warns)}")
     for p, ln, msg in errors:
         print(f"  E {os.path.relpath(p, root) if os.path.isabs(p) else p}:{ln or ''} {msg}")

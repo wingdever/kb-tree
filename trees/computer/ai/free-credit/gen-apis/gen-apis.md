@@ -1,6 +1,6 @@
 ---
-description: "Free quotas for generative media APIs: 100 images per model, unlimited TTS for a 3-month trial at 2 concurrency, and why per-image pricing is scarce"
-描述: "生成型免费 API：图像生成按张、语音合成按字符与时长，试用期与并发限制"
+description: "Free quotas for generative media APIs: images by count, video by seconds or daily credits, and TTS by characters and concurrency"
+描述: "生成型免费 API：图像按张、视频按秒或每日积分、语音按字符与时长"
 name: "Free Generation APIs"
 名称: "生成型免费 API"
 ---
@@ -14,7 +14,7 @@ name: "Free Generation APIs"
 | 模态 | 常见单位 | 平台典型做法 |
 |---|---|---|
 | 图像 | 张 | 每模型 100 张，一次性或按活动发放 |
-| 视频 | 秒 | 数十秒到千余秒，随活动 |
+| 视频 | 秒；消费端为每日积分 | API 按 token 折算，消费端按积分扣 |
 | 语音合成 | 字符、请求次数、时长 | 试用期内不限量但限并发，或每月固定字符 |
 | 语音识别 | 秒/小时 | 见识别类额度，按语音段计 |
 
@@ -33,6 +33,37 @@ name: "Free Generation APIs"
 边缘平台是另一条路：Cloudflare Workers AI 每天 10,000 Neurons 的免费额度同样覆盖文生图模型，按每张图的神经元消耗折算，张数取决于所选模型；好处是每天重置、不需要新用户资格，坏处是模型清单与效果要自己挑。
 
 **警惕"无限免费"**：社区里流传的若干"无需注册、无水印、无限生成"站点，多数没有公开配额与条款，属于预览期或限速服务，不能进生产规划；判断标准是能否查到明确的额度页与计费单价。
+
+## 视频生成：Seedance 的免费入口
+
+先分清两条路：**API 侧基本没有免费的 Seedance 视频额度，免费的是消费端每日积分。**
+
+- 火山方舟的公开免费额度表只覆盖文本、图像、语音、向量与联网插件，**视频生成不在表内**。Seedance 2.0 系列的开通条件是账户余额超过 200 元，或已购买对应资源包；API 按 token 计费，2.0 为 28 元/百万 token 起，2.5 为 42 元/百万 token 起（含视频输入档）。只有成功生成的视频计费，审核失败不收费。
+- 即梦AI（国内）：每日登录可领免费积分或额度，**当日 24:00 清零、不累计**；网页端领的每日积分可能只能在网页端使用。新用户完成任务最高可得 235 积分，任务有效期 14 天。Seedance 2.5 可以先用试用积分体验，具体数量因账号与地区而异。
+- Dreamina（海外）：免费用户**每天 120 积分**，按模型、时长、分辨率与生成模式扣。官方明确说 120 是"每日创作预算"，不保证能出多少条；Seedance 2.5 标准生成 4–30 秒，免费测试优先用短视频。
+
+### 怎么换算
+
+消费端积分不是"每秒固定价"：同一笔积分在不同模型、分辨率、时长下扣得不一样，唯一可靠的口径是创作页在生成前显示的本次消耗。API 侧按输出 token 计价，与"秒"没有直接汇率，必须用官方价格计算器估算。
+
+### 视频额度的坑
+
+- 每日积分当天清零，攒不起来；网页端与 App 的额度可能不互通。
+- 免费档通常要排队，可能有水印或分辨率限制；失败是否退积分以平台规则为准。
+- 多账号批量注册刷额度违反条款，不能把"每日签到"当成生产容量。
+- 即梦与 Dreamina 是分区产品，积分不互通。
+
+## C 端豆包调用的是内置技能，不是方舟 API
+
+豆包 App、电脑端与网页版的视频生成，底层模型是 Seedance 2.0/2.5，但调用链是**豆包 Agent 触发平台内置的「视频生成」技能**，再由平台后端调用模型服务。它不是用户安装的第三方 MCP 工具，C 端账号也不持有火山方舟 API key，不按 token 出账。
+
+因此**工具层没有独立的额度页**，额度记在豆包账号上：
+
+- 免费额度：每日登录赠送积分，当日 24:00 清零；视频生成按模型与分辨率每秒扣 2–10 积分，按最终时长结算。查看入口在登录后的产品内，**没有公开直链**：移动端在底部【我的】→ 积分；Web 端在左下角账号菜单的【积分/会员】。部分版本或套餐只显示订阅额度、不显示积分明细，以客户端实际为准。
+- 付费额度：订阅套餐的额度在【设置】→【订阅与额度管理】查看消耗比例；网页端在左侧栏【豆包订阅】。
+- 方舟控制台的免费额度与账单只反映 API 调用，**不会出现 C 端豆包的消耗**；两边不可互查，也不可互抵。
+
+生成失败不扣积分；积分余额低于最小生成单位时，会直接生成失败。公开的积分规则页只说明规则，**不是余额查询页**，不能拿它替代产品内的积分明细。
 
 ## 语音合成（TTS）
 
@@ -70,3 +101,14 @@ name: "Free Generation APIs"
 - Cloudflare Workers AI 定价（每天 10,000 Neurons，覆盖文生图模型）：https://developers.cloudflare.com/workers-ai/platform/pricing
 - 知乎：免费 AI 生图工具实测（"无限免费"类站点的线索来源，未核实条款）：https://zhuanlan.zhihu.com/p/2053535282918691138?utm_medium=openapi_platform&utm_source=b38f6831b176
 - 知乎：TTS 旁白选型与各家免费字符额度（线索来源，数字需回官方页核对）：https://zhuanlan.zhihu.com/p/2106968548753068288?utm_medium=openapi_platform&utm_source=b38f6831b176
+- 火山方舟模型列表（Seedance 2.0/2.5 模型与能力，免费额度列不含视频）：https://www.volcengine.com/docs/82379/1554682
+- 火山方舟免费额度（文本、图像、语音、向量与联网插件，未列视频生成）：https://www.volcengine.com/product/ark
+- Seedance 2.0 系列资源包使用规则（开通条件与抵扣范围）：https://www.volcengine.com/docs/82379/2191775?lang=zh
+- 即梦AI 积分规则（每日免费积分/额度、当日 24:00 清零、网页端限制）：https://lf26-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/dreamina/bbb8a810-1fd5-4962-a24a-9b01acd3dec4.html
+- 即梦AI Seedance 2.5（支持试用积分体验）：https://jimeng.jianying.com/tools/seedance-2-5
+- 即梦AI 会员与新人积分（新用户任务最高 235 积分、14 天有效）：https://jimeng.jianying.com/tools/jimeng-monthly-membership
+- Dreamina 免费积分 FAQ（免费用户每天 120 积分、按配置扣、Seedance 2.5 4–30 秒）：https://dreamina.capcut.com/ai-video/free-image-to-video-generator-credits-faq
+- 豆包积分规则（每日 80–150 积分、视频每秒 2–10 积分、积分查询说明）：https://www.doubao.com/legal/credit/pc/rule
+- 豆包付费服务协议（订阅与额度管理、网页端豆包订阅查询路径）：https://www.doubao.com/legal/ey01
+- 豆包个人订阅帮助（免费版每日体验次数、付费版共享额度池）：https://www.doubao.com/work/docs/zh-cn/articles/672868468340-personal-subscription
+- 字节跳动 Seed：Seedance 2.0 已上线豆包等平台：https://research.doubao.com/zh/blog/official-launch-of-seedance-2-0

@@ -16,11 +16,12 @@
 - **front matter**：每个 md 顶部四字段 `description` / `描述` / `name` / `名称`，值用双引号。
 - **节点不互链也不互引**：每份文档自足陈述，不提及其他节点——不放相对链接，不写 `> 相关：…` 引用行，也不写「见某某节点」的文字点名。层级由目录结构表达。
 - **子节点**：子节点放在父节点目录下继续嵌套，层级不限；父文档不列子节点链接表。
+- **词项链接**：每个节点目录的 `links.csv` 记录“本页正文出现的词 → 另一个节点对象”，只作对象级索引，不写进正文；它不改变文档自足与不互引规则。
 - **工具目录例外**：`skills/` 目录存放可直接加载的 agent 技能，属工具文件而非知识节点，不适用四字段 front matter 与同名 md 规则，也不在知识文档里登记。
 
 ## 一致性巡检
 
-- `skills/kb-tree/scripts/lint.py` 检查结构、front matter、跨节点引用、操作痕迹、可疑数字、跨页重复断言与 `questions.jsonl` 字段。
+- `skills/kb-tree/scripts/lint.py` 检查结构、front matter、跨节点引用、操作痕迹、可疑数字、跨页重复断言、`questions.jsonl` 字段与 `links.csv` 词项链接。
 - 用法：`python3 skills/kb-tree/scripts/lint.py trees/computer/ai/agent`，`--strict` 时警告也判失败。
 - 错误（E）必须修；警告（W）逐条判断——论文引用的数字可以保留，自己估的数要么标成判断、要么删掉。
 - 数字警告逐条判断后，把核对结论写进 `skills/kb-tree/references/number-sources.json`（路径 + 页面上的原始数字 + 核对来源），巡检即不再报该数字；没把握核实的不要登记，改写成定性表述。

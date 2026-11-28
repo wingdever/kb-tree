@@ -1,0 +1,5 @@
+term,target
+Anthropic 工作流模式,trees/computer/ai/agent/architecture/patterns/anthropic
+状态机与 DAG,trees/computer/ai/agent/architecture/patterns/stategraph
+自我修正族,trees/computer/ai/agent/architecture/patterns/self-correct
+树搜索,trees/computer/ai/agent/architecture/patterns/tree-search

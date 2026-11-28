@@ -1,0 +1,3 @@
+term,target
+切块策略,trees/computer/ai/rag/chunking
+嵌入模型,trees/computer/ai/rag/embedding

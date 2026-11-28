@@ -1,0 +1,3 @@
+term,target
+Anthropic 兼容,trees/computer/ai/api/deepseek/anthropic
+上下文缓存,trees/computer/ai/api/deepseek/kv-cache
