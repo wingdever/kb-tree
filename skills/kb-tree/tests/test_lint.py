@@ -54,6 +54,11 @@ class LintTest(unittest.TestCase):
     def set_links(self, body):
         (self.demo / "links.csv").write_text("term,target\n" + body, encoding="utf-8")
 
+    def set_list(self, body):
+        (self.demo / "demo.list.csv").write_text(
+            "name,group,source,url,note\n" + body, encoding="utf-8"
+        )
+
     def run_lint(self):
         return subprocess.run(
             [sys.executable, str(LINT), str(self.demo)],
@@ -93,6 +98,22 @@ class LintTest(unittest.TestCase):
             encoding="utf-8",
         )
         self.assert_lint_error("section")
+
+    def test_valid_list_csv_passes(self):
+        self.set_list("示例教程,示例分组,示例机构,https://example.com,一条说明\n")
+        proc = self.run_lint()
+        self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
+
+    def test_list_url_must_be_http(self):
+        self.set_list("示例教程,示例分组,示例机构,example.com,一条说明\n")
+        self.assert_lint_error("url 必须以")
+
+    def test_list_name_must_be_unique(self):
+        self.set_list(
+            "示例教程,示例分组,示例机构,https://example.com,一条说明\n"
+            "示例教程,示例分组,示例机构,https://example.org,另一条\n"
+        )
+        self.assert_lint_error("name 重复")
 
 
 if __name__ == "__main__":

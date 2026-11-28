@@ -369,6 +369,51 @@ OBJ_ENUM = {
     "volatility": {"high", "medium", "low"},
 }
 
+LIST_HEADER = ("name", "group", "source", "url", "note")
+
+
+def check_lists(root):
+    files = 0
+    total = 0
+    for fp in sorted(glob.glob(os.path.join(root, "**", "*.list.csv"), recursive=True)):
+        files += 1
+        d = os.path.dirname(fp)
+        expected = os.path.basename(d) + ".list.csv"
+        if os.path.basename(fp) != expected:
+            err(fp, f"文件名应为 {expected}")
+        try:
+            with open(fp, encoding="utf-8", newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    err(fp, "空文件，缺表头 name,group,source,url,note")
+                    continue
+                header[0] = header[0].lstrip("\ufeff")
+                if [x.strip() for x in header] != list(LIST_HEADER):
+                    err(fp, f"表头应为 {','.join(LIST_HEADER)}，实际为 {header}")
+                    continue
+                seen = set()
+                for lineno, row in enumerate(reader, 2):
+                    if not row or all(not x.strip() for x in row):
+                        continue
+                    total += 1
+                    if len(row) != 5:
+                        err(fp, f"应为 5 列，实际 {len(row)} 列", lineno)
+                        continue
+                    name, group, source, url, note = [x.strip() for x in row]
+                    for key, val in (("name", name), ("group", group), ("source", source), ("url", url)):
+                        if not val:
+                            err(fp, f"{key} 不能为空", lineno)
+                    if url and not re.match(r"^https?://", url):
+                        err(fp, "url 必须以 http:// 或 https:// 开头", lineno)
+                    if name in seen:
+                        err(fp, f"name 重复: {name}", lineno)
+                    else:
+                        seen.add(name)
+        except (OSError, csv.Error) as e:
+            err(fp, f"读清单 CSV 失败: {e}")
+    return files, total
+
 
 def check_objects(mds):
     for md in mds:
@@ -477,10 +522,11 @@ def main():
     check_duplicates(mds)
     check_objects(mds)
     nlink_files, nlinks = check_links(root, mds)
+    nlist_files, nlists = check_lists(root)
     missing_q = check_questions_coverage(mds, args.coverage)
     nfiles, nq = check_questions(root)
 
-    print(f"节点 md={len(mds)}  questions 文件={nfiles} 条目={nq}  links 文件={nlink_files} 条目={nlinks}  覆盖 {len(mds)-missing_q}/{len(mds)}")
+    print(f"节点 md={len(mds)}  questions 文件={nfiles} 条目={nq}  links 文件={nlink_files} 条目={nlinks}  list 文件={nlist_files} 条目={nlists}  覆盖 {len(mds)-missing_q}/{len(mds)}")
     print(f"错误 {len(errors)}  警告 {len(warns)}")
     for p, ln, msg in errors:
         print(f"  E {os.path.relpath(p, root) if os.path.isabs(p) else p}:{ln or ''} {msg}")

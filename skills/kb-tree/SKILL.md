@@ -98,6 +98,22 @@ description: 按树状知识树规范构建/扩展离线学习资料库（如 ag
 
 编写或校验时，用 Read 打开 `${CODEBUDDY_SKILL_DIR}/references/links-csv.md`，按字段、路径与校验规则执行。巡检脚本会检查文件存在性、表头、目标节点、自指、词是否出现在正文，以及重复项。
 
+## 附属清单 list.csv
+
+每个节点目录可放一份 `<节点名>.list.csv`，承载本节点里**可枚举的条目**（教程、工具、厂商、API、论文、产品等），一行一个，像填表一样维护。它是 C 层附属文件，不是知识节点，不套四字段 front matter；缺失合法。
+
+表头固定为 `name,group,source,url,note`：
+
+- `name`：条目名称，同一文件内唯一。
+- `group`：本页定义的分组，通常三到六组。
+- `source`：提供方/作者/维护方。
+- `url`：直达链接，必须 `http://` 或 `https://`。
+- `note`：一句话说明，可留空。
+
+正文只保留定义、分类、选择判断与常见坑，不再重复整张表；清单负责“有哪些、在哪、是什么”。条目增删直接改 CSV，不改 Markdown 表格。
+
+编写或校验时，用 Read 打开 `${CODEBUDDY_SKILL_DIR}/references/list-csv.md`。巡检脚本会检查文件名、表头、列数、必填字段、URL 协议与重名。
+
 ## 来源标注
 
 引入、抓取、迁移或融合资料时，一律交代来源。区分的是**交代什么**，不是**是否交代**。
@@ -196,4 +212,5 @@ name: "English Full Name"
 - [ ] `questions.jsonl`（若有）每行可解析、字段齐全，`section` 与同级同名 md 的 H2/H3 标题逐字一致。
 - [ ] `object.json`（若有）三轴取值在枚举内，一个节点一个三元组，`canonical` 与 md 所述对象一致。
 - [ ] 每个节点都有 `links.csv`，表头为 `term,target`；单个词或词形组至少一个词形能在正文找到，目标节点存在且不是自己。
+- [ ] 清单型节点若有 `<节点名>.list.csv`，表头为 `name,group,source,url,note`，一行一个条目，`name` 不重复，`url` 为 http(s)。
 - [ ] 同一问题全树只有一个 `primary`，每条 `perspective` 都有 `owner` 且路径存在。

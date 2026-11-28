@@ -1,0 +1,54 @@
+name,group,source,url,note
+OpenAI Agents SDK — Python Quickstart,官方 SDK 与平台快速入门,OpenAI,https://openai.github.io/openai-agents-python/quickstart/,第一个文本 Agent，加工具、会话与追踪
+OpenAI Agents SDK — TypeScript Quickstart,官方 SDK 与平台快速入门,OpenAI,https://openai.github.io/openai-agents-js/quickstart/,用 TypeScript 跑通 Agent 与工具循环
+OpenAI Agents SDK — Examples,官方 SDK 与平台快速入门,OpenAI,https://github.com/openai/openai-agents-python/tree/main/examples,handoff、guardrail、session、sandbox、voice 等完整示例
+Claude Agent SDK — Quickstart,官方 SDK 与平台快速入门,Anthropic,https://code.claude.com/docs/en/agent-sdk/quickstart,一个能读代码、找 bug 并修复的编码 Agent
+Google ADK — Python Quickstart,官方 SDK 与平台快速入门,Google,https://google.github.io/adk-docs/get-started/python/,多工具 Agent，本地 CLI 与 Dev UI
+Google ADK — Multi-tool Quickstart,官方 SDK 与平台快速入门,Google,https://google.github.io/adk-docs/get-started/quickstart/,多语言入口，最小 Agent + 工具
+Google Codelab — Building AI Agents with ADK,官方 SDK 与平台快速入门,Google,https://codelabs.developers.google.com/devsite/codelabs/build-agents-with-adk-foundation,跟着 Cloud Shell 一步步做出个人助理
+Microsoft Agent Framework — Your First Agent,官方 SDK 与平台快速入门,Microsoft,https://learn.microsoft.com/en-us/agent-framework/get-started/your-first-agent,第一个 Agent，再逐步加工具、会话、记忆、工作流
+Microsoft AI Agents for Beginners,官方 SDK 与平台快速入门,Microsoft,https://github.com/microsoft/ai-agents-for-beginners,多课代码样例，覆盖工具、规划、多 Agent、RAG、MCP
+Semantic Kernel — Quickstart,官方 SDK 与平台快速入门,Microsoft,https://learn.microsoft.com/en-us/semantic-kernel/get-started/quick-start-guide,用插件与 Agent 抽象做出可调用工具的 Agent
+AutoGen — AgentChat Tutorial,官方 SDK 与平台快速入门,Microsoft,https://microsoft.github.io/autogen/stable/,双 Agent 对话、群聊、代码执行与 MCP 工具
+Amazon Bedrock Agents — Create Agent,官方 SDK 与平台快速入门,AWS,https://docs.aws.amazon.com/bedrock/latest/userguide/agents-create.html,配置模型、动作组与知识库的托管 Agent
+Amazon Bedrock AgentCore — CLI Quickstart,官方 SDK 与平台快速入门,AWS,https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-get-started-cli.html,脚手架、本地测试、部署并调用云端 Agent
+Microsoft Foundry — Prompt Agent Quickstart,官方 SDK 与平台快速入门,Microsoft,https://learn.microsoft.com/en-us/azure/ai-foundry/agents/quickstarts/prompt-agent,在 Foundry 创建带指令与工具的托管 Agent
+Vercel AI SDK — Agents Guide,官方 SDK 与平台快速入门,Vercel,https://vercel.com/docs/agents,用 TypeScript 写工具循环并部署为 API
+Cloudflare Agents — First Durable Agent,官方 SDK 与平台快速入门,Cloudflare,https://developers.cloudflare.com/agents/getting-started/quick-start/,跑在 Durable Object 上的持久化 Agent
+Letta — Quickstart,官方 SDK 与平台快速入门,Letta,https://docs.letta.com/quickstart,带长期记忆的 Agent，云端或本地 CLI
+Mastra — Run Your First Agent,官方 SDK 与平台快速入门,Mastra,https://mastra.ai/learn/run-your-first-agent,完整项目脚手架、Studio 调试与工具
+LangChain — Agents,框架官方教程,LangChain,https://docs.langchain.com/oss/python/langchain/agents,用 `create_agent` 做工具调用、middleware、结构化输出
+LangGraph — Introduction,框架官方教程,LangChain Academy,https://academy.langchain.com/courses/intro-to-langgraph,从手写循环过渡到状态图、记忆、human-in-the-loop、部署
+LangGraph — Essentials,框架官方教程,LangChain Academy,https://academy.langchain.com/courses/langgraph-essentials-python,节点、边、条件边、记忆与 interrupt 的最小闭环
+LangSmith — Essentials,框架官方教程,LangChain Academy,https://academy.langchain.com/courses/langsmith-essentials,追踪、数据集、评估与回归
+LlamaIndex — Starter Tutorial,框架官方教程,LlamaIndex,https://developers.llamaindex.ai/python/framework/getting_started/starter_example_local/,用本地模型做计算器 Agent，再加 RAG
+LlamaIndex — Building an Agent,框架官方教程,LlamaIndex,https://developers.llamaindex.ai/python/framework/understanding/agent/,FunctionAgent、工具调用与多 Agent 入口
+CrewAI — Quickstart,框架官方教程,CrewAI,https://docs.crewai.com/en/quickstart,角色化 Crew + Flow 的完整项目
+PydanticAI — Agents,框架官方教程,Pydantic,https://ai.pydantic.dev/,类型安全、依赖注入、结构化输出的 Agent
+smolagents — Guided Tour,框架官方教程,Hugging Face,https://huggingface.co/docs/smolagents/guided_tour,CodeAgent、工具调用与多 Agent 管理
+Agno — Setup and Quickstart,框架官方教程,Agno,https://docs.agno.com/sdk/setup,带知识库、记忆与 AgentOS 服务的 Agent
+AI Agents Course,系统课程,Hugging Face,https://huggingface.co/learn/agents-course/en/unit0/introduction,从基础到 smolagents / LlamaIndex / LangGraph，含练习与证书
+Agentic AI,系统课程,DeepLearning.AI,https://www.deeplearning.ai/courses/agentic-ai/,Andrew Ng 讲反思、工具、规划、多 Agent 与评估
+AI Agents in LangGraph,系统课程,DeepLearning.AI,https://www.deeplearning.ai/courses/ai-agents-in-langgraph,手写 Agent 再用 LangGraph 重构，含持久化与 Agentic Search
+Multi AI Agent Systems with crewAI,系统课程,DeepLearning.AI,https://www.deeplearning.ai/courses/multi-ai-agent-systems-with-crewai/,角色分工、任务委派与 Crew 协作
+AI Agentic Design Patterns with AutoGen,系统课程,DeepLearning.AI,https://www.deeplearning.ai/courses/ai-agentic-design-patterns-with-autogen/,反思、工具、规划、多 Agent 等模式的 AutoGen 实现
+Building Agentic RAG with LlamaIndex,系统课程,DeepLearning.AI,https://www.deeplearning.ai/courses/building-agentic-rag-with-llamaindex/,检索、路由、工具调用与 Agentic RAG
+"Functions, Tools and Agents with LangChain",系统课程,DeepLearning.AI,https://www.deeplearning.ai/courses/functions-tools-agents-langchain/,function calling、工具、输出解析与对话循环
+Generative AI for Beginners,系统课程,Microsoft,https://github.com/microsoft/generative-ai-for-beginners,生成式 AI 基础，含 Agent 相关课节
+Claude Academy,系统课程,Anthropic,https://www.anthropic.com/learn,Claude、Claude Code、工具使用、MCP、skills 的官方课
+MCP for Beginners,系统课程,Microsoft,https://github.com/microsoft/mcp-for-beginners,跨语言 MCP 课程，覆盖服务器、客户端、安全与部署
+MCP Course,系统课程,Hugging Face,https://huggingface.co/learn/mcp-course/unit0/introduction,从协议到端到端应用，含练习与证书
+Open Source LLM Agent Handbook,系统课程,freeCodeCamp,https://www.freecodecamp.org/news/the-open-source-llm-agent-handbook/,免费文字教程：Agent 循环、LangGraph、CrewAI
+Hello-Agents《从零开始构建智能体》,中文与开源实战,Datawhale,https://github.com/datawhalechina/hello-agents,原理、经典范式、上下文与记忆、多 Agent、实战案例
+AgentBook《深入理解 AI Agent》,中文与开源实战,李博杰,https://github.com/bojieli/ai-agent-book,原则驱动，10 章 + 实验，强调 `Agent = LLM + 上下文 + 工具`
+ai-agents-from-zero,中文与开源实战,didilili,https://github.com/didilili/ai-agents-from-zero,从提示词到企业级 RAG / Agent，含面试题库与案例
+Deep Agents in Action,中文与开源实战,Datawhale,https://github.com/datawhalechina/deepagents-in-action,基于 LangGraph / Deep Agents：harness、上下文、子 Agent、Skills、HITL
+Claude Code Book《御舆》,中文与开源实战,lintsinghua,https://github.com/lintsinghua/claude-code-book,从对话循环到自建 harness，拆解真实编码 Agent
+Harness Books,中文与开源实战,wquguru,https://github.com/wquguru/harness-books,约束、查询循环、上下文治理、多 Agent 验证
+Agent Rules Books,中文与开源实战,ciembor,https://github.com/ciembor/agent-rules-books,把 Clean Code / DDD / Clean Architecture 写成 AGENTS.md 规则
+Machine Learning Systems,中文与开源实战,Harvard Edge,https://github.com/harvard-edge/cs249r_book,含 Agentic AI 与 Physical AI 卷的系统教材
+Realtime Agents Quickstart,专题与进阶,OpenAI,https://openai.github.io/openai-agents-python/realtime/quickstart/,低延迟语音 Agent、打断与实时工具调用
+Voice Pipeline Quickstart,专题与进阶,OpenAI,https://openai.github.io/openai-agents-python/voice/quickstart/,STT → Agent → TTS 的语音流水线
+12-Factor Agents,专题与进阶,HumanLayer,https://github.com/humanlayer/12-factor-agents,生产 Agent 的十二条工程原则，适合对照自己的 harness
+OpenAI Cookbook,专题与进阶,OpenAI,https://cookbook.openai.com/,官方示例集：工具、RAG、评估、多 Agent、微调
+Anthropic Cookbook,专题与进阶,Anthropic,https://github.com/anthropics/claude-cookbooks,Claude 工具调用、检索、Agent 与评估 notebook
