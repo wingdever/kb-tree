@@ -1,0 +1,122 @@
+name,group,source,url,note
+AI 研究员,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,探索新模型、新方法、新能力
+大模型算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,预训练、继续训练与模型结构
+LLM 预训练工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,大规模语料与训练稳定性
+后训练工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,指令微调、偏好对齐与能力强化
+对齐研究员,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,RLHF、RLAIF 与价值观对齐
+强化学习研究员,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,奖励设计、策略优化与环境构建
+多模态算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,文本、图像、音频、视频联合建模
+视觉算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,检测、分割、识别与生成
+语音算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,ASR、TTS、语音理解与对话
+NLP 算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,语言理解、抽取、生成与检索
+推荐算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,召回、排序与用户建模
+搜索算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,索引、检索、排序与查询理解
+生成模型算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,扩散、自回归与可控生成
+具身智能算法工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,感知、规划与动作策略
+AI4Science 研究员,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,用 AI 做生物、材料、化学等科研
+模型压缩工程师,研究与算法,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,剪枝、量化、蒸馏与加速
+AI 数据工程师,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,采集、清洗、构建训练与评测数据
+数据标注员,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,按规范标注文本、图像、语音与视频
+标注质检员,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,抽检标注质量与一致性
+AI 训练师,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,写示范、修回答、调模型行为
+数据治理专员,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,数据资产、权限、血缘与合规
+数据策略经理,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,定义采什么、怎么用、如何评估
+合成数据工程师,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,用模型或规则生成训练数据
+具身数据采集员,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,采集真实动作、轨迹与场景数据
+语料工程师,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,构建领域语料与清洗流水线
+AI 数据运营,数据与标注,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,维护数据集版本与使用反馈
+AI Infra 工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,训练/推理基础设施与平台
+分布式训练工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,多机多卡并行与通信优化
+GPU 集群工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,集群调度、故障与性能
+推理优化工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,吞吐、延迟、显存与批处理
+模型编译工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,图优化、算子融合与编译后端
+算子开发工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,GPU/NPU 算子实现与调优
+AI 芯片软件工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,芯片驱动、运行时与工具链
+高性能计算工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,HPC 集群、网络与存储
+AI 存储工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,训练数据与检查点存储
+AI 网络工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,RDMA、集群网络与拥塞控制
+算力调度工程师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,配额、队列、优先级与成本
+模型服务架构师,AI 基础设施,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,推理服务与弹性伸缩架构
+MLOps 工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,模型交付流水线与运行治理
+模型部署工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,把模型变成稳定服务
+推理服务工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,在线推理接口与性能
+AI 平台工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,模型平台、工具与工作台
+模型运维工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,线上模型监控与故障处理
+AI 可观测性工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,追踪、指标、日志与归因
+模型版本工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,版本、灰度、回滚与发布
+AI 性能测试工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,压测、基准与容量规划
+AI 成本工程师,MLOps 与部署,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,token、算力与调用成本优化
+LLM 应用工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,把模型能力做成可用应用
+AI 应用工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,应用链路、接口与产品集成
+Agent 开发工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,循环、工具、记忆与任务编排
+Agent 平台工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,运行时、工具注册与多租户
+RAG 工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,摄取、切块、检索、重排与引用
+Prompt 工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,提示设计、结构化输出与调优
+AI 工具链工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,工具定义、调用与结果契约
+AI 工作流工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,确定性流程与节点编排
+AI 插件工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,外部系统接入与插件开发
+AI 后端工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,模型服务、队列、存储与权限
+AI 前端工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,对话、流式输出与可视化
+AI 全栈工程师,应用与 Agent,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,从界面到模型服务的完整链路
+AI 产品经理,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,场景、需求、验收与商业闭环
+AI 产品负责人,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,产品方向、团队与资源
+AI 解决方案架构师,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,客户问题到技术方案的翻译
+AI 解决方案经理,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,方案包装、投标与交付边界
+AI 售前工程师,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,演示、答疑与技术信任
+AI UX 设计师,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,对话与智能交互体验
+AI 交互设计师,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,多轮流程、状态与反馈
+AI 视觉设计师,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,界面、图标与生成内容视觉
+AI 内容设计师,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,模板、示例与内容策略
+AI 产品运营,产品与设计,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,增长、留存、反馈与活动
+AI 评测工程师,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,评测集、指标、回归与失败分析
+模型对齐工程师,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,行为规范、偏好数据与对齐训练
+AI 红队工程师,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,对抗测试、越狱与风险发现
+AI 安全工程师,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,提示注入、权限与工具安全
+AI 合规经理,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,数据、算法与生成内容合规
+AI 伦理研究员,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,伦理风险、偏见与社会影响
+AI 可解释性研究员,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,解释模型行为与决策依据
+模型审计师,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,模型来源、数据与风险审计
+数据隐私工程师,评测、安全与合规,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,脱敏、最小化与隐私计算
+机器人算法工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,感知、规划与决策
+运动控制工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,关节控制、轨迹与稳定性
+SLAM 工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,定位、建图与导航
+机器人仿真工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,仿真环境、物理与数据生成
+机器人感知工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,视觉、力觉与多传感器融合
+具身数据采集工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,真实场景数据采集与标注
+遥操作工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,远程操控与示教数据
+机器人部署工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,现场部署、调试与运维
+自动驾驶算法工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,感知、预测、规划与控制
+自动驾驶系统工程师,机器人与具身智能,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,车载系统、安全与集成
+医疗 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,影像、病历、临床与合规
+金融 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,风控、投研、客服与审计
+法律 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,合同、检索、文书与合规
+教育 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,自适应学习、批改与教研
+工业 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,质检、预测性维护与工艺
+农业 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,遥感、病虫害与农机
+能源 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,负荷预测、巡检与调度
+零售 AI 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,选品、推荐、库存与门店
+AIGC 工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,文生图、文生视频与内容管线
+数字人工程师,行业应用,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,形象、驱动、语音与交互
+AI 实施工程师,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,部署、配置、数据接入与验收
+AI 客户成功经理,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,上线后使用与续约
+AI 技术支持工程师,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,故障排查与客户答疑
+AI 咨询顾问,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,诊断、路线图与组织转型
+AI 增长运营,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,获客、转化与留存
+AI 销售经理,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,商机、方案与签约
+AI 渠道经理,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,伙伴、代理与生态
+AI 项目经理,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,范围、进度、风险与交付
+AI 交付经理,交付与商业化,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,多项目交付与资源协调
+AIGC 创作者,内容与创意,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,用生成工具做图文与多媒体
+AI 视频制作,内容与创意,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,脚本、生成、剪辑与后期
+AI 音频制作,内容与创意,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,配音、音乐与声音设计
+AI 美术师,内容与创意,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,概念、插画与资产
+AI 编剧,内容与创意,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,故事、分镜与提示设计
+AI 内容审核,内容与创意,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,合规、质量与风险审核
+AI 内容运营,内容与创意,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,选题、分发与数据复盘
+AI 技术负责人,组织与管理,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,技术方向、架构与团队
+AI 研发经理,组织与管理,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,研发团队与交付
+AI 产品总监,组织与管理,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,产品组合与商业结果
+AI 创新负责人,组织与管理,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,创新项目与跨部门推动
+AI 转型顾问,组织与管理,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,企业 AI 转型路径
+AI 团队负责人,组织与管理,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,小团队目标与产出
+AI 项目群经理,组织与管理,AI 行业岗位族（综合公开招聘口径）,https://www.linkedin.com/jobs/artificial-intelligence-jobs/,跨团队项目推进
