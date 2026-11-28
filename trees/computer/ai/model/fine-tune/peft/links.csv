@@ -1,0 +1,8 @@
+term,target
+全参数微调,trees/computer/ai/model/fine-tune/full
+SFT,trees/computer/ai/model/fine-tune/sft
+微调数据,trees/computer/ai/model/fine-tune/data
+偏好对齐,trees/computer/ai/model/fine-tune/preference
+微调评估,trees/computer/ai/model/fine-tune/eval
+部署,trees/computer/ai/model/fine-tune/serving
+治理,trees/computer/ai/model/fine-tune/governance

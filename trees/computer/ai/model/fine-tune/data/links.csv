@@ -1,0 +1,5 @@
+term,target
+SFT,trees/computer/ai/model/fine-tune/sft
+偏好对齐,trees/computer/ai/model/fine-tune/preference
+评测,trees/computer/ai/model/fine-tune/eval
+许可证,trees/computer/ai/model/fine-tune/governance

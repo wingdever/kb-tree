@@ -1,5 +1,0 @@
-term,target
-SFT,trees/computer/ai/model/peft/sft
-偏好对齐,trees/computer/ai/model/peft/preference
-评测,trees/computer/ai/model/peft/eval
-许可证,trees/computer/ai/model/peft/governance

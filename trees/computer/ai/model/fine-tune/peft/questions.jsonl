@@ -1,5 +1,5 @@
 {"q": "Prompt、RAG、SFT 该怎么选？", "section": "Prompt / RAG / SFT 决策", "aliases": ["提示词 还是 微调", "RAG 和 SFT 区别"]}
-{"q": "微调工程除了 LoRA 还包含哪些环节？", "section": "微调工程不止 LoRA", "aliases": ["微调 全流程", "微调 数据 评估 部署"]}
+{"q": "PEFT 在微调中处于什么位置？", "section": "PEFT 在微调中的位置", "aliases": ["PEFT 是微调吗", "PEFT 和全参微调"]}
 {"q": "全参数微调和 PEFT 的差别在哪？", "section": "全参数微调 vs PEFT", "aliases": ["全参微调 成本", "PEFT 优势"]}
 {"q": "LoRA 的原理是什么？", "section": "LoRA 原理", "aliases": ["低秩分解", "LoRA 秩 选择"]}
 {"q": "QLoRA 怎么在消费级显卡上微调大模型？", "section": "QLoRA：消费级 GPU 微调大模型", "aliases": ["4bit 微调", "QLoRA 显存"]}

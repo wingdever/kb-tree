@@ -1,0 +1,4 @@
+term,target
+SFT,trees/computer/ai/model/fine-tune/sft
+偏好数据,trees/computer/ai/model/fine-tune/data
+评估,trees/computer/ai/model/fine-tune/eval

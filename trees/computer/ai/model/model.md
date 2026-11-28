@@ -7,11 +7,11 @@ name: "Model Engineering"
 
 # 模型工程知识树
 
-本目录覆盖模型本身的全链路：从分词、预训练、并行训练、微调对齐、distill压缩，到推理部署与eval，以及multimodal与rl。每个知识点自成一个目录。
+本目录覆盖模型本身的全链路：从分词、预训练、并行训练、微调（含 PEFT）、偏好对齐、distill压缩，到推理部署与eval，以及multimodal与rl。每个知识点自成一个目录。
 
 ## 建议顺序
 
-造模型全链路：tokenizer → pretrain → distributed → peft → distill → inference。选型与eval：eval → inference。理论基础：rl → peft 的偏好对齐部分。multimodal独立成篇。
+造模型全链路：tokenizer → pretrain → distributed → fine-tune → distill → inference。选型与eval：eval → inference。理论基础：rl → fine-tune 的偏好对齐部分。multimodal独立成篇。
 
 ## 与其他领域的关系
 

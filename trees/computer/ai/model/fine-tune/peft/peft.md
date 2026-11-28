@@ -1,15 +1,15 @@
 ---
-description: "Fine-tuning pipeline: full tuning, SFT, data, preference alignment, evaluation, serving and governance, plus LoRA/QLoRA/DoRA"
-描述: "微调工程：全参、SFT、数据、偏好对齐、评估、部署与治理，附 LoRA/QLoRA/DoRA"
-name: "Fine-Tuning and PEFT"
-名称: "微调与 PEFT"
+description: "Parameter-efficient fine-tuning: LoRA/QLoRA/DoRA, training configs and pitfalls"
+描述: "PEFT 参数高效微调：LoRA/QLoRA/DoRA、训练配置与常见坑"
+name: "PEFT"
+名称: "PEFT 参数高效微调"
 ---
 
-# 微调与 PEFT
+# PEFT 参数高效微调
 
-## 微调工程不止 LoRA
+## PEFT 在微调中的位置
 
-微调工程不止 LoRA 参数：全参数微调、SFT、微调数据、偏好对齐、微调评估、合并部署以及成本与合规，各自都是独立问题。参数高效方法只是其中一层。
+PEFT 是微调的一种：冻结主干、只训练少量参数，用较低显存把模型拉到任务行为上。它不覆盖全参数微调，也不替代微调数据、SFT、偏好对齐、微调评估、部署与治理。
 
 ## Prompt / RAG / SFT 决策
 

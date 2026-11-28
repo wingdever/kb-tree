@@ -1,0 +1,4 @@
+term,target
+PEFT,trees/computer/ai/model/fine-tune/peft
+数据,trees/computer/ai/model/fine-tune/data
+评测,trees/computer/ai/model/fine-tune/eval
