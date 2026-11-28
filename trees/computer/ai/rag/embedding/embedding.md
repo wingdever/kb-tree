@@ -11,6 +11,10 @@ name: "Embedding Models"
 
 本主题已拆成 3 个子知识点目录，每个自成一个目录、目录内放同名 md。
 
+## 一句话主线
+
+先选对语义坐标系，再谈索引参数；模型换一代，检索上限才可能换一层。
+
 ## 参考资料
 
 - Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks：https://arxiv.org/abs/1908.10084

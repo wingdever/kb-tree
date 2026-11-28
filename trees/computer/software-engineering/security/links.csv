@@ -1,1 +1,7 @@
 term,target
+主机入侵,trees/computer/software-engineering/security/host-intrusion
+凭证卫生,trees/computer/software-engineering/security/credential-hygiene
+自启面,trees/computer/software-engineering/security/persistence-surface
+完整性基线,trees/computer/software-engineering/security/integrity-baseline
+主机自我巡检,trees/computer/software-engineering/security/host-self-audit
+运行期护栏,trees/computer/software-engineering/security/runtime-guardrails
