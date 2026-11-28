@@ -65,6 +65,10 @@ name: "Agent Tool Design"
 
 上架即校验（fail-closed）：缺契约、名字对不上、描述空/过短、无 examples 都在注册阶段失败；生产/CI 开 `require_contract` 模式。
 
+## C 端 Agent 作为工具
+
+有些工具不是函数，而是另一个 C 端 Agent：它能规划、改代码、跑命令，通过 CLI、Agent SDK 或 OpenAPI 暴露能力。接它时要按“外部 Agent”而不是“函数”设计：会话、流式事件、工作区、配额、取消与产物回收都要进契约。
+
 ## 常见反模式
 
 - **God Tool**：一个工具通过 `action` 参数做所有事——难安全使用、难测试、逼模型理解内部 API。

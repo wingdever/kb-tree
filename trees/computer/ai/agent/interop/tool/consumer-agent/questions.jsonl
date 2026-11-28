@@ -1,0 +1,6 @@
+{"q": "C 端 coding agent 能不能接进自己的 Agent？", "section": "四种入口"}
+{"q": "接 C 端 Agent 有哪几种官方入口？", "section": "四种入口"}
+{"q": "CodeBuddy 和 WorkBuddy 这类产品具体怎么接？", "section": "具体到 WorkBuddy / CodeBuddy"}
+{"q": "为什么免费额度不等于 API 配额？", "section": "免费额度的真实边界"}
+{"q": "接入外部 Agent 要定义哪些契约？", "section": "推荐接入契约"}
+{"q": "什么情况下不该接 C 端 Agent？", "section": "什么时候不该接"}

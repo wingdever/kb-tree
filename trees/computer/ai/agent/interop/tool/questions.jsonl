@@ -1,3 +1,4 @@
+{"q": "C 端 Agent 作为工具要设计什么？", "section": "C 端 Agent 作为工具", "aliases": ["外部 Agent 接入 契约"]}
 {"q": "工具契约应该包含什么？", "section": "工具契约（Tool Contract）", "aliases": ["工具定义要写哪些内容"]}
 {"q": "工具 schema 怎么设计才适合模型填？", "section": "Schema 设计"}
 {"q": "Agent 工具的权限和爆炸半径怎么限？", "section": "权限与爆炸半径"}
