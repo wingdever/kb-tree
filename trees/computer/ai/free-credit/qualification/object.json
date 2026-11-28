@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "资格型额度（学生 / 创业 / 科研 / 开源计划）",
+  "volatility": "high",
+  "verify": "各计划官方页面"
+}

@@ -1,0 +1,4 @@
+{"q": "切块评估的核心原则是什么？", "section": "核心原则", "aliases": ["chunking eval 原则"]}
+{"q": "切块评估集怎么构造？", "section": "评估集长什么样", "aliases": ["chunk 评估集"]}
+{"q": "切块评估看哪四个指标？", "section": "四个关键指标", "aliases": ["chunking 指标", "召回 评估"]}
+{"q": "切块参数怎么做对照实验？", "section": "Sweep 流程（对照实验）", "aliases": ["chunk sweep", "切块 实验"]}

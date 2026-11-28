@@ -1,0 +1,4 @@
+{"q": "OpenAI 函数调用的核心五步是什么？", "section": "核心五步流程", "aliases": ["function calling 五步", "OpenAI 工具 流程"]}
+{"q": "函数怎么定义？", "section": "定义函数（Chat Completions 形态）", "aliases": ["function 定义", "tools 参数"]}
+{"q": "tool_choice 怎么控制？", "section": "tool_choice 控制", "aliases": ["tool_choice", "工具选择"]}
+{"q": "Strict 模式怎么用？", "section": "Strict 模式", "aliases": ["strict function", "严格模式"]}

@@ -1,0 +1,4 @@
+{"q": "为什么召回之后还要重排？", "section": "为什么需要重排", "aliases": ["rerank 必要", "重排 原因"]}
+{"q": "重排器有哪几种类型？", "section": "重排器类型", "aliases": ["reranker 类型"]}
+{"q": "Cross-Encoder 重排的代价是什么？", "section": "Cross-Encoder 深入", "aliases": ["cross encoder", "交叉编码器"]}
+{"q": "什么时候可以跳过重排？", "section": "什么时候跳过重排", "aliases": ["跳过 rerank"]}

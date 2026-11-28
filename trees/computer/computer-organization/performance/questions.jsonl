@@ -1,0 +1,5 @@
+{"q": "性能的基本公式是什么？", "section": "基本公式", "aliases": ["CPU 时间 公式", "性能 = 指令数 CPI 周期"]}
+{"q": "常用性能指标有哪些？", "section": "常用指标", "aliases": ["IPC 主频", "延迟 吞吐"]}
+{"q": "Amdahl 定律怎么算加速比？", "section": "加速比定律", "aliases": ["Amdahl 加速比", "并行 加速"]}
+{"q": "基准测试为什么容易误导？", "section": "基准测试", "aliases": ["benchmark 偏差", "跑分 陷阱"]}
+{"q": "Roofline 模型怎么判断瓶颈？", "section": "Roofline 模型", "aliases": ["Roofline 计算密度", "算力 带宽 瓶颈"]}

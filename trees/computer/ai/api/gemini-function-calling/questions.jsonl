@@ -1,0 +1,4 @@
+{"q": "Gemini 函数调用的核心理念是什么？", "section": "核心理念", "aliases": ["Gemini function calling", "函数调用 理念"]}
+{"q": "FunctionDeclaration 怎么声明？", "section": "声明函数（FunctionDeclaration）", "aliases": ["FunctionDeclaration", "Gemini 声明"]}
+{"q": "functionCall 和 functionResponse 怎么配合？", "section": "functionCall 与 functionResponse", "aliases": ["functionCall", "functionResponse"]}
+{"q": "Gemini 怎么自动执行函数调用？", "section": "Automatic Function Calling（SDK 自动执行）", "aliases": ["自动函数调用", "SDK 自动"]}

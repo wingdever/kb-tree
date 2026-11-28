@@ -1,0 +1,4 @@
+{"q": "Transformer Block 有哪两个子层？", "section": "两个子层", "aliases": ["attention FFN", "Block 子层"]}
+{"q": "残差连接为什么重要？", "section": "残差连接：梯度高速路", "aliases": ["残差", "梯度 消失"]}
+{"q": "归一化放在哪、用哪种？", "section": "归一化：控制尺度", "aliases": ["LayerNorm", "pre norm"]}
+{"q": "Block 的参数量怎么算？", "section": "参数量", "aliases": ["Block 参数", "参数 计算"]}

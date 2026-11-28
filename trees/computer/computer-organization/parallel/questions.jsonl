@@ -1,0 +1,6 @@
+{"q": "Flynn 分类法把并行分成哪几类？", "section": "Flynn 分类法", "aliases": ["SISD SIMD MIMD", "Flynn 分类"]}
+{"q": "SIMD 适合什么类型的计算？", "section": "SIMD", "aliases": ["向量化", "SIMD 指令"]}
+{"q": "多核扩展受什么限制？", "section": "多核与缓存一致性", "aliases": ["多核 扩展性", "一致性 开销"]}
+{"q": "NUMA 和大小核各有什么取舍？", "section": "NUMA 与大小核", "aliases": ["NUMA 延迟", "大小核 调度"]}
+{"q": "GPU 架构为什么适合吞吐型计算？", "section": "GPU 架构", "aliases": ["GPU SM", "SIMT 架构"]}
+{"q": "加速比定律说明什么？", "section": "加速比定律", "aliases": ["Amdahl 定律", "加速比 上限"]}

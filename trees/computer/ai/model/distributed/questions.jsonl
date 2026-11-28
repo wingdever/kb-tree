@@ -1,0 +1,7 @@
+{"q": "训练大模型有哪几种并行维度？", "section": "五种并行维度", "aliases": ["DP TP PP SP EP", "5D 并行"]}
+{"q": "数据并行、ZeRO 和 FSDP 是什么关系？", "section": "数据并行与 ZeRO / FSDP", "aliases": ["ZeRO 分片", "FSDP 原理"]}
+{"q": "张量并行怎么切分模型？", "section": "张量并行（TP）", "aliases": ["TP 切分", "张量并行 通信"]}
+{"q": "流水线并行的气泡问题怎么处理？", "section": "流水线并行（PP）", "aliases": ["PP 气泡", "流水线并行 调度"]}
+{"q": "MoE 为什么要专家并行？", "section": "专家并行（EP，MoE 专用）", "aliases": ["EP 专家并行", "MoE 并行"]}
+{"q": "万卡集群训练不稳定的常见原因是什么？", "section": "训练稳定性：万卡集群的日常", "aliases": ["训练 崩 loss", "万卡 故障"]}
+{"q": "MFU 是什么，怎么判断集群利用率？", "section": "MFU 与前沿集群", "aliases": ["MFU 计算", "集群 利用率"]}

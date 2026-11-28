@@ -1,0 +1,5 @@
+{"q": "预训练的数据管道包含哪些步骤？", "section": "数据管道", "aliases": ["语料 清洗 流程", "预训练 数据 处理"]}
+{"q": "预训练数据该怎么混合、怎么安排课程？", "section": "数据混合与课程", "aliases": ["数据配比", "课程学习 预训练"]}
+{"q": "Scaling Law 和 Chinchilla 说了什么？", "section": "Scaling Law 与 Chinchilla", "aliases": ["缩放定律", "Chinchilla 最优 token"]}
+{"q": "从零预训练一个模型要准备什么？", "section": "从零预训练实操", "aliases": ["小模型 预训练", "预训练 实操"]}
+{"q": "预训练阶段怎么评估模型？", "section": "预训练评估", "aliases": ["预训练 loss 评估", "中间 checkpoint 评测"]}

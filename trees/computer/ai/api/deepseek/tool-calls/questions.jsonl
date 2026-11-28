@@ -1,0 +1,3 @@
+{"q": "tool_calls 的结构是什么？", "section": "tool_calls 结构（OpenAI 兼容）", "aliases": ["tool_calls 字段", "工具调用 结构"]}
+{"q": "对话中间怎么插入工具调用？", "section": "对话中间插入工具调用", "aliases": ["多轮 工具调用", "中间 插入"]}
+{"q": "完整工具调用示例怎么走？", "section": "完整示例（非思考模式）", "aliases": ["tool call 示例", "非思考 模式"]}

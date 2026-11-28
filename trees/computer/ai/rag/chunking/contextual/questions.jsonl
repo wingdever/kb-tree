@@ -1,0 +1,4 @@
+{"q": "Contextual Retrieval 怎么做？", "section": "Contextual Retrieval（Anthropic 2024）", "aliases": ["上下文检索", "contextual chunk"]}
+{"q": "Late Chunking 和普通切块差在哪？", "section": "Late Chunking（Jina 2024）", "aliases": ["late chunking", "后切块"]}
+{"q": "Agentic 和命题切块适合什么？", "section": "Agentic / Propositions 切块", "aliases": ["propositions 切块", "agentic chunking"]}
+{"q": "三种上下文增强怎么取舍？", "section": "三者的取舍", "aliases": ["contextual late chunking 对比", "切块 增强"]}

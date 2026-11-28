@@ -1,0 +1,3 @@
+{"q": "DeepSeek 的 Anthropic 兼容接口怎么映射模型名？", "section": "模型名映射", "aliases": ["DeepSeek Claude 兼容", "模型名 映射"]}
+{"q": "Anthropic 格式的工具字段怎么填？", "section": "工具字段（Anthropic 格式）", "aliases": ["DeepSeek tools 格式", "Anthropic 格式"]}
+{"q": "怎么返回 Anthropic 格式的工具结果？", "section": "返回工具结果（Anthropic 格式）", "aliases": ["tool result Anthropic", "工具结果 格式"]}

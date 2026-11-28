@@ -1,0 +1,3 @@
+{"q": "LLM Wiki 的三层之外还有什么？", "section": "第三层：Schema", "aliases": ["LLM wiki 架构", "raw wiki schema"]}
+{"q": "Raw Sources 和 Wiki 各放什么？", "section": "第二层：Wiki（知识库层，`wiki/`）—— 核心", "aliases": ["wiki 层", "raw 层"]}
+{"q": "三层结构怎么类比编译器？", "section": "三层的编译类比", "aliases": ["wiki 编译 类比"]}

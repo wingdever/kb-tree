@@ -1,0 +1,6 @@
+{"q": "Prompt、RAG、SFT 该怎么选？", "section": "Prompt / RAG / SFT 决策", "aliases": ["提示词 还是 微调", "RAG 和 SFT 区别"]}
+{"q": "全参数微调和 PEFT 的差别在哪？", "section": "全参数微调 vs PEFT", "aliases": ["全参微调 成本", "PEFT 优势"]}
+{"q": "LoRA 的原理是什么？", "section": "LoRA 原理", "aliases": ["低秩分解", "LoRA 秩 选择"]}
+{"q": "QLoRA 怎么在消费级显卡上微调大模型？", "section": "QLoRA：消费级 GPU 微调大模型", "aliases": ["4bit 微调", "QLoRA 显存"]}
+{"q": "LoRA 训练配置有哪些要点？", "section": "训练配置要点", "aliases": ["LoRA 学习率", "target modules"]}
+{"q": "PEFT 微调常见的坑有哪些？", "section": "常见坑", "aliases": ["LoRA 不收敛", "微调 过拟合"]}

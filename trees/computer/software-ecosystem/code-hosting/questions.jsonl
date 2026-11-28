@@ -1,0 +1,5 @@
+{"q": "代码托管平台有哪些谱系？", "section": "平台谱系", "aliases": ["GitHub GitLab Gitee", "代码托管 平台"]}
+{"q": "Agent 接入代码托管的两层 MCP 是什么？", "section": "Agent 接入：两层 MCP", "aliases": ["MCP 代码托管", "Agent 接入 Git"]}
+{"q": "Agent 在代码托管平台上能做什么？", "section": "Agent 能做什么", "aliases": ["Agent 提 PR", "Agent 改代码"]}
+{"q": "Agent 写代码的真正瓶颈在哪？", "section": "治理：Agent 写代码的真正瓶颈", "aliases": ["Agent 代码 治理", "评审 瓶颈"]}
+{"q": "迁移代码托管平台要注意什么成本？", "section": "迁移成本提示", "aliases": ["代码托管 迁移", "迁移 成本"]}

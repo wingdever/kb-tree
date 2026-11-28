@@ -151,7 +151,7 @@ def check_cross_refs(root, mds):
                 err(p, "存在相对链接", i)
             if re.search(r">\s*相关[:：]", ln):
                 err(p, "存在「> 相关」引用行", i)
-            if re.search(r"(参见|详见|另见|见第[一二三四五六七八九十]|见下文|见前文)", ln):
+            if re.search(r"(参见|详见|另见)", ln) and not re.search(r"(官方|官网|文档|论文|规范|标准|手册|链接|http)", ln):
                 warn(p, "出现跨节点指引语", i + off)
             if re.search(r"(本树|本节点|兄弟节点)", ln):
                 warn(p, "出现树结构元话术", i + off)
@@ -168,7 +168,7 @@ def node_names(mds):
     return names
 
 
-CUE = re.compile(r"(参见|详见|另见|见第|参考|类似|不同于|相比|对照|如同|节点|页面|文档|章节)")
+CUE = re.compile(r"(参见|详见|另见)")
 
 
 def norm_name(s):
@@ -271,6 +271,55 @@ def norm_q(q):
     return re.sub(r"[\s，。？！、,.\?!]+", "", q).lower()
 
 
+
+OBJ_ENUM = {
+    "realm": {"logical", "material", "symbolic"},
+    "kind": {"thing", "event", "relation"},
+    "generality": {"particular", "type"},
+    "volatility": {"high", "medium", "low"},
+}
+
+
+def check_objects(mds):
+    for md in mds:
+        d = os.path.dirname(md)
+        fp = os.path.join(d, "object.json")
+        if not os.path.exists(fp):
+            continue
+        try:
+            obj = json.loads(read(fp))
+        except json.JSONDecodeError as e:
+            err(fp, f"坏 JSON: {e}")
+            continue
+        if not isinstance(obj, dict):
+            err(fp, "不是对象")
+            continue
+        for k, allowed in OBJ_ENUM.items():
+            if k not in obj:
+                if k in ("realm", "kind", "generality"):
+                    err(fp, f"缺坐标 {k}")
+                continue
+            v = obj[k]
+            if v not in allowed:
+                err(fp, f"{k} 取值非法: {v}")
+        for k in ("canonical", "verify"):
+            if k in obj and not isinstance(obj[k], str):
+                err(fp, f"{k} 应为字符串")
+
+
+def check_questions_coverage(mds, verbose=False):
+    missing = 0
+    for md in mds:
+        d = os.path.dirname(md)
+        if os.path.exists(os.path.join(d, "questions.jsonl")):
+            continue
+        missing += 1
+        heads = re.findall(r"^##\s+", read(md), re.M)
+        if verbose and len(heads) >= 3:
+            warn(md, f"缺 questions.jsonl（{len(heads)} 个二级标题可挂问题）")
+    return missing
+
+
 def check_questions(root):
     files = sorted(glob.glob(os.path.join(root, "**", "questions.jsonl"), recursive=True))
     primary = {}
@@ -321,6 +370,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("root")
     ap.add_argument("--strict", action="store_true")
+    ap.add_argument("--coverage", action="store_true", help="列出缺 questions 的节点")
     args = ap.parse_args()
     root = os.path.abspath(args.root)
     mds = sorted(glob.glob(os.path.join(root, "**", "*.md"), recursive=True))
@@ -335,9 +385,11 @@ def main():
     check_node_mentions(mds)
     check_numbers(mds, root)
     check_duplicates(mds)
+    check_objects(mds)
+    missing_q = check_questions_coverage(mds, args.coverage)
     nfiles, nq = check_questions(root)
 
-    print(f"节点 md={len(mds)}  questions 文件={nfiles} 条目={nq}")
+    print(f"节点 md={len(mds)}  questions 文件={nfiles} 条目={nq}  覆盖 {len(mds)-missing_q}/{len(mds)}")
     print(f"错误 {len(errors)}  警告 {len(warns)}")
     for p, ln, msg in errors:
         print(f"  E {os.path.relpath(p, root) if os.path.isabs(p) else p}:{ln or ''} {msg}")

@@ -1,0 +1,4 @@
+{"q": "DeepSeek-V3 的核心部件有哪些？", "section": "核心部件", "aliases": ["V3 架构", "核心 部件"]}
+{"q": "MLA 是什么？", "section": "MLA（Multi-head Latent Attention）", "aliases": ["MLA", "多头潜在注意力"]}
+{"q": "DeepSeekMoE 的无辅助损失均衡怎么做？", "section": "DeepSeekMoE + 无辅助损失均衡", "aliases": ["DeepSeekMoE", "无辅助损失"]}
+{"q": "MTP 多 token 预测是什么？", "section": "MTP（Multi-Token Prediction）", "aliases": ["MTP", "多 token 预测"]}

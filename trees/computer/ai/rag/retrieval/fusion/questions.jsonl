@@ -1,0 +1,3 @@
+{"q": "混合检索的融合规则有哪些？", "section": "融合（Fusion）：混合检索的合并规则", "aliases": ["RRF 融合", "混合检索"]}
+{"q": "融合加重的完整流水线怎么搭？", "section": "融合 + 重排的完整流水线（生产参考）", "aliases": ["融合 重排", "hybrid pipeline"]}
+{"q": "自适应检索和纠正型检索是什么？", "section": "自适应 / 纠正型检索", "aliases": ["adaptive retrieval", "纠正 检索"]}

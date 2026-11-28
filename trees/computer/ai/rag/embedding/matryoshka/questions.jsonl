@@ -1,0 +1,3 @@
+{"q": "Matryoshka 表示学习解决什么问题？", "section": "Matryoshka Representation Learning（MRL）", "aliases": ["MRL", "套娃 表示"]}
+{"q": "MRL 向量怎么降维使用？", "section": "降维操作", "aliases": ["embedding 降维", "MRL 截断"]}
+{"q": "用 MRL 能省多少存储？", "section": "存储账", "aliases": ["embedding 存储", "MRL 存储"]}

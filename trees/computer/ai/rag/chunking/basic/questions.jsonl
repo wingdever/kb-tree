@@ -1,0 +1,4 @@
+{"q": "固定大小切块和句子切分怎么选？", "section": "方法对照", "aliases": ["chunking 方法 对比"]}
+{"q": "固定大小切块为什么要加 overlap？", "section": "固定大小 + overlap", "aliases": ["chunk overlap", "固定切块"]}
+{"q": "递归字符分割怎么工作？", "section": "递归字符分割", "aliases": ["recursive splitter"]}
+{"q": "块大小该定多大？", "section": "块大小经验", "aliases": ["chunk size", "块大小"]}

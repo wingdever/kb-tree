@@ -1,0 +1,4 @@
+{"q": "自纠错 RAG 有哪三种参考模式？", "section": "三大参考模式", "aliases": ["self-rag", "corrective rag"]}
+{"q": "自检的成本和质量收益如何？", "section": "成本与质量实测", "aliases": ["self-correcting 成本", "自检 效果"]}
+{"q": "评估器应该检查什么？", "section": "评估器该查什么", "aliases": ["evaluator 检索质量"]}
+{"q": "自检什么时候会表现不佳？", "section": "何时自检会表现不佳", "aliases": ["self-correcting 失败", "自检 局限"]}

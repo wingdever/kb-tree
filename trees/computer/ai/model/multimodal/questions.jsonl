@@ -1,0 +1,5 @@
+{"q": "多模态模型有哪三种融合架构？", "section": "三种融合架构", "aliases": ["early fusion late fusion", "多模态 架构"]}
+{"q": "视觉编码器怎么选？", "section": "视觉编码器", "aliases": ["ViT CLIP 视觉编码器", "视觉塔"]}
+{"q": "多模态训练分哪几个阶段？", "section": "训练阶段", "aliases": ["多模态 预训练 对齐", "VLM 训练 阶段"]}
+{"q": "采用一个 VLM 前必须测哪些项？", "section": "评测 VLM：采用前必测七项", "aliases": ["VLM 评测", "多模态 幻觉 测试"]}
+{"q": "自建多模态模型有什么建议？", "section": "构建建议", "aliases": ["多模态 构建", "VLM 选型"]}

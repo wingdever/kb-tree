@@ -1,0 +1,4 @@
+{"q": "工具调用的六步循环是什么？", "section": "六步循环（所有厂商通用）", "aliases": ["工具调用 循环", "function calling 流程"]}
+{"q": "工具定义用 JSON Schema 该怎么写？", "section": "工具定义规范（JSON Schema）", "aliases": ["工具 schema", "function 定义"]}
+{"q": "工具结果回灌有哪些通用规则？", "section": "回灌工具结果的通用规则", "aliases": ["tool result 回灌", "工具结果 格式"]}
+{"q": "控制模式有哪几种？", "section": "控制模式对照", "aliases": ["tool_choice 模式", "控制模式"]}

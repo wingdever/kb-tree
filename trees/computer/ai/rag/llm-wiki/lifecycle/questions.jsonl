@@ -1,0 +1,4 @@
+{"q": "LLM Wiki 的摄入流程怎么走？", "section": "Ingest（摄入）", "aliases": ["wiki ingest", "知识 摄入"]}
+{"q": "查询阶段怎么用 Wiki？", "section": "Query（查询）", "aliases": ["wiki query", "知识库 查询"]}
+{"q": "Wiki 的健康检查查什么？", "section": "Lint（健康检查）", "aliases": ["wiki lint", "知识库 巡检"]}
+{"q": "六类查询模板是什么？", "section": "六类查询模板（Beyond Q&A）", "aliases": ["wiki 查询模板", "知识库 用法"]}

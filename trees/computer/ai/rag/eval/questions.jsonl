@@ -1,0 +1,4 @@
+{"q": "RAG Triad 的三个问题是什么？", "section": "RAG Triad（核心三问）", "aliases": ["RAG 三元评估", "groundedness"]}
+{"q": "最低可行的 RAG 评估分哪四层？", "section": "四层最低可行方案", "aliases": ["RAG 评估 四层", "最小评估"]}
+{"q": "RAGAS 的核心算法怎么算？", "section": "RAGAS 核心算法", "aliases": ["RAGAS 指标", "faithfulness"]}
+{"q": "Agentic RAG 为什么难评估？", "section": "Agentic RAG 的评估难题", "aliases": ["agentic rag eval", "多步检索 评估"]}

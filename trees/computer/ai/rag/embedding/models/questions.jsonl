@@ -1,0 +1,3 @@
+{"q": "2026 年主流嵌入模型有哪些？", "section": "主流模型（2026）", "aliases": ["embedding 模型", "文本嵌入"]}
+{"q": "嵌入模型怎么选？", "section": "选择决策树", "aliases": ["embedding 选型", "向量模型"]}
+{"q": "input_type 不对称为什么会伤召回？", "section": "input_type 不对称（静默的召回杀手）", "aliases": ["input_type", "query document 不对称"]}

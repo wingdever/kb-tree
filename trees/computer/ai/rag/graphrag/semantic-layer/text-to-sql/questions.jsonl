@@ -1,0 +1,4 @@
+{"q": "Text-to-SQL 的五阶段管线是什么？", "section": "五阶段管线", "aliases": ["text to sql 流程", "NL2SQL"]}
+{"q": "Schema 增强要做什么？", "section": "Schema 增强（不是原始 DDL）", "aliases": ["schema 增强", "DDL"]}
+{"q": "Text-to-SQL 的基准和现实差多远？", "section": "基准与现实差距", "aliases": ["text to sql benchmark", "准确率"]}
+{"q": "Text-to-SQL 的安全护栏怎么设？", "section": "安全护栏（纵深防御）", "aliases": ["text to sql 安全", "SQL 防护"]}

@@ -66,6 +66,8 @@ description: 按树状知识树规范构建/扩展离线学习资料库（如 ag
 
 编写或校验 `questions.jsonl` 时，用 Read 打开 `${CODEBUDDY_SKILL_DIR}/references/questions-jsonl.md`，按其中的字段规则与校验脚本执行。
 
+巡检脚本会顺带报告覆盖率：`python3 skills/kb-tree/scripts/lint.py <根>` 输出「覆盖 已配/总节点」。加 `--coverage` 可列出缺夹具且二级标题不少于三个的节点。`object.json` 的 `realm`/`kind`/`generality`/`volatility` 取值也由巡检校验，非法枚举直接报错。
+
 ## 附属对象坐标 object.json
 
 每个节点目录可放一份 `object.json`，用三个坐标登记该节点所讲的对象：`realm`（`logical` 逻辑界 / `material` 物质界 / `symbolic` 符号界）、`kind`（`thing` 东西 / `event` 事件 / `relation` 关系）、`generality`（`particular` 这一个 / `type` 这一类）；再附 `canonical`、`volatility`、`verify` 供核实与复查。

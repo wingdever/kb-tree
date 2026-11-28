@@ -1,0 +1,3 @@
+{"q": "双编码器召回怎么工作？", "section": "Bi-Encoder（双编码器）", "aliases": ["bi encoder", "双塔 召回"]}
+{"q": "BM25、SPLADE、向量召回各自适合什么？", "section": "三种检索信号对照", "aliases": ["BM25 向量", "稀疏 稠密"]}
+{"q": "典型召回栈怎么组合？", "section": "典型召回栈", "aliases": ["召回 栈", "多路召回"]}

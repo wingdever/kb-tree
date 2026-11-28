@@ -2,7 +2,7 @@
   "说明": "已人工核对过的数字。巡检脚本对这里登记过的数字不再报警告；新增条目必须写明核对来源（论文/官方文档/数据表），核对不了的不要登记，改为把数字改成定性表述。key 为相对知识树根目录的页面路径，numbers 为页面上出现的原始数字记法（含单位，如 5×、42.4%），同一页多个数字可合并成一条。",
   "entries": [
     {
-      "path": "architecture/patterns/react/react.md",
+      "path": "ai/agent/architecture/patterns/react/react.md",
       "numbers": [
         "6%",
         "14%"
@@ -11,7 +11,7 @@
       "verified": "2026-11-25"
     },
     {
-      "path": "architecture/patterns/rewoo/rewoo.md",
+      "path": "ai/agent/architecture/patterns/rewoo/rewoo.md",
       "numbers": [
         "5×",
         "4%",
@@ -24,7 +24,7 @@
       "verified": "2026-11-25"
     },
     {
-      "path": "architecture/patterns/tree-search/tree-search.md",
+      "path": "ai/agent/architecture/patterns/tree-search/tree-search.md",
       "numbers": [
         "4%",
         "74%",
@@ -32,6 +32,16 @@
       ],
       "source": "Tree of Thoughts（arXiv 2305.10601）Game of 24 成功率 CoT 4% 对 ToT 74%；LATS（arXiv 2310.04406）摘要 HumanEval GPT-4 pass@1 92.7%、网页决策平均分 75.9",
       "verified": "2026-11-25"
+    },
+    {
+      "path": "ai/rag/chunking/contextual/contextual.md",
+      "numbers": [
+        "35%",
+        "49%",
+        "67%"
+      ],
+      "source": "Anthropic《Introducing Contextual Retrieval》：上下文嵌入使 top-20 检索失败率降 35%（5.7%→3.7%），叠加上下文 BM25 降 49%（5.7%→2.9%），再加 reranker 降 67%",
+      "verified": "2026-11-28"
     }
   ]
 }

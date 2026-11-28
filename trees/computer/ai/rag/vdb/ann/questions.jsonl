@@ -1,0 +1,4 @@
+{"q": "ANN 索引算法有哪些？", "section": "算法对照", "aliases": ["ANN 算法", "HNSW IVF PQ"]}
+{"q": "HNSW 的参数怎么影响召回和延迟？", "section": "HNSW 深入", "aliases": ["HNSW M ef", "HNSW 参数"]}
+{"q": "IVF 和 IVF-PQ 怎么用？", "section": "IVF / IVF-PQ", "aliases": ["IVF PQ", "乘积量化"]}
+{"q": "ANN 工程经验有哪些？", "section": "工程经验", "aliases": ["ANN 调参", "索引 经验"]}

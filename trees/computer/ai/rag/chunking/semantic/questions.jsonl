@@ -1,0 +1,3 @@
+{"q": "语义分割切块怎么做？", "section": "语义分割（Semantic chunking）", "aliases": ["semantic chunking", "语义切块"]}
+{"q": "父子分块和 small-to-big 是什么？", "section": "层级 / 父子分块（Parent-Child，Small-to-Big）", "aliases": ["parent child", "small to big"]}
+{"q": "语义分块和层级分块怎么选？", "section": "怎么选", "aliases": ["chunking 语义 层级"]}

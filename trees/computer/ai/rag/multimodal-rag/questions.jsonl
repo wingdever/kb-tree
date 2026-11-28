@@ -1,0 +1,4 @@
+{"q": "多模态 RAG 有哪三条技术路线？", "section": "三条技术路线", "aliases": ["multimodal rag", "多模态 检索"]}
+{"q": "多模态 RAG 的存储权衡是什么？", "section": "存储权衡（关键决策）", "aliases": ["多模态 存储", "图片 向量"]}
+{"q": "生成端为什么只是一半？", "section": "生成端：检索只是一半", "aliases": ["multimodal rag 生成", "生成 端"]}
+{"q": "什么场景该用多模态 RAG？", "section": "何时用 / 不用", "aliases": ["multimodal rag 适用"]}

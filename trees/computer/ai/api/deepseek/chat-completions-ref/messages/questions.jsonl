@@ -1,0 +1,4 @@
+{"q": "system message 怎么用？", "section": "system message", "aliases": ["系统消息", "system prompt"]}
+{"q": "user message 和 assistant message 有什么区别？", "section": "user message", "aliases": ["用户消息", "助手消息"]}
+{"q": "tool message 回灌要注意什么？", "section": "tool message", "aliases": ["工具消息", "tool 回灌"]}
+{"q": "消息构造有哪些常见陷阱？", "section": "常见陷阱", "aliases": ["消息 陷阱", "多轮 消息"]}

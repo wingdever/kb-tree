@@ -1,0 +1,4 @@
+{"q": "Anthropic 的 tools 参数怎么定义？", "section": "tools 参数", "aliases": ["Anthropic tools", "Claude 工具定义"]}
+{"q": "tool_choice 有哪几种控制方式？", "section": "tool_choice 控制", "aliases": ["Claude tool_choice", "工具选择"]}
+{"q": "Anthropic 的工具调用流程怎么走？", "section": "工具调用流程（Messages API）", "aliases": ["Claude 工具流程", "Messages API 工具"]}
+{"q": "严格工具使用是什么？", "section": "严格工具使用（Strict Tool Use）", "aliases": ["strict tool use", "严格工具"]}

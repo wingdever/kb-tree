@@ -1,0 +1,4 @@
+{"q": "把检索做成工具意味着什么？", "section": "为什么这个转变重要", "aliases": ["retrieval as tool", "检索 工具化"]}
+{"q": "工程投入从哪转移到哪？", "section": "工程投入的转移", "aliases": ["agentic rag 工程", "投入 转移"]}
+{"q": "成本和延迟的现实是什么？", "section": "成本与延迟的现实", "aliases": ["agentic rag 延迟", "检索 成本"]}
+{"q": "Pipeline 和 Loop 本质差别在哪？", "section": "从 Pipeline 到 Loop 的对照", "aliases": ["pipeline loop", "检索 循环"]}

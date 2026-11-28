@@ -1,0 +1,4 @@
+{"q": "嵌入模型的训练目标是什么？", "section": "训练目标（决定向量空间的几何）", "aliases": ["embedding 训练 目标", "向量空间"]}
+{"q": "InfoNCE 损失怎么起作用？", "section": "InfoNCE loss（对比学习核心）", "aliases": ["InfoNCE", "对比学习"]}
+{"q": "现代嵌入模型的三阶段训练是什么？", "section": "三阶段训练范式（现代 Embedding 模型）", "aliases": ["embedding 三阶段", "预训练 对比 微调"]}
+{"q": "困难负样本怎么挖？", "section": "困难负样本挖掘（Hard Negative Mining）", "aliases": ["hard negative", "难负样本"]}

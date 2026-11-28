@@ -1,0 +1,6 @@
+{"q": "缓存的组织方式有哪几种？", "section": "缓存组织", "aliases": ["直接映射 组相联", "cache 组织"]}
+{"q": "命中率和失效是怎么计算的？", "section": "命中与失效", "aliases": ["命中率 缺失率", "cache 命中"]}
+{"q": "写回和写直达怎么选？", "section": "写策略", "aliases": ["write back write through"]}
+{"q": "缓存替换策略有哪些？", "section": "替换策略", "aliases": ["LRU 替换", "cache 替换"]}
+{"q": "3C 失效模型指什么？", "section": "3C 失效模型", "aliases": ["强制失效 容量失效 冲突失效"]}
+{"q": "MESI 协议怎么保证一致性？", "section": "多核一致性（MESI / MOESI）", "aliases": ["MESI 状态", "缓存行 一致性"]}

@@ -1,0 +1,4 @@
+{"q": "查询改写有哪四大技术？", "section": "四大技术与对应失败模式", "aliases": ["query transform", "查询改写"]}
+{"q": "查询变换的成本和风险是什么？", "section": "成本与风险", "aliases": ["query rewrite 成本", "改写 风险"]}
+{"q": "生产里为什么路由是主流？", "section": "路由：生产实践的主流", "aliases": ["query routing", "查询路由"]}
+{"q": "查询变换和重排、上下文检索怎么区分？", "section": "与重排 / 上下文检索的区别", "aliases": ["query transform 区别", "改写 重排"]}

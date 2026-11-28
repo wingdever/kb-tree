@@ -1,0 +1,2 @@
+{"q": "流式响应的 chunk 长什么样？", "section": "chunk 形态", "aliases": ["SSE chunk", "流式 格式"]}
+{"q": "流式解析要注意什么？", "section": "保活与解析", "aliases": ["SSE 保活", "流式 解析"]}

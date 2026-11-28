@@ -1,0 +1,3 @@
+{"q": "MCP 工具的能力怎么声明？", "section": "能力声明", "aliases": ["MCP 能力", "capabilities"]}
+{"q": "MCP 的 Tool 和 Tool Result 数据类型是什么？", "section": "Tool 数据类型", "aliases": ["MCP Tool", "工具 类型"]}
+{"q": "MCP 错误处理有哪两套机制？", "section": "错误处理（两套机制）", "aliases": ["MCP 错误", "协议 错误"]}

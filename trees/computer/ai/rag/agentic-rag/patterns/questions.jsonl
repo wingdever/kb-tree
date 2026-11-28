@@ -1,0 +1,4 @@
+{"q": "Agentic RAG 有哪些核心模式？", "section": "核心模式", "aliases": ["agentic rag 模式", "检索循环"]}
+{"q": "单 Agent 和多 Agent 怎么选？", "section": "Agent 数量：single vs multi", "aliases": ["single multi agent", "多智能体 检索"]}
+{"q": "一个检索循环由哪些步骤组成？", "section": "循环的解剖", "aliases": ["retrieval loop", "循环 步骤"]}
+{"q": "不同场景该选哪种模式？", "section": "选择建议", "aliases": ["agentic rag 选型"]}

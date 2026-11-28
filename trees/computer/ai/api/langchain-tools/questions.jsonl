@@ -1,0 +1,3 @@
+{"q": "LangChain 工具的本质是什么？", "section": "工具的本质", "aliases": ["LangChain tool", "工具 本质"]}
+{"q": "怎么创建工具并绑定 Agent？", "section": "创建 Agent 并绑定工具", "aliases": ["create_agent", "工具 绑定"]}
+{"q": "ToolNode 在 LangGraph 里怎么用？", "section": "ToolNode（LangGraph）", "aliases": ["ToolNode", "LangGraph 工具"]}

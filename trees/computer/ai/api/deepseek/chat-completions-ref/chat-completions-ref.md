@@ -7,7 +7,7 @@ name: "Chat Completions API Reference"
 
 # Chat Completions API Reference
 
-`POST https://api.deepseek.com/chat/completions`，根据输入上下文让模型补全对话。本节点按官方 schema 逐字段记录请求、响应、消息结构与流式增量。
+`POST https://api.deepseek.com/chat/completions`，根据输入上下文让模型补全对话。下文按官方 schema 逐字段记录请求、响应、消息结构与流式增量。
 
 ## 一句话主线
 

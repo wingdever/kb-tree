@@ -1,0 +1,4 @@
+{"q": "意图识别怎么定义和分类？", "section": "定义与分类", "aliases": ["意图识别", "intent 分类"]}
+{"q": "歧义有哪些类型？", "section": "歧义分类学（NoisyToolBench, 2026）", "aliases": ["歧义 分类", "意图 歧义"]}
+{"q": "Ask-when-Needed 框架是什么？", "section": "Ask-when-Needed（AwN）框架", "aliases": ["AwN", "按需追问"]}
+{"q": "槽位填充工程怎么做？", "section": "槽位填充工程", "aliases": ["槽位填充", "slot filling"]}

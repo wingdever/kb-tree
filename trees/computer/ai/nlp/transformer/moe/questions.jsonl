@@ -1,0 +1,4 @@
+{"q": "MoE 的核心机制是什么？", "section": "核心机制", "aliases": ["MoE 原理", "专家 混合"]}
+{"q": "MoE 的路由策略有哪些？", "section": "路由策略", "aliases": ["MoE 路由", "router"]}
+{"q": "负载均衡怎么做？", "section": "负载均衡", "aliases": ["MoE 均衡", "专家 负载"]}
+{"q": "MoE 生产部署的挑战是什么？", "section": "生产挑战", "aliases": ["MoE 部署", "专家 并行"]}

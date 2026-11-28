@@ -1,0 +1,3 @@
+{"q": "GraphRAG 范式是什么？", "section": "GraphRAG 范式", "aliases": ["GraphRAG 原理", "图谱 增强 检索"]}
+{"q": "查询时怎么按类型选检索策略？", "section": "查询路由（按类型选择检索策略）", "aliases": ["graphrag 路由", "局部 全局 查询"]}
+{"q": "GraphRAG 落地有哪些工程要点？", "section": "工程要点", "aliases": ["graphrag 落地", "图谱 工程"]}

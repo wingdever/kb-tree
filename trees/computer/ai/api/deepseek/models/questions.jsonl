@@ -1,0 +1,2 @@
+{"q": "model object 包含什么？", "section": "model object", "aliases": ["模型对象", "model 字段"]}
+{"q": "为什么要通过接口查模型而不是写死？", "section": "为什么用接口而不是写死", "aliases": ["模型列表 接口", "写死 模型"]}

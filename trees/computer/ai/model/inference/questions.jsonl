@@ -1,0 +1,6 @@
+{"q": "推理的两个阶段本质区别是什么？", "section": "两阶段本质", "aliases": ["prefill decode", "首 token 延迟"]}
+{"q": "模型级推理优化有哪些手段？", "section": "模型级优化", "aliases": ["量化 推理", "KV cache 优化"]}
+{"q": "运行时和系统级优化包括什么？", "section": "运行时/系统级优化", "aliases": ["continuous batching", "PagedAttention"]}
+{"q": "常见的推理服务引擎怎么选？", "section": "服务引擎", "aliases": ["vLLM SGLang TensorRT-LLM", "推理引擎 对比"]}
+{"q": "推理服务要看哪些关键指标？", "section": "关键指标", "aliases": ["TTFT TPOT", "吞吐 延迟"]}
+{"q": "推理优化应该按什么顺序做？", "section": "推荐优化顺序", "aliases": ["推理 优化 步骤", "先量化还是先批处理"]}

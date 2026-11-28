@@ -1,0 +1,6 @@
+{"q": "强化学习的基本框架是什么？", "section": "什么是强化学习", "aliases": ["RL 定义", "智能体 环境 奖励"]}
+{"q": "MDP 的五个要素是什么？", "section": "MDP（马尔可夫决策过程）", "aliases": ["状态 动作 奖励", "马尔可夫决策"]}
+{"q": "探索与利用怎么平衡？", "section": "探索 vs 利用", "aliases": ["exploration exploitation", "epsilon greedy"]}
+{"q": "强化学习算法怎么分类？", "section": "算法分类", "aliases": ["值方法 策略梯度", "model-free model-based"]}
+{"q": "PPO 的核心机制是什么？", "section": "PPO（近端策略优化）", "aliases": ["PPO 裁剪", "优势函数 PPO"]}
+{"q": "强化学习怎么接到语言模型对齐上？", "section": "与语言模型对齐的衔接", "aliases": ["RLHF PPO", "偏好对齐 RL"]}

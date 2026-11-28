@@ -1,0 +1,4 @@
+{"q": "属性图模型是什么？", "section": "属性图模型", "aliases": ["property graph", "图数据库 模型"]}
+{"q": "图数据库查询语言有哪些？", "section": "查询语言", "aliases": ["Cypher Gremlin SPARQL", "图查询"]}
+{"q": "图、向量、关系型怎么分工？", "section": "图 vs 向量 vs 关系型", "aliases": ["图数据库 对比"]}
+{"q": "图数据库有哪些常见误区？", "section": "常见误区", "aliases": ["图数据库 误区", "图 不适合"]}

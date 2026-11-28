@@ -1,0 +1,6 @@
+{"q": "为什么需要子词分词？", "section": "为什么需要子词分词", "aliases": ["BPE 为什么", "分词 粒度"]}
+{"q": "BPE、WordPiece、Unigram、SentencePiece 有什么区别？", "section": "四种算法对照", "aliases": ["分词算法 对比", "SentencePiece 和 BPE"]}
+{"q": "BPE 的训练过程是怎样的？", "section": "BPE（Byte-Pair Encoding）", "aliases": ["BPE 合并规则", "byte-level BPE"]}
+{"q": "词表大小该怎么选？", "section": "词表大小怎么选", "aliases": ["vocab size", "词表 压缩率"]}
+{"q": "怎么给已有分词器扩展领域词？", "section": "扩展已有分词器（领域适配）", "aliases": ["分词器 扩展 中文", "新增 token"]}
+{"q": "分词器实践中有哪些要点？", "section": "实践要点", "aliases": ["分词 坑", "tokenizer 一致性"]}

@@ -1,0 +1,4 @@
+{"q": "Transformer 的核心要素有哪些？", "section": "核心要素", "aliases": ["Transformer 组成", "核心 要素"]}
+{"q": "词嵌入和位置编码怎么配合？", "section": "Transformer Input：词嵌入 + 位置编码", "aliases": ["位置编码", "词嵌入"]}
+{"q": "Self-Attention 怎么计算？", "section": "Self-Attention 自注意力", "aliases": ["自注意力", "attention 计算"]}
+{"q": "Prefill 和 Decode 有什么区别？", "section": "Prefill 与 Decode（推理两阶段）", "aliases": ["prefill decode", "推理 两阶段"]}

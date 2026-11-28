@@ -1,0 +1,4 @@
+{"q": "本体、Schema、Taxonomy 有什么区别？", "section": "本体 vs Schema vs Taxonomy", "aliases": ["ontology taxonomy", "本体 分类"]}
+{"q": "TBox 和 ABox 分别是什么？", "section": "TBox 与 ABox", "aliases": ["TBox ABox", "术语 断言"]}
+{"q": "能力问题怎么驱动本体设计？", "section": "能力问题驱动设计（Competency Questions）", "aliases": ["competency questions", "能力问题"]}
+{"q": "什么时候本体是过度工程？", "section": "何时过度工程", "aliases": ["本体 过度设计", "ontology 成本"]}

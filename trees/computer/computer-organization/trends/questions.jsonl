@@ -1,0 +1,5 @@
+{"q": "Chiplet 和先进封装改变了什么？", "section": "Chiplet 与先进封装", "aliases": ["Chiplet 封装", "先进封装 成本"]}
+{"q": "HBM 为什么成为 AI 芯片的关键？", "section": "HBM 与内存带宽", "aliases": ["HBM 带宽", "高带宽内存"]}
+{"q": "NPU 和 TPU 与 GPU 有什么不同？", "section": "NPU / TPU 与 AI 专用加速器", "aliases": ["NPU TPU 区别", "AI 加速器"]}
+{"q": "RISC-V 为什么近年崛起？", "section": "RISC-V 崛起", "aliases": ["RISC-V 开源", "RISC-V 生态"]}
+{"q": "微架构安全漏洞有哪些类型？", "section": "微架构安全", "aliases": ["Spectre Meltdown", "侧信道 攻击"]}

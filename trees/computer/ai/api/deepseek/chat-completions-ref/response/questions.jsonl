@@ -1,0 +1,3 @@
+{"q": "响应顶层字段有哪些？", "section": "顶层字段", "aliases": ["DeepSeek response", "响应字段"]}
+{"q": "choices 里的 message 和 logprobs 是什么？", "section": "choices[].message", "aliases": ["choices message", "logprobs"]}
+{"q": "usage 字段怎么读？", "section": "usage", "aliases": ["token 用量", "usage 字段"]}

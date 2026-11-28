@@ -7,7 +7,7 @@ name: "Transformer Architecture"
 
 # Transformer 架构
 
-Transformer 是现代NLP与大模型的基石架构。2017 年 Vaswani 论文的六个设计决策把单个注意力层变成可堆叠的 Block——此后所有模型（encoder-only 的 BERT、decoder-only 的 GPT、encoder-decoder 的 T5）都继承同一骨架。本主题已拆成 5 个子知识点目录。
+注意力堆叠取代了循环结构，成为当代语言模型的基本构件。2017 年 Vaswani 论文的六个设计决策把单个注意力层变成可堆叠的 Block——此后所有模型（encoder-only 的 BERT、decoder-only 的 GPT、encoder-decoder 的 T5）都继承同一骨架。本主题已拆成 5 个子知识点目录。
 
 ## 一句话主线
 
