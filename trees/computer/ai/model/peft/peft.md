@@ -1,11 +1,15 @@
 ---
-description: "SFT pipeline and LoRA/QLoRA/DoRA parameter-efficient tuning"
-描述: "SFT 流程与 LoRA/QLoRA/DoRA 参数高效微调"
+description: "Fine-tuning pipeline: full tuning, SFT, data, preference alignment, evaluation, serving and governance, plus LoRA/QLoRA/DoRA"
+描述: "微调工程：全参、SFT、数据、偏好对齐、评估、部署与治理，附 LoRA/QLoRA/DoRA"
 name: "Fine-Tuning and PEFT"
 名称: "微调与 PEFT"
 ---
 
-# M3 微调与 PEFT
+# 微调与 PEFT
+
+## 微调工程不止 LoRA
+
+微调工程不止 LoRA 参数：全参数微调、SFT、微调数据、偏好对齐、微调评估、合并部署以及成本与合规，各自都是独立问题。参数高效方法只是其中一层。
 
 ## Prompt / RAG / SFT 决策
 

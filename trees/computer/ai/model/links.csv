@@ -1,1 +1,7 @@
 term,target
+分词,trees/computer/ai/model/tokenizer
+预训练,trees/computer/ai/model/pretrain
+并行训练,trees/computer/ai/model/distributed
+微调,trees/computer/ai/model/peft
+推理,trees/computer/ai/model/inference
+评估,trees/computer/ai/model/eval

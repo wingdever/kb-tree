@@ -1,0 +1,5 @@
+{"q": "SFT 的数据格式应该怎么定？", "section": "数据格式"}
+{"q": "SFT 为什么要只对 assistant 回答计算 loss？", "section": "损失掩码"}
+{"q": "SFT 里的 packing 有什么好处和风险？", "section": "超参与 packing"}
+{"q": "SFT 训练最常见的错误有哪些？", "section": "常见错误"}
+{"q": "SFT 能用来注入新事实吗？", "section": "一句话主线"}

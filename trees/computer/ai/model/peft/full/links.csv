@@ -1,0 +1,4 @@
+term,target
+PEFT,trees/computer/ai/model/peft
+数据,trees/computer/ai/model/peft/data
+评测,trees/computer/ai/model/peft/eval

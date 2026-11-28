@@ -1,0 +1,4 @@
+term,target
+SFT,trees/computer/ai/model/peft/sft
+偏好数据,trees/computer/ai/model/peft/data
+评估,trees/computer/ai/model/peft/eval

@@ -1,0 +1,4 @@
+term,target
+微调,trees/computer/ai/model/peft
+评测,trees/computer/ai/model/peft/eval
+成本,trees/computer/ai/model/peft/governance
