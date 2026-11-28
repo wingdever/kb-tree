@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "主题图谱扩展抓取",
+  "volatility": "medium",
+  "verify": "SPARQL 查询结果、抓取计划与人工复核记录"
+}
