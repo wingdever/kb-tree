@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "开放知识图谱",
+  "volatility": "medium",
+  "verify": "官方数据页、许可证与版本说明"
+}
