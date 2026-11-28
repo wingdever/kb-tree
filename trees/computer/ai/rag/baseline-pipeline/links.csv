@@ -1,0 +1,5 @@
+term,target
+BM25,trees/computer/ai/rag/retrieval/fusion
+Cross-Encoder,trees/computer/ai/rag/retrieval/rerank
+向量库,trees/computer/ai/rag/vdb
+语义切块,trees/computer/ai/rag/chunking/semantic

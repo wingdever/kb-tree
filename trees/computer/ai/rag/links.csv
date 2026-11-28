@@ -1,3 +1,4 @@
 term,target
 摄取,trees/computer/ai/rag/ingestion
 知识库形态,trees/computer/ai/rag/kb-forms
+四步基线流水线,trees/computer/ai/rag/baseline-pipeline
