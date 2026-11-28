@@ -1,0 +1,7 @@
+term,target
+Agentic RL,trees/computer/ai/agent/advanced/rl
+工具调用,trees/computer/ai/agent/interop/tool
+沙箱,trees/computer/ai/agent/engineering/sandbox
+评测,trees/computer/ai/agent/engineering/eval
+RAG,trees/computer/ai/rag
+SFT,trees/computer/ai/model/fine-tune/sft

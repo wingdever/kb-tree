@@ -1,0 +1,6 @@
+{"q": "Agentic RL 增强的是知识还是策略？", "section": "增强的是策略，不是知识"}
+{"q": "Agentic RL 主要能增强 Agent 的哪些功能？", "section": "六类主要增强"}
+{"q": "为什么工具调用是 Agentic RL 最容易见效的功能？", "section": "工具调用策略"}
+{"q": "Agentic RL 能增强 Agent 的事实知识吗？", "section": "弱增强或不增强的功能"}
+{"q": "Agentic RL 在哪些任务上容易失效？", "section": "弱增强或不增强的功能"}
+{"q": "Agentic RL 的增强效果在什么条件下才成立？", "section": "增强成立的条件"}
