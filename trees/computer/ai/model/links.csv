@@ -6,3 +6,4 @@ term,target
 PEFT,trees/computer/ai/model/fine-tune/peft
 推理,trees/computer/ai/model/inference
 评估,trees/computer/ai/model/eval
+distill,trees/computer/ai/model/distill

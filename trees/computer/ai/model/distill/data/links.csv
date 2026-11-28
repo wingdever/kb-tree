@@ -1,0 +1,3 @@
+term,target
+蒸馏,trees/computer/ai/model/distill
+SFT,trees/computer/ai/model/fine-tune/sft
