@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "多模态模型",
+  "volatility": "high",
+  "verify": "模型卡、论文与版本发布"
+}

@@ -22,12 +22,12 @@ name: "Advanced Agent Topics"
 
 编码 Agent 之所以成为 Agent 研究的主战场，不是因为程序员多，而是因为**它是少数「对错能被廉价验证」的领域**：跑一遍测试就知道答案对不对，于是可以大规模自动评测、自动改进、自动回归。把这条经验搬到其他领域时，第一件事是找「这个领域的测试」——找不到，就先造一个判定器，否则所有优化都缺反馈。
 
-## 什么时候该进这一组
+## 什么时候需要专项
 
-- 通用模式与评测都搭起来了，任务仍不够好 → 看编码 Agent 的脚手架设计（架构差距常大于模型差距）。
-- 想用训练而不是提示来提升 → 看 RL 那一支，先确认环境可复现。
-- 要把 Agent 放到云端供多端接入 → 看运维与云端运行形态，别在客户端硬拼传输。
-- 要对外交付而不只是内部试用 → 看产品化那一支，先把"能承诺什么、错了怎么办、怎么计费"写清楚。
+- 通用模式与评测都搭起来了，任务仍不够好 → 检查编码类任务的脚手架设计（架构差距常大于模型差距）。
+- 想用训练而不是提示来提升 → 先确认环境可复现，再考虑 RL。
+- 要把 Agent 放到云端供多端接入 → 处理会话、工作区、连接三层解耦，别在客户端硬拼传输。
+- 要对外交付而不只是内部试用 → 先把"能承诺什么、错了怎么办、怎么计费"写清楚。
 
 ## 一句话主线
 
@@ -35,6 +35,6 @@ name: "Advanced Agent Topics"
 
 ## 参考资料
 
-- SWE-bench 基准论文（可验证任务如何驱动 Agent 迭代）：https://arxiv.org/abs/2310.06770
-- SWE-agent 与 ACI 论文（脚手架差距的来源）：https://arxiv.org/abs/2405.15793
-- Anthropic《Claude Code 最佳实践》：https://www.anthropic.com/engineering/claude-code-best-practices
+- SWE-bench 基准论文（arXiv:2310.06770；可验证任务如何驱动 Agent 迭代）：https://arxiv.org/abs/2310.06770
+- SWE-agent 与 ACI 论文（arXiv:2405.15793；脚手架差距的来源）：https://arxiv.org/abs/2405.15793
+- Anthropic 官方文档《Claude Code 最佳实践》：https://www.anthropic.com/engineering/claude-code-best-practices

@@ -1,6 +1,6 @@
 ---
 description: "Knowledge tree for designing, building and evaluating agents"
-描述: "Agent 开发：基础、架构、产品形态、互操作、工程、运维与进阶"
+描述: "Agent 开发：基础、架构、产品形态、互操作、工程、运维与进阶（含学习资源与资料获取）"
 name: "Agent Engineering"
 名称: "Agent 开发"
 ---
@@ -19,12 +19,12 @@ name: "Agent Engineering"
 - **互操作**：往外伸的手。工具契约决定能做什么，协议决定跟谁对话，技能把知识打包，渠道决定怎么触达用户。
 - **工程**：怎么搭起来并证明它行。最小闭环、评测与黄金集、框架取舍、安全与权限边界。
 - **运维**：上线后怎么跑稳。追踪与信号、成本与延迟、版本与灰度、多租户与隔离。
-- **专项**：通用骨架之上的深挖。编码 Agent、云端运行形态、用 RL 训练、以及补齐体系的学习资源。
+- **专项**：通用骨架之上的深挖。编码 Agent、云端运行形态、用 RL 训练、以及补齐体系的学习资源与资料获取方法。
 
-## 用这棵树的三条建议
+## 三条设计原则
 
-1. **按问题查，不按目录背**。每个节点要能独立回答一个问题；读完一个节点就该能做出一个判断，而不是记住一堆术语。
-2. **先看判断，再看方法**。带 `> 判断：` 的段落是这一页的结论，方法与数据都是为它服务的；时间紧就先读判断。
+1. **按问题定边界**。先问要解决的是哪类失败，再决定要不要循环、工具与多 Agent；不按目录或模板倒推架构。
+2. **先有判断，再选方法**。方法与数据服务于判断；说不清要挡哪种失败时，先别加组件。
 3. **警惕「更复杂 = 更好」**。多 Agent、图式编排、自主循环都是按失败代价选的，不是能力等级；每一层复杂度都要能说清它挡住了哪种具体失败。
 
 ## 一句话主线
@@ -33,5 +33,5 @@ Agent 的工程质量主要不取决于模型，而取决于 harness：先把边
 
 ## 参考资料
 
-- Anthropic《Building effective agents》（Agent 与工作流的分界、五种工作流模式）：https://www.anthropic.com/engineering/building-effective-agents
-- Anthropic《Effective context engineering for AI agents》（上下文是稀缺资源）：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- Anthropic《Building effective agents》（2024-12-19；Agent 与工作流的分界、五种工作流模式）：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic《Effective context engineering for AI agents》（2025-09-29；上下文是稀缺资源）：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents

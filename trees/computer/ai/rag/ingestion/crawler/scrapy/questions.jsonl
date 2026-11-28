@@ -1,0 +1,5 @@
+{"q": "Scrapy 的请求在框架内部怎么流转？", "section": "架构与数据流"}
+{"q": "Scrapy 项目里各文件分别放什么？", "section": "一个项目里放什么"}
+{"q": "Scrapy 的限速和重试要调哪些设置？", "section": "关键设置"}
+{"q": "Scrapy 常见的坑有哪些？", "section": "常见坑"}
+{"q": "什么情况下不该用 Scrapy？", "section": "什么时候不用 Scrapy"}

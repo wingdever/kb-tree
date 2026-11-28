@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "Agent 开发",
+  "volatility": "medium",
+  "verify": "官方文档、框架源码与评测记录"
+}

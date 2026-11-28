@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "严格模式（Structured Outputs）",
+  "volatility": "high",
+  "verify": "厂商 API 文档与版本发布"
+}

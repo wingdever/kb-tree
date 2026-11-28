@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "抓取去重",
+  "volatility": "medium",
+  "verify": "URI 规范、去重指纹与重复率抽样"
+}

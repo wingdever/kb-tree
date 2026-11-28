@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "抓取质量评估",
+  "volatility": "medium",
+  "verify": "黄金集、分层抽样与端到端检索评估"
+}

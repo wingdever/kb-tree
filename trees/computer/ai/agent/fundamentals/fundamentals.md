@@ -21,9 +21,9 @@ name: "Agent Fundamentals"
 - **上下文越长不一定越好**。无关内容会稀释注意力，位置也会影响召回——中间段的信息最容易被忽略。
 - **外部知识的第一价值是「可溯源」**，其次才是「更准」。能指向原始文档的回答，出错时能查、能修；只靠模型记忆的回答，错了只能重问。
 
-## 怎么读这一组
+## 判断顺序
 
-先读 Agent 的定义与边界，确认你要做的确实是 Agent；再读提示与上下文，把窗口当成预算来分配；然后读知识策略，决定外部知识是走检索、走文件、还是走微调；最后读检索实现，把"该检索"落成"检索得对、引得出、更新得动"。这一组的结论会被后面所有方向引用，值得慢读。
+先确认要做的是 Agent，而不是工作流或聊天机器人；再把上下文当成预算分配，确定哪些内容必须进提示；最后按变化频率与规模决定知识放在提示、检索还是权重。三步定完，后面的架构与工程选择才有依据。
 
 ## 一句话主线
 
@@ -31,6 +31,6 @@ name: "Agent Fundamentals"
 
 ## 参考资料
 
-- Anthropic《Effective context engineering for AI agents》（上下文是稀缺预算）：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-- Anthropic《Building effective agents》（Agent 与工作流的分界）：https://www.anthropic.com/engineering/building-effective-agents
-- ReAct 论文（推理与行动交错的原始动机）：https://arxiv.org/abs/2210.03629
+- Anthropic《Effective context engineering for AI agents》（2025-09-29；上下文是稀缺预算）：https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- Anthropic《Building effective agents》（2024-12-19；Agent 与工作流的分界）：https://www.anthropic.com/engineering/building-effective-agents
+- ReAct 论文（arXiv:2210.03629；推理与行动交错的原始动机）：https://arxiv.org/abs/2210.03629

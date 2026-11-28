@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "世界信息结构",
+  "volatility": "medium",
+  "verify": "论文、本体规范与知识图谱资料"
+}

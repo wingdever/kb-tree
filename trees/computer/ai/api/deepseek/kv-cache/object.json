@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "上下文缓存",
+  "volatility": "high",
+  "verify": "厂商 API 文档与计费页"
+}

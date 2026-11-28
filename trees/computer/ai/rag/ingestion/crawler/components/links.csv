@@ -1,0 +1,10 @@
+term,target
+调度,trees/computer/ai/rag/ingestion/crawler/discovery
+抓取,trees/computer/ai/rag/ingestion/crawler/fetch
+渲染,trees/computer/ai/rag/ingestion/crawler/render
+解析,trees/computer/ai/rag/ingestion/parse
+去重,trees/computer/ai/rag/ingestion/dedupe
+限速,trees/computer/ai/rag/ingestion/crawler/politeness
+管道,trees/computer/ai/rag/ingestion/pipeline
+Scrapy,trees/computer/ai/rag/ingestion/crawler/scrapy
+BeautifulSoup,trees/computer/ai/rag/ingestion/crawler/beautifulsoup

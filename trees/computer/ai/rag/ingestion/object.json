@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "RAG 数据摄取",
+  "volatility": "medium",
+  "verify": "抓取框架文档、站点协议与摄取链监控记录"
+}

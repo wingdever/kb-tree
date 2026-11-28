@@ -44,6 +44,6 @@ name: "Core Architectures and Design Patterns"
 
 ## 参考资料
 
-- Anthropic《Building effective agents》（五种工作流模式与自主 Agent 的原始划分）：https://www.anthropic.com/engineering/building-effective-agents
-- ReAct 论文：https://arxiv.org/abs/2210.03629
-- Tree of Thoughts 论文：https://arxiv.org/abs/2305.10601
+- Anthropic《Building effective agents》（2024-12-19；五种工作流模式与自主 Agent 的原始划分）：https://www.anthropic.com/engineering/building-effective-agents
+- ReAct 论文（arXiv:2210.03629）：https://arxiv.org/abs/2210.03629
+- Tree of Thoughts 论文（arXiv:2305.10601）：https://arxiv.org/abs/2305.10601

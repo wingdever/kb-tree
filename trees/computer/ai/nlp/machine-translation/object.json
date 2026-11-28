@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "机器翻译",
+  "volatility": "medium",
+  "verify": "论文、评测集与厂商文档"
+}

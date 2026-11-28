@@ -6,7 +6,7 @@
 
 - `trees/<树名>/` — 一棵知识树，树内只放知识文档，不放规则文档；每棵树自足，互不依赖。
 - `skills/` — 可直接加载的 agent 技能，属工具目录。
-- `tools/` — 本仓库自带的可执行工具（如 `tools/zhihu-search/` 的知乎检索脚本），连同使用说明与工作流文档一起纳入版本管理；凭证放仓库外。
+- `tools/` — 本仓库自带的可执行工具（如 `tools/zhihu-search/` 的知乎检索、`tools/links-graph/` 的词项图统计、`tools/new-node/` 的节点脚手架、`tools/ref-check/` 的引用时效检查），连同使用说明一起纳入版本管理；凭证放仓库外。
 
 ## 组织规则
 
@@ -23,6 +23,7 @@
 
 - `skills/kb-tree/scripts/lint.py` 检查结构、front matter、跨节点引用、操作痕迹、可疑数字、跨页重复断言、`questions.jsonl` 字段与 `links.csv` 词项链接。
 - 用法：`python3 skills/kb-tree/scripts/lint.py trees/computer/ai/agent`，`--strict` 时警告也判失败。
+- `tools/check.sh` 一次跑回归测试与三棵树巡检；`tools/ref-check/ref_check.py` 按 `skills/kb-tree/references/review-queue.json` 检查引用可达性与复查日期。
 - 错误（E）必须修；警告（W）逐条判断——论文引用的数字可以保留，自己估的数要么标成判断、要么删掉。
 - 数字警告逐条判断后，把核对结论写进 `skills/kb-tree/references/number-sources.json`（路径 + 页面上的原始数字 + 核对来源），巡检即不再报该数字；没把握核实的不要登记，改写成定性表述。
 - 纯归纳、纯经验或资源索引页确实没有外部来源时，把路径登记到 `skills/kb-tree/references/no-source-pages.json`，巡检不再要求该页写「参考资料」；一旦补了来源就把它移出清单。

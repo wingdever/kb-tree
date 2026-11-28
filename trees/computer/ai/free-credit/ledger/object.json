@@ -1,5 +1,5 @@
 {
-  "realm": "logical",
+  "realm": "symbolic",
   "kind": "event",
   "generality": "type",
   "canonical": "额度台账管理方法",

@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "动态页面渲染抓取",
+  "volatility": "high",
+  "verify": "浏览器自动化文档、渲染日志与页面样本"
+}

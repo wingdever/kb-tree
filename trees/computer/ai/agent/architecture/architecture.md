@@ -31,9 +31,9 @@ name: "Agent Architecture and Orchestration"
 - **图式编排用得太早或太晚**。太早，灵活性被不必要的节点锁死；太晚，崩溃恢复与人工审批没有地方挂，只能在外层包一层脆弱的重试。
 - **钩子里做业务判断**。模型看不到钩子的决策，行为会与提示描述不一致，排查时极难定位。
 
-## 怎么读这一组
+## 决策顺序
 
-先用模式词汇表建立共同语言（ReAct、Plan-and-Execute、ReWOO、自我修正、树搜索、ACI），再读多智能体的拆分判断——它是这一组里最容易被跳过的部分，也是最省钱的部分。做编码、浏览器或桌面类任务时转到行动面那一支，那里讲的是动作接口与权限边界，而不是推理模式。
+先按任务结构与失败代价选循环形态（一步可完成、边看边改、步骤可预判、答案不唯一），再判断单 Agent 是否足够；只有上下文、权限或并行度确有隔离需求时才拆多 Agent。涉及不可逆动作或长任务时，先把关键控制流显式化。编码、浏览器与桌面类任务的决定点在行动面：动作接口与权限边界，而不是推理模式。
 
 ## 一句话主线
 
@@ -41,5 +41,5 @@ name: "Agent Architecture and Orchestration"
 
 ## 参考资料
 
-- Anthropic《Building effective agents》（工作流与自主 Agent 的分界）：https://www.anthropic.com/engineering/building-effective-agents
-- Anthropic 多 Agent 研究系统（拆多 Agent 的成本与收益实测）：https://www.anthropic.com/engineering/multi-agent-research-system
+- Anthropic《Building effective agents》（2024-12-19；工作流与自主 Agent 的分界）：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic 多 Agent 研究系统（2025-06-13；拆多 Agent 的成本与收益实测）：https://www.anthropic.com/engineering/multi-agent-research-system

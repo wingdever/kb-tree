@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "世界模型",
+  "volatility": "medium",
+  "verify": "论文、模型卡与评测记录"
+}

@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "虚拟内存",
+  "volatility": "low",
+  "verify": "操作系统教材与内核文档"
+}

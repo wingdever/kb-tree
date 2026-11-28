@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "并行架构",
+  "volatility": "low",
+  "verify": "计算机体系结构教材与厂商文档"
+}

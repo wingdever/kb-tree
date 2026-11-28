@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "增量抓取流水线",
+  "volatility": "medium",
+  "verify": "HTTP 条件请求规范、版本索引与调度记录"
+}

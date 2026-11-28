@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "爬取内容解析",
+  "volatility": "medium",
+  "verify": "HTML/PDF 规范、解析器版本与样本回归"
+}

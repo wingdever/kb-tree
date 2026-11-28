@@ -1,4 +1,5 @@
 term,target
-检索增强生成,trees/computer/ai/rag
+{检索增强生成|RAG},trees/computer/ai/rag
 切块策略,trees/computer/ai/rag/chunking
 嵌入模型,trees/computer/ai/rag/embedding
+摄取,trees/computer/ai/rag/ingestion

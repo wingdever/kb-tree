@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "Scrapy 爬虫框架",
+  "volatility": "high",
+  "verify": "Scrapy 官方文档、版本说明与项目配置"
+}

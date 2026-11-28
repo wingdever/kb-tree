@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "网络爬虫",
+  "volatility": "medium",
+  "verify": "抓取框架文档、站点协议与运行监控记录"
+}

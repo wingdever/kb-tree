@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "BeautifulSoup HTML 解析库",
+  "volatility": "high",
+  "verify": "BeautifulSoup 官方文档、版本说明与样本回归"
+}

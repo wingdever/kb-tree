@@ -22,9 +22,9 @@ name: "Agent Engineering and Validation"
 - **评估器比模式重要**。没有评估时，加模式与调提示都只能凭感觉；有评估时，很多「看起来需要多 Agent」的问题会变成一次提示修改。
 - **安全的第一杠杆是权限，不是措辞**。能删库的工具即便提示写得再严，也不该给模型直接调用的权限；最小权限加人工确认，比任何提示都可靠。
 
-## 怎么读这一组
+## 推进顺序
 
-按「定义 → 搭起来 → 评测 → 护栏」的顺序读；示例只在需要对照实现细节时看。已经在跑的系统，直接从评测与回归那一支进——它是唯一能把「感觉变好了」变成「确实变好了」的环节。
+按「定义成功标准 → 跑通最小闭环 → 建评估门禁 → 嵌护栏」四步推进；每一步都留下可验证的痕迹。已经在跑的系统，优先补评估与回归，这是把「感觉变好了」变成「确实变好了」的唯一环节；示例只在需要对照实现细节时使用。
 
 ## 一句话主线
 
@@ -32,6 +32,6 @@ name: "Agent Engineering and Validation"
 
 ## 参考资料
 
-- Anthropic《Building effective agents》（工程流程与常见误区）：https://www.anthropic.com/engineering/building-effective-agents
+- Anthropic《Building effective agents》（2024-12-19；工程流程与常见误区）：https://www.anthropic.com/engineering/building-effective-agents
 - HumanLayer《12-Factor Agents》（生产级 Agent 的十二条工程约束）：https://github.com/humanlayer/12-factor-agents
-- Anthropic《Writing effective tools for agents》：https://www.anthropic.com/engineering/writing-tools-for-agents
+- Anthropic《Writing effective tools for agents》（2025-09-11）：https://www.anthropic.com/engineering/writing-tools-for-agents

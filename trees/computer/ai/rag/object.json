@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "检索增强生成（RAG）",
+  "volatility": "medium",
+  "verify": "论文、官方文档与评测记录"
+}

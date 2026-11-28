@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "上下文工程",
+  "volatility": "medium",
+  "verify": "官方文档、论文与框架源码"
+}

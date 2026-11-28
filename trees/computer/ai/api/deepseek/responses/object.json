@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "particular",
+  "canonical": "OpenAI Responses API",
+  "volatility": "high",
+  "verify": "OpenAI 官方文档与版本发布"
+}

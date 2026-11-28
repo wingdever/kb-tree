@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "JSON 输出模式",
+  "volatility": "high",
+  "verify": "厂商 API 文档与 JSON Schema 规范"
+}

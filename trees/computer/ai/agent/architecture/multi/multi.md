@@ -24,9 +24,9 @@ name: "Multi-Agent Systems"
 - **上下文隔离是主要收益**。多 Agent 最实在的好处是每个 Agent 只看到自己该看的东西——这既是能力提升，也是安全边界。
 - **协调开销随 Agent 数量超线性增长**。三个 Agent 两两通信是三对关系，五个是十对；超过某个数量后，编排本身就成了瓶颈。
 
-## 怎么读这一组
+## 决策顺序
 
-先读拆分判断与设计判断，确认单 Agent 真的不够；再选架构与编排形态；最后读失效模式，把 MAST 的失败清单当成上线前的自查表。跨组织协作时才需要引入标准协议，同团队内部用框架自带的通信机制就够。
+先做单 Agent + 工具的基线，确认拆分确实能换来上下文隔离、权限隔离或并行度；再按控制权归属选架构与编排形态；最后用失效模式清单做上线前自查。跨组织协作才引入标准协议，同团队内部用框架自带的通信机制就够。
 
 ## 一句话主线
 
@@ -34,6 +34,6 @@ name: "Multi-Agent Systems"
 
 ## 参考资料
 
-- Anthropic 工程博客《How we built our multi-agent research system》：https://www.anthropic.com/engineering/multi-agent-research-system
-- 《Why Do Multi-Agent LLM Systems Fail?》（MAST 失败分类）：https://arxiv.org/abs/2503.13657
-- AutoGen 论文（多 Agent 对话框架）：https://arxiv.org/abs/2308.08155
+- Anthropic 工程博客《How we built our multi-agent research system》（2025-06-13）：https://www.anthropic.com/engineering/multi-agent-research-system
+- 《Why Do Multi-Agent LLM Systems Fail?》（arXiv:2503.13657；MAST 失败分类）：https://arxiv.org/abs/2503.13657
+- AutoGen 论文（arXiv:2308.08155；多 Agent 对话框架）：https://arxiv.org/abs/2308.08155

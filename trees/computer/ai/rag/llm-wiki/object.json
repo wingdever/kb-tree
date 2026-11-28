@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "LLM Wiki 知识编译模式",
+  "volatility": "high",
+  "verify": "原始论文、项目仓库与版本记录"
+}

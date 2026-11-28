@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "切块策略",
+  "volatility": "medium",
+  "verify": "论文、框架源码与评测记录"
+}

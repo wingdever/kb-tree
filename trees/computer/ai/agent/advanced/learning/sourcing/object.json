@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "Agent 开发资料的获取方法",
+  "volatility": "medium",
+  "verify": "官方文档、release note、代码与一手论文复核"
+}

@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "RAG 数据源类型",
+  "volatility": "medium",
+  "verify": "官方接口文档、站点地图协议与授权条款"
+}

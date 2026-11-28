@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "抓取执行",
+  "volatility": "medium",
+  "verify": "HTTP 规范、抓取框架文档与请求日志"
+}

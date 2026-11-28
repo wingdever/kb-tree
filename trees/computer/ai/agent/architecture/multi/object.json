@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "多智能体系统",
+  "volatility": "medium",
+  "verify": "论文、框架源码与评测记录"
+}

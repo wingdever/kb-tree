@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "particular",
+  "canonical": "OpenAI Codex",
+  "volatility": "high",
+  "verify": "官方文档与版本发布"
+}

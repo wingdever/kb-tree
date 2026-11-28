@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "树搜索（Tree Search）",
+  "volatility": "medium",
+  "verify": "论文与框架源码"
+}

@@ -1,0 +1,5 @@
+term,target
+Agent 开发,trees/computer/ai/agent
+上下文工程,trees/computer/ai/agent/fundamentals/context
+{Agent 评估与测试|评测},trees/computer/ai/agent/engineering/eval
+MCP,trees/computer/ai/agent/interop/mcp

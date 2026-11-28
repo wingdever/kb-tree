@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "嵌入模型",
+  "volatility": "high",
+  "verify": "MTEB 榜单与厂商模型卡"
+}

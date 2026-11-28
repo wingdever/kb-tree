@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "抓取 URL 发现与调度",
+  "volatility": "medium",
+  "verify": "站点地图协议、URI 规范与抓取调度日志"
+}

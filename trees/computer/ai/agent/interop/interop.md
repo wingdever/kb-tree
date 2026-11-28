@@ -31,9 +31,9 @@ name: "Agent Interoperability and Interfaces"
 - **过早抽象**。只有一个客户端时自建私有协议更省事，但接第二个客户端时成本会一次性回来；判断依据是「半年内会不会有第二个入口」。
 - **渠道倒逼产品**。先做网页再上 IM，会撞上消息长度与富媒体的限制；有 IM 需求时，交互要按 IM 的粒度设计。
 
-## 怎么读这一组
+## 决策顺序
 
-从工具契约开始（它决定了能力与风险的边界），再读协议选型，最后读技能与渠道。做跨端产品时，先确定接入协议，再定渠道——顺序反过来会返工。
+先定工具契约，因为它同时决定能力与风险边界；再按「对面是谁」选协议；最后处理技能打包与渠道接入。做跨端产品时，先确定接入协议再定渠道——顺序反过来会返工。
 
 ## 一句话主线
 
@@ -43,4 +43,4 @@ name: "Agent Interoperability and Interfaces"
 
 - MCP 规范（工具与资源的接口标准）：https://modelcontextprotocol.io
 - A2A 协议规范（跨组织 Agent 协作）：https://a2a-protocol.org/latest/specification/
-- Anthropic《Writing effective tools for agents》：https://www.anthropic.com/engineering/writing-tools-for-agents
+- Anthropic《Writing effective tools for agents》（2025-09-11）：https://www.anthropic.com/engineering/writing-tools-for-agents

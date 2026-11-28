@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "Transformer 架构",
+  "volatility": "medium",
+  "verify": "原始论文、模型卡与框架源码"
+}

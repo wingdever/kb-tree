@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "爬虫系统构成与工程选型",
+  "volatility": "high",
+  "verify": "官方文档、项目配置与运行监控记录"
+}

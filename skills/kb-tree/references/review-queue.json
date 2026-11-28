@@ -1,0 +1,60 @@
+{
+  "entries": [
+    {
+      "path": "trees/computer/ai/free-credit/gen-apis",
+      "label": "Cloudflare Workers AI 定价",
+      "url": "https://developers.cloudflare.com/workers-ai/platform/pricing",
+      "volatility": "high",
+      "last_checked": "2026-11-28",
+      "next_review": "2026-12-28"
+    },
+    {
+      "path": "trees/computer/ai/api/deepseek/responses",
+      "label": "DeepSeek API 文档",
+      "url": "https://api-docs.deepseek.com",
+      "volatility": "high",
+      "last_checked": "2026-11-28",
+      "next_review": "2026-12-28"
+    },
+    {
+      "path": "trees/computer/ai/agent/advanced/learning/sourcing",
+      "label": "Model Context Protocol 规范",
+      "url": "https://modelcontextprotocol.io/specification/",
+      "volatility": "high",
+      "last_checked": "2026-11-28",
+      "next_review": "2026-12-28"
+    },
+    {
+      "path": "trees/computer/ai/agent/advanced/learning/sourcing",
+      "label": "GitHub 代码搜索语法",
+      "url": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "volatility": "medium",
+      "last_checked": "2026-11-28",
+      "next_review": "2027-02-28"
+    },
+    {
+      "path": "trees/computer/ai/agent/fundamentals/context",
+      "label": "Anthropic 上下文工程",
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "volatility": "medium",
+      "last_checked": "2026-11-28",
+      "next_review": "2027-02-28"
+    },
+    {
+      "path": "trees/computer/ai/rag/embedding",
+      "label": "MTEB 基准论文",
+      "url": "https://arxiv.org/abs/2210.07316",
+      "volatility": "low",
+      "last_checked": "2026-11-28",
+      "next_review": "2027-05-28"
+    },
+    {
+      "path": "trees/computer/ai/world-model",
+      "label": "World Models 论文",
+      "url": "https://arxiv.org/abs/1803.10122",
+      "volatility": "low",
+      "last_checked": "2026-11-28",
+      "next_review": "2027-05-28"
+    }
+  ]
+}

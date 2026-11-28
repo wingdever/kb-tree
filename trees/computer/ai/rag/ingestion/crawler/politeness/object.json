@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "爬虫礼貌与合规",
+  "volatility": "medium",
+  "verify": "RFC 9309、站点条款与抓取审计记录"
+}

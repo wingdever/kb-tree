@@ -324,7 +324,23 @@ def check_links(root, mds):
                     if not term or not target:
                         err(fp, "term/target 不能为空", lineno)
                         continue
-                    if term not in body:
+                    if term.startswith("{") or term.endswith("}"):
+                        if not (term.startswith("{") and term.endswith("}")):
+                            err(fp, f"词形组格式不完整: {term}", lineno)
+                            continue
+                        variants = [x.strip() for x in term[1:-1].split("|")]
+                        if len(variants) < 2 or any(not x for x in variants):
+                            err(fp, f"词形组至少要有两个非空词形: {term}", lineno)
+                            continue
+                        if any("{" in x or "}" in x for x in variants):
+                            err(fp, f"词形组不支持嵌套: {term}", lineno)
+                            continue
+                        if len(set(variants)) != len(variants):
+                            err(fp, f"词形组内有重复词形: {term}", lineno)
+                            continue
+                        if not any(v in body for v in variants):
+                            err(fp, f"词形组内没有词在正文出现: {term}", lineno)
+                    elif term not in body:
                         err(fp, f"term 未在正文出现: {term}", lineno)
                     if os.path.isabs(target) or ".." in target.split("/"):
                         err(fp, f"target 必须是仓库内相对路径: {target}", lineno)

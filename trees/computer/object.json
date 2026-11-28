@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "计算机科学",
+  "volatility": "medium",
+  "verify": "学科综述与教材"
+}

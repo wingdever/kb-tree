@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "分布式爬虫",
+  "volatility": "medium",
+  "verify": "抓取框架文档、队列监控与重复率记录"
+}
