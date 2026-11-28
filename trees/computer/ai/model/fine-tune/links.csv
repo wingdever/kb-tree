@@ -7,3 +7,4 @@ SFT,trees/computer/ai/model/fine-tune/sft
 评估,trees/computer/ai/model/fine-tune/eval
 部署,trees/computer/ai/model/fine-tune/serving
 治理,trees/computer/ai/model/fine-tune/governance
+八维,trees/computer/ai/model/fine-tune/dimensions
