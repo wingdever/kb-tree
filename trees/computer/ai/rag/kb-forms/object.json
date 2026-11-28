@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "Agent 知识检索的知识库",
+  "volatility": "medium",
+  "verify": "RAG 综述、向量库/图数据库/搜索引擎官方文档"
+}

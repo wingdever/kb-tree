@@ -1,0 +1,7 @@
+term,target
+RAG,trees/computer/ai/rag
+{向量库|向量数据库},trees/computer/ai/rag/vdb
+{倒排索引|BM25},trees/computer/ai/rag/retrieval
+知识图谱,trees/computer/ai/rag/graphrag
+chunk,trees/computer/ai/rag/chunking
+embedding,trees/computer/ai/rag/embedding
