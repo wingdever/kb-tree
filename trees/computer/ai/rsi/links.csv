@@ -1,0 +1,4 @@
+term,target
+Agent,trees/computer/ai/agent
+模型,trees/computer/ai/model
+评估,trees/computer/ai/model/eval
