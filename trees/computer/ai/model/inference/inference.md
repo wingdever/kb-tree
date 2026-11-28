@@ -9,6 +9,10 @@ name: "Inference Optimization and Deployment"
 
 LLM 推理的三大挑战：内存限制（模型常超单卡）、延迟与吞吐的平衡（单用户延迟 vs 多用户吞吐）、注意力二次复杂度。优化技术分模型级、运行时/系统级、服务级三层，多数可叠加。
 
+## 硬件算子
+
+模型图里的 MatMul、Attention、Softmax 最终都要落到硬件 kernel；同一个 Attention 在 GPU 上可能是多个 kernel，也可能被 FlashAttention 融合成一个，在 NPU 上则可能被编译器切成一组矩阵乘与向量操作。算子的切分、融合、布局与精度，决定实际吞吐；峰值 FLOPs 只是上限。
+
 ## 两阶段本质
 
 - **Prefill（预填充）**：计算密集（compute-bound），处理输入 prompt、并行算所有 token。
