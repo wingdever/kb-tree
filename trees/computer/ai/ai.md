@@ -23,6 +23,7 @@ name: "Artificial Intelligence"
 ## 横向主题
 
 - **RSI（递归自我改进）**：系统用当前能力改进决定未来能力的组件，再用改进后的版本继续改进；它讨论的是能力复利与生态壁垒，不属于上面六个工程领域中的任何一个单独领域。
+- **AI 硬件**：能运行大模型的 14 个硬件家族，从数据中心 GPU、TPU、Trainium、昇腾，到 CPU、Apple Silicon、消费卡、端侧 SoC、手机 NPU 与 FPGA。
 
 ## 一句话主线
 

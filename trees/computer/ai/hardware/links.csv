@@ -1,0 +1,15 @@
+term,target
+NVIDIA 数据中心 GPU,trees/computer/ai/hardware/nvidia
+AMD Instinct,trees/computer/ai/hardware/amd
+Intel Gaudi 与 Xeon,trees/computer/ai/hardware/intel
+Google TPU,trees/computer/ai/hardware/google-tpu
+AWS Trainium/Inferentia,trees/computer/ai/hardware/aws-trainium
+华为昇腾,trees/computer/ai/hardware/huawei
+国产 GPU/NPU,trees/computer/ai/hardware/china-accelerators
+推理 ASIC/LPU,trees/computer/ai/hardware/inference-asic
+CPU,trees/computer/ai/hardware/cpu
+Apple Silicon,trees/computer/ai/hardware/apple
+消费级 GPU,trees/computer/ai/hardware/consumer-gpu
+端侧 SoC/迷你机,trees/computer/ai/hardware/edge-soc
+手机 NPU,trees/computer/ai/hardware/mobile-npu
+FPGA/自适应 SoC,trees/computer/ai/hardware/fpga
