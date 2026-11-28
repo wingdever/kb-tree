@@ -7,7 +7,7 @@ name: "Coding Agents with Free Quotas"
 
 # 有免费额度的 C 端 Coding Agent
 
-这份清单按三个条件收口：**C 端可自助注册、能规划并修改代码、官方公开了免费额度或长期免费层**。纯 API 模型额度、纯开源但必须自带 Key 的客户端、一次性内测资格不单独算。截至 2026 年 11 月，能公开核验的有 20 个；产品调价频繁，额度以账号账单页为准。
+这份清单按三个条件收口：**C 端可自助注册、能规划并修改代码、官方公开了免费额度或长期免费层**。纯 API 模型额度、纯开源但必须自带 Key 的客户端、一次性内测资格不单独算。截至 2026 年 11 月，能公开核验的有 20 个；其中 CodeBuddy 与 WorkBuddy 共用同一积分池，所以是 20 个产品、不是 20 份独立额度。产品调价频繁，额度以账号账单页为准。
 
 ## 清单
 
@@ -23,8 +23,8 @@ name: "Coding Agents with Free Quotas"
 | iFlow CLI | 个人免费，内置 Kimi K2/Qwen3 Coder/GLM | 长期免费 | 强：开源 CLI |
 | Kilo Code Auto Free | 200 次请求/小时/IP | 长期免费 | 中：CLI/IDE |
 | Trae Free | 国内 500 积分/月；国际版有限用量 | 每月额度 | 弱：IDE/云端任务 |
-| CodeBuddy Free | 100 积分/月 + 30 积分/活跃日 | 每月额度 | 强：CLI/SDK/OpenAPI |
-| WorkBuddy Free | 国内 500 积分/月；国际版 100 + 30/天 | 每月额度 | 中：OpenAPI |
+| CodeBuddy Free | 100 积分/月 + 30 积分/活跃日；与 WorkBuddy 共用同一积分池 | 每月额度 | 强：CLI/SDK/OpenAPI |
+| WorkBuddy Free | 国内 500 积分/月 + 签到 100/天；国际版 100 + 30/天；与 CodeBuddy 共用同一积分池 | 每月额度 | 中：OpenAPI |
 | Qoder Free | 2 周 Pro 试用 + 300 Credits | 限时试用 | 中：CLI/IDE |
 | Baidu Comate Free | 5,000 积分，之后 Auto 免费模式每日限额 | 一次性 + 每日 | 弱：IDE |
 | Huawei CodeArts Free | 500 积分/月 + 50 积分/天（口径有差异） | 每月 + 每日 | 中：CLI/TUI/IDE |
@@ -49,6 +49,7 @@ name: "Coding Agents with Free Quotas"
 
 ## 共同限制
 
+- **同厂共享池不能叠加**：CodeBuddy 与 WorkBuddy 共用同一账号积分池，WorkBuddy 每日签到 100 积分也进入同一池；不能把两个产品的额度相加。其他厂商也可能有同类共享规则，按账号页为准。
 - **免费额度不是 API 配额**：产品内积分、对话次数、token 包，不等于可以自由调用 API 的配额；能否自动化要看条款与开放平台。
 - **绑定个人账号**：多数免费档只限一个自然人一个账号，禁止共享、拼号、批量注册、换号刷额度。
 - **额度与模型会变**：免费档常用 Auto 路由、限时活动、容量调度；今天能用的模型明天可能降级。
