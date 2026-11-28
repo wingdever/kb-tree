@@ -1,0 +1,110 @@
+---
+description: "How installed software pulls and applies updates: manifest, signed artifacts, atomic swap, rollback and staged rollout"
+描述: "软件自动更新：版本清单、签名制品、原子替换、失败回滚与分批放量"
+name: "Software Auto-Update"
+名称: "软件自动更新"
+---
+
+# 软件自动更新（Auto-Update）
+
+自动更新不是“定时访问一个 URL 下载最新版”这么简单。它是一套**客户端侧的发布系统**：软件自己发现新版本、验证来源、下载制品、原子替换、失败回滚，并控制放量节奏。服务端 CI/CD 管“制品怎么发到服务器”，自动更新管“已经装在用户机器上的旧版本怎么安全换新”。
+
+## 两条更新路径
+
+- **客户端自更新（pull）**：应用内置 updater，定期拉版本清单，自己下载并替换。Electron、Sparkle、Squirrel、Omaha 都是这一类。
+- **平台托管更新（store/OS push）**：应用商店、系统包管理器或镜像系统负责分发。用户或系统触发，应用只声明版本。App Store、Google Play、Microsoft Store、apt/dnf、Snap/Flatpak、Android A/B、rpm-ostree 都属于这一类。
+
+自更新适合跨平台、独立分发的桌面应用；商店更新适合移动端与受控环境；系统级更新适合 OS、驱动与基础设施。三者可以叠加，但**同一台机器上不要多个 updater 抢着改同一份文件**。
+
+## 标准流程
+
+1. **版本协商**：客户端带当前版本、渠道（stable/beta）、平台、架构、语言、硬件能力，向更新服务查询。
+2. **返回清单**：服务端给目标版本、下载地址、SHA-256、签名、文件大小、发布日期、最低系统要求、是否强制、灰度比例。
+3. **下载**：后台下载到临时目录；支持断点续传、分块、限速；大版本可用 delta/bsdiff 只下差异。
+4. **验证**：校验哈希、代码签名、清单签名、证书链、时间戳；拒绝降级到低于安全基线的版本。
+5. **暂存**：写入 staging 目录或第二个槽位；不直接覆盖正在运行的文件。
+6. **应用**：退出/重启、原子替换、执行数据库/配置迁移；需要时申请管理员权限。
+7. **自检与回滚**：启动后跑健康检查；失败则切回旧版本或触发 watchdog；保留旧制品直到新版本稳定。
+8. **上报**：记录成功/失败、版本、错误码、耗时；用于灰度和故障定位。
+
+核心原则：**先下载、再验证、后替换；任何一步失败都不能把机器留在半新半旧的状态**。
+
+## 更新策略
+
+| 策略 | 做法 | 适用 |
+|---|---|---|
+| 全量包 | 每次下载完整安装包 | 简单、可靠，包大 |
+| 增量包 | 只下二进制差异，本地合并 | 包大、带宽敏感，需严格版本匹配 |
+| 静默更新 | 后台下载，重启时应用 | 桌面工具、输入法、浏览器 |
+| 提示更新 | 弹窗让用户确认 | 需要用户知情或权限 |
+| 强制更新 | 低于安全基线必须升级 | 安全补丁、协议变更 |
+| 灰度放量 | 从小比例开始，逐步扩量到全量 | 降低大面积故障风险 |
+| 双槽/A-B | 新版本写另一分区，启动切换 | Android、CoreOS、嵌入式 |
+| 滚动更新 | 服务端逐批替换实例 | 服务器集群，不是客户端 |
+
+**强制更新要有出口**：至少给“稍后”或“仅本次跳过”，否则用户会被卡死在无法启动的循环里。安全基线可以强制，但不能因为服务端配置错误把所有人锁死。
+
+## 安全校验
+
+- **代码签名**：Windows Authenticode、macOS Developer ID + notarization、Linux 包签名。操作系统在安装/启动时验证发布者。
+- **清单签名**：更新清单本身要签名，防止中间人把下载地址改成恶意 CDN。
+- **哈希与 TLS 不够**：HTTPS 只保护传输；如果下载源被攻破，仍需要签名验证制品来源。
+- **TUF（The Update Framework）**：用角色密钥分离（root/targets/snapshot/timestamp）抵御密钥泄露、回滚攻击与冻结攻击；适合自建更新系统。
+- **防降级**：记录最低安全版本，拒绝旧版本重放；时间戳防“旧清单重放”。
+- **密钥轮换**：签名密钥要有轮换与吊销预案；不要和 CI 的普通 token 放一起。
+- **权限最小化**：updater 只改自己的安装目录与必要服务，不以 root 常驻。
+
+## 失败与回滚
+
+- **原子替换**：写新目录/新槽位，成功后切符号链接或引导项；失败时旧版本仍在。
+- **健康检查**：新版本启动后验证核心功能、数据库连接、端口、许可证；失败自动回滚。
+- **Watchdog**：独立进程/引导器监控启动次数；连续崩溃达到阈值就回退。
+- **迁移可逆**：数据库 schema 变更要么向前兼容，要么准备 downgrade 脚本；不要在新版本里做不可逆迁移后还指望回滚。
+- **磁盘与断电**：预留两倍空间；写临时文件 + fsync + rename；断电后能识别未完成更新。
+- **崩溃循环保护**：记录“正在更新”标记，启动失败时清除标记并回退，避免无限重启。
+
+## 平台差异
+
+| 平台 | 常见机制 | 关键点 |
+|---|---|---|
+| Windows | MSIX App Installer、Squirrel.Windows、WinSparkle、Omaha | 代码签名、UAC、后台更新与重启 |
+| macOS | Sparkle + appcast、Mac App Store | Developer ID、notarization、沙箱、权限 |
+| Linux | apt/dnf 仓库、Snap、Flatpak、rpm-ostree | 包签名、仓库元数据、原子系统 |
+| Android | Google Play In-App Updates、A/B 分区 | 商店政策、无缝更新、回滚槽 |
+| iOS | App Store / TestFlight | 只能走商店，不能自建二进制更新 |
+| 浏览器扩展 | Chrome Web Store / Edge Add-ons | 商店审核、权限变更复审 |
+| 容器 | 镜像 digest + Watchtower/Argo CD | 不可变镜像、按 digest 拉取、滚动发布 |
+| Electron | electron-updater / Squirrel | 签名、差分包、多平台通道 |
+
+移动端尤其要注意：**iOS 不允许应用自己下载可执行代码更新**；Android 的 sideload 自更新也受商店政策与安全设置限制。桌面端才有较大的自更新空间。
+
+## 自研还是用框架
+
+- **优先用成熟框架**：Sparkle（macOS）、electron-updater（Electron）、Squirrel（Windows/.NET）、Omaha（Chrome 系）、MSIX App Installer（Windows）。它们处理了签名、差分、重启、回滚等大量边界。
+- **自研只在必要时**：需要特殊硬件、私有协议、离线环境、极致差分、或框架不支持的平台。自研必须补上签名、防降级、原子替换、watchdog、灰度与遥测，否则就是“能下载，但不能安全更新”。
+- **更新服务最小组成**：版本清单 API、制品存储/CDN、签名服务、灰度配置、失败率监控、回滚开关。不要用 GitHub Releases 的“latest”当唯一版本源；它没有灰度、没有最低版本、没有签名策略。
+
+## 常见反模式
+
+- 直接下载 `latest` 覆盖正在运行的二进制，失败后软件打不开。
+- 只校验 HTTPS，不校验签名；CDN 被攻破就下发恶意包。
+- 更新失败后无限重试，用户每次启动都卡在更新页。
+- 强制更新没有“稍后”，服务端配置错误导致全量锁死。
+- 新版本做了不可逆数据库迁移，回滚后数据不兼容。
+- 多个 updater 同时改同一目录，互相覆盖。
+- 不记录更新成功率，灰度放量等于盲发。
+
+## 一句话主线
+
+软件自动更新 = **版本协商 + 签名制品分发 + 原子替换 + 健康检查与回滚 + 分批放量**。把这五件事拆开做，比“写个下载脚本”可靠得多。
+
+## 参考资料
+
+- The Update Framework（TUF）：https://theupdateframework.io/
+- Sparkle（macOS 自动更新）：https://sparkle-project.org/
+- electron-updater 文档：https://www.electron.build/auto-update
+- Squirrel.Windows：https://github.com/Squirrel/Squirrel.Windows
+- MSIX App Installer：https://learn.microsoft.com/windows/msix/app-installer/app-installer-file-overview
+- Android A/B 无缝更新：https://source.android.com/docs/core/ota/ab
+- rpm-ostree 原子系统：https://coreos.github.io/rpm-ostree/
+- Chrome Omaha 更新器：https://chromium.googlesource.com/chromium/src/+/main/components/omaha/
