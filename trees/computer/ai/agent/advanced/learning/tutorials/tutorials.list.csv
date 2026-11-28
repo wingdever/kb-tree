@@ -52,3 +52,4 @@ Voice Pipeline Quickstart,专题与进阶,OpenAI,https://openai.github.io/openai
 12-Factor Agents,专题与进阶,HumanLayer,https://github.com/humanlayer/12-factor-agents,生产 Agent 的十二条工程原则，适合对照自己的 harness
 OpenAI Cookbook,专题与进阶,OpenAI,https://cookbook.openai.com/,官方示例集：工具、RAG、评估、多 Agent、微调
 Anthropic Cookbook,专题与进阶,Anthropic,https://github.com/anthropics/claude-cookbooks,Claude 工具调用、检索、Agent 与评估 notebook
+learn-claude-code — Harness Engineering,中文与开源实战,shareAI-lab,https://github.com/shareAI-lab/learn-claude-code,17 节主轨：从单循环 + Bash 到工具、权限、上下文压缩、多 Agent 与 worktree 隔离

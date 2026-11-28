@@ -31,7 +31,7 @@ name: "AI Agent Development Tutorials"
 | 做 RAG Agent | LlamaIndex Starter、DeepLearning.AI Agentic RAG | 检索、工具调用、评估串成一条线 |
 | 做 MCP 工具接入 | Hugging Face MCP Course、Microsoft MCP for Beginners | 协议、服务器/客户端、权限与部署 |
 | 做评估与可观测 | LangSmith Essentials、Hugging Face 课程评估单元 | 先能看见轨迹，再谈优化 |
-| 拆真实 Harness | claude-code-book、harness-books、Deep Agents 教程 | 从循环、上下文治理到子 Agent 与权限 |
+| 拆真实 Harness | learn-claude-code、claude-code-book、harness-books、Deep Agents 教程 | 从循环、上下文治理到子 Agent 与权限 |
 
 ## 教程清单
 
@@ -87,3 +87,4 @@ name: "AI Agent Development Tutorials"
 - Microsoft MCP for Beginners：https://github.com/microsoft/mcp-for-beginners
 - Hugging Face MCP Course：https://huggingface.co/learn/mcp-course/unit0/introduction
 - Vercel AI SDK Agents：https://vercel.com/docs/agents
+- shareAI-lab/learn-claude-code：https://github.com/shareAI-lab/learn-claude-code
