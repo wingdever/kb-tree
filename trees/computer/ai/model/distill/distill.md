@@ -84,6 +84,10 @@ DeepSeek 把 R1（671B）的推理行为蒸馏到 1.5B、7B、8B、14B、32B、7
 - 未经许可蒸馏商业模型通常违反服务条款。OpenAI 条款禁止用输出"开发与 OpenAI 竞争的模型"；Anthropic 商业条款禁止"构建竞争产品/服务，包括训练竞争模型"；Google Gemini API 条款禁止"开发竞争模型"或"反向工程、提取、复制任何组件"。
 - 2026 年争议升级：2 月 Anthropic 称 DeepSeek、Moonshot、MiniMax 通过约 2.4 万个欺诈账户与 Claude 产生 1600 万+ 次交互；9 月 NSA/CISA/FBI 联合 advisory 指控多家公司针对美国 AI 公司进行工业规模蒸馏活动。相关公司未证实、未经法庭检验。
 
+## 工具套件
+
+蒸馏工具已经分层：黑盒响应蒸馏可直接用 SFT 工具加教师数据；白盒 logit 蒸馏有 TRL、DistillKit、torchtune、ms-swift 等训练器；on-policy 蒸馏与 Agent 轨迹蒸馏还在快速演进。选工具前先确定教师信号与训练范式，不要拿普通 SFT 工具硬做 logit 蒸馏。
+
 ## 实践选择
 
 | 场景 | 方案 |

@@ -1,0 +1,5 @@
+term,target
+蒸馏,trees/computer/ai/model/distill
+SFT,trees/computer/ai/model/fine-tune/sft
+合成数据,trees/computer/ai/model/training-data/acquisition
+Agent 轨迹,trees/computer/ai/agent/advanced/rl
