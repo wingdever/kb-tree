@@ -1,0 +1,6 @@
+term,target
+Agent,trees/computer/ai/agent
+RAG,trees/computer/ai/rag/agentic-rag
+MCP,trees/computer/ai/agent/interop/mcp
+评估,trees/computer/ai/agent/engineering/eval
+工具调用,trees/computer/ai/agent/interop/tool

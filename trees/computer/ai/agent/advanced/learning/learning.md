@@ -68,6 +68,8 @@ Harness 方向的专题书。
 | freeCodeCamp 开源 LLM Agent Handbook | https://www.freecodecamp.org/news/the-open-source-llm-agent-handbook/ | 免费文字教程，发布于 2025-06-03；讲 Agent 循环、LangGraph 与 CrewAI，无配套视频 |
 | MCP 官方文档 | https://modelcontextprotocol.io | 工具与数据接入的开放标准 |
 
+教程可以按「官方快速入门 / 框架教程 / 系统课程 / 中文开源实战 / 专题进阶」五类组织；本页只保留书与课程入口，不重复展开每一步。
+
 > 课程教的是厂商的心智模型，这没问题——但要分清自己是在学概念、学实现，还是学产品工作流。旧文章的日期要看：被广泛引用的《Building Effective Agents》已加注说明部分工具形态变化。
 
 ## 软件与平台
