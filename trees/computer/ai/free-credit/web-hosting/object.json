@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "Web 托管服务",
+  "volatility": "high",
+  "verify": "厂商文档"
+}

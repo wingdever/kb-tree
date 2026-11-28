@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "particular",
+  "canonical": "Cloudflare, Inc.",
+  "volatility": "high",
+  "verify": "Cloudflare 官方定价与文档"
+}

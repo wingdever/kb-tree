@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "AI 沙箱服务",
+  "volatility": "high",
+  "verify": "厂商文档"
+}

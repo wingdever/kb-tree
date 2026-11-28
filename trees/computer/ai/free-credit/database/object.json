@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "托管数据库与缓存服务",
+  "volatility": "high",
+  "verify": "各厂商文档"
+}

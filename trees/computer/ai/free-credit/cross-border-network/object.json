@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "跨境网络通道",
+  "volatility": "medium",
+  "verify": "运营商与云厂商文档"
+}

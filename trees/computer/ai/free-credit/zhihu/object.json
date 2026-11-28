@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "particular",
+  "canonical": "知乎搜索 API",
+  "volatility": "high",
+  "verify": "知乎开放平台控制台"
+}

@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "地图数据来源",
+  "volatility": "medium",
+  "verify": "官方平台与许可页"
+}

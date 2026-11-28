@@ -66,6 +66,14 @@ description: 按树状知识树规范构建/扩展离线学习资料库（如 ag
 
 编写或校验 `questions.jsonl` 时，用 Read 打开 `${CODEBUDDY_SKILL_DIR}/references/questions-jsonl.md`，按其中的字段规则与校验脚本执行。
 
+## 附属对象坐标 object.json
+
+每个节点目录可放一份 `object.json`，用三个坐标登记该节点所讲的对象：`realm`（`logical` 逻辑界 / `material` 物质界 / `symbolic` 符号界）、`kind`（`thing` 东西 / `event` 事件 / `relation` 关系）、`generality`（`particular` 这一个 / `type` 这一类）；再附 `canonical`、`volatility`、`verify` 供核实与复查。
+
+它属于 C 层附属文件，不是知识节点，不套四字段，缺失合法。一个节点只给一个三元组，按节点回答的问题的主语判定；主语跨格就拆节点，不在一页混写。
+
+编写或校验时，用 Read 打开 `${CODEBUDDY_SKILL_DIR}/references/object-json.md`，按其中的判定顺序、硬规则与字段取值执行。
+
 ## 来源标注
 
 引入、抓取、迁移或融合资料时，一律交代来源。区分的是**交代什么**，不是**是否交代**。
@@ -162,4 +170,5 @@ name: "English Full Name"
 - [ ] 横切知识有主宿主，其他挂载点是视角化简述、不放相对链接，没有整段复制。
 - [ ] 新建目录前确认它代表一类对象；只是补一个方面时优先加小节。
 - [ ] `questions.jsonl`（若有）每行可解析、字段齐全，`section` 与同级同名 md 的 H2/H3 标题逐字一致。
+- [ ] `object.json`（若有）三轴取值在枚举内，一个节点一个三元组，`canonical` 与 md 所述对象一致。
 - [ ] 同一问题全树只有一个 `primary`，每条 `perspective` 都有 `owner` 且路径存在。

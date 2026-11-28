@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "邮件与推送通道",
+  "volatility": "high",
+  "verify": "厂商文档"
+}

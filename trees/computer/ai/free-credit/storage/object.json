@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "对象存储与图床服务",
+  "volatility": "high",
+  "verify": "厂商文档"
+}

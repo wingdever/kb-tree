@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "particular",
+  "canonical": "腾讯云 TokenHub",
+  "volatility": "high",
+  "verify": "腾讯云官方文档"
+}

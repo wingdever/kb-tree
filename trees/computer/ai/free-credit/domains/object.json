@@ -1,0 +1,8 @@
+{
+  "realm": "symbolic",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "域名",
+  "volatility": "high",
+  "verify": "ICANN 与注册局政策"
+}

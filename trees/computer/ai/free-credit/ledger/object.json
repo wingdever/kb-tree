@@ -1,0 +1,8 @@
+{
+  "realm": "logical",
+  "kind": "event",
+  "generality": "type",
+  "canonical": "额度台账管理方法",
+  "volatility": "low",
+  "verify": "本文归纳，无外部权威"
+}

@@ -1,0 +1,8 @@
+{
+  "realm": "material",
+  "kind": "thing",
+  "generality": "type",
+  "canonical": "生成式 API 服务",
+  "volatility": "high",
+  "verify": "厂商文档"
+}
