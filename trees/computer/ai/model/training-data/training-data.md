@@ -1,13 +1,17 @@
 ---
-description: "Where training data comes from: four stage-specific data types, open dataset platforms, self-collection and synthesis, licensing, and cleaning"
-描述: "训练数据从哪来：按训练阶段分的四类数据、开放数据集平台、自采与合成、许可合规与清洗"
-name: "Training Data Sourcing"
-名称: "训练数据来源"
+description: "Where training and fine-tuning data comes from: stage-specific types, platforms, self-collection, synthesis, licensing and cleaning"
+描述: "训练与微调数据从哪来：按阶段分的类型、平台、自采、合成、许可与清洗"
+name: "Training and Fine-Tuning Data Sourcing"
+名称: "训练与微调数据来源"
 ---
 
-# 训练数据来源
+# 训练与微调数据来源
 
-"训练数据从哪来"不是一个问题，而是四个：预训练要万亿级 token 的通用语料，SFT 要几千到几十万条高质量示范，偏好对齐要成对的排序标注，可验证奖励要能自动判分的题目。四类数据的获取渠道、成本与法律风险完全不同，混在一起谈就会得出"数据不够用"或"数据随便爬"这两种错误结论。
+"数据从哪来"不是一个问题，而是四个：预训练要万亿级 token 的通用语料，SFT 要几千到几十万条高质量示范，偏好对齐要成对的排序标注，可验证奖励要能自动判分的题目。四类数据的获取渠道、成本与法律风险完全不同，混在一起谈就会得出"数据不够用"或"数据随便爬"这两种错误结论。训练与微调共用同一套获取逻辑，但各阶段的重点不同。
+
+## 获取流程
+
+无论训练还是微调，数据获取都按同一条链推进：先定数据契约，再按"现成 → 授权 → 自采 → 标注 → 合成"逐级找，随后小样验证、清洗配比、验收登记。顺序不是死板阶梯，但每一步都要能回答"这批数据能不能合法用于这个阶段"。
 
 ## 按阶段分四类
 

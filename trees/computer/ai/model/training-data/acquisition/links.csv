@@ -1,0 +1,6 @@
+term,target
+训练数据,trees/computer/ai/model/training-data
+微调数据,trees/computer/ai/model/fine-tune/data
+预训练,trees/computer/ai/model/pretrain
+SFT,trees/computer/ai/model/fine-tune/sft
+偏好对齐,trees/computer/ai/model/fine-tune/preference
